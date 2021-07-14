@@ -1,172 +1,160 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
-modDyeRoyalPurple,item_modifiers,mod,,,[B0E7FF]Dye: Royal Purple
-modDyeTurquoise,item_modifiers,mod,,,[B0E7FF]Dye: Turquoise
-modDyeGold,item_modifiers,mod,,,[B0E7FF]Dye: Gold
-modDyeSilver,item_modifiers,mod,,,[B0E7FF]Dye: Silver
-modDyeBronze,item_modifiers,mod,,,[B0E7FF]Dye: Bronze
-modDyeLime,item_modifiers,mod,,,[B0E7FF]Dye: Lime
-modDyeCandyPink,item_modifiers,mod,,,[B0E7FF]Dye: Candy Pink
-modDyeOrange,item_modifiers,mod,,,[B0E7FF]Dye: Orange
-modDyeBeige,item_modifiers,mod,,,[B0E7FF]Dye: Beige
-modDyeTan,item_modifiers,mod,,,[B0E7FF]Dye: Tan
-modDyeGray,item_modifiers,mod,,,[B0E7FF]Dye: Gray
-modDyeCharcoal,item_modifiers,mod,,,[B0E7FF]Dye: Charcoal
-modDyeNavyBlue,item_modifiers,mod,,,[B0E7FF]Dye: Navy-Blue
-modDyeRoyalBlue,item_modifiers,mod,,,[B0E7FF]Dye: Royal-Blue
-modDyeAzure,item_modifiers,mod,,,[B0E7FF]Dye: Azure
-modDyeCyan,item_modifiers,mod,,,[B0E7FF]Dye: Cyan
-modDyeAquamarine,item_modifiers,mod,,,[B0E7FF]Dye: Aquamarine
-modDyeTeal,item_modifiers,mod,,,[B0E7FF]Dye: Teal
-modDyeForestGreen,item_modifiers,mod,,,[B0E7FF]Dye: Forest-Green
-modDyeOlive,item_modifiers,mod,,,[B0E7FF]Dye: Olive
-modDyeChartreuse,item_modifiers,mod,,,[B0E7FF]Dye: Chartreuse
-modDyeCoral,item_modifiers,mod,,,[B0E7FF]Dye: Coral
-modDyeSalmon,item_modifiers,mod,,,[B0E7FF]Dye: Salmon
-modDyeFuchsia,item_modifiers,mod,,,[B0E7FF]Dye: Fuchsia
-modDyePuce,item_modifiers,mod,,,[B0E7FF]Dye: Puce
-modDyeMauve,item_modifiers,mod,,,[B0E7FF]Dye: Mauve
-modDyeLavender,item_modifiers,mod,,,[B0E7FF]Dye: Lavender
-modDyePlum,item_modifiers,mod,,,[B0E7FF]Dye: Plum
-modDyeIndigo,item_modifiers,mod,,,[B0E7FF]Dye: Indigo
-modDyeMaroon,item_modifiers,mod,,,[B0E7FF]Dye: Maroon
-modDyeCrimson,item_modifiers,mod,,,[B0E7FF]Dye: Crimson
-Jeg_Coop,Blocks,block,,,[B0E7FF]Chicken Coop
-Jeg_Coop_Desc,Blocks,block,,,"[B0E7FF]Generate your own Eggs and Feathers!\n\nUnlocked with the 'Living off the Land' perk."
-Jeg_Coop_Full,Blocks,block,,,[B0E7FF]Full Chicken Coop
-resourceGoldenEgg,items,Item,,,[B0E7FF]Golden Egg
-resourceGoldenEggDesc,items,Item,,,"[B0E7FF]It's no Golden Ticket, but it can be crafted into a Golden Omelette or sold to a trader for a hefty sum."
-foodOmelette,,item,Food,newKey,[B0E7FF]Golden Omelette,,,,,
-foodOmeletteDesc,,item,Food,newKey,[B0E7FF]Tastes like a million dukes.,,,,,
-foodBearStew,,item,Food,newKey,[B0E7FF]Bear Steak Stew,,,,,
-foodBearStewDesc,,item,Food,newKey,"[B0E7FF]An extremely filling meal.\n\nProvides ample amounts of food and water, increases stamina regeneration, heals infections, and extinguishes fires.",,,,,
-foodBearSteak,,item,Food,newKey,[B0E7FF]Raw Bear Steak,,,,,
-foodBearSteakDesc,,item,Food,newKey,"[B0E7FF]Although inedible in its raw state, this Navezgane delicacy can be used exclusively in the creation of a delicious, nutritious Bear Steak Stew.",,,,,
-killscarecrow_start,items,Item,,,"[B0E7FF]Quest: Kill the Scarecrow!"
-killscarecrow_startDesc,items,Item,,,"[B0E7FF]This once-useful item is now useless. It can be scrapped or sold to a trader for a little cash.\n\nHalloween is over!"
-foodHalloweenCandy1,items,Medical,,,"[B0E7FF]Chocolate Orange Treat"
-foodHalloweenCandy2,items,Medical,,,"[B0E7FF]Candy Corn"
-halloweenCandy1,items,Medical,,,"[B0E7FF]Chocolate Orange Treat"
-halloweenCandy1Desc,items,Medical,,,"[B0E7FF]A sweet Halloween treat."
-halloweenCandy2,items,Medical,,,"[B0E7FF]Candy Corn"
-halloweenCandy2Desc,items,Medical,,,"[B0E7FF]A sweet Halloween treat."
-quest_killscarecrow,items,Quest - Challenge,,,"[B0E7FF]Quest: Kill the Scarecrow!"
-quest_killscarecrow_subtitle,items,Quest - Challenge,,,"[B0E7FF]Kill the Scarecrow"
-quest_killscarecrow_offer,items,Quest - Challenge,,,"[B0E7FF]As if 2020 wasn't bad enough, now we have undead scarecrows?! Go and take care of it before it terrorises the children.\n\n... Well, this is awkward. I've just been informed that the children are dead already. Take care of it regardless."
-zombieScarecrow,entityclasses,Entity,,,[B0E7FF]Undead Scarecrow
-itemPilotHandbook,items,Item,,,"[B0E7FF]Pilot's Handbook"
-itemPilotHandbookDesc,,item,Item,newKey,"[B0E7FF]Your very own Pilot's Handbook!\n\nThis item is a vital part of being able to craft a helicopter.",,,,,
-perkPilotTrainingRank5LongDesc,progression,perk Per,,,"[B0E7FF]You've impressed Bob and earned your Pilot's License!\n\nUnlocks Pilot's Handbook crafting."
-perkPilotTrainingRank4LongDesc,progression,perk Per,,,"[B0E7FF]Your training is coming along nicely. You've pushed many buttons and fondled many joysticks. It won't be long until you're fully trained!"
-perkPilotTrainingRank3LongDesc,progression,perk Per,,,"[B0E7FF]You wake up early, eager to learn, only to realise it's Sunday and everyone knows there are no flights on Sundays."
-perkPilotTrainingRank2LongDesc,progression,perk Per,,,"[B0E7FF]Today you met Bob. Bob will be carrying out your training. Don't disappoint Bob."
-perkPilotTrainingRank1LongDesc,progression,perk Per,,,"[B0E7FF]When you were young you dreamt of taking to the skies. Now you're finally learning to fly!"
-perkPilotTrainingRank5Desc,progression,perk Per,,,"[B0E7FF]Fully Trained Pilot"
-perkPilotTrainingRank4Desc,progression,perk Per,,,"[B0E7FF]Joystick Fondler"
-perkPilotTrainingRank3Desc,progression,perk Per,,,"[B0E7FF]Early Riser"
-perkPilotTrainingRank2Desc,progression,perk Per,,,"[B0E7FF]Bob's Student"
-perkPilotTrainingRank1Desc,progression,perk Per,,,"[B0E7FF]Rookie"
-perkPilotTrainingName,progression,perk Per,,,"[B0E7FF]Pilot Training Course"
-perkPilotTrainingDesc,progression,perk Per,,,"[B0E7FF]This comprehensive training course will reward you with the knowledge to obtain your very own Pilot's Handbook."
-itemFertileSoil,Items,Resources,,,"[B0E7FF]Fertile soil"
-itemFertileSoilDesc,Items,Resources,,,"[B0E7FF]Fertile Soil can be used to create farm plots for the green-thumbed survivor."
-itemSkillbookPage,Items,Resources,,,"[B0E7FF]Page from a Book of Skill"
-itemSkillbookPageDesc,Items,Resources,,,"[B0E7FF]Ten of these pages can be crafted into a Book of Skill, granting 1 skill point upon use."
-drinkJarPineTea,Items,CFDrink/Cooking,,,"[B0E7FF]Pinecone Tea"
-drinkJarPineTeaDesc,Items,CFDrink/Cooking,,,"[B0E7FF]One of the oldest known drinks, Pinecone Tea can cure dysentery and mild infections with its antibiotic properties.\n\nUnlocked by Master Chef 2"
-drinkJarAcornCoffee,Items,CFDrink/Cooking,,,"[B0E7FF]Acorn Coffee"
-drinkJarAcornCoffeeDesc,Items,CFDrink/Cooking,,,"[B0E7FF]Made using a classic recipe, drinking Acorn Coffee will keep you warm and improve your wellbeing.\n\nUnlocked by Master Chef 1."
-drinkJarGrassSmoothie,Items,CFDrink/Cooking,,,"[B0E7FF]Grass Clipping Smoothie"
-drinkJarGrassSmoothieDesc,Items,CFDrink/Cooking,,,"[B0E7FF]A traditional drink with an earthy taste which is packed with vitamins and minerals. Provides extra resistance against infections.\n\nUnlocked by Master Chef 3."
-perkAdvancedEngineeringRank1Desc,progression,perk Int,,,[B0E7FF]Blacksmith,,
-perkAdvancedEngineeringRank2Desc,progression,perk Int,,,[B0E7FF]Tinkerer,,
-perkAdvancedEngineeringRank3Desc,progression,perk Int,,,[B0E7FF]Electrician,,
-perkAdvancedEngineeringRank4Desc,progression,perk Int,,,[B0E7FF]Inventor,,
-perkAdvancedEngineeringRank5Desc,progression,perk Int,,,[B0E7FF]Advanced Engineer,,
-perkAdvancedEngineeringRank1LongDesc,progression,perk Int,,,"[B0E7FF]You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster, craft glue cheaper, and craft in workbenches and cement mixers 20% faster.",,
-perkAdvancedEngineeringRank2LongDesc,progression,perk Int,,,"[B0E7FF]Your tinkering is proving useful in the apocalypse. Craft workbenches and cement mixers and craft items with them 30% faster.",,
-perkAdvancedEngineeringRank3LongDesc,progression,perk Int,,,"[B0E7FF]You are now an electrician. Learn to craft generators, and build advanced base defense systems such as electric fences & blade traps. Craft military fiber. Gain 30% XP from electrical trap kills.\nEfficient craftsman. All forge recipes cost 10% less, crafting Forged Steel and electrical devices costs 15% less. Workbench and cement mixer crafting is 40% faster.",,
-perkAdvancedEngineeringRank4LongDesc,progression,perk Int,,,"[B0E7FF]Learn to craft shotgun turrets for short range concentrated base defense, battery banks and nail guns. Gain 60% XP from electrical trap kills.\nAll forge recipes cost 15% less, crafting Forged Steel and electrical devices costs 25% less. Workbench and cement mixer crafting is 50% faster.",,
-perkAdvancedEngineeringRank5LongDesc,progression,perk Int,,,"[B0E7FF]Learn to craft SMG auto turrets for the best ranged base defense, and crucibles to forge steel in forges. Gain 100% XP from Electrical Trap Kills.\nAll forge recipes cost 20% less, crafting Forged Steel and electrical devices costs 35% less. Workbench and cement mixer crafting is 60% faster.",,
-perkCharismaticNatureDesc,progression,perk Int,,,"[B0E7FF]Your charismatic nature is known across the land.",,,,,
-perkCharismaticNatureName,progression,perk Int,,,[B0E7FF]Charismatic Nature,,,,,
-perkCharismaticNatureRank1Desc,progression,perk Int,,,[B0E7FF]Inspirational,,,,,
-perkCharismaticNatureRank1LongDesc,progression,perk Int,,,"[B0E7FF]Provides 2% additional experience, 2% bartering bonus, 2% damage mitigation, 1% loot stage, 10 health, 10 stamina and 2 hypothermal & hyperthermal resist\n\nUnlocks Golden Egg and Golden Omelette recipes",,,,,
-perkCharismaticNatureRank2Desc,progression,perk Int,,,[B0E7FF]Team Leader,,,,,
-perkCharismaticNatureRank2LongDesc,progression,perk Int,,,"[B0E7FF]Provides 4% additional experience, 4% bartering bonus, 4% damage mitigation, 2% loot stage, 20 health, 20 stamina and 4 hypothermal & hyperthermal resist\n\nUnlocks vehicle mod crafting recipes",,,,,
-perkCharismaticNatureRank3Desc,progression,perk Int,,,[B0E7FF]Motivational Speaker
-perkCharismaticNatureRank3LongDesc,progression,perk Int,,,"[B0E7FF]Provides 6% additional experience, 6% bartering bonus, 6% damage mitigation, 3% loot stage, 30 health, 30 stamina and 6 hypothermal & hyperthermal resist\n\nUnlocks Tri-Handle mod recipe",,,,,
-perkCharismaticNatureRank4Desc,progression,perk Int,,,[B0E7FF]Squad Leader,,,,,
-perkCharismaticNatureRank4LongDesc,progression,perk Int,,,"[B0E7FF]Provides 8% additional experience, 8% bartering bonus, 8% damage mitigation, 4% loot stage, 40 health, 40 stamina and 8 hypothermal & hyperthermal resist\n\nUnlocks Thermal Protection mod recipe",,,,,
-perkCharismaticNatureRank5Desc,progression,perk Int,,,[B0E7FF]Elected Official,,,,,
-perkCharismaticNatureRank5LongDesc,progression,perk Int,,,"[B0E7FF]Provides 10% additional experience, 10% bartering bonus, 10% damage mitigation, 5% loot stage, 50 health, 50 stamina and 10 hypothermal & hyperthermal resist\n\nUnlocks Damage Equality and Silenced Destruction mod recipes",,,,,
-modMeleeStructuralBrace_2,item_modifiers,mod,,,"[B0E7FF]Tri-Handle Mod"
-modMeleeStructuralBrace_2Desc,item_modifiers,mod,,,"[B0E7FF]Decreases melee stamina usage by 10% and increases weapon handling of bows by 10%, lowers degradation by 25% and while below 50% health, restores 1 health every 5 seconds."
-modGunBarrelExtender_2,item_modifiers,mod,,,"[B0E7FF]Silenced Destruction Mod"
-modGunBarrelExtender_2Desc,item_modifiers,mod,,,"[B0E7FF]Increases damage, range and aimed accuracy and surpresses firing noise, making you harder to detect."
-modGunMeleeRadRemover_2,item_modifiers,mod,,,"[B0E7FF]Damage Equality Mod"
-modGunMeleeRadRemover_2Desc,item_modifiers,mod,,,"[B0E7FF]Negates the regeneration effect of radiated zombies for 90 seconds, and deals 100% increased damage to living beings."
-modArmorInsulatedLiner_2,item_modifiers,mod,,,"[B0E7FF]Thermal Protection Mod"
-modArmorInsulatedLiner_2Desc,item_modifiers,mod,,,"[B0E7FF]Combines the benefits of the Cooling Mesh and Insulated Liner, protecting against hot and cold weather."
-foodCookedRibs,,item,Food,newKey,[B0E7FF]Crispy Wolf Ribs,,,,,
-foodCookedRibsDesc,,item,Food,newKey,"[B0E7FF]A tasty treat. Smother in barbecue sauce for a messier eating experience.",,,,,
-foodGrilledChickenLeg,,item,Food,newKey,[B0E7FF]Fried Chicken,,,,,
-foodGrilledChickenLegDesc,,item,Food,newKey,"[B0E7FF]Great taste on your lips, great weight on your hips.",,,,,
-foodChickenLeg,,item,Food,newKey,[B0E7FF]Raw Chicken Leg,,,,,
-foodChickenLegDesc,,item,Food,newKey,"[B0E7FF]Guaranteed to cause fatal food poisoning if eaten raw. You may not be the Colonel, but I'm sure you can cook some decent fried chicken with this.",,,,,
-foodRawRibs,,item,Food,newKey,[B0E7FF]Raw Wolf Ribs,,,,,
-foodRawRibsDesc,,item,Food,newKey,"[B0E7FF]Guaranteed to cause fatal food poisoning if eaten raw. Baked, smoked or grilled, these ribs would pair fantastically with BBQ sauce!",,,,,
-foodCropWheat,,item,Food,newKey,[B0E7FF]Wheat,,,,,
-foodCropWheatDesc,,item,Food,newKey,"[B0E7FF]Wheat can be processed into flour.\n\nNow gluten free, so gluten can't not hurt anyone ever again...",,,,,
-foodBakingFlour,,item,Food,newKey,[B0E7FF]Flour,,,,,
-foodBakingFlourDesc,,item,Food,newKey,[B0E7FF]Basic white flour.,,,,,
-foodRapeseedOil,,item,Food,newKey,[B0E7FF]Rapeseed Oil,,,,,
-foodRapeseedOilDesc,,item,Food,newKey,"[B0E7FF]Rapeseed Oil is a flavourless vegetable oil that can be used in many recipes.\n\nOnly available from traders.",,,,,
-foodBearEggSandwich,,item,Food,newKey,"[B0E7FF]Bear Steak & Golden Egg Sandwich",,,,,
-foodBearEggSandwichDesc,,item,Food,newKey,"[B0E7FF]The ultimate indulgence for the hungriest survivor.\n\nThis protein rich sandwich will leave you full all day, provide extra stamina, extinguish fires and probably give you sexual favours... It's that good!",,,,,
-chestReward1,,item,Food,newKey,[B0E7FF]Quest Reward Chest,,,,,
-chestReward1Desc,,item,Food,newKey,"[B0E7FF]This chest contains one or more rewards for a quest you completed.\n\nWell done!",,,,,
-questSummonDesc,items,Quest - Challenge,,,"[B0E7FF]Using this item will summon the relevent animals/zombies. Kill them to complete the quest.\n\nThis quest provides resources rather than experience and will be auto-completed when the objectives are met."
-itemSpawnerBookBear,Items,Resources,,,"[B0E7FF]Resource Challenge: Bear"
-chestRewardBearDesc,Items,Resources,,,"[B0E7FF]Your reward for completing the quest - Resource Challenge: Bear"
-chestRewardBear,Items,Resources,,,"[B0E7FF]Resource Challenge: Bear"
-itemSpawnerBookDirewolf,Items,Resources,,,"[B0E7FF]Resource Challenge: Dire Wolf"
-chestRewardDirewolfDesc,Items,Resources,,,"[B0E7FF]Your reward for completing the quest - Resource Challenge: Dire Wolf"
-chestRewardDirewolf,Items,Resources,,,"[B0E7FF]Resource Challenge: Bear"
-itemSpawnerBookPig,Items,Resources,,,"[B0E7FF]Resource Challenge: Boar"
-chestRewardPigDesc,Items,Resources,,,"[B0E7FF]Your reward for completing the quest - Resource Challenge: Boar"
-chestRewardPig,Items,Resources,,,"[B0E7FF]Resource Challenge: Boar"
-itemSpawnerBookChickens,Items,Resources,,,"[B0E7FF]Resource Challenge: Chicken"
-chestRewardChickensDesc,Items,Resources,,,"[B0E7FF]Your reward for completing the quest - Resource Challenge: Chicken"
-chestRewardChickens,Items,Resources,,,"[B0E7FF]Resource Challenge: Chicken"
-itemSpawnerBookNurse,Items,Resources,,,"[B0E7FF]Resource Challenge: Nurse"
-chestRewardNurseDesc,Items,Resources,,,"[B0E7FF]Your reward for completing the quest - Resource Challenge: Nurse"
-chestRewardNurse,Items,Resources,,,"[B0E7FF]Resource Challenge: Nurse"
-itemSpawnerBookWorkmen,Items,Resources,,,"[B0E7FF]Resource Challenge: Workmen"
-chestRewardWorkmenDesc,Items,Resources,,,"[B0E7FF]Your reward for completing the quest - Resource Challenge: Workmen"
-chestRewardWorkmen,Items,Resources,,,"[B0E7FF]Resource Challenge: Workmen"
-itemSpawnerBookCop,Items,Resources,,,"[B0E7FF]Resource Challenge: Cop"
-chestRewardCopDesc,Items,Resources,,,"[B0E7FF]Your reward for completing the quest - Resource Challenge: Cop"
-chestRewardCop,Items,Resources,,,"[B0E7FF]Resource Challenge: Cop"
-itemSpawnerBookDemo,Items,Resources,,,"[B0E7FF]Resource Challenge: Demolisher"
-chestRewardDemoDesc,Items,Resources,,,"[B0E7FF]Your reward for completing the quest - Resource Challenge: Demolisher"
-chestRewardDemo,Items,Resources,,,"[B0E7FF]Resource Challenge: Demolisher"
-resourceAmmoToken,Items,Resources,,,"[B0E7FF]Ammo Token"
-resourceAmmoTokenDesc,Items,Resources,,,"[B0E7FF]This token is obtained by completing the Resource Challenge: Demolisher.\n\nA stack of 250 of any ammo, arrow or bolt can be crafted using this token."
-toolAdamantiumBellows,Items,Resources,,,"[B0E7FF]Adamantium-Enriched Bellows"
-toolAdamantiumAnvil,Items,Resources,,,"[B0E7FF]Adamantium-Enriched Anvil"
-toolAdamantiumBellowsDesc,Items,Resources,,,"[B0E7FF]An improved bellow that can be installed in the Advanced Forge.\n\nIt increases the smelting speed and crafting speed of the forge."
-toolAdamantiumAnvilDesc,Items,Resources,,,"[B0E7FF]An improved anvil that can be installed in the Advanced Forge.\n\nIt increases the smelting speed and crafting speed of the forge."
-forgeAdv,Items,Resources,,,"[B0E7FF]Advanced Forge"
-forgeAdvDesc,Items,Resources,,,"[B0E7FF]An improved forge that can be augmented by Adamantium-Enriched tools."
-glassBulletproofCTRPlatePlayer,blocks,Block,,,"[B0E7FF]Bulletproof Glass Plate Centered"
-glassBulletproofPlatePlayer,blocks,Block,,,"[B0E7FF]Bulletproof Glass Plate"
-glassBulletproofBlockPlayer,blocks,Block,,,"[B0E7FF]Bulletproof Glass Block"
-glassBulletproofRampPlayer,blocks,Block,,,"[B0E7FF]Bulletproof Glass Ramp"
-glassBulletproofRampSheetPlayer,blocks,Block,,,"[B0E7FF]Bulletproof Glass Ramp Sheet"
-glassBulletproofPlateCurvedPlayer,blocks,Block,,,"[B0E7FF]Bulletproof Glass Curved Plate"
-windowStoreFourSidedBulletproofPlayer,blocks,Block,,,"[B0E7FF]Window Store Four Sided Bulletproof"
-glassBulletproofBlockVariantHelper,blocks,Block,,,"[B0E7FF]Bulletproof Glass Block"
-lblFace,UI,Tooltip,,,"[B0E7FF]Accessory"
+modDyeRoyalPurple,item_modifiers,mod,,,[60CCFF]Dye: Royal Purple
+modDyeTurquoise,item_modifiers,mod,,,[60CCFF]Dye: Turquoise
+modDyeGold,item_modifiers,mod,,,[60CCFF]Dye: Gold
+modDyeSilver,item_modifiers,mod,,,[60CCFF]Dye: Silver
+modDyeBronze,item_modifiers,mod,,,[60CCFF]Dye: Bronze
+modDyeLime,item_modifiers,mod,,,[60CCFF]Dye: Lime
+modDyeCandyPink,item_modifiers,mod,,,[60CCFF]Dye: Candy Pink
+modDyeOrange,item_modifiers,mod,,,[60CCFF]Dye: Orange
+modDyeBeige,item_modifiers,mod,,,[60CCFF]Dye: Beige
+modDyeTan,item_modifiers,mod,,,[60CCFF]Dye: Tan
+modDyeGray,item_modifiers,mod,,,[60CCFF]Dye: Gray
+modDyeCharcoal,item_modifiers,mod,,,[60CCFF]Dye: Charcoal
+modDyeNavyBlue,item_modifiers,mod,,,[60CCFF]Dye: Navy-Blue
+modDyeRoyalBlue,item_modifiers,mod,,,[60CCFF]Dye: Royal-Blue
+modDyeAzure,item_modifiers,mod,,,[60CCFF]Dye: Azure
+modDyeCyan,item_modifiers,mod,,,[60CCFF]Dye: Cyan
+modDyeAquamarine,item_modifiers,mod,,,[60CCFF]Dye: Aquamarine
+modDyeTeal,item_modifiers,mod,,,[60CCFF]Dye: Teal
+modDyeForestGreen,item_modifiers,mod,,,[60CCFF]Dye: Forest-Green
+modDyeOlive,item_modifiers,mod,,,[60CCFF]Dye: Olive
+modDyeChartreuse,item_modifiers,mod,,,[60CCFF]Dye: Chartreuse
+modDyeCoral,item_modifiers,mod,,,[60CCFF]Dye: Coral
+modDyeSalmon,item_modifiers,mod,,,[60CCFF]Dye: Salmon
+modDyeFuchsia,item_modifiers,mod,,,[60CCFF]Dye: Fuchsia
+modDyePuce,item_modifiers,mod,,,[60CCFF]Dye: Puce
+modDyeMauve,item_modifiers,mod,,,[60CCFF]Dye: Mauve
+modDyeLavender,item_modifiers,mod,,,[60CCFF]Dye: Lavender
+modDyePlum,item_modifiers,mod,,,[60CCFF]Dye: Plum
+modDyeIndigo,item_modifiers,mod,,,[60CCFF]Dye: Indigo
+modDyeMaroon,item_modifiers,mod,,,[60CCFF]Dye: Maroon
+modDyeCrimson,item_modifiers,mod,,,[60CCFF]Dye: Crimson
+Jeg_Coop,Blocks,block,,,[60CCFF]Chicken Coop
+Jeg_Coop_Desc,Blocks,block,,,"[60CCFF]Generate your own Eggs and Feathers!\n\nUnlocked with the 'Living off the Land' perk."
+Jeg_Coop_Full,Blocks,block,,,[60CCFF]Full Chicken Coop
+resourceGoldenEgg,items,Item,,,[60CCFF]Golden Egg
+resourceGoldenEggDesc,items,Item,,,"[60CCFF]It's no Golden Ticket, but it can be crafted into a Golden Omelette or sold to a trader for a hefty sum."
+foodOmelette,,item,Food,newKey,[60CCFF]Golden Omelette
+foodOmeletteDesc,,item,Food,newKey,[60CCFF]Tastes like a million dukes.
+foodBearStew,,item,Food,newKey,[60CCFF]Bear Steak Stew
+foodBearStewDesc,,item,Food,newKey,"[60CCFF]An extremely filling meal.\n\nProvides ample amounts of food and water, increases stamina regeneration, heals infections, and extinguishes fires."
+foodBearSteak,,item,Food,newKey,[60CCFF]Raw Bear Steak
+foodBearSteakDesc,,item,Food,newKey,"[60CCFF]Although inedible in its raw state, this Navezgane delicacy can be used exclusively in the creation of a delicious, nutritious Bear Steak Stew."
+killscarecrow_start,items,Item,,,"[60CCFF]Quest: Kill the Scarecrow!"
+killscarecrow_startDesc,items,Item,,,"[60CCFF]This once-useful item is now useless. It can be scrapped or sold to a trader for a little cash.\n\nHalloween is over!"
+foodHalloweenCandy1,items,Medical,,,"[60CCFF]Chocolate Orange Treat"
+foodHalloweenCandy2,items,Medical,,,"[60CCFF]Candy Corn"
+halloweenCandy1,items,Medical,,,"[60CCFF]Chocolate Orange Treat"
+halloweenCandy1Desc,items,Medical,,,"[60CCFF]A sweet Halloween treat."
+halloweenCandy2,items,Medical,,,"[60CCFF]Candy Corn"
+halloweenCandy2Desc,items,Medical,,,"[60CCFF]A sweet Halloween treat."
+quest_killscarecrow,items,Quest - Challenge,,,"[60CCFF]Quest: Kill the Scarecrow!"
+quest_killscarecrow_subtitle,items,Quest - Challenge,,,"[60CCFF]Kill the Scarecrow"
+quest_killscarecrow_offer,items,Quest - Challenge,,,"[60CCFF]As if 2020 wasn't bad enough, now we have undead scarecrows?! Go and take care of it before it terrorises the children.\n\n... Well, this is awkward. I've just been informed that the children are dead already. Take care of it regardless."
+zombieScarecrow,entityclasses,Entity,,,[60CCFF]Undead Scarecrow
+itemPilotHandbook,items,Item,,,"[60CCFF]Pilot's Handbook"
+itemPilotHandbookDesc,,item,Item,newKey,"[60CCFF]Your very own Pilot's Handbook!\n\nThis item is a vital part of being able to craft a helicopter."
+perkPilotTrainingRank5LongDesc,progression,perk Per,,,"[60CCFF]You've impressed Bob and earned your Pilot's License!\n\nUnlocks Pilot's Handbook crafting."
+perkPilotTrainingRank4LongDesc,progression,perk Per,,,"[60CCFF]Your training is coming along nicely. You've pushed many buttons and fondled many joysticks. It won't be long until you're fully trained!"
+perkPilotTrainingRank3LongDesc,progression,perk Per,,,"[60CCFF]You wake up early, eager to learn, only to realise it's Sunday and everyone knows there are no flights on Sundays."
+perkPilotTrainingRank2LongDesc,progression,perk Per,,,"[60CCFF]Today you met Bob. Bob will be carrying out your training. Don't disappoint Bob."
+perkPilotTrainingRank1LongDesc,progression,perk Per,,,"[60CCFF]When you were young you dreamt of taking to the skies. Now you're finally learning to fly!"
+perkPilotTrainingRank5Desc,progression,perk Per,,,"[60CCFF]Fully Trained Pilot"
+perkPilotTrainingRank4Desc,progression,perk Per,,,"[60CCFF]Joystick Fondler"
+perkPilotTrainingRank3Desc,progression,perk Per,,,"[60CCFF]Early Riser"
+perkPilotTrainingRank2Desc,progression,perk Per,,,"[60CCFF]Bob's Student"
+perkPilotTrainingRank1Desc,progression,perk Per,,,"[60CCFF]Rookie"
+perkPilotTrainingName,progression,perk Per,,,"[60CCFF]Pilot Training Course"
+perkPilotTrainingDesc,progression,perk Per,,,"[60CCFF]This comprehensive training course will reward you with the knowledge to obtain your very own Pilot's Handbook."
+itemFertileSoil,Items,Resources,,,"[60CCFF]Fertile soil"
+itemFertileSoilDesc,Items,Resources,,,"[60CCFF]Fertile Soil can be used to create farm plots for the green-thumbed survivor."
+itemSkillbookPage,Items,Resources,,,"[60CCFF]Page from a Book of Skill"
+itemSkillbookPageDesc,Items,Resources,,,"[60CCFF]Ten of these pages can be crafted into a Book of Skill, granting 1 skill point upon use."
+drinkJarPineTea,Items,CFDrink/Cooking,,,"[60CCFF]Pinecone Tea"
+drinkJarPineTeaDesc,Items,CFDrink/Cooking,,,"[60CCFF]One of the oldest known drinks, Pinecone Tea can cure dysentery and mild infections with its antibiotic properties.\n\nUnlocked by Master Chef 2"
+drinkJarAcornCoffee,Items,CFDrink/Cooking,,,"[60CCFF]Acorn Coffee"
+drinkJarAcornCoffeeDesc,Items,CFDrink/Cooking,,,"[60CCFF]Made using a classic recipe, drinking Acorn Coffee will keep you warm and improve your wellbeing.\n\nUnlocked by Master Chef 1."
+drinkJarGrassSmoothie,Items,CFDrink/Cooking,,,"[60CCFF]Grass Clipping Smoothie"
+drinkJarGrassSmoothieDesc,Items,CFDrink/Cooking,,,"[60CCFF]A traditional drink with an earthy taste which is packed with vitamins and minerals. Provides extra resistance against infections.\n\nUnlocked by Master Chef 3."
+perkAdvancedEngineeringRank1Desc,progression,perk Int,,,[60CCFF]Blacksmith,,
+perkAdvancedEngineeringRank2Desc,progression,perk Int,,,[60CCFF]Tinkerer,,
+perkAdvancedEngineeringRank3Desc,progression,perk Int,,,[60CCFF]Electrician,,
+perkAdvancedEngineeringRank4Desc,progression,perk Int,,,[60CCFF]Inventor,,
+perkAdvancedEngineeringRank5Desc,progression,perk Int,,,[60CCFF]Advanced Engineer,,
+perkAdvancedEngineeringRank1LongDesc,progression,perk Int,,,"[60CCFF]You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster, craft glue cheaper, and craft in workbenches and cement mixers 20% faster.",,
+perkAdvancedEngineeringRank2LongDesc,progression,perk Int,,,"[60CCFF]Your tinkering is proving useful in the apocalypse. Craft workbenches and cement mixers and craft items with them 30% faster.",,
+perkAdvancedEngineeringRank3LongDesc,progression,perk Int,,,"[60CCFF]You are now an electrician. Learn to craft generators, and build advanced base defense systems such as electric fences & blade traps. Craft military fiber. Gain 30% XP from electrical trap kills.\nEfficient craftsman. All forge recipes cost 10% less, crafting Forged Steel and electrical devices costs 15% less. Workbench and cement mixer crafting is 40% faster.",,
+perkAdvancedEngineeringRank4LongDesc,progression,perk Int,,,"[60CCFF]Learn to craft shotgun turrets for short range concentrated base defense, battery banks and nail guns. Gain 60% XP from electrical trap kills.\nAll forge recipes cost 15% less, crafting Forged Steel and electrical devices costs 25% less. Workbench and cement mixer crafting is 50% faster.",,
+perkAdvancedEngineeringRank5LongDesc,progression,perk Int,,,"[60CCFF]Learn to craft SMG auto turrets for the best ranged base defense, and crucibles to forge steel in forges. Gain 100% XP from Electrical Trap Kills.\nAll forge recipes cost 20% less, crafting Forged Steel and electrical devices costs 35% less. Workbench and cement mixer crafting is 60% faster.",,
+modMeleeStructuralBrace_2,item_modifiers,mod,,,"[60CCFF]Tri-Handle Mod"
+modMeleeStructuralBrace_2Desc,item_modifiers,mod,,,"[60CCFF]Decreases melee stamina usage by 10% and increases weapon handling of bows by 10%, lowers degradation by 25% and while below 50% health, restores 1 health every 5 seconds."
+modGunBarrelExtender_2,item_modifiers,mod,,,"[60CCFF]Silenced Destruction Mod"
+modGunBarrelExtender_2Desc,item_modifiers,mod,,,"[60CCFF]Increases damage, range and aimed accuracy and surpresses firing noise, making you harder to detect."
+modGunMeleeRadRemover_2,item_modifiers,mod,,,"[60CCFF]Damage Equality Mod"
+modGunMeleeRadRemover_2Desc,item_modifiers,mod,,,"[60CCFF]Negates the regeneration effect of radiated zombies for 90 seconds, and deals 100% increased damage to living beings."
+modArmorInsulatedLiner_2,item_modifiers,mod,,,"[60CCFF]Thermal Protection Mod"
+modArmorInsulatedLiner_2Desc,item_modifiers,mod,,,"[60CCFF]Combines the benefits of the Cooling Mesh and Insulated Liner, protecting against hot and cold weather."
+foodCookedRibs,,item,Food,newKey,[60CCFF]Crispy Wolf Ribs
+foodCookedRibsDesc,,item,Food,newKey,"[60CCFF]A tasty treat. Smother in barbecue sauce for a messier eating experience."
+foodGrilledChickenLeg,,item,Food,newKey,[60CCFF]Fried Chicken
+foodGrilledChickenLegDesc,,item,Food,newKey,"[60CCFF]Great taste on your lips, great weight on your hips."
+foodChickenLeg,,item,Food,newKey,[60CCFF]Raw Chicken Leg
+foodChickenLegDesc,,item,Food,newKey,"[60CCFF]Guaranteed to cause fatal food poisoning if eaten raw. You may not be the Colonel, but I'm sure you can cook some decent fried chicken with this."
+foodRawRibs,,item,Food,newKey,[60CCFF]Raw Wolf Ribs
+foodRawRibsDesc,,item,Food,newKey,"[60CCFF]Guaranteed to cause fatal food poisoning if eaten raw. Baked, smoked or grilled, these ribs would pair fantastically with BBQ sauce!"
+foodCropWheat,,item,Food,newKey,[60CCFF]Wheat
+foodCropWheatDesc,,item,Food,newKey,"[60CCFF]Wheat can be processed into flour.\n\nNow gluten free, so gluten can't not hurt anyone ever again..."
+foodBakingFlour,,item,Food,newKey,[60CCFF]Flour
+foodBakingFlourDesc,,item,Food,newKey,[60CCFF]Basic white flour.
+foodRapeseedOil,,item,Food,newKey,[60CCFF]Rapeseed Oil
+foodRapeseedOilDesc,,item,Food,newKey,"[60CCFF]Rapeseed Oil is a flavourless vegetable oil that can be used in many recipes.\n\nOnly available from traders."
+foodBearEggSandwich,,item,Food,newKey,"[60CCFF]Bear Steak & Golden Egg Sandwich"
+foodBearEggSandwichDesc,,item,Food,newKey,"[60CCFF]The ultimate indulgence for the hungriest survivor.\n\nThis protein rich sandwich will leave you full all day, provide extra stamina, extinguish fires and probably give you sexual favours... It's that good!"
+chestReward1,,item,Food,newKey,[60CCFF]Quest Reward Chest
+chestReward1Desc,,item,Food,newKey,"[60CCFF]This chest contains one or more rewards for a quest you completed.\n\nWell done!"
+questSummonDesc,items,Quest - Challenge,,,"[60CCFF]Using this item will summon the relevent animals/zombies. Kill them to complete the quest.\n\nThis quest provides resources rather than experience and will be auto-completed when the objectives are met."
+itemSpawnerBookBear,Items,Resources,,,"[60CCFF]Resource Challenge: Bear"
+chestRewardBearDesc,Items,Resources,,,"[60CCFF]Your reward for completing the quest - Resource Challenge: Bear"
+chestRewardBear,Items,Resources,,,"[60CCFF]Resource Challenge: Bear"
+itemSpawnerBookDirewolf,Items,Resources,,,"[60CCFF]Resource Challenge: Dire Wolf"
+chestRewardDirewolfDesc,Items,Resources,,,"[60CCFF]Your reward for completing the quest - Resource Challenge: Dire Wolf"
+chestRewardDirewolf,Items,Resources,,,"[60CCFF]Resource Challenge: Bear"
+itemSpawnerBookPig,Items,Resources,,,"[60CCFF]Resource Challenge: Boar"
+chestRewardPigDesc,Items,Resources,,,"[60CCFF]Your reward for completing the quest - Resource Challenge: Boar"
+chestRewardPig,Items,Resources,,,"[60CCFF]Resource Challenge: Boar"
+itemSpawnerBookChickens,Items,Resources,,,"[60CCFF]Resource Challenge: Chicken"
+chestRewardChickensDesc,Items,Resources,,,"[60CCFF]Your reward for completing the quest - Resource Challenge: Chicken"
+chestRewardChickens,Items,Resources,,,"[60CCFF]Resource Challenge: Chicken"
+itemSpawnerBookNurse,Items,Resources,,,"[60CCFF]Resource Challenge: Nurse"
+chestRewardNurseDesc,Items,Resources,,,"[60CCFF]Your reward for completing the quest - Resource Challenge: Nurse"
+chestRewardNurse,Items,Resources,,,"[60CCFF]Resource Challenge: Nurse"
+itemSpawnerBookWorkmen,Items,Resources,,,"[60CCFF]Resource Challenge: Workmen"
+chestRewardWorkmenDesc,Items,Resources,,,"[60CCFF]Your reward for completing the quest - Resource Challenge: Workmen"
+chestRewardWorkmen,Items,Resources,,,"[60CCFF]Resource Challenge: Workmen"
+itemSpawnerBookCop,Items,Resources,,,"[60CCFF]Resource Challenge: Cop"
+chestRewardCopDesc,Items,Resources,,,"[60CCFF]Your reward for completing the quest - Resource Challenge: Cop"
+chestRewardCop,Items,Resources,,,"[60CCFF]Resource Challenge: Cop"
+itemSpawnerBookDemo,Items,Resources,,,"[60CCFF]Resource Challenge: Demolisher"
+chestRewardDemoDesc,Items,Resources,,,"[60CCFF]Your reward for completing the quest - Resource Challenge: Demolisher"
+chestRewardDemo,Items,Resources,,,"[60CCFF]Resource Challenge: Demolisher"
+resourceAmmoToken,Items,Resources,,,"[60CCFF]Ammo Token"
+resourceAmmoTokenDesc,Items,Resources,,,"[60CCFF]This token is obtained by completing the Resource Challenge: Demolisher.\n\nA stack of 250 of any ammo, arrow or bolt can be crafted using this token."
+toolAdamantiumBellows,Items,Resources,,,"[60CCFF]Adamantium-Enriched Bellows"
+toolAdamantiumAnvil,Items,Resources,,,"[60CCFF]Adamantium-Enriched Anvil"
+toolAdamantiumBellowsDesc,Items,Resources,,,"[60CCFF]An improved bellow that can be installed in the Advanced Forge.\n\nIt increases the smelting speed and crafting speed of the forge."
+toolAdamantiumAnvilDesc,Items,Resources,,,"[60CCFF]An improved anvil that can be installed in the Advanced Forge.\n\nIt increases the smelting speed and crafting speed of the forge."
+forgeAdv,Items,Resources,,,"[60CCFF]Advanced Forge"
+forgeAdvDesc,Items,Resources,,,"[60CCFF]An improved forge that can be augmented by Adamantium-Enriched tools."
+glassBulletproofCTRPlatePlayer,blocks,Block,,,"[60CCFF]Bulletproof Glass Plate Centered"
+glassBulletproofPlatePlayer,blocks,Block,,,"[60CCFF]Bulletproof Glass Plate"
+glassBulletproofBlockPlayer,blocks,Block,,,"[60CCFF]Bulletproof Glass Block"
+glassBulletproofRampPlayer,blocks,Block,,,"[60CCFF]Bulletproof Glass Ramp"
+glassBulletproofRampSheetPlayer,blocks,Block,,,"[60CCFF]Bulletproof Glass Ramp Sheet"
+glassBulletproofPlateCurvedPlayer,blocks,Block,,,"[60CCFF]Bulletproof Glass Curved Plate"
+windowStoreFourSidedBulletproofPlayer,blocks,Block,,,"[60CCFF]Window Store Four Sided Bulletproof"
+glassBulletproofBlockVariantHelper,blocks,Block,,,"[60CCFF]Bulletproof Glass Block"
+lblFace,UI,Tooltip,,,"[60CCFF]Accessory"
 accessorySilverRing,items,Item,,,"[E88F09]Platinum Diamond Ring"
 accessoryGoldFlowerRing,items,Item,,,"[E88F09]Gold Flower Ring"
 accessoryGoldStuddedRing,items,Item,,,"[E88F09]Diamond Studded Gold Ring"
@@ -185,3 +173,80 @@ buffHarmonyHCModeName,UI,Tooltip,,,"[EB1D0E]Harmony Test Buff"
 buffHarmonyHCModeDesc,UI,Tooltip,,,"[EB1D0E]This is a test buff which is applied automatically. It should be a permanent buff that persists through death, gaining a level and logging in or out.\n\nIf you notice this buff has vanished, or notice it coming and going, let Scott know."
 buffHarmonyHCModeTooltip,UI,Tooltip,,,"[EB1D0E]You've gained a buff and it came with this cool tooltip. That's pretty neat."
 buffHarmonyHCModeRemoved,UI,Tooltip,,,"[EB1D0E]Harmony Test Buff has been removed\nTHIS IS NOT MEANT TO HAPPEN - Report to Scott!"
+attExtraProgression,progression,perk Per,,,"[60CCFF]Extra Progression"
+attExtraProgressionName,progression,perk Per,,,"[60CCFF]Extra Progression"
+attExtraProgressionDesc,progression,perk Per,,,"[60CCFF]Extra Progression allows you to gain additional progress in certain areas to further enhance your character."
+attExtraProgressionPerkDesc,progression,perk Per,,,"[60CCFF]This placeholder perk does nothing, it's only here to prevent errors"
+attExtraProgressionPerkDescLong,progression,perk Per,,,"[60CCFF]This placeholder perk does nothing, it's only here to prevent errors."
+extraExpBonusName,progression,perk Int,,,"[60CCFF]Experience Bonus"
+extraExpBonusDesc,progression,perk Int,,,"[60CCFF]Increases all experience gain by up-to 50%."
+expBonus10Desc,progression,perk Int,,,"[60CCFF]Increases all experience gained by 10%"
+expBonus20Desc,progression,perk Int,,,"[60CCFF]Increases all experience gained by 20%"
+expBonus30Desc,progression,perk Int,,,"[60CCFF]Increases all experience gained by 30%"
+expBonus40Desc,progression,perk Int,,,"[60CCFF]Increases all experience gained by 40%"
+expBonus50Desc,progression,perk Int,,,"[60CCFF]Increases all experience gained by 50%"
+expBonus10,progression,perk Int,,,"[60CCFF]10% More XP"
+expBonus20,progression,perk Int,,,"[60CCFF]20% More XP"
+expBonus30,progression,perk Int,,,"[60CCFF]30% More XP"
+expBonus40,progression,perk Int,,,"[60CCFF]40% More XP"
+expBonus50,progression,perk Int,,,"[60CCFF]50% More XP"
+extraDmgReduceName,progression,perk Int,,,"[60CCFF]Damage Mitigation"
+extraDmgReduceDesc,progression,perk Int,,,"[60CCFF]Each point reduces all damage taken by 2%, up to a maximum of 10%"
+extraDmgReduce02Desc,progression,perk Int,,,"[60CCFF]Damage taken reduced by 2%"
+extraDmgReduce04Desc,progression,perk Int,,,"[60CCFF]Damage taken reduced by 4%"
+extraDmgReduce06Desc,progression,perk Int,,,"[60CCFF]Damage taken reduced by 6%"
+extraDmgReduce08Desc,progression,perk Int,,,"[60CCFF]Damage taken reduced by 8%"
+extraDmgReduce10Desc,progression,perk Int,,,"[60CCFF]Damage taken reduced by 10%"
+extraDmgReduce02,progression,perk Int,,,"[60CCFF]2% Damage Mitigation"
+extraDmgReduce04,progression,perk Int,,,"[60CCFF]4% Damage Mitigation"
+extraDmgReduce06,progression,perk Int,,,"[60CCFF]6% Damage Mitigation"
+extraDmgReduce08,progression,perk Int,,,"[60CCFF]8% Damage Mitigation"
+extraDmgReduce10,progression,perk Int,,,"[60CCFF]10% Damage Mitigation"
+extraMaxHealthName,progression,perk Int,,,"[60CCFF]Maximum Health Bonus"
+extraMaxHealthDesc,progression,perk Int,,,"[60CCFF]Increases your maximum health points by up to 300.\n\n[CC0000]REQUIRES 5 SKILL POINTS PER LEVEL"
+extraMaxHealth50Desc,progression,perk Int,,,"[60CCFF]Increases base health pool by 50 points"
+extraMaxHealth100Desc,progression,perk Int,,,"[60CCFF]Increases base health pool by 100 points"
+extraMaxHealth150Desc,progression,perk Int,,,"[60CCFF]Increases base health pool by 150 points"
+extraMaxHealth225Desc,progression,perk Int,,,"[60CCFF]Increases base health pool by 225 points"
+extraMaxHealth300Desc,progression,perk Int,,,"[60CCFF]Increases base health pool by 300 points"
+extraMaxHealth50,progression,perk Int,,,"[60CCFF]50 Increased Health"
+extraMaxHealth100,progression,perk Int,,,"[60CCFF]100 Increased Health"
+extraMaxHealth150,progression,perk Int,,,"[60CCFF]150 Increased Health"
+extraMaxHealth225,progression,perk Int,,,"[60CCFF]225 Increased Health"
+extraMaxHealth300,progression,perk Int,,,"[60CCFF]300 Increased Health"
+extraMaxStaminaName,progression,perk Int,,,"[60CCFF]Maximum Stamina Bonus"
+extraMaxStaminaDesc,progression,perk Int,,,"[60CCFF]Increases your maximum Stamina points by up to 300.\n\n[CC0000]REQUIRES 2 SKILL POINTS PER LEVEL"
+extraMaxStamina50Desc,progression,perk Int,,,"[60CCFF]Increases base Stamina pool by 50 points"
+extraMaxStamina100Desc,progression,perk Int,,,"[60CCFF]Increases base Stamina pool by 100 points"
+extraMaxStamina150Desc,progression,perk Int,,,"[60CCFF]Increases base Stamina pool by 150 points"
+extraMaxStamina225Desc,progression,perk Int,,,"[60CCFF]Increases base Stamina pool by 225 points"
+extraMaxStamina300Desc,progression,perk Int,,,"[60CCFF]Increases base Stamina pool by 300 points"
+extraMaxStamina50,progression,perk Int,,,"[60CCFF]50 Increased Stamina"
+extraMaxStamina100,progression,perk Int,,,"[60CCFF]100 Increased Stamina"
+extraMaxStamina150,progression,perk Int,,,"[60CCFF]150 Increased Stamina"
+extraMaxStamina225,progression,perk Int,,,"[60CCFF]225 Increased Stamina"
+extraMaxStamina300,progression,perk Int,,,"[60CCFF]300 Increased Stamina"
+extraThermalProtName,progression,perk Int,,,"[60CCFF]Thermal Protection"
+extraThermalProtDesc,progression,perk Int,,,"[60CCFF]Increases your Hypothermal and Hyperthermal resistance by 4 points per level, up to 20."
+extraThermalProt04Desc,progression,perk Int,,,"[60CCFF]Increases your resistance to extreme temperatures by 4"
+extraThermalProt08Desc,progression,perk Int,,,"[60CCFF]Increases your resistance to extreme temperatures by 8"
+extraThermalProt12Desc,progression,perk Int,,,"[60CCFF]Increases your resistance to extreme temperatures by 12"
+extraThermalProt16Desc,progression,perk Int,,,"[60CCFF]Increases your resistance to extreme temperatures by 16"
+extraThermalProt20Desc,progression,perk Int,,,"[60CCFF]Increases your resistance to extreme temperatures by 20"
+extraThermalProt04,progression,perk Int,,,"[60CCFF]+4 Hot and Cold Resist"
+extraThermalProt08,progression,perk Int,,,"[60CCFF]+8 Hot and Cold Resist"
+extraThermalProt12,progression,perk Int,,,"[60CCFF]+12 Hot and Cold Resist"
+extraThermalProt16,progression,perk Int,,,"[60CCFF]+16 Hot and Cold Resist"
+extraThermalProt20,progression,perk Int,,,"[60CCFF]+20 Hot and Cold Resist"
+extraCraftSpeedName,progression,perk Int,,,"[60CCFF]Crafting Mastery"
+extraCraftSpeedDesc,progression,perk Int,,,"[60CCFF]Your mastery of smashing things together to make other things allows you to craft up to 50% faster than normal"
+extraCraftSpeed10Desc,progression,perk Int,,,"[60CCFF]You can craft 10% faster than normal"
+extraCraftSpeed20Desc,progression,perk Int,,,"[60CCFF]You can craft 20% faster than normal"
+extraCraftSpeed30Desc,progression,perk Int,,,"[60CCFF]You can craft 30% faster than normal"
+extraCraftSpeed40Desc,progression,perk Int,,,"[60CCFF]You can craft 40% faster than normal"
+extraCraftSpeed50Desc,progression,perk Int,,,"[60CCFF]You can craft 50% faster than normal"
+extraCraftSpeed10,progression,perk Int,,,"[60CCFF]10% Faster Crafting"
+extraCraftSpeed20,progression,perk Int,,,"[60CCFF]20% Faster Crafting"
+extraCraftSpeed30,progression,perk Int,,,"[60CCFF]30% Faster Crafting"
+extraCraftSpeed40,progression,perk Int,,,"[60CCFF]40% Faster Crafting"
+extraCraftSpeed50,progression,perk Int,,,"[60CCFF]50% Faster Crafting"

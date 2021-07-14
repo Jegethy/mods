@@ -1,0 +1,78 @@
+<configs>
+
+	<!-- Slightly increases the amount of items bought and sold by traders -->
+	<set xpath="/traders/trader_info/@min_inventory">60</set>
+	<set xpath="/traders/trader_info/@max_inventory">120</set>
+	<set xpath="/traders/trader_info/@min_items_swapped">60</set>
+	<set xpath="/traders/trader_info/@max_items_swapped">120</set>
+
+	<!-- Modifies how often the trader's inventory will refresh -->
+	<set xpath="/traders/trader_info/@reset_interval">3</set>
+
+	<!-- Modifies the opening and closing times of the trader -->
+	<set xpath="/traders/trader_info/@open_time">3:30</set>
+	<set xpath="/traders/trader_info/@close_time">22:30</set>
+
+	<!-- Updates the trader with modified face items -->
+
+	<remove xpath="/traders/trader_info[@id='3']" />
+
+	<remove xpath="/traders/trader_info/tier_items[@level='3000,3999']/item[@name='cntVendingMachine']"/>
+	<remove xpath="/traders/trader_info/tier_items[@level='4000,4999']/item[@name='cntVendingMachine']"/>
+
+	<insertAfter xpath="/traders/trader_info/tier_items[@level='5000,-1']/item[@name='drinkJarGrandpasForgettingElixir']">
+		<item name="resourceAdamantium2" count="1" prob="0.1"/>
+	</insertAfter>
+
+	<append xpath="/traders">
+		<trader_info id="3" full_reset="true" reset_interval="1" override_buy_markup="5.0" override_sell_markup="1.0" allow_sell="false" player_owned="false" min_inventory="8" max_inventory="16" min_items_swapped="24" max_items_swapped="48">
+			<trader_items count="8">
+				<item name="foodRapeseedOil" count="2,20"/>
+				<item group="books" />
+				<item name="bookHammerTimeDamage" count="1" prob="0.01"/>
+				<item name="bookHammerTimeHarvest" count="1" prob="0.01"/>
+				<item name="bookHammerTimeDefense" count="1" prob="0.01"/>
+				<item name="bookHammerTimeDoorKey" count="1" prob="0.01"/>
+				<item name="bookHammerTimeProtect" count="1" prob="0.01"/>
+				<item name="bookHammerTimeUnstoppable" count="1" prob="0.01"/>
+				<item name="bookHammerTimeDrunk" count="1" prob="0.01"/>
+				<item name="itemSpawnerBookBear" count="1" prob="0.4"/>
+				<item name="itemSpawnerBookPig" count="1" prob="0.4"/>
+				<item name="itemSpawnerBookChickens" count="1" prob="0.4"/>
+				<item name="itemSpawnerBookDirewolf" count="1" prob="0.4"/>
+				<item name="itemSpawnerBookWorkmen" count="1" prob="0.4"/>
+				<item name="itemSpawnerBookNurse" count="1" prob="0.4"/>
+				<item name="itemSpawnerBookCop" count="1" prob="0.4"/>
+				<item name="itemSpawnerBookDemo" count="1" prob="0.4"/>
+				<item name="resourceAdamantium2" count="1" prob="0.1"/>
+				<item group="foodCandy" count="1" prob="0.70"/>
+			</trader_items>
+		</trader_info>	
+	</append>
+
+	<insertAfter xpath="/traders/trader_info/tier_items[@level='5000,-1']/item[@name='drinkJarGrandpasForgettingElixir']">
+		<item name="bigEngine" prob="0.02"/>
+		<item name="vehicleHelicopterChassis" prob="0.01"/>
+		<item name="vehicleHelicopterRotor" prob="0.01"/>
+		<item name="vehicleHelicopterChassisSchematic" prob="0.02"/>
+		<item name="vehicleHelicopterRotorSchematic" prob="0.02"/>
+	</insertAfter>
+
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']/item[@group='foodAll']">
+		<item name="foodRapeseedOil" count="5,50"/>
+	</insertAfter>
+
+	<set xpath="/traders/trader_item_groups/trader_item_group[@name='groupQuestChallenge']/@count">3</set>
+
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='groupQuestChallenge']/item[@name='qt_raphael']">
+		<item name="itemSpawnerBookBear" count="1" prob="0.4"/>
+		<item name="itemSpawnerBookPig" count="1" prob="0.4"/>
+		<item name="itemSpawnerBookChickens" count="1" prob="0.4"/>
+		<item name="itemSpawnerBookDirewolf" count="1" prob="0.4"/>
+		<item name="itemSpawnerBookWorkmen" count="1" prob="0.4"/>
+		<item name="itemSpawnerBookNurse" count="1" prob="0.4"/>
+		<item name="itemSpawnerBookCop" count="1" prob="0.4"/>
+		<item name="itemSpawnerBookDemo" count="1" prob="0.4"/>
+	</insertAfter>	
+
+</configs>

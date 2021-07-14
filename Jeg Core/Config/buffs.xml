@@ -1,0 +1,159 @@
+							<configs>
+
+	<!-- Reduced Encumbrance Penalty -->
+	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @operation='multiply']/@value">0.006</set>
+
+	<!-- Reduced Encumbrance Penalty -->
+	<remove xpath="/buffs/buff[@name='buffShocked']/effect_group/triggered_effect[@sound='electric_fence_impact']" />
+	<remove xpath="/buffs/buff[@name='buffTwitchShocked']/effect_group/triggered_effect[@sound='electric_fence_impact']" />
+
+	<!-- Removes the experience penalty incurred from dying -->
+	<append xpath="/buffs/buff[@name='buffNearDeathTraumaTrigger']/effect_group">
+		<triggered_effect trigger="onSelfBuffStart" action="GiveExp" exp="@_expdeficit"/>
+	</append>
+
+	<append xpath="/buffs">
+		<buff name="buffHammerTimeDrunk" name_key="buffHammerTimeDrunkName" description_key="buffHammerTimeDrunkDesc" showonhud="false" icon="ui_game_symbol_sledge" icon_color="0,255,0">
+			<duration value="30"/>
+			<stack_type value="replace"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".5"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+			</effect_group>
+		</buff>
+	</append>
+
+	<append xpath="/buffs">
+		<buff name="buffBearStew" name_key="foodBearStew" description_key="foodBearStewDesc" icon="ui_game_symbol_coffee">
+			<stack_type value="replace"/><duration value="0"/>
+			<display_value value=".buffBeefStewDumpDisplay"/><display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffBeefStewDumpDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffBeefStewDumpDisplay" operation="set" value="@$buffBeefStewDumpDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffBeefStewDumpDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBearStew">
+					<requirement name="CVarCompare" cvar="$buffBeefStewDumpDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffBeefStewDumpDisplay" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffBeefStewDumpDuration" operation="set" value="0"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="FoodLossPerStaminaPointGained" operation="perc_add" value="-.15"/>
+				<passive_effect name="WaterLossPerStaminaPointGained" operation="perc_add" value="-.15"/>
+			</effect_group>
+		</buff>
+	</append>
+
+	<!-- Adds Harmony Test Buff -->
+
+	<append xpath="/buffs">	
+		<buff name="buffHarmonyHCMode" name_key="buffHarmonyHCModeName" description_key="buffHarmonyHCModeDesc"	tooltip_key="buffHarmonyHCModeTooltip" icon="comingSoon" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<requirement name="PlayerLevel" operation="LT" value="1000"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="1"/> 
+				<!-- <passive_effect name="HealthMax" operation="base_set" value="1000"/> -->
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHarmonyHCMode"/>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,30" tags="buffHarmonyHCMode"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="ShowToolbeltMessage" message_key="buffHarmonyHCModeRemoved"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message_key="buffHarmonyHCModeRemoved"/>
+			</effect_group>
+		</buff>
+	</append>
+
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHarmonyHCMode"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHarmonyHCMode"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHarmonyHCMode">
+			<requirement name="NotHasBuff" buff="buffHarmonyHCMode"/>
+		</triggered_effect>
+	</append>
+
+	<!-- Scaling Difficulty Based On Player Level, Work in Progress -->
+	<!--
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHardModeScale01">
+			<requirement name="PlayerLevel" operation="GTE" value="100"/>
+			<requirement name="PlayerLevel" operation="LT" value="199"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale01"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHardModeScale01">
+			<requirement name="PlayerLevel" operation="GTE" value="100"/>
+			<requirement name="PlayerLevel" operation="LT" value="199"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale01"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHardModeScale02">
+			<requirement name="PlayerLevel" operation="GTE" value="200"/>
+			<requirement name="PlayerLevel" operation="LT" value="299"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale02"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHardModeScale02">
+			<requirement name="PlayerLevel" operation="GTE" value="200"/>
+			<requirement name="PlayerLevel" operation="LT" value="299"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale02"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHardModeScale03">
+			<requirement name="PlayerLevel" operation="GTE" value="300"/>
+			<requirement name="PlayerLevel" operation="LT" value="399"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale03"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHardModeScale03">
+			<requirement name="PlayerLevel" operation="GTE" value="300"/>
+			<requirement name="PlayerLevel" operation="LT" value="399"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale03"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHardModeScale04">
+			<requirement name="PlayerLevel" operation="GTE" value="400"/>
+			<requirement name="PlayerLevel" operation="LT" value="499"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale04"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHardModeScale04">
+			<requirement name="PlayerLevel" operation="GTE" value="400"/>
+			<requirement name="PlayerLevel" operation="LT" value="499"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale04"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHardModeScale05">
+			<requirement name="PlayerLevel" operation="GTE" value="500"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale05"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHardModeScale05">
+			<requirement name="PlayerLevel" operation="GTE" value="500"/>
+			<requirement name="NotHasBuff" buff="buffHardModeScale05"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHardModeScale01">
+			<requirement name="HasBuff" buff="buffHardModeScale02"/>
+			<requirement name="PlayerLevel" operation="GTE" value="200"/>
+			<requirement name="PlayerLevel" operation="LT" value="299"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHardModeScale01,buffHardModeScale02">
+			<requirement name="HasBuff" buff="buffHardModeScale03"/>
+			<requirement name="PlayerLevel" operation="GTE" value="300"/>
+			<requirement name="PlayerLevel" operation="LT" value="399"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHardModeScale01,buffHardModeScale02,buffHardModeScale03">
+			<requirement name="HasBuff" buff="buffHardModeScale04"/>
+			<requirement name="PlayerLevel" operation="GTE" value="400"/>
+			<requirement name="PlayerLevel" operation="LT" value="499"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHardModeScale01,buffHardModeScale02,buffHardModeScale03,buffHardModeScale04">
+			<requirement name="HasBuff" buff="buffHardModeScale05"/>
+			<requirement name="PlayerLevel" operation="GTE" value="500"/>
+		</triggered_effect>
+	</append>
+	-->
+
+</configs>

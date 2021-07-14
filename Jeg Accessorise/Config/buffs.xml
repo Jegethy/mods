@@ -1,0 +1,137 @@
+<configs>
+
+	<!-- Silver Ring - Cannot use Melee weapons, 75% more Ranged damage -->
+
+	<append xpath="/buffs">	
+		<buff name="buffaccessorySilverRing" name_key="buffaccessorySilverRingName" description_key="buffaccessorySilverRingDesc" tooltip_key="buffaccessorySilverRingTooltip" icon="rangedonly" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<requirement name="PlayerLevel" operation="LT" value="1000"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/> 
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessorySilverRing"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="DisableItem" operation="base_set" value="1" tags="meleeAccessorise" />
+				<passive_effect name="EntityDamage" operation="perc_add" value=".75" tags="rangedAccessorise"/>
+			</effect_group>
+		</buff>
+	</append>
+
+	<!-- Gold Flower Ring - Cannot use Ranged weapons, 75% more Melee damage -->
+
+	<append xpath="/buffs">	
+		<buff name="buffaccessoryGoldFlowerRing" name_key="buffaccessoryGoldFlowerRingName" description_key="buffaccessoryGoldFlowerRingDesc" tooltip_key="buffaccessoryGoldFlowerRingTooltip" icon="meleeonly" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<requirement name="PlayerLevel" operation="LT" value="1000"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/> 
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldFlowerRing"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="DisableItem" operation="base_set" value="1" tags="rangedAccessorise" />
+				<passive_effect name="EntityDamage" operation="perc_add" value=".75" tags="meleeAccessorise"/>
+			</effect_group>
+		</buff>
+	</append>
+
+	<!-- Gold Studded Ring - 60% Movement speed, no stamina regen while running, 20% reduced while walking, sometimes fall over -->
+
+	<append xpath="/buffs">	
+		<buff name="buffaccessoryGoldStuddedRing" name_key="buffaccessoryGoldStuddedRingName" description_key="buffaccessoryGoldStuddedRingDesc" tooltip_key="buffaccessoryGoldStuddedRingTooltip" icon="norunning" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<update_rate value="0.3"/>
+			<effect_group>
+				<requirement name="PlayerLevel" operation="LT" value="1000"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldStuddedRing"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".60"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-1" tags="running"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.2" tags="walking"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="Ragdoll" duration=".3">
+					<requirement name="!EntityTagCompare" tags="trader"/>
+					<requirement name="EntityHasMovementTag" tags="running"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="9"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfFallImpact" action="Ragdoll" duration=".3">
+					<requirement name="!EntityTagCompare" tags="trader"/>
+					<requirement name="CVarCompare" cvar="_fallSpeed" operation="GTE" value=".02"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+	</append>
+
+	<!-- Ruby Diamond Ring - Effect WIP -->
+
+	<append xpath="/buffs">	
+		<buff name="buffaccessoryGoldStuddedRing" name_key="buffaccessoryGoldStuddedRingName" description_key="buffaccessoryGoldStuddedRingDesc" tooltip_key="buffaccessoryGoldStuddedRingTooltip" icon="noarmour" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<update_rate value="0.5"/>
+			<effect_group>
+				<requirement name="PlayerLevel" operation="LT" value="1000"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldStuddedRing"/>
+				<passive_effect name="DisableItem" operation="base_set" value="1" tags="heavyArmor,lightArmor" />
+			</effect_group>
+
+			<effect_group>
+
+			</effect_group>
+		</buff>
+	</append>
+
+	<!-- Ruby Heart Ring - Effect WIP -->
+
+	<append xpath="/buffs">	
+		<buff name="buffaccessoryGoldStuddedRing" name_key="buffaccessoryGoldStuddedRingName" description_key="buffaccessoryGoldStuddedRingDesc" tooltip_key="buffaccessoryGoldStuddedRingTooltip" icon="noarmour" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<update_rate value="0.5"/>
+			<effect_group>
+				<requirement name="PlayerLevel" operation="LT" value="1000"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldStuddedRing"/>
+				<passive_effect name="DisableItem" operation="base_set" value="1" tags="heavyArmor,lightArmor" />
+			</effect_group>
+
+			<effect_group>
+
+			</effect_group>
+		</buff>
+	</append>
+
+	<!-- Combined Rings - Effect WIP -->
+
+	<append xpath="/buffs">	
+		<buff name="buffaccessoryGoldStuddedRing" name_key="buffaccessoryGoldStuddedRingName" description_key="buffaccessoryGoldStuddedRingDesc" tooltip_key="buffaccessoryGoldStuddedRingTooltip" icon="noarmour" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<update_rate value="0.5"/>
+			<effect_group>
+				<requirement name="PlayerLevel" operation="LT" value="1000"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldStuddedRing"/>
+				<passive_effect name="DisableItem" operation="base_set" value="1" tags="heavyArmor,lightArmor" />
+			</effect_group>
+
+			<effect_group>
+
+			</effect_group>
+		</buff>
+	</append>
+
+</configs>

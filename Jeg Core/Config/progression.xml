@@ -1,0 +1,230 @@
+<configs>
+
+	<!-- Pilot Handbook -->
+	<append xpath="/progression/perks" >
+		<perk name="perkPilotTraining" max_level="5" base_skill_point_cost="5" parent="skillIntellectCraftsmanship" name_key="perkPilotTrainingName" desc_key="perkPilotTrainingDesc" icon="pilot-icon">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="itemPilotHandbook"/>
+
+				<effect_description level="1" desc_key="perkPilotTrainingRank1Desc" long_desc_key="perkPilotTrainingRank1LongDesc"/>
+				<effect_description level="2" desc_key="perkPilotTrainingRank2Desc" long_desc_key="perkPilotTrainingRank2LongDesc"/>
+				<effect_description level="3" desc_key="perkPilotTrainingRank3Desc" long_desc_key="perkPilotTrainingRank3LongDesc"/>
+				<effect_description level="4" desc_key="perkPilotTrainingRank4Desc" long_desc_key="perkPilotTrainingRank4LongDesc"/>
+				<effect_description level="5" desc_key="perkPilotTrainingRank5Desc" long_desc_key="perkPilotTrainingRank5LongDesc"/>
+
+			</effect_group>
+		</perk>
+	</append>
+
+	<!-- Adds custom sledgehammer book category -->
+	<append xpath="/progression/skills" >
+		<skill name="skillHammerTime" parent="attBooks" name_key="perkHammerTimeName" desc_key="perkHammerTimeDesc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_sledge"><effect_group/></skill>
+	</append>
+	<!-- Adds custom sledgehammer book skills -->
+	<append xpath="/progression/perks" >
+		<perk name="perkHammerTimeDamage" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDamageDesc" long_desc_key="perkHammerTimeDamageLongDesc">
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1" value="0.1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1" value="0.1"/>
+			</effect_group>
+		</perk>
+
+		<perk name="perkHammerTimeHarvest" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeHarvestDesc" long_desc_key="perkHammerTimeHarvestLongDesc">
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+				<passive_effect name="HarvestCount" operation="perc_add" level="1" value=".25" tags="oreWoodHarvest"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" level="1" value="-.4" tags="Harvesting"/>
+			</effect_group>
+		</perk>
+
+		<perk name="perkHammerTimeDefense" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDefenseDesc" long_desc_key="perkHammerTimeDefenseLongDesc">
+			<effect_group>
+				<!-- effect is on sledgehammers, item.xml -->
+			</effect_group>
+		</perk>
+
+		<perk name="perkHammerTimeDoorKey" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDoorKeyDesc" long_desc_key="perkHammerTimeDoorKeyLongDesc">
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="1" value="5.0" tags="door"/>
+			</effect_group>
+		</perk>
+
+		<perk name="perkHammerTimeProtect" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeProtectDesc" long_desc_key="perkHammerTimeProtectLongDesc">
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkCanMegaCrush"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugSteroids"/>	
+			</effect_group>
+		</perk>
+
+		<perk name="perkHammerTimeUnstoppable" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeUnstoppableDesc" long_desc_key="perkHammerTimeUnstoppableLongDesc">
+			<effect_group>
+				<requirement name="HasBuff" buff="buffDrugSteroids"/>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeUnstoppable" operation="Equals" value="1"/>
+				<passive_effect name="HealthLoss" operation="perc_subtract" level="1" value=".50"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" level="1" value=".233"/>
+				<passive_effect name="BuffResistance" operation="base_add" level="1" value="1" tags="buffInjuryStunned01,buffInjuryKnockdown01,buffInjuryStunned02,buffInfectionCatch,buffInfection01Main,buffInjuryBleeding,buffDrowning01,buffDrowning02,buffArmorShredding,buffLegSprained,buffLegBroken,buffArmSprained"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="0.30" level="1" />
+				<passive_effect name="RunSpeed" operation="perc_add" value="0.30" level="1" />
+			</effect_group>
+		</perk>
+
+		<perk name="perkHammerTimeDrunk" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDrunkDesc" long_desc_key="perkHammerTimeDrunkLongDesc">
+			<effect_group>
+				<requirement name="HasBuff" buff="buffMegaCrush"/>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeDrunk" operation="Equals" value="1"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffHammerTimeDrunk"/>				
+			</effect_group>
+		</perk>
+
+		<perk name="perkHammerTimeComplete" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeCompleteDesc" long_desc_key="perkHammerTimeCompleteLongDesc">
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+				<passive_effect name="LootDropProb" operation="perc_add" level="1" value=".2"/>
+			</effect_group>
+		</perk>
+	</append>
+
+	<append xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='1,3']/@tags">,Jeg_Coop</append>
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='2,5']/@tags">,foodCookedRibs,foodGrilledChickenLeg</append>
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='4,5']/@tags">,foodBearStew</append>
+
+	<!-- <append xpath="/progression/perks/perk[@name='perkCharismaticNature']/effect_group" >
+		<triggered_effect trigger="onCombatEntered" action="AddBuff" buff="buffPerkCharismaticNature" >
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="1" />
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="1" >
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="1" />
+			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="1" />				
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="2" >
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="2" />
+			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="2" />				
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="3" >
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="3" />
+			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="3" />				
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="4" >
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="4" />
+			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="4" />				
+		</triggered_effect>
+	</append> -->
+
+	<!-- Increased loot quantity on Treasure Hunter perk -->
+	<set xpath="/progression/perks/perk[@name='perkTreasureHunter']/effect_group/passive_effect[@name='LootQuantity'][@level='1,2,3']/@value">.33,.66,1</set>
+
+	<!-- Increased healing effect from Healing Factor -->
+	<set xpath="/progression/perks/perk[@name='perkHealingFactor']/effect_group/passive_effect[@name='HealthChangeOT']/@value">.022,.044,.1,.2,.32</set>
+
+	<!-- Increases loot gamestage and loot speed from Lucky Looter -->
+	<set xpath="/progression/perks/perk[@name='perkLuckyLooter']/effect_group/passive_effect[@name='LootGamestage'][@level='1,5']/@value">.08,.40</set>
+	<set xpath="/progression/perks/perk[@name='perkLuckyLooter']/effect_group/passive_effect[@name='ScavengingTime'][@level='1,2,3,4,5']/@value">.2,.4,.6,.8,1</set>
+
+	<!-- Updates the lock picking breakage chance and lock picking speed -->
+	<set xpath="/progression/perks/perk[@name='perkLockPicking']/effect_group/passive_effect[@name='LockPickBreakChance']/@value">.30,.90</set> <!-- .1,.3 -->
+	<set xpath="/progression/perks/perk[@name='perkLockPicking']/effect_group/passive_effect[@name='LockPickTime']/@value">.25,.75</set> <!-- .1,.3 -->
+
+	<!-- Removes experience penalty -->
+	<set xpath="/progression/perks/perk[@name='perkSalvageOperations']/effect_group/passive_effect[@name='PlayerExpGain'][@value='-.1,-.4']/@value">0,0</set>
+	<set xpath="/progression/perks/perk[@name='perkMotherLode']/effect_group/passive_effect[@name='PlayerExpGain'][@value='-.1,-.4']/@value">0,0</set>
+	<set xpath="/progression/perks/perk[@name='perkArtOfMiningCoffee']/effect_group/passive_effect[@name='PlayerExpGain'][@value='-.05']/@value">0</set>
+
+	<!-- Increased experience from trap kills -->
+	<set xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='ElectricalTrapXP']/@value">0.3,0.6,1</set>
+
+	<!-- Reduced crafting time with work benches and cement mixers -->
+	<remove xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTime'][@level='2,5']"/>
+
+	<insertAfter xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@tags='toolForgeCrucible,autoTurret']">
+		<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.2,-0.3,-0.4,-0.5,-0.6" tags="workbenchCrafting,cementMixerCrafting"/>
+	</insertAfter>
+
+	<!-- Increased damage with Miner 69er -->
+	<set xpath="/progression/perks/perk[@name='perkMiner69r']/effect_group/passive_effect[@name='BlockDamage'][@value='.3,1.5']/@value">.4,2</set>
+
+	<!-- Increased harvesting amount -->
+	<set xpath="/progression/perks/perk[@name='perkMotherLode']/effect_group/passive_effect[@name='HarvestCount'][@value='.2,1']/@value">.3,1.5</set>
+
+	<!-- Increased stamina generation -->
+	<set xpath="/progression/perks/perk[@name='perkSexualTrex']/effect_group/passive_effect[@name='StaminaLoss'][@value='-.08,-.15,-.2,-.25']/@value">-.12,-.18,-.24,-.30</set>
+	<set xpath="/progression/perks/perk[@name='perkSexualTrex']/effect_group/passive_effect[@name='StaminaLoss'][@value='-.07,-.15,-.2,-.25']/@value">-.12,-.18,-.24,-.30</set>
+
+	<!-- Increased attack speed -->
+	<set xpath="/progression/perks/perk[@name='perkFlurryOfBlows']/effect_group/passive_effect[@name='AttacksPerMinute'][@value='.1,.17,.25']/@value">.15,.22,.30</set>
+
+	<!-- Increased stamina regen at all times -->
+	<set xpath="/progression/perks/perk[@name='perkRuleOneCardio']/effect_group/passive_effect[@name='StaminaChangeOT'][@value='0.1,0.3']/@value">0.10,0.30</set>
+	<removeattribute xpath="/progression/perks[@min_level='0']/perk[@name='perkRuleOneCardio']/effect_group/passive_effect[@name='StaminaChangeOT']/@tags"/>
+
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='5']/@tags">,bigEngine</append>
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='5']/@tags">,vehicleHelicopterRotor,vehicleHelicopterChassis</append>
+
+	<append xpath="/progression/perks/perk[@name='perkLightArmor']/effect_group/passive_effect[@level='1,5']/@tags">,Night Vision Mod</append>
+
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags=",drinkJarAccornCoffee"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags=",drinkJarPineTea"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags=",drinkJarGrassSmoothie"/>
+	</append>
+
+	<!-- Reworked Charismatic Nature -->
+	<remove xpath="/progression/perks/perk[@name='perkCharismaticNature']" />
+	<insertAfter xpath="/progression/perks/perk[@name='perkDaringAdventurer']">
+		<perk name="perkCharismaticNature" max_level="5" base_skill_point_cost="2" parent="skillIntellectInfluence" name_key="perkCharismaticNatureName" desc_key="perkCharismaticNatureDesc" icon="ui_game_symbol_talk">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="9" desc_key="reqIntellectLevel09"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="9" desc_key="reqIntellectLevel09"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+
+			<effect_group>
+				<passive_effect name="LootGamestage" operation="perc_add" level="1,2,3,4,5" value="0.01,0.02,0.03,0.04,0.05"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" level="1,2,3,4,5" value="0.02,0.04,0.06,0.08,0.10"/>
+				<passive_effect name="HealthLoss" operation="perc_subtract" level="1,2,3,4,5" value="0.02,0.04,0.06,0.08,0.10"/>
+				<passive_effect name="BarteringBuying" operation="base_add" level="1,2,3,4,5" value="0.02,0.04,0.06,0.08,0.10"/>
+				<passive_effect name="BarteringSelling" operation="base_add" level="1,2,3,4,5" value="0.02,0.04,0.06,0.08,0.10"/>
+				<passive_effect name="HealthMax" operation="base_add" level="1,2,3,4,5" value="10,20,30,40,50"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="1,2,3,4,5" value="10,20,30,40,50"/>
+				<passive_effect name="HypothermalResist" operation="base_add" level="1,2,3,4,5" value="2,4,6,8,10"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" level="1,2,3,4,5" value="2,4,6,8,10"/>
+
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1"
+				tags="resourceGoldenEgg,foodOmelette"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1"
+				tags="modVehicleFuelSaver,modVehicleHeadlights,modVehicleSpeed"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1"
+				tags="modMeleeStructuralBrace_2"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1"
+				tags="modArmorInsulatedLiner_2"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1"
+				tags="modGunMeleeRadRemover_2,modGunBarrelExtender_2,foodBearEggSandwich,accessoryJewerlyBox6"/>
+
+				<effect_description level="1" desc_key="perkCharismaticNatureRank1Desc" long_desc_key="perkCharismaticNatureRank1LongDesc"/>
+				<effect_description level="2" desc_key="perkCharismaticNatureRank2Desc" long_desc_key="perkCharismaticNatureRank2LongDesc"/>
+				<effect_description level="3" desc_key="perkCharismaticNatureRank3Desc" long_desc_key="perkCharismaticNatureRank3LongDesc"/>
+				<effect_description level="4" desc_key="perkCharismaticNatureRank4Desc" long_desc_key="perkCharismaticNatureRank4LongDesc"/>
+				<effect_description level="5" desc_key="perkCharismaticNatureRank5Desc" long_desc_key="perkCharismaticNatureRank5LongDesc"/>
+			</effect_group>
+		</perk>
+	</insertAfter>
+	
+	<!-- Adds Advanced Forge -->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,forgeAdv</append>
+
+</configs>

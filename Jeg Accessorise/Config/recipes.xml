@@ -1,0 +1,2115 @@
+<configs>
+
+	<append xpath="/recipes">	
+		<recipe name="foodOmelette" count="2" craft_area="campfire" craft_tool="toolCookingPot" tags="perkCharismaticNature,learnable" craft_time="15">
+			<ingredient name="resourceGoldenEgg" count="1"/>
+			<ingredient name="foodEgg" count="3"/>
+			<ingredient name="foodRapeseedOil" count="2"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodCookedRibs" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+			<ingredient name="foodRawRibs" count="1"/>
+			<ingredient name="foodBakingFlour" count="2"/>
+			<ingredient name="foodRapeseedOil" count="2"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodGrilledChickenLeg" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+			<ingredient name="foodChickenLeg" count="1"/>
+			<ingredient name="foodBakingFlour" count="2"/>
+			<ingredient name="foodRapeseedOil" count="2"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodBakingFlour" count="1" craft_time="1">
+			<ingredient name="foodCropWheat" count="1"/>
+		</recipe>
+	</append>
+
+	<!-- Adds recipe for modded customised fittings -->
+	<append xpath="/recipes">
+		<recipe name="modLightweightMasterFitting" count="1" craft_time="90" craft_area="workbench">
+			<ingredient name="itemPartsTemplateMaster" count="5"/>
+			<ingredient name="resourceLeather" count="50"/>
+			<ingredient name="resourceDuctTape" count="15"/>
+			<ingredient name="resourceForgedIron" count="30"/>
+			<ingredient name="resourceForgedSteel" count="30"/>
+		</recipe>
+
+		<recipe name="modReinforcedMasterFitting" count="1" craft_time="90" craft_area="workbench">
+			<ingredient name="itemPartsTemplateMaster" count="5"/>
+			<ingredient name="resourceLeather" count="50"/>
+			<ingredient name="resourceDuctTape" count="15"/>
+			<ingredient name="resourceForgedIron" count="30"/>
+			<ingredient name="resourceForgedSteel" count="30"/>
+		</recipe>
+	</append>
+
+	<!-- Adding crafting recipe for medicinal honey -->
+	<append xpath="/recipes">
+		<recipe name="foodMedicalHoney" count="1" craft_time="5">
+			<ingredient name="foodHoney" count="1"/>
+			<ingredient name="foodCropYuccaFruit" count="1"/>
+		</recipe>
+	</append>
+
+	<!-- Adds crafting recipes for new lights -->
+	<append xpath="/recipes">
+		<recipe name="Jeg's Porch Light 01" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceBrokenGlass" count="1"/>
+		</recipe>
+
+		<recipe name="Jeg's Wall-Mounted Flood Light" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="8"/>
+			<ingredient name="resourceForgedIron" count="5"/>
+			<ingredient name="resourceBrokenGlass" count="10"/>
+		</recipe>
+
+		<recipe name="Jeg's Street Light" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceForgedIron" count="25"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+		</recipe>
+
+		<recipe name="Jeg's Fluorescent Light" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="8"/>
+			<ingredient name="resourceForgedIron" count="5"/>
+			<ingredient name="resourceBrokenGlass" count="10"/>
+		</recipe>
+
+		<recipe name="Jeg's Street Light Classic" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="9"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceBrokenGlass" count="5"/>
+		</recipe>
+
+		<recipe name="Jeg's Shielded Light White" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="3"/>
+			<ingredient name="resourceBrokenGlass" count="1"/>
+		</recipe>
+
+		<recipe name="Jeg's Shielded Light Red" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="3"/>
+			<ingredient name="resourceBrokenGlass" count="1"/>
+		</recipe>
+
+		<recipe name="Jeg's Porch Light 02" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceForgedIron" count="5"/>
+			<ingredient name="resourceBrokenGlass" count="9"/>
+		</recipe>
+
+		<recipe name="Jeg's Porch Light 02 Brass" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceForgedIron" count="1"/>
+			<ingredient name="resourceScrapBrass" count="4"/>
+			<ingredient name="resourceBrokenGlass" count="9"/>
+		</recipe>
+
+		<recipe name="Jeg's Ceiling Light 01" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="1"/>
+			<ingredient name="resourceBrokenGlass" count="1"/>
+		</recipe>
+
+		<recipe name="Jeg's Ceiling Light 02" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceBrokenGlass" count="5"/>
+		</recipe>
+
+		<recipe name="Jeg's Ceiling Light 02 Brass" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="4"/>
+			<ingredient name="resourceForgedIron" count="1"/>
+			<ingredient name="resourceScrapBrass" count="3"/>
+			<ingredient name="resourceBrokenGlass" count="5"/>
+		</recipe>
+
+		<recipe name="Jeg's Ceiling Light 03" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="3"/>
+			<ingredient name="resourceBrokenGlass" count="1"/>
+		</recipe>
+
+		<recipe name="Jeg's Ceiling Light 04" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="2"/>
+			<ingredient name="resourceBrokenGlass" count="6"/>
+		</recipe>
+
+		<recipe name="Jeg's Ceiling Light 04 Brass" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="1"/>
+			<ingredient name="resourceScrapBrass" count="1"/>
+			<ingredient name="resourceBrokenGlass" count="6"/>
+		</recipe>
+
+		<recipe name="Jeg's Wall Light" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="3"/>
+			<ingredient name="resourceForgedIron" count="6"/>
+			<ingredient name="resourceBrokenGlass" count="1"/>
+		</recipe>
+
+		<recipe name="Jeg's Sconce Light" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="3"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+		</recipe>
+
+		<recipe name="Jeg's Sconce Light Shadow" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="3"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+		</recipe>
+
+		<recipe name="Jeg's Ceiling Fan" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceForgedIron" count="6"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+			<ingredient name="resourceWood" count="4"/>
+		</recipe>
+
+		<recipe name="Jeg's Exit Sign" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceForgedIron" count="3"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+		</recipe>
+
+		<recipe name="Jeg's Road Barricade" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="8"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceBrokenGlass" count="6"/>
+			<ingredient name="resourceWood" count="8"/>
+		</recipe>
+
+		<recipe name="Jeg's Desk Lamp 01" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="1"/>
+			<ingredient name="resourceScrapBrass" count="3"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+		</recipe>
+
+		<recipe name="Jeg's Desk Lamp 02" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="1"/>
+			<ingredient name="resourceBrokenGlass" count="1"/>
+			<ingredient name="resourceClayLump" count="2"/>
+			<ingredient name="resourceCloth" count="1"/>
+		</recipe>
+
+		<recipe name="Jeg's Work Light" count="1" craft_area="workbench">
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceForgedIron" count="6"/>
+			<ingredient name="resourceBrokenGlass" count="10"/>
+		</recipe>
+	</append>
+
+	<!-- Adds arrow and bolt crafting recipes -->
+	<append xpath="/recipes">
+		<recipe name="ammoArrowStone" count="1">
+			<ingredient name="ammoCrossbowBoltStone" count="1"/>
+		</recipe>
+		<recipe name="ammoArrowIron" count="1">
+			<ingredient name="ammoCrossbowBoltIron" count="1"/>
+		</recipe>
+		<recipe name="ammoArrowSteelAP" count="1">
+			<ingredient name="ammoCrossbowBoltSteelAP" count="1"/>
+		</recipe>
+		<recipe name="ammoArrowSteelAP" count="1">
+			<ingredient name="ammoArrowIron" count="3"/>
+		</recipe>
+		<recipe name="ammoCrossbowBoltStone" count="1">
+			<ingredient name="ammoArrowStone" count="1"/>
+		</recipe>
+		<recipe name="ammoCrossbowBoltIron" count="1">
+			<ingredient name="ammoArrowIron" count="1"/>
+		</recipe>
+		<recipe name="ammoCrossbowBoltSteelAP" count="1">
+			<ingredient name="ammoArrowSteelAP" count="1"/>
+		</recipe>
+		<recipe name="ammoCrossbowBoltSteelAP" count="1">
+			<ingredient name="ammoCrossbowBoltIron" count="3"/>
+		</recipe>
+
+	</append>
+
+	<!-- Adds recipe to convert ammo into different ammo -->
+	<append xpath="/recipes">
+		<recipe name="ammo762mmBulletAP" count="1" craft_area="workbench">
+			<ingredient name="ammo9mmBulletAP" count="2"/>
+		</recipe>
+		<recipe name="ammo762mmBulletHP" count="1" craft_area="workbench">
+			<ingredient name="ammo9mmBulletHP" count="2"/>
+		</recipe>
+		<recipe name="ammo9mmBulletHP" count="2" craft_area="workbench">
+			<ingredient name="ammo762mmBulletHP" count="1"/>
+		</recipe>
+		<recipe name="ammo9mmBulletAP" count="2" craft_area="workbench">
+			<ingredient name="ammo762mmBulletAP" count="1"/>
+		</recipe>
+		<recipe name="ammo762mmBulletBall" count="1" craft_area="workbench">
+			<ingredient name="ammo9mmBulletBall" count="2"/>
+		</recipe>
+		<recipe name="ammo9mmBulletBall" count="2" craft_area="workbench">
+			<ingredient name="ammo762mmBulletBall" count="1"/>
+		</recipe>
+		<recipe name="ammoShotgunShell" count="1" craft_area="workbench">
+			<ingredient name="ammoShotgunSlug" count="2"/>
+		</recipe>
+		<recipe name="ammoShotgunShell" count="4" craft_area="workbench">
+			<ingredient name="ammoShotgunBreachingSlug" count="1"/>
+		</recipe>
+		<recipe name="ammoShotgunSlug" count="2" craft_area="workbench">
+			<ingredient name="ammoShotgunShell" count="1"/>
+		</recipe>
+		<recipe name="ammoShotgunBreachingSlug" count="4" craft_area="workbench">
+			<ingredient name="ammoShotgunShell" count="1"/>
+		</recipe>
+		<recipe name="ammoShotgunBreachingSlug" count="2" craft_area="workbench">
+			<ingredient name="ammoShotgunSlug" count="1"/>
+		</recipe>
+	</append>
+
+	<!-- Adds recipe for crafting Megacrush -->	
+	<append xpath="/recipes">
+		<recipe name="drinkCanMegaCrush" count="1" tags="learnable,perkHammerTimeProtect">
+			<incredient name="resourceGunPowder" count="1"/>
+			<ingredient name="drinkJarGrainAlcohol" count="1"/>
+			<ingredient name="resourceCropCoffeeBeans" count="1" />
+			<ingredient name="drinkCanEmpty" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">	
+		<recipe name="modArmorInvisible" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="drinkJarGrainAlcohol" count="1"/>
+		</recipe>
+		<recipe name="modArmorInvisibleGoth" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="drinkJarGrainAlcohol" count="1"/>
+		</recipe>
+		<recipe name="modArmorInvisibleWorn" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="drinkJarGrainAlcohol" count="1"/>
+		</recipe>
+		<recipe name="modArmorInvisibleRunning" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="drinkJarGrainAlcohol" count="1"/>
+		</recipe>
+		<recipe name="modArmorInvisibleCowboy" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="drinkJarGrainAlcohol" count="1"/>
+		</recipe>
+		<recipe name="modArmorInvisibleDress" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="drinkJarGrainAlcohol" count="1"/>
+		</recipe>
+		<recipe name="modArmorInvisibleFace" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="drinkJarGrainAlcohol" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">	
+		<recipe name="itemLearningbook" count="1" always_unlocked="true" craft_time="15">
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceTornPage" count="12"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="resourceTornPage" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+			<wildcard_forge_category />
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="resourceAdamantium" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+			<wildcard_forge_category />
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="modAugerDiamondTip" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="modAugerDiamondTipSchematic" count="1"/>
+			<ingredient name="itemPartsTemplateMaster" count="5"/>
+			<ingredient name="resourceGunPowder" count="15"/>
+			<ingredient name="resourceSpring" count="10"/>
+			<ingredient name="resourceForgedSteel" count="15"/>		
+		</recipe>
+
+		<recipe name="modAugerTurbo" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="modAugerTurboSchematic" count="1"/>
+			<ingredient name="smallEngine" count="3"/>
+			<ingredient name="resourceElectricParts" count="25"/>
+			<ingredient name="resourceScrapPolymers" count="25"/>
+			<ingredient name="resourceForgedSteel" count="15"/>		
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="blockMysteryBoxOuter" count="1" always_unlocked="true" craft_time="4">
+			<ingredient name="resourceRawDiamond" count="1"/>
+			<ingredient name="resourceGoldNugget" count="2"/>
+			<ingredient name="resourceSilverNugget" count="3"/>
+			<ingredient name="resourceGlue" count="4"/>
+			<ingredient name="resourceWood" count="6"/>		
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="ammo762mmBulletBall" count="1000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceGunPowder" count="75"/>	
+		</recipe>
+
+		<recipe name="ammo9mmBulletBall" count="1000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceGunPowder" count="75"/>	
+		</recipe>
+
+		<recipe name="ammoArrowSteelAP" count="1000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceForgedSteel" count="15"/>	
+		</recipe>
+
+		<recipe name="ammoCrossbowBoltSteelAP" count="1000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceForgedSteel" count="15"/>	
+		</recipe>
+
+		<recipe name="ammoGasCan" count="10000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceOilShale" count="75"/>	
+		</recipe>
+
+		<recipe name="resourceConcreteMix" count="10000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceCobblestones" count="75"/>	
+		</recipe>
+
+		<recipe name="resourceTornPage" count="36" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourcePaper" count="12"/>	
+		</recipe>
+
+		<recipe name="itemPartsTemplateMaster" count="50" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceMilitaryFiber" count="5"/>	
+		</recipe>
+
+		<recipe name="resourceRepairKit" count="150" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceForgedIron" count="10"/>	
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="ammo762mmBulletBall" count="1000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+			<ingredient name="resourceGunPowder" count="75"/>	
+		</recipe>
+
+		<recipe name="ammo9mmBulletBall" count="1000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+			<ingredient name="resourceGunPowder" count="75"/>	
+		</recipe>
+
+		<recipe name="ammoArrowSteelAP" count="1000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+			<ingredient name="resourceForgedSteel" count="15"/>	
+		</recipe>
+
+		<recipe name="ammoCrossbowBoltSteelAP" count="1000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+			<ingredient name="resourceForgedSteel" count="15"/>	
+		</recipe>
+
+		<recipe name="ammoGasCan" count="10000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+			<ingredient name="resourceOilShale" count="75"/>	
+		</recipe>
+
+		<recipe name="resourceConcreteMix" count="10000" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+			<ingredient name="resourceCobblestones" count="75"/>	
+		</recipe>
+
+		<recipe name="resourceTornPage" count="36" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+			<ingredient name="resourcePaper" count="12"/>	
+		</recipe>
+
+		<recipe name="itemPartsTemplateMaster" count="50" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+			<ingredient name="resourceMilitaryFiber" count="5"/>	
+		</recipe>
+
+		<recipe name="resourceRepairKit" count="150" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+			<ingredient name="resourceForgedIron" count="10"/>	
+		</recipe>
+
+		<recipe name="foodRapeseedOil" count="500" always_unlocked="true" craft_time="12">
+			<ingredient name="resourceAdamantium2" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="reinforcedBladeTrap" count="1" craft_area="workbench" craft_time="28"> <!-- trap -->
+			<ingredient name="bladeTrap" count="1"/>
+			<ingredient name="resourceForgedSteel" count="20"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="stealBarsJeg" count="1" material_based="true" craft_area="forge,forgeAdv">
+			<ingredient name="unit_iron" count="150"/>
+			<ingredient name="unit_clay" count="50"/>
+		</recipe>
+
+		<recipe name="stealBarsCenteredJeg" count="1" material_based="true" craft_area="forge">
+			<ingredient name="unit_iron" count="150"/>
+			<ingredient name="unit_clay" count="50"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="Wireless Junction Box" count="1" craft_area="workbench" craft_time="15"> <!-- trap -->
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceGlue" count="2"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+
+		<!-- Craftable Dyes -->
+		<recipe name="modDyeRed" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeGreen" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeBlack" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeBlue" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeBrown" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyePink" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyePurple" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeYellow" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+
+		<!-- Custom Dyes -->
+		<recipe name="modDyeTurquoise" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeRoyalPurple" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeGold" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeSilver" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeBronze" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeLime" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeCandyPink" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeOrange" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+		<recipe name="modDyeBeige" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeTan" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeGray" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeCharcoal" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeNavyBlue" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeRoyalBlue" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeAzure" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeCyan" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeAquamarine" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeTeal" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeForestGreen" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeOlive" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeChartreuse" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeCoral" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeSalmon" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeFuchsia" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyePuce" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeMauve" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeLavender" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyePlum" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeIndigo" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeMaroon" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+		<recipe name="modDyeCrimson" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>	
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="cntHardenedChestSecure" count="1" craft_area="workbench" tags="workbenchCrafting" craft_time="90">
+			<ingredient name="resourceForgedSteel" count="40"/>
+			<ingredient name="resourceSpring" count="5"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="chimneyPOI" count="1" craft_area="workbench" tags="workbenchCrafting" craft_time="90">
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceOil" count="5"/>
+			<ingredient name="resourceGunPowder" count="5"/>
+		</recipe>
+
+		<recipe name="chimneyBlackPOI" count="1" craft_area="workbench" tags="workbenchCrafting" craft_time="90">
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceOil" count="5"/>
+			<ingredient name="resourceGunPowder" count="5"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodBearStew" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable" craft_time="12">
+			<ingredient name="foodBearSteak" count="1"/>
+			<ingredient name="foodCropPotato" count="3"/>
+			<ingredient name="foodCropCorn" count="3"/>
+			<ingredient name="foodCropMushrooms" count="3"/>
+			<ingredient name="foodRapeseedOil" count="3"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodBearEggSandwich" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkCharismaticNature,learnable" craft_time="12">
+			<ingredient name="foodBearSteak" count="2"/>
+			<ingredient name="resourceGoldenEgg" count="1"/>
+			<ingredient name="foodRapeseedOil" count="5"/>
+			<ingredient name="foodBakingFlour" count="5"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodCanBeef" count="1" craft_area="campfire" craft_tool="toolCookingPot" always_unlocked="true" craft_time="8">
+			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="foodCropPotato" count="3"/>
+			<ingredient name="foodRapeseedOil" count="3"/>
+			<ingredient name="foodCornMeal" count="3"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodCanPeas" count="1" craft_area="campfire" craft_tool="toolCookingPot" always_unlocked="true" craft_time="8">
+			<ingredient name="foodCropPotato" count="3"/>
+			<ingredient name="foodRapeseedOil" count="3"/>
+			<ingredient name="foodCornMeal" count="3"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodCanStock" count="1" craft_area="campfire" craft_tool="toolCookingPot" always_unlocked="true" craft_time="8">
+			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="foodCropPotato" count="3"/>
+			<ingredient name="foodRapeseedOil" count="3"/>
+			<ingredient name="foodCornMeal" count="3"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodCanSoup" count="1" craft_area="campfire" craft_tool="toolCookingPot" always_unlocked="true" craft_time="8">
+			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="foodCropPotato" count="3"/>
+			<ingredient name="foodRapeseedOil" count="3"/>
+			<ingredient name="foodCornMeal" count="3"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+	</append>
+
+	<insertAfter xpath="//recipe[@name='vehicleGyrocopterPlaceable']">
+		<recipe name="vehicleHelicopterChassis" count="1" craft_area="workbench" craft_time="300" tags="learnable,perkGreaseMonkey">
+			<ingredient name="resourceForgedSteel" count="900"/>
+			<ingredient name="resourceMechanicalParts" count="125"/>
+			<ingredient name="resourceDuctTape" count="65"/>
+			<ingredient name="resourceLeather" count="240"/>
+			<ingredient name="resourceElectricParts" count="165"/>
+		</recipe>
+
+		<recipe name="vehicleHelicopterRotor" count="1" craft_area="workbench" craft_time="300" tags="learnable,perkGreaseMonkey">
+			<ingredient name="resourceForgedSteel" count="90"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+			<ingredient name="resourceSpring" count="25"/>
+			<ingredient name="resourceGlue" count="30"/>	
+		</recipe>
+
+		<recipe name="bigEngine" count="1" craft_area="workbench" craft_time="360" tags="learnable,perkAdvancedEngineering">
+			<ingredient name="resourceForgedSteel" count="180"/>
+			<ingredient name="resourceMechanicalParts" count="165"/>
+			<ingredient name="resourceSpring" count="42"/>
+			<ingredient name="resourceMetalPipe" count="25"/>
+			<ingredient name="smallEngine" count="3"/>
+		</recipe>
+
+		<recipe name="vehicleHelicopterPlaceable" count="1" craft_area="workbench" craft_time="1800">
+			<ingredient name="itemPilotHandbook" count="1"/>
+			<ingredient name="vehicleHelicopterChassis" count="1"/>
+			<ingredient name="vehicleHelicopterRotor" count="4"/>
+			<ingredient name="bigEngine" count="2"/>
+			<ingredient name="carBattery" count="12"/>
+		</recipe>
+	</insertAfter>
+
+	<append xpath="/recipes">
+		<recipe name="Night Vision Mod" count="1" craft_area="workbench" tags="learnable,perkLightArmor">
+			<ingredient name="armorMilitarySetParts" count="5"/>
+			<ingredient name="resourceMilitaryFiber" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceForgedIron" count="5"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes/recipe[@name='farmPlotBlockPlayer']">
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="itemFertileSoil" count="10"/>
+	</append>
+
+	<remove xpath="/recipes/recipe[@name='farmPlotBlockPlayer']/ingredient[@name='foodRottingFlesh' or @name='resourceClayLump' or @name='resourcePotassiumNitratePowder']"/>
+
+	<append xpath="/recipes">
+		<recipe name="itemFertileSoil" count="1" craft_time="5">
+			<ingredient name="resourceClayLump" count="10"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="drinkJarPineTea" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable" craft_time="12">
+			<ingredient name="treePlantedMountainPine1m" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
+		</recipe>
+
+		<recipe name="drinkJarAcornCoffee" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable" craft_time="12">
+			<ingredient name="treePlantedOak1m" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceCoal" count="1"/>
+		</recipe>
+
+		<recipe name="drinkJarGrassSmoothie" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable" craft_time="12">
+			<ingredient name="resourceYuccaFibers" count="20"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceCoal" count="1"/>
+			<ingredient name="resourceSnowBall" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="itemSkillbook" count="1" always_unlocked="true" craft_time="2">
+			<ingredient name="itemSkillbookPage" count="10"/>
+			<ingredient name="resourceLeather" count="1"/>		
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="itemSkillbook" count="1" always_unlocked="true" craft_time="5">
+			<ingredient name="itemSkillbookPage" count="50"/>
+			<ingredient name="resourceLeather" count="5"/>		
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="itemSkillbook" count="1" always_unlocked="true" craft_time="8">
+			<ingredient name="itemSkillbookPage" count="100"/>
+			<ingredient name="resourceLeather" count="10"/>		
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="resourceAcid" count="1" always_unlocked="true" craft_time="2">
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceCoal" count="1"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="1"/>
+			<ingredient name="foodRottingFlesh" count="1"/>
+			<ingredient name="foodRapeseedOil" count="1"/>			
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="resourceLeather" count="1" always_unlocked="true" craft_time="2">
+			<ingredient name="foodRottingFlesh" count="2"/>	
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodRottingFlesh" count="1" always_unlocked="true" craft_time="2">
+			<ingredient name="foodRawMeat" count="1"/>	
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="resourceGoldenEgg" count="1" craft_time="2" tags="learnable,perkCharismaticNature">
+			<ingredient name="resourceGoldNugget" count="5"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="foodRapeseedOil" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="modGunMeleeRadRemover_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkCharismaticNature" craft_time="60">
+			<ingredient name="modGunMeleeRadRemover" count="1"/>
+			<ingredient name="modGunMeleeTheHunter" count="1"/>
+			<ingredient name="resourceGlue" count="2"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="modArmorInsulatedLiner_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkCharismaticNature" craft_time="60">
+			<ingredient name="modArmorCoolingMesh" count="1"/>
+			<ingredient name="modArmorInsulatedLiner" count="1"/>
+			<ingredient name="resourceGlue" count="2"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="modMeleeStructuralBrace_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkCharismaticNature" craft_time="60">
+			<ingredient name="modMeleeStructuralBrace" count="1"/>
+			<ingredient name="modMeleeErgonomicGrip" count="1"/>
+			<ingredient name="modMeleeFortifyingGrip" count="1"/>
+			<ingredient name="resourceGlue" count="2"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="modGunBarrelExtender_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkCharismaticNature" craft_time="60">
+			<ingredient name="modGunBarrelExtender" count="1"/>
+			<ingredient name="modGunSoundSuppressorSilencer" count="1"/>
+			<ingredient name="resourceGlue" count="2"/>
+		</recipe>
+	</append>
+
+	<!-- Makes vehicle mods craftable -->
+
+	<append xpath="/recipes">
+		<recipe name="modVehicleFuelSaver" count="1" craft_area="workbench" craft_time="60" tags="learnable,workbenchCrafting,perkCharismaticNature">
+			<ingredient name="resourceForgedSteel" count="30"/>
+			<ingredient name="resourceMechanicalParts" count="12"/>
+			<ingredient name="resourceScrapLead" count="12"/>
+			<ingredient name="resourceAirFilter" count="1"/>
+		</recipe>
+		<recipe name="modVehicleHeadlights" count="1" craft_area="workbench" craft_time="60" tags="learnable,workbenchCrafting,perkCharismaticNature">
+			<ingredient name="resourceForgedSteel" count="30"/>
+			<ingredient name="resourceElectricParts" count="12"/>
+			<ingredient name="resourceBrokenGlass" count="12"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="modVehicleSpeed" count="1" craft_area="workbench" craft_time="60" tags="learnable,workbenchCrafting,perkCharismaticNature">
+			<ingredient name="resourceForgedSteel" count="30"/>
+			<ingredient name="resourceMechanicalParts" count="12"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+			<ingredient name="smallEngine" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="ammo9mmBulletAP" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammo9mmBulletHP" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammo9mmBulletBall" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammo762mmBulletAP" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>
+		</recipe>
+
+		<recipe name="ammo762mmBulletHP" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>
+		</recipe>
+
+		<recipe name="ammo762mmBulletAP" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammo44MagnumBulletBall" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammo44MagnumBulletAP" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammo44MagnumBulletHP" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammoShotgunShell" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>
+		</recipe>
+
+		<recipe name="ammoShotgunSlug" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammoArrowIron" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammoArrowSteelAP" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammoCrossbowBoltIron" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>
+		</recipe>
+
+		<recipe name="ammoCrossbowBoltSteelAP" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+
+		<recipe name="ammoBlunderbuss" count="250" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>	
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">	
+		<recipe name="toolAdamantiumBellows" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="18">
+			<ingredient name="toolBellows" count="1"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="resourceAdamantium" count="1"/>
+		</recipe>
+
+		<recipe name="toolAdamantiumAnvil" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="18">
+			<ingredient name="toolAnvil" count="1"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="resourceAdamantium" count="1"/>
+		</recipe>
+
+		<recipe name="toolAdamantiumBellows" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="18">
+			<ingredient name="toolBellows" count="1"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="resourceAdamantium2" count="1"/>
+		</recipe>
+
+		<recipe name="toolAdamantiumAnvil" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="18">
+			<ingredient name="toolAnvil" count="1"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="resourceAdamantium2" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="forgeAdv" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkAdvancedEngineering" craft_time="80">
+			<ingredient name="resourceRockSmall" count="10000"/>
+			<ingredient name="resourceClayLump" count="10000"/>
+			<ingredient name="resourceForgedSteel" count="1000"/>
+			<ingredient name="resourceForgedIron" count="1000"/>
+			<ingredient name="itemPartsTemplateMaster" count="10"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="decoCarTirePile" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceForgedIron" count="8"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="resourceLeather" count="3"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="decoCarTireStack" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceForgedIron" count="8"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="resourceLeather" count="3"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="flagPoleWhiteRiver" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceForgedSteel" count="8"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="resourceLeather" count="3"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="flagPoleAmerican" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceForgedSteel" count="8"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="resourceLeather" count="3"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="decoHandTruck" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceForgedIron" count="8"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="resourceLeather" count="3"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="accessoryJewerlyBox6" count="1" craft_area="workbench" tags="workbenchCrafting,learnable,perkCharismaticNature" craft_time="18">
+			<ingredient name="accessorySilverRing" count="1"/>
+			<ingredient name="accessoryGoldFlowerRing" count="1"/>
+			<ingredient name="accessoryGoldStuddedRing" count="1"/>
+			<ingredient name="accessoryRubyDiamondRing" count="1"/>
+			<ingredient name="accessoryRubyHeartRing" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="accessoryGoldFlowerRing" count="1" always_unlocked="true" craft_time="4">
+			<ingredient name="accessorySilverRing" count="1"/>
+		</recipe>
+
+		<recipe name="accessorySilverRing" count="1" always_unlocked="true" craft_time="4">
+			<ingredient name="accessoryGoldFlowerRing" count="1"/>
+		</recipe>	
+	</append>
+
+	<!-- Makes perk books craftable with torn pages -->
+
+	<append xpath="/recipes">
+
+		<recipe name="bookRangersArrowRecovery" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookRangersCripplingShot" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookRangersKnockdown" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookRangersFlamingArrows" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookRangersAPAmmo" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookRangersExplodingBolts" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookRangersForestGuide" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookArtOfMiningLuckyStrike" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookArtOfMiningDiamondTools" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookArtOfMiningCoffee" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookArtOfMiningBlackStrap" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookArtOfMiningPallets" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookArtOfMiningAvalanche" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookArtOfMiningLantern" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookAutoWeaponsDamage" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookAutoWeaponsRagdoll" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookAutoWeaponsMaintenance" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookAutoWeaponsRecoil" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookAutoWeaponsDrumMag" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookAutoWeaponsUncontrolledBurst" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookAutoWeaponsMachineGuns" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBatterUpBaseballBats" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBatterUpBigHits" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBatterUpGear" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBatterUpKnockdown" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBatterUpSlowPitch" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBatterUpMaintenance" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBatterUpMetalChain" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookEnforcerAPAmmo" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookEnforcerApparel" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookEnforcerCriminalPursuit" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookEnforcerHPAmmo" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookEnforcerDamage" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookEnforcerIntimidation" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookEnforcerPunks" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookFiremansAlmanacSpeed" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookFiremansAlmanacAxes" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookFiremansAlmanacEquipment" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookFiremansAlmanacPrevention" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookFiremansAlmanacHarvest" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookFiremansAlmanacHeat" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookFiremansAlmanacMolotov" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookGreatHeistAdrenalineFall" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookGreatHeistTimedCharge" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookGreatHeistClaimed" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookGreatHeistGems" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookGreatHeistMotionDetection" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookGreatHeistSafes" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookGreatHeistSprintSneak" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookHuntingJournalBears" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookHuntingJournalCoyotes" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookHuntingJournalDeer" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookHuntingJournalMountainLions" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookHuntingJournalVultures" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookHuntingJournalWolves" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookHuntingJournalSelfDefense" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookLuckyLooterAmmunition" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookLuckyLooterBooks" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookLuckyLooterBrass" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookLuckyLooterDukes" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookLuckyLooterFood" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookLuckyLooterLead" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookLuckyLooterMedical" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNeedleAndThreadDesertWear" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNeedleAndThreadDusters" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNeedleAndThreadFootwear" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNeedleAndThreadLegwear" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNeedleAndThreadPockets" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNeedleAndThreadPufferCoats" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNeedleAndThreadWinterWear" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNightStalkerArchery" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNightStalkerBlades" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNightStalkerSilentNight" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNightStalkerSlumberParty" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNightStalkerStealthDamage" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNightStalkerThiefAdrenaline" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookNightStalkerTwilightThief" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookPistolPeteAPAmmo" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookPistolPeteDamage" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookPistolPeteHPAmmo" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookPistolPeteMaintenance" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookPistolPeteSteadyHand" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookPistolPeteSwissKnees" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookPistolPeteTakeAim" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookShotgunMessiahBreachingSlugs" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookShotgunMessiahDamage" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookShotgunMessiahLimbShot" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookShotgunMessiahMaintenance" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookShotgunMessiahMagazine" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookShotgunMessiahPartyStarter" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookShotgunMessiahSlugs" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSniperAPAmmo" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSniperControlledBreathing" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSniperCripplingShot" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSniperDamage" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSniperHeadShot" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSniperReload" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSniperHPAmmo" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookUrbanCombatAdrenalineRush" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookUrbanCombatCigar" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookUrbanCombatRoomClearing" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookUrbanCombatJumping" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookUrbanCombatLandMines" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookUrbanCombatLanding" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookUrbanCombatSneaking" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookWasteTreasuresAcid" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookWasteTreasuresCloth" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookWasteTreasuresCoffins" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookWasteTreasuresDoors" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookWasteTreasuresHoney" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookWasteTreasuresSinks" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookWasteTreasuresWater" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBarBrawling1BasicMoves" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBarBrawling2DropABomb" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBarBrawling3KillerInstinct" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBarBrawling4FinishingMoves" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBarBrawling5AdrenalineHealing" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBarBrawling6RageMode" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookBarBrawling7BoozedUp" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSpearHunter1Damage" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSpearHunter2Maintenance" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSpearHunter3SteelSpears" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSpearHunter4StrongArm" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSpearHunter5RapidStrike" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSpearHunter6PuncturedLung" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookSpearHunter7QuickStrike" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookTechJunkie1Damage" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookTechJunkie2Maintenance" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookTechJunkie3APAmmo" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookTechJunkie4Shells" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookTechJunkie5Repulsor" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookTechJunkie6BatonCharge" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+
+		<recipe name="bookTechJunkie7Hydraulics" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="12">
+			<ingredient name="resourceTornPage" count="10" />
+			<ingredient name="resourcePaper" count="25" />
+			<ingredient name="resourceLeather" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+		</recipe>
+	</append>
+
+</configs>

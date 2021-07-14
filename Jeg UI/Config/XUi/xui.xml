@@ -1,0 +1,57 @@
+<configs>
+
+	<!-- Crafting slots -->
+	<set xpath="/xui/ruleset[@name='default']/window_group[@name='crafting']/window[@name='windowCraftingQueue']/@name">JegWindowCraftingQueue</set>
+	<!-- Campfire crafting slots -->
+	<set xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_campfire']/window[@name='windowCraftingQueue']/@name">JegWindowCraftingQueue</set>
+	<!-- Forge crafting slots -->
+	<set xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_forge']/window[@name='windowCraftingQueue']/@name">JegWindowCraftingQueue</set>
+	<!-- Cement mixer crafting slots -->
+	<set xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_cementMixer']/window[@name='windowCraftingQueue']/@name">JegWindowCraftingQueue</set>
+	<!-- Workbench crafting slots -->
+	<set xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_workbench']/window[@name='windowCraftingQueue']/@name">JegWindowCraftingQueue</set>
+	<!-- Chemistry station crafting slots -->
+	<set xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_chemistryStation']/window[@name='windowCraftingQueue']/@name">JegWindowCraftingQueue</set>
+
+	<!-- Main scale of UI -->
+	<set xpath="/xui/ruleset[@name='default']/@scale">1.05</set>
+	<set xpath="/xui/ruleset[@name='default']/@stackpanel_scale">0.93</set>
+
+	<!-- New Looting window -->
+	<set xpath="/xui/ruleset[@name='default']/window_group[@name='looting']/window[@name='windowLooting']/@name">JegLootingWindow</set>
+
+	<!-- Compass updates -->
+	<remove xpath="/xui/ruleset[@name='default']/window_group[@name='compass']/window[@name='windowCompass']"/>
+	<append xpath="/xui/ruleset[@name='default']/window_group[@name='compass']">
+		<window name="JegCompass" /> 
+	</append>
+
+	<append xpath="/xui/ruleset[@name='default']/window_group[@name='players']" >
+		<window name="JegCompassModule1" />
+		<window name="JegCompassModule2" />
+	</append>
+
+	<append xpath="/xui/ruleset[@name='default']/window_group[@controller]" >
+		<window name="JegCompassModule1" />
+		<window name="JegCompassModule2" />
+	</append>
+
+	<append xpath="/xui/ruleset[@name='default']/window_group[@name='map']" >
+		<window name="JegCompassModule1" />
+		<window name="JegCompassModule2" />
+	</append>
+
+	<append xpath="/xui/ruleset[@name='default']" >
+		<window_group name="workstation_forgeAdv" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingListAdv"/>
+			<window name="craftingInfoPanel"/>
+			<window name="JegWindowCraftingQueue"/>
+			<window name="windowToolsForgeAdv" />
+			<window name="windowFuel" />
+			<window name="windowForgeInput" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+	</append>
+
+</configs>

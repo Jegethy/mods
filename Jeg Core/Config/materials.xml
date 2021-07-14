@@ -1,0 +1,167 @@
+<configs>
+
+	<set xpath="/materials/material[@id='MmetalDrawbridge']/property[@name='MaxDamage']/@value">75000</set>
+	<set xpath="/materials/material[@id='MmetalDrawbridge']/property[@name='explosionresistance']/@value">32</set>
+	<set xpath="/materials/material[@id='MmetalDrawbridge']/property[@name='Hardness']/@value">5</set>
+
+	<set xpath="/materials/material[@id='MglassBulletproof']/property[@name='MaxDamage']/@value">5000</set>
+	
+	<set xpath="/materials/material[@id='Msteel']/property[@name='MaxDamage']/@value">10000</set>
+	<set xpath="/materials/material[@id='Msteel']/property[@name='explosionresistance']/@value">3</set>
+
+	<append xpath="/materials">
+		<material id="MglassBulletproofPlayer">
+			<property name="damage_category" value="glass"/>
+			<property name="surface_category" value="glass"/>
+			<property name="forge_category" value="glass"/>
+			<property name="Hardness" type="float" value="3"/>
+			<property name="lightopacity" value="2"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="500"/>
+			<property name="Mass" type="int" value="10"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="explosionresistance" value="2.5"/>
+			<property name="MaxDamage" value="30000"/>
+			<property name="Experience" value="2"/>
+		</material>
+	</append>
+
+	<append xpath="/materials">
+		<material id="resourceTornPage">
+			<property name="damage_category" value="cloth"/>
+			<property name="surface_category" value="cloth"/>
+			<property name="forge_category" value="resourceTornPage"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="wood"/>
+			<property name="stability_glue" value="20"/>
+			<property name="Mass" type="int" value="5"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="Experience" value="2"/>
+		</material>
+	</append>
+
+	<append xpath="/materials">
+		<material id="1HitWonder">
+			<property name="surface_category" value="cloth"/>
+			<property name="damage_category" value="wood"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="wood"/>
+			<property name="stability_glue" value="4"/>
+			<property name="Mass" type="int" value="2"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="Experience" value="0"/>
+		</material>
+		<material id="ImmortalBox">
+			<property name="damage_category" value="wood"/>
+			<property name="surface_category" value="wood"/>
+			<property name="Hardness" type="float" value="10000"/>
+			<property name="stepsound" value="wood"/>
+			<property name="stability_glue" value="120"/>
+			<property name="Mass" type="int" value="10"/>
+			<property name="MaxDamage" value="5000"/>
+			<property name="Experience" value="0"/>
+		</material>
+	</append>
+
+	<append xpath="/materials">	
+		<material id="Mmetal_harder">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="500"/>
+			<property name="Mass" type="int" value="10"/>
+			<property name="explosionresistance" value="2.2"/>
+			<property name="MaxDamage" value="25000"/>
+			<property name="Experience" value="2"/>
+		</material>
+	</append>
+
+	<append xpath="/materials">	
+		<material id="Mmetal_hardest">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="2"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="600"/>
+			<property name="Mass" type="int" value="10"/>
+			<property name="explosionresistance" value="2.7"/>
+			<property name="MaxDamage" value="75000"/>
+			<property name="Experience" value="2"/>
+		</material>
+	</append>
+
+	<append xpath="/materials">
+		<material id="resourceAdamantium">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="resourceAdamantium"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="wood"/>
+			<property name="stability_glue" value="20"/>
+			<property name="Mass" type="int" value="5"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="Experience" value="2"/>
+		</material>
+	</append>
+
+	<append xpath="/materials">
+		<material id="MstainlessSteelX">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="500"/>
+			<property name="Mass" type="int" value="10"/>
+			<property name="explosionresistance" value="3"/>
+			<property name="MaxDamage" value="37500"/>
+			<property name="Experience" value="6"/>
+		</material>
+	</append>
+
+	<!-- Adds new materials for garage doors -->
+	<append xpath="/materials">
+		<material id="MstSteelGarageDoor5x3">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="6"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="400"/>
+			<property name="Mass" type="int" value="5"/>
+			<property name="MaxDamage" value="100000"/>
+			<property name="Experience" value="2"/>
+			<property name="explosionresistance" value="36"/>
+		</material>
+
+		<material id="MsteelGarageDoor5x3">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="4"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="400"/>
+			<property name="Mass" type="int" value="5"/>
+			<property name="MaxDamage" value="50000"/>
+			<property name="Experience" value="2"/>
+			<property name="explosionresistance" value="18"/>
+		</material>
+
+		<material id="MironGarageDoor5x3">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="2"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="400"/>
+			<property name="Mass" type="int" value="5"/>
+			<property name="MaxDamage" value="20000"/>
+			<property name="Experience" value="2"/>
+			<property name="explosionresistance" value="9"/>
+		</material>
+	</append>
+
+</configs>

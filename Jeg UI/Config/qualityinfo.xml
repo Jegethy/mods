@@ -1,0 +1,17 @@
+<configs>
+	<!--Broken-->
+	<set xpath="/qualityinfo/quality[@key='0']/@color">E6CC80</set>
+	<!--Junk -->
+	<set xpath="/qualityinfo/quality[@key='1']/@color">808080</set>
+	<!--Common-->
+	<set xpath="/qualityinfo/quality[@key='2']/@color">A9A9A9</set>
+	<!--Uncommon-->
+	<set xpath="/qualityinfo/quality[@key='3']/@color">228B22</set>
+	<!--Rare-->
+	<set xpath="/qualityinfo/quality[@key='4']/@color">0070DD</set>
+	<!--Epic-->
+	<set xpath="/qualityinfo/quality[@key='5']/@color">A335EE</set>
+	<!--Legendary-->
+	<set xpath="/qualityinfo/quality[@key='6']/@color">E67300</set>
+	<!-- <set xpath="/qualityinfo/quality[@key='6']/@color">FF8000</set> -->
+</configs>

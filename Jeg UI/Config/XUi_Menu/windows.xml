@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<windows>
+<set xpath="/windows/window[@name='menuBackground']">
+<texture name="bgTexture" depth="1" texture="@modfolder:Textures/HarmonyMenuBG.jpg" anchor_left="#cam,0,-5" anchor_bottom="#cam,0,-5" anchor_right="#cam,1,5" anchor_top="#cam,1,5"/>
+<texture name="HarmonyLogoCore" depth="5" pos="520,-360" size="600,250" pivot="center" texture="@modfolder:Textures/HarmonyLogoCore.png" keep_aspect_ratio="BasedOnHeight" aspect_ratio="2.3"/>
+</set>
+</windows>

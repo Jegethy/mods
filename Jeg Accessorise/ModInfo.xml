@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="Jegethy's Accessorise Mod" />
+		<Description value="Accessorise changes the Bandana slot into a generic Accessory slot and provides several new items to equip which can only be gained by looting" />
+		<Author value="Jegethy" />
+		<Version value="1.0.0" />
+	</ModInfo>
+</xml>

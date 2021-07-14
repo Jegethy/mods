@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+attExtraProgression,progression,perk Per,,,"[B0E7FF]Extra Progression"
+attExtraProgressionName,progression,perk Per,,,"[B0E7FF]Extra Progression"
+attExtraProgressionDesc,progression,perk Per,,,"[B0E7FF]Extra Progression allows you to gain additional progress in certain areas to further enhance your character."
+attExtraProgressionPerkDesc,progression,perk Per,,,"[B0E7FF]This placeholder perk does nothing, it's only here to prevent errors"
+attExtraProgressionPerkDescLong,progression,perk Per,,,"[B0E7FF]This placeholder perk does nothing, it's only here to prevent errors."

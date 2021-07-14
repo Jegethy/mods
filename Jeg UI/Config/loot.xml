@@ -1,0 +1,32 @@
+<configs>
+	<!-- empty, storage containers the player crafts-->
+	<set xpath="/lootcontainers/lootcontainer[@id='1']/@size">13,11</set>
+    <!-- Player dropped backpack-->
+	<set xpath="/lootcontainers/lootcontainer[@id='2']/@size">11,13</set>
+	<!-- paintable cube storage containers the player crafts -->
+	<set xpath="/lootcontainers/lootcontainer[@id='5']/@size">13,11</set>
+	<!-- wallSafe / deskSafe -->
+	<set xpath="/lootcontainers/lootcontainer[@id='6']/@size">13,11</set>
+	<!-- gun safe -->
+	<set xpath="/lootcontainers/lootcontainer[@id='7']/@size">13,11</set>
+	<!-- cntHardenedChestSecure, hero, big, fancy chest -->
+	<set xpath="/lootcontainers/lootcontainer[@id='121']/@size">13,11</set>
+	
+	<!-- Increased vehicle storage size -->
+	<!-- Bicycle -->
+	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">11,13</set>
+	<!-- Minibike -->
+	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">11,13</set>
+	<!-- Motorcycle -->
+	<set xpath="/lootcontainers/lootcontainer[@id='78']/@size">11,13</set>
+	<!-- 4x4Truck -->
+	<set xpath="/lootcontainers/lootcontainer[@id='79']/@size">11,13</set>
+	<!-- Gyrocopter -->
+	<set xpath="/lootcontainers/lootcontainer[@id='80']/@size">11,13</set>
+
+	<insertBefore xpath="//lootcontainer[@id='83']">
+		<!-- vehicleHelicopter storage-->
+		<lootcontainer id="81" count="0" size="11,13" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+		</lootcontainer>
+	</insertBefore>
+</configs>

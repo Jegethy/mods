@@ -3,12 +3,12 @@
 	<!-- Increases the despawn timer of the player dropped backpack to 12 hours (real time) -->
 	<set xpath="/entity_classes/entity_class[contains(@name, 'Backpack')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">43200</set>
 
-	<!-- Animal corpses take longer to despawn -->	
+	<!-- Animal corpses take longer to despawn -->
 	<set xpath="/entity_classes/entity_class[starts-with(@name,'animal')]/property[@name='TimeStayAfterDeath']/@value">1800</set> <!--20 minutes instead of 5-->
 
 	<!-- Increases the despawn timer of the zombie dropped loot bags from 5 minutes to 12 hours (real time) -->
 	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">300</set>
-	<set xpath="/entity_classes/entity_class[contains(@name, 'EntityLoot')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">43200</set>	
+	<set xpath="/entity_classes/entity_class[contains(@name, 'EntityLoot')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">43200</set>
 
 	<!-- Randomises the speed at which zombies recovery from knock downs -->
 	<set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">1.0,10.0</set>
@@ -184,24 +184,24 @@
 	<set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">8</set>
 
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='foodRawMeat' and @tag='butcherHarvest']">
-		<drop event="Harvest" name="foodBearSteak" tag="butcherHarvest" count="10"/>	
+		<drop event="Harvest" name="foodBearSteak" tag="butcherHarvest" count="10"/>
 	</insertAfter>
 
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@name='foodRottingFlesh' and @tag='butcherHarvest']">
-		<drop event="Harvest" name="foodBearSteak" tag="butcherHarvest" count="5"/>	
+		<drop event="Harvest" name="foodBearSteak" tag="butcherHarvest" count="5"/>
 	</insertAfter>
 
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat' and @tag='butcherHarvest']">
 		<drop event="Harvest" name="foodEgg" tag="butcherHarvest" count="5"/>
-		<drop event="Harvest" name="foodChickenLeg" tag="butcherHarvest" count="4"/>		
+		<drop event="Harvest" name="foodChickenLeg" tag="butcherHarvest" count="4"/>
 	</insertAfter>
 
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='foodRawMeat' and @tag='butcherHarvest']">
-		<drop event="Harvest" name="foodRawRibs" tag="butcherHarvest" count="6"/>	
+		<drop event="Harvest" name="foodRawRibs" tag="butcherHarvest" count="6"/>
 	</insertAfter>
 
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='foodRawMeat' and @tag='butcherHarvest']">
-		<drop event="Harvest" name="foodRawRibs" tag="butcherHarvest" count="8"/>	
+		<drop event="Harvest" name="foodRawRibs" tag="butcherHarvest" count="8"/>
 	</insertAfter>
 
 	<!-- Increases the health of certain animals -->
@@ -209,9 +209,9 @@
 	<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='base_set']/@value">4250</set>
 
 	<!-- Increases the drop rate of loot bags -->
-	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Radiated'))]/property[contains(@name, 'LootDropProb')]/@value">0.12</set>
-	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.08</set>
-	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.03</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Radiated'))]/property[contains(@name, 'LootDropProb')]/@value">0.09</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.06</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.02</set>
 
 	<!-- Implements new zombie AI during blood moons -->
 	<append xpath="/entity_classes">
@@ -2239,7 +2239,7 @@
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
-			<!-- Gameplay -->	
+			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 			<property name="ExperienceGain" value="2400"/> <!-- XP strong radiated -->
@@ -2352,7 +2352,7 @@
 
 	<!-- Adds Elite zombies -->
 
-	<append xpath="/entity_classes">  
+	<append xpath="/entity_classes">
 
 		<!--EliteCop-->
 

@@ -18,14 +18,13 @@
 			<entity name="animalBoar" prob="2"/>
 			<entity name="animalStag" prob="2"/>
 			<entity name="animalDoe" prob="2"/>
-			<entity name="animalZombieBear" prob="0.033"/>
-			<entity name="animalZombieDog" prob="0.033"/>
-			<entity name="animalZombieVultureRadiated" prob="0.033"/>
-			<entity name="zombieDemolitionBM" prob=".001"/>
+			<entity name="animalZombieBear" prob="0.08"/>
+			<entity name="animalZombieDog" prob="0.08"/>
+			<entity name="zombieDemolitionBM" prob="0.01"/>
 		</entitygroup>
 	</append>
 
-	<!-- Removes crawler zombeis from Blood Moons -->
+	<!-- Removes crawler zombies from Blood Moons -->
 	<append xpath="/entitygroups">
 		<entitygroup name="BMHordeStageGS1"><entity name="zombieMoeBM"/><entity name="zombieArleneBM"/><entity name="zombieMarleneBM"/><entity name="zombieDarleneBM"/><entity name="zombieFemaleFatBM" prob="0.7"/><entity name="zombieJoeBM"/><entity name="zombieYoBM"/><entity name="zombieSteveBM"/><entity name="zombieBusinessManBM"/><entity name="zombieBoeBM"/><entity name="zombieNurseBM"/><entity name="zombieSkateboarderBM"/></entitygroup>
 		<entitygroup name="BMHordeStageGS2"><entity name="zombieMoeBM"/><entity name="zombieFemaleFatBM" prob="0.7"/><entity name="zombieJoeBM"/><entity name="zombieSteveBM"/><entity name="zombieMarleneBM"/><entity name="zombieSkateboarderBM"/><entity name="zombieArleneBM"/><entity name="zombieYoBM"/><entity name="zombieBusinessManBM"/><entity name="zombieBoeBM"/><entity name="zombieDarleneBM"/><entity name="zombieNurseBM"/></entitygroup>
@@ -385,7 +384,7 @@
 	<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS954']"> <entity name="EliteCop" prob="1.000"/><entity name="EliteHawai" prob="1.000"/><entity name="EliteSkater" prob="1.000"/><entity name="EliteSolider" prob="1.000"/><entity name="EliteBoomer" prob="1.000"/><entity name="EliteFeral" prob="1.000"/></append>
 	<append xpath="/entitygroups/entitygroup[@name='badassOnlyHordeStageGS1003']"> <entity name="EliteCop" prob="1.000"/><entity name="EliteHawai" prob="1.000"/><entity name="EliteSkater" prob="1.000"/><entity name="EliteSolider" prob="1.000"/><entity name="EliteBoomer" prob="1.000"/><entity name="EliteFeral" prob="1.000"/></append>
 
-	<!-- badasshordeStages -->	
+	<!-- badasshordeStages -->
 
 	<append xpath="/entitygroups/entitygroup[@name='badassHordeStageGS79']"> <entity name="EliteCop" prob="0.002"/><entity name="EliteHawai" prob="0.002"/><entity name="EliteSkater" prob="0.002"/><entity name="EliteSolider" prob="0.002"/><entity name="EliteBoomer" prob="0.002"/><entity name="EliteFeral" prob="0.002"/></append>
 	<append xpath="/entitygroups/entitygroup[@name='badassHordeStageGS95']"> <entity name="EliteCop" prob="0.006"/><entity name="EliteHawai" prob="0.006"/><entity name="EliteSkater" prob="0.006"/><entity name="EliteSolider" prob="0.006"/><entity name="EliteBoomer" prob="0.006"/><entity name="EliteFeral" prob="0.006"/></append>

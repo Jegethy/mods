@@ -11,7 +11,7 @@
 			<effect_group>
 				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="1"/>
 
-				<effect_description level="1" desc_base="attExtraProgressionPerkDesc" long_desc_key="attExtraProgressionPerkDescLong"/>
+				<effect_description level="1" desc_key="attExtraProgressionPerkDesc" long_desc_key="attExtraProgressionPerkDescLong"/>
 
 			</effect_group>
 
@@ -50,7 +50,7 @@
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>	
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
 				<passive_effect name="HealthMax" operation="base_add" value="50" level="1"/>
@@ -59,14 +59,14 @@
 				<passive_effect name="HealthMax" operation="base_add" value="225" level="4"/>
 				<passive_effect name="HealthMax" operation="base_add" value="300" level="5"/>
 
-				<effect_description level="1" desc_base="extraMaxHealth50Desc" long_desc_key="extraMaxHealth50DescLong"/>
-				<effect_description level="2" desc_base="extraMaxHealth100Desc" long_desc_key="extraMaxHealth100DescLong"/>
-				<effect_description level="3" desc_base="extraMaxHealth150Desc" long_desc_key="extraMaxHealth150DescLong"/>
-				<effect_description level="4" desc_base="extraMaxHealth225Desc" long_desc_key="extraMaxHealth225DescLong"/>
-				<effect_description level="5" desc_base="extraMaxHealth300Desc" long_desc_key="extraMaxHealth300DescLong"/>
+				<effect_description level="1" desc_key="extraMaxHealth50Desc" long_desc_key="extraMaxHealth50DescLong"/>
+				<effect_description level="2" desc_key="extraMaxHealth100Desc" long_desc_key="extraMaxHealth100DescLong"/>
+				<effect_description level="3" desc_key="extraMaxHealth150Desc" long_desc_key="extraMaxHealth150DescLong"/>
+				<effect_description level="4" desc_key="extraMaxHealth225Desc" long_desc_key="extraMaxHealth225DescLong"/>
+				<effect_description level="5" desc_key="extraMaxHealth300Desc" long_desc_key="extraMaxHealth300DescLong"/>
 			</effect_group>
 
-		</perk>	
+		</perk>
 	</append>
 
 	<!-- Maximum stamina buff -->
@@ -101,7 +101,7 @@
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>	
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
 				<passive_effect name="StaminaMax" operation="base_add" value="50" level="1"/>
@@ -110,14 +110,14 @@
 				<passive_effect name="StaminaMax" operation="base_add" value="225" level="4"/>
 				<passive_effect name="StaminaMax" operation="base_add" value="300" level="5"/>
 
-				<effect_description level="1" desc_base="extraMaxStamina50" long_desc_key="extraMaxStamina50Desc"/>
-				<effect_description level="2" desc_base="extraMaxStamina100" long_desc_key="extraMaxStamina100Desc"/>
-				<effect_description level="3" desc_base="extraMaxStamina150" long_desc_key="extraMaxStamina150Desc"/>
-				<effect_description level="4" desc_base="extraMaxStamina225" long_desc_key="extraMaxStamina225Desc"/>
-				<effect_description level="5" desc_base="extraMaxStamina300" long_desc_key="extraMaxStamina300Desc"/>
+				<effect_description level="1" desc_key="extraMaxStamina50" long_desc_key="extraMaxStamina50Desc"/>
+				<effect_description level="2" desc_key="extraMaxStamina100" long_desc_key="extraMaxStamina100Desc"/>
+				<effect_description level="3" desc_key="extraMaxStamina150" long_desc_key="extraMaxStamina150Desc"/>
+				<effect_description level="4" desc_key="extraMaxStamina225" long_desc_key="extraMaxStamina225Desc"/>
+				<effect_description level="5" desc_key="extraMaxStamina300" long_desc_key="extraMaxStamina300Desc"/>
 			</effect_group>
 
-		</perk>	
+		</perk>
 	</append>
 
 	<!-- Damage Reduction Buff -->
@@ -152,7 +152,7 @@
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>	
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
 				<passive_effect name="HealthLoss" operation="perc_subtract" value="0.02" level="1"/>
@@ -161,14 +161,14 @@
 				<passive_effect name="HealthLoss" operation="perc_subtract" value="0.08" level="4"/>
 				<passive_effect name="HealthLoss" operation="perc_subtract" value="0.10" level="5"/>
 
-				<effect_description level="1" desc_base="extraDmgReduce02" long_desc_key="extraDmgReduce02Desc"/>
-				<effect_description level="2" desc_base="extraDmgReduce04" long_desc_key="extraDmgReduce04Desc"/>
-				<effect_description level="3" desc_base="extraDmgReduce06" long_desc_key="extraDmgReduce06Desc"/>
-				<effect_description level="4" desc_base="extraDmgReduce08" long_desc_key="extraDmgReduce08Desc"/>
-				<effect_description level="5" desc_base="extraDmgReduce10" long_desc_key="extraDmgReduce10Desc"/>
+				<effect_description level="1" desc_key="extraDmgReduce02" long_desc_key="extraDmgReduce02Desc"/>
+				<effect_description level="2" desc_key="extraDmgReduce04" long_desc_key="extraDmgReduce04Desc"/>
+				<effect_description level="3" desc_key="extraDmgReduce06" long_desc_key="extraDmgReduce06Desc"/>
+				<effect_description level="4" desc_key="extraDmgReduce08" long_desc_key="extraDmgReduce08Desc"/>
+				<effect_description level="5" desc_key="extraDmgReduce10" long_desc_key="extraDmgReduce10Desc"/>
 			</effect_group>
 
-		</perk>	
+		</perk>
 	</append>
 
 	<!-- Hot and Cold resistance -->
@@ -203,7 +203,7 @@
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>	
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
 				<passive_effect name="HypothermalResist" operation="base_add" value="4" level="1"/>
@@ -218,14 +218,14 @@
 				<passive_effect name="HyperthermalResist" operation="base_add" value="16" level="4"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="20" level="5"/>
 
-				<effect_description level="1" desc_base="extraThermalProt04" long_desc_key="extraThermalProt04Desc"/>
-				<effect_description level="2" desc_base="extraThermalProt08" long_desc_key="extraThermalProt08Desc"/>
-				<effect_description level="3" desc_base="extraThermalProt12" long_desc_key="extraThermalProt12Desc"/>
-				<effect_description level="4" desc_base="extraThermalProt16" long_desc_key="extraThermalProt16Desc"/>
-				<effect_description level="5" desc_base="extraThermalProt20" long_desc_key="extraThermalProt20Desc"/>
+				<effect_description level="1" desc_key="extraThermalProt04" long_desc_key="extraThermalProt04Desc"/>
+				<effect_description level="2" desc_key="extraThermalProt08" long_desc_key="extraThermalProt08Desc"/>
+				<effect_description level="3" desc_key="extraThermalProt12" long_desc_key="extraThermalProt12Desc"/>
+				<effect_description level="4" desc_key="extraThermalProt16" long_desc_key="extraThermalProt16Desc"/>
+				<effect_description level="5" desc_key="extraThermalProt20" long_desc_key="extraThermalProt20Desc"/>
 			</effect_group>
 
-		</perk>	
+		</perk>
 	</append>
 
 	<!-- Experience Boost Perk -->
@@ -260,23 +260,23 @@
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>	
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
 				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.10" level="1"/>
 				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.20" level="2"/>
 				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.30" level="3"/>
 				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.40" level="4"/>
-				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.50" level="5"/>	
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.50" level="5"/>
 
-				<effect_description level="1" desc_base="expBonus10" long_desc_key="expBonus10Desc"/>
-				<effect_description level="2" desc_base="expBonus20" long_desc_key="expBonus20Desc"/>
-				<effect_description level="3" desc_base="expBonus30" long_desc_key="expBonus30Desc"/>
-				<effect_description level="4" desc_base="expBonus40" long_desc_key="expBonus40Desc"/>
-				<effect_description level="5" desc_base="expBonus50" long_desc_key="expBonus50Desc"/>
+				<effect_description level="1" desc_key="expBonus10" long_desc_key="expBonus10Desc"/>
+				<effect_description level="2" desc_key="expBonus20" long_desc_key="expBonus20Desc"/>
+				<effect_description level="3" desc_key="expBonus30" long_desc_key="expBonus30Desc"/>
+				<effect_description level="4" desc_key="expBonus40" long_desc_key="expBonus40Desc"/>
+				<effect_description level="5" desc_key="expBonus50" long_desc_key="expBonus50Desc"/>
 			</effect_group>
 
-		</perk>	
+		</perk>
 	</append>
 
 	<!-- Crafting Speed Perk -->
@@ -311,7 +311,7 @@
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>	
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
 				<passive_effect name="CraftingTime" operation="perc_subtract" level="1" value=".1"/>
@@ -320,11 +320,11 @@
 				<passive_effect name="CraftingTime" operation="perc_subtract" level="4" value=".4"/>
 				<passive_effect name="CraftingTime" operation="perc_subtract" level="5" value=".5"/>
 
-				<effect_description level="1" desc_base="extraCraftSpeed10" long_desc_key="extraCraftSpeed10Desc"/>
-				<effect_description level="2" desc_base="extraCraftSpeed20" long_desc_key="extraCraftSpeed20Desc"/>
-				<effect_description level="3" desc_base="extraCraftSpeed30" long_desc_key="extraCraftSpeed30Desc"/>
-				<effect_description level="4" desc_base="extraCraftSpeed40" long_desc_key="extraCraftSpeed40Desc"/>
-				<effect_description level="5" desc_base="extraCraftSpeed50" long_desc_key="extraCraftSpeed50Desc"/>
+				<effect_description level="1" desc_key="extraCraftSpeed10" long_desc_key="extraCraftSpeed10Desc"/>
+				<effect_description level="2" desc_key="extraCraftSpeed20" long_desc_key="extraCraftSpeed20Desc"/>
+				<effect_description level="3" desc_key="extraCraftSpeed30" long_desc_key="extraCraftSpeed30Desc"/>
+				<effect_description level="4" desc_key="extraCraftSpeed40" long_desc_key="extraCraftSpeed40Desc"/>
+				<effect_description level="5" desc_key="extraCraftSpeed50" long_desc_key="extraCraftSpeed50Desc"/>
 			</effect_group>
 
 		</perk>
@@ -454,7 +454,7 @@
 		<perk name="perkHammerTimeProtect" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeProtectDesc" long_desc_key="perkHammerTimeProtectLongDesc">
 			<effect_group>
 				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkCanMegaCrush"/>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugSteroids"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugSteroids"/>
 			</effect_group>
 		</perk>
 
@@ -478,7 +478,7 @@
 				<requirement name="ProgressionLevel" progression_name="perkHammerTimeDrunk" operation="Equals" value="1"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="25"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="25"/>
-				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffHammerTimeDrunk"/>				
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffHammerTimeDrunk"/>
 			</effect_group>
 		</perk>
 

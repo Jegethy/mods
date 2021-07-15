@@ -1,6 +1,6 @@
 <configs>
 
-	<append xpath="/recipes">	
+	<append xpath="/recipes">
 		<recipe name="foodOmelette" count="2" craft_area="campfire" craft_tool="toolCookingPot" tags="perkCharismaticNature,learnable" craft_time="15">
 			<ingredient name="resourceGoldenEgg" count="1"/>
 			<ingredient name="foodEgg" count="3"/>
@@ -278,7 +278,7 @@
 		</recipe>
 	</append>
 
-	<!-- Adds recipe for crafting Megacrush -->	
+	<!-- Adds recipe for crafting Megacrush -->
 	<append xpath="/recipes">
 		<recipe name="drinkCanMegaCrush" count="1" tags="learnable,perkHammerTimeProtect">
 			<incredient name="resourceGunPowder" count="1"/>
@@ -288,7 +288,7 @@
 		</recipe>
 	</append>
 
-	<append xpath="/recipes">	
+	<append xpath="/recipes">
 		<recipe name="modArmorInvisible" count="1" craft_time="10">
 			<ingredient name="itemPartsTemplateMaster" count="2"/>
 			<ingredient name="resourceLeather" count="2"/>
@@ -333,7 +333,7 @@
 		</recipe>
 	</append>
 
-	<append xpath="/recipes">	
+	<append xpath="/recipes">
 		<recipe name="itemLearningbook" count="1" always_unlocked="true" craft_time="15">
 			<ingredient name="resourceLeather" count="2"/>
 			<ingredient name="resourceTornPage" count="12"/>
@@ -358,7 +358,7 @@
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceGunPowder" count="15"/>
 			<ingredient name="resourceSpring" count="10"/>
-			<ingredient name="resourceForgedSteel" count="15"/>		
+			<ingredient name="resourceForgedSteel" count="15"/>
 		</recipe>
 
 		<recipe name="modAugerTurbo" count="1" craft_area="workbench" tags="learnable">
@@ -366,7 +366,7 @@
 			<ingredient name="smallEngine" count="3"/>
 			<ingredient name="resourceElectricParts" count="25"/>
 			<ingredient name="resourceScrapPolymers" count="25"/>
-			<ingredient name="resourceForgedSteel" count="15"/>		
+			<ingredient name="resourceForgedSteel" count="15"/>
 		</recipe>
 	</append>
 
@@ -376,101 +376,101 @@
 			<ingredient name="resourceGoldNugget" count="2"/>
 			<ingredient name="resourceSilverNugget" count="3"/>
 			<ingredient name="resourceGlue" count="4"/>
-			<ingredient name="resourceWood" count="6"/>		
+			<ingredient name="resourceWood" count="6"/>
 		</recipe>
 	</append>
 
 	<append xpath="/recipes">
 		<recipe name="ammo762mmBulletBall" count="1000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium" count="1"/>
-			<ingredient name="resourceGunPowder" count="75"/>	
+			<ingredient name="resourceGunPowder" count="75"/>
 		</recipe>
 
 		<recipe name="ammo9mmBulletBall" count="1000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium" count="1"/>
-			<ingredient name="resourceGunPowder" count="75"/>	
+			<ingredient name="resourceGunPowder" count="75"/>
 		</recipe>
 
 		<recipe name="ammoArrowSteelAP" count="1000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium" count="1"/>
-			<ingredient name="resourceForgedSteel" count="15"/>	
+			<ingredient name="resourceForgedSteel" count="15"/>
 		</recipe>
 
 		<recipe name="ammoCrossbowBoltSteelAP" count="1000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium" count="1"/>
-			<ingredient name="resourceForgedSteel" count="15"/>	
+			<ingredient name="resourceForgedSteel" count="15"/>
 		</recipe>
 
 		<recipe name="ammoGasCan" count="10000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium" count="1"/>
-			<ingredient name="resourceOilShale" count="75"/>	
+			<ingredient name="resourceOilShale" count="75"/>
 		</recipe>
 
 		<recipe name="resourceConcreteMix" count="10000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium" count="1"/>
-			<ingredient name="resourceCobblestones" count="75"/>	
+			<ingredient name="resourceCobblestones" count="75"/>
 		</recipe>
 
 		<recipe name="resourceTornPage" count="36" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium" count="1"/>
-			<ingredient name="resourcePaper" count="12"/>	
+			<ingredient name="resourcePaper" count="12"/>
 		</recipe>
 
 		<recipe name="itemPartsTemplateMaster" count="50" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium" count="1"/>
-			<ingredient name="resourceMilitaryFiber" count="5"/>	
+			<ingredient name="resourceMilitaryFiber" count="5"/>
 		</recipe>
 
 		<recipe name="resourceRepairKit" count="150" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium" count="1"/>
-			<ingredient name="resourceForgedIron" count="10"/>	
+			<ingredient name="resourceForgedIron" count="10"/>
 		</recipe>
 	</append>
 
 	<append xpath="/recipes">
 		<recipe name="ammo762mmBulletBall" count="1000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium2" count="1"/>
-			<ingredient name="resourceGunPowder" count="75"/>	
+			<ingredient name="resourceGunPowder" count="75"/>
 		</recipe>
 
 		<recipe name="ammo9mmBulletBall" count="1000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium2" count="1"/>
-			<ingredient name="resourceGunPowder" count="75"/>	
+			<ingredient name="resourceGunPowder" count="75"/>
 		</recipe>
 
 		<recipe name="ammoArrowSteelAP" count="1000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium2" count="1"/>
-			<ingredient name="resourceForgedSteel" count="15"/>	
+			<ingredient name="resourceForgedSteel" count="15"/>
 		</recipe>
 
 		<recipe name="ammoCrossbowBoltSteelAP" count="1000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium2" count="1"/>
-			<ingredient name="resourceForgedSteel" count="15"/>	
+			<ingredient name="resourceForgedSteel" count="15"/>
 		</recipe>
 
 		<recipe name="ammoGasCan" count="10000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium2" count="1"/>
-			<ingredient name="resourceOilShale" count="75"/>	
+			<ingredient name="resourceOilShale" count="75"/>
 		</recipe>
 
 		<recipe name="resourceConcreteMix" count="10000" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium2" count="1"/>
-			<ingredient name="resourceCobblestones" count="75"/>	
+			<ingredient name="resourceCobblestones" count="75"/>
 		</recipe>
 
 		<recipe name="resourceTornPage" count="36" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium2" count="1"/>
-			<ingredient name="resourcePaper" count="12"/>	
+			<ingredient name="resourcePaper" count="12"/>
 		</recipe>
 
 		<recipe name="itemPartsTemplateMaster" count="50" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium2" count="1"/>
-			<ingredient name="resourceMilitaryFiber" count="5"/>	
+			<ingredient name="resourceMilitaryFiber" count="5"/>
 		</recipe>
 
 		<recipe name="resourceRepairKit" count="150" always_unlocked="true" craft_time="12">
 			<ingredient name="resourceAdamantium2" count="1"/>
-			<ingredient name="resourceForgedIron" count="10"/>	
+			<ingredient name="resourceForgedIron" count="10"/>
 		</recipe>
 
 		<recipe name="foodRapeseedOil" count="500" always_unlocked="true" craft_time="12">
@@ -612,139 +612,139 @@
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeTan" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeGray" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeCharcoal" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeNavyBlue" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeRoyalBlue" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeAzure" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeCyan" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeAquamarine" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeTeal" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeForestGreen" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeOlive" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeChartreuse" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeCoral" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeSalmon" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeFuchsia" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyePuce" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeMauve" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeLavender" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyePlum" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeIndigo" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeMaroon" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>		
+		</recipe>
 		<recipe name="modDyeCrimson" count="1" craft_area="chemistryStation" always_unlocked="true" craft_time="15">
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="resourceOil" count="1"/>
-		</recipe>	
+		</recipe>
 	</append>
 
 	<append xpath="/recipes">
@@ -841,7 +841,7 @@
 			<ingredient name="resourceMechanicalParts" count="50"/>
 			<ingredient name="resourceElectricParts" count="50"/>
 			<ingredient name="resourceSpring" count="25"/>
-			<ingredient name="resourceGlue" count="30"/>	
+			<ingredient name="resourceGlue" count="30"/>
 		</recipe>
 
 		<recipe name="bigEngine" count="1" craft_area="workbench" craft_time="360" tags="learnable,perkAdvancedEngineering">
@@ -871,11 +871,6 @@
 		</recipe>
 	</append>
 
-	<append xpath="/recipes/recipe[@name='farmPlotBlockPlayer']">
-		<ingredient name="drinkJarRiverWater" count="1"/>
-		<ingredient name="itemFertileSoil" count="10"/>
-	</append>
-
 	<remove xpath="/recipes/recipe[@name='farmPlotBlockPlayer']/ingredient[@name='foodRottingFlesh' or @name='resourceClayLump' or @name='resourcePotassiumNitratePowder']"/>
 
 	<append xpath="/recipes">
@@ -884,6 +879,11 @@
 			<ingredient name="resourceYuccaFibers" count="1"/>
 			<ingredient name="resourcePotassiumNitratePowder" count="1"/>
 		</recipe>
+	</append>
+
+	<append xpath="/recipes/recipe[@name='farmPlotBlockPlayer']">
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="itemFertileSoil" count="10"/>
 	</append>
 
 	<append xpath="/recipes">
@@ -910,21 +910,21 @@
 	<append xpath="/recipes">
 		<recipe name="itemSkillbook" count="1" always_unlocked="true" craft_time="2">
 			<ingredient name="itemSkillbookPage" count="10"/>
-			<ingredient name="resourceLeather" count="1"/>		
+			<ingredient name="resourceLeather" count="1"/>
 		</recipe>
 	</append>
 
 	<append xpath="/recipes">
 		<recipe name="itemSkillbook" count="1" always_unlocked="true" craft_time="5">
 			<ingredient name="itemSkillbookPage" count="50"/>
-			<ingredient name="resourceLeather" count="5"/>		
+			<ingredient name="resourceLeather" count="5"/>
 		</recipe>
 	</append>
 
 	<append xpath="/recipes">
 		<recipe name="itemSkillbook" count="1" always_unlocked="true" craft_time="8">
 			<ingredient name="itemSkillbookPage" count="100"/>
-			<ingredient name="resourceLeather" count="10"/>		
+			<ingredient name="resourceLeather" count="10"/>
 		</recipe>
 	</append>
 
@@ -934,19 +934,19 @@
 			<ingredient name="resourceCoal" count="1"/>
 			<ingredient name="resourcePotassiumNitratePowder" count="1"/>
 			<ingredient name="foodRottingFlesh" count="1"/>
-			<ingredient name="foodRapeseedOil" count="1"/>			
+			<ingredient name="foodRapeseedOil" count="1"/>
 		</recipe>
 	</append>
 
 	<append xpath="/recipes">
 		<recipe name="resourceLeather" count="1" always_unlocked="true" craft_time="2">
-			<ingredient name="foodRottingFlesh" count="2"/>	
+			<ingredient name="foodRottingFlesh" count="2"/>
 		</recipe>
 	</append>
 
 	<append xpath="/recipes">
 		<recipe name="foodRottingFlesh" count="1" always_unlocked="true" craft_time="2">
-			<ingredient name="foodRawMeat" count="1"/>	
+			<ingredient name="foodRawMeat" count="1"/>
 		</recipe>
 	</append>
 
@@ -1016,15 +1016,15 @@
 
 	<append xpath="/recipes">
 		<recipe name="ammo9mmBulletAP" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammo9mmBulletHP" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammo9mmBulletBall" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammo762mmBulletAP" count="250" always_unlocked="true" craft_time="8">
@@ -1036,19 +1036,19 @@
 		</recipe>
 
 		<recipe name="ammo762mmBulletAP" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammo44MagnumBulletBall" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammo44MagnumBulletAP" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammo44MagnumBulletHP" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammoShotgunShell" count="250" always_unlocked="true" craft_time="8">
@@ -1056,15 +1056,15 @@
 		</recipe>
 
 		<recipe name="ammoShotgunSlug" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammoArrowIron" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammoArrowSteelAP" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammoCrossbowBoltIron" count="250" always_unlocked="true" craft_time="8">
@@ -1072,15 +1072,15 @@
 		</recipe>
 
 		<recipe name="ammoCrossbowBoltSteelAP" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
 		<recipe name="ammoBlunderbuss" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>	
+			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 	</append>
 
-	<append xpath="/recipes">	
+	<append xpath="/recipes">
 		<recipe name="toolAdamantiumBellows" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="18">
 			<ingredient name="toolBellows" count="1"/>
 			<ingredient name="resourceDuctTape" count="3"/>

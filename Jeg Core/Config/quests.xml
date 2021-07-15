@@ -102,25 +102,25 @@
 	</append>
 
 	<!-- Increases the experience granted by completing quests -->
-	<set xpath="/quests/quest[@id='tier1_clear']/reward[@type='Exp']/@value">2000</set>
-	<set xpath="/quests/quest[@id='tier1_fetch']/reward[@type='Exp']/@value">2000</set>
-	<set xpath="/quests/quest[@id='tier1_buried_supplies']/reward[@type='Exp']/@value">2000</set>
-	<set xpath="/quests/quest[@id='tier2_clear']/reward[@type='Exp']/@value">4000</set>
-	<set xpath="/quests/quest[@id='tier2_fetch']/reward[@type='Exp']/@value">4000</set>
-	<set xpath="/quests/quest[@id='tier2_buried_supplies']/reward[@type='Exp']/@value">4000</set>
-	<set xpath="/quests/quest[@id='tier2_fetch_clear']/reward[@type='Exp']/@value">4000</set>
-	<set xpath="/quests/quest[@id='tier3_clear']/reward[@type='Exp']/@value">6000</set>
-	<set xpath="/quests/quest[@id='tier3_fetch']/reward[@type='Exp']/@value">6000</set>
-	<set xpath="/quests/quest[@id='tier3_fetch_clear']/reward[@type='Exp']/@value">6000</set>
-	<set xpath="/quests/quest[@id='tier4_clear']/reward[@type='Exp']/@value">8000</set>
-	<set xpath="/quests/quest[@id='tier4_fetch']/reward[@type='Exp']/@value">8000</set>
-	<set xpath="/quests/quest[@id='tier4_fetch_clear']/reward[@type='Exp']/@value">8000</set>
-	<set xpath="/quests/quest[@id='tier5_clear']/reward[@type='Exp']/@value">10000</set>
-	<set xpath="/quests/quest[@id='tier5_fetch']/reward[@type='Exp']/@value">10000</set>
-	<set xpath="/quests/quest[@id='tier5_fetch_clear']/reward[@type='Exp']/@value">10000</set>
-	<set xpath="/quests/quest[@id='tier6_clear']/reward[@type='Exp']/@value">12000</set>
-	<set xpath="/quests/quest[@id='tier6_fetch']/reward[@type='Exp']/@value">12000</set>
-	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@type='Exp']/@value">12000</set>
+	<set xpath="/quests/quest[@id='tier1_clear']/reward[@type='Exp']/@value">1000</set>
+	<set xpath="/quests/quest[@id='tier1_fetch']/reward[@type='Exp']/@value">1000</set>
+	<set xpath="/quests/quest[@id='tier1_buried_supplies']/reward[@type='Exp']/@value">1000</set>
+	<set xpath="/quests/quest[@id='tier2_clear']/reward[@type='Exp']/@value">2000</set>
+	<set xpath="/quests/quest[@id='tier2_fetch']/reward[@type='Exp']/@value">2000</set>
+	<set xpath="/quests/quest[@id='tier2_buried_supplies']/reward[@type='Exp']/@value">2000</set>
+	<set xpath="/quests/quest[@id='tier2_fetch_clear']/reward[@type='Exp']/@value">2000</set>
+	<set xpath="/quests/quest[@id='tier3_clear']/reward[@type='Exp']/@value">3000</set>
+	<set xpath="/quests/quest[@id='tier3_fetch']/reward[@type='Exp']/@value">3000</set>
+	<set xpath="/quests/quest[@id='tier3_fetch_clear']/reward[@type='Exp']/@value">3000</set>
+	<set xpath="/quests/quest[@id='tier4_clear']/reward[@type='Exp']/@value">4000</set>
+	<set xpath="/quests/quest[@id='tier4_fetch']/reward[@type='Exp']/@value">4000</set>
+	<set xpath="/quests/quest[@id='tier4_fetch_clear']/reward[@type='Exp']/@value">4000</set>
+	<set xpath="/quests/quest[@id='tier5_clear']/reward[@type='Exp']/@value">5000</set>
+	<set xpath="/quests/quest[@id='tier5_fetch']/reward[@type='Exp']/@value">5000</set>
+	<set xpath="/quests/quest[@id='tier5_fetch_clear']/reward[@type='Exp']/@value">5000</set>
+	<set xpath="/quests/quest[@id='tier6_clear']/reward[@type='Exp']/@value">6000</set>
+	<set xpath="/quests/quest[@id='tier6_fetch']/reward[@type='Exp']/@value">6000</set>
+	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@type='Exp']/@value">6000</set>
 
 	<set xpath="/quests/quest[@id='tier1_clear']/reward[@id='casinoCoin']/@value">200</set>
 	<set xpath="/quests/quest[@id='tier1_fetch']/reward[@id='casinoCoin']/@value">200</set>
@@ -278,7 +278,7 @@
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
-			<reward type="Exp" value="6000"/>
+			<reward type="Exp" value="3000"/>
 			<reward type="Item" id="casinoCoin" value="600"/>
 			<reward type="Item" id="itemSkillbookPage" value="3" />
 
@@ -335,7 +335,7 @@
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
-			<reward type="Exp" value="8000"/>
+			<reward type="Exp" value="4000"/>
 			<reward type="Item" id="casinoCoin" value="800"/>
 			<reward type="Item" id="itemSkillbookPage" value="4" />
 
@@ -392,7 +392,7 @@
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
-			<reward type="Exp" value="10000"/>
+			<reward type="Exp" value="5000"/>
 			<reward type="Item" id="casinoCoin" value="1000"/>
 			<reward type="Item" id="itemSkillbookPage" value="5" />
 
@@ -433,7 +433,7 @@
 			<reward type="Item" id="chestRewardBear" value="1"/>
 		</quest>
 	</append>
-	
+
 	<append xpath="/quests" >
 		<quest id="summon_Direwolf">
 			<property name="name_key" value="itemSpawnerBookDirewolf"/>
@@ -452,7 +452,7 @@
 			<reward type="Item" id="chestRewardDirewolf" value="1"/>
 		</quest>
 	</append>
-	
+
 	<append xpath="/quests" >
 		<quest id="summon_Pig">
 			<property name="name_key" value="itemSpawnerBookPig"/>
@@ -471,7 +471,7 @@
 			<reward type="Item" id="chestRewardPig" value="1"/>
 		</quest>
 	</append>
-	
+
 	<append xpath="/quests" >
 		<quest id="summon_Chickens">
 			<property name="name_key" value="itemSpawnerBookChickens"/>
@@ -490,7 +490,7 @@
 			<reward type="Item" id="chestRewardChickens" value="1"/>
 		</quest>
 	</append>
-	
+
 	<append xpath="/quests" >
 		<quest id="summon_Nurse">
 			<property name="name_key" value="itemSpawnerBookNurse"/>
@@ -509,7 +509,7 @@
 			<reward type="Item" id="chestRewardNurse" value="1"/>
 		</quest>
 	</append>
-	
+
 	<append xpath="/quests" >
 		<quest id="summon_Workmen">
 			<property name="name_key" value="itemSpawnerBookWorkmen"/>
@@ -528,7 +528,7 @@
 			<reward type="Item" id="chestRewardWorkmen" value="1"/>
 		</quest>
 	</append>
-	
+
 	<append xpath="/quests" >
 		<quest id="summon_Cops">
 			<property name="name_key" value="itemSpawnerBookCop"/>

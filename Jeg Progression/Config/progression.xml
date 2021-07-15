@@ -330,7 +330,19 @@
 		</perk>
 	</append>
 
+<!--
 
+Smelting speed?
+Movement speed?
+Attack speed?
+Loot stage?
+Game stage?
+Quest rewards?
+Buried supply radius?
+Better bartering?
+Craftable candies?
+
+-->
 
 	<!-- Removed Charismatic Nature -->
 	<remove xpath="/progression/perks/perk[@name='perkCharismaticNature']" />

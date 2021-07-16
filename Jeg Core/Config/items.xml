@@ -605,7 +605,7 @@
 	<!-- Adds the advanced wrench -->
 	<append xpath="/items">
 		<item name="itemAdvWrench">
-			<property name="Tags" value="blunt,melee,grunting,light,tool,longShaft,attPerception,perkSalvageOperations,canHaveCosmetic,perkFlurryOfBlows,perkMasterCrafter"/>
+			<property name="Tags" value="blunt,melee,grunting,light,tool,longShaft,advWrench,attPerception,perkSalvageOperations,canHaveCosmetic,perkFlurryOfBlows,perkMasterCrafter"/>
 			<property name="DisplayType" value="melee"/>
 			<property name="HoldType" value="29"/>
 			<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
@@ -617,6 +617,7 @@
 			<property name="SoundDestroy" value="metaldestroy1"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="EconomicValue" value="450"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property name="Weight" value="50"/>
 			<property class="Action0">
 				<property name="Class" value="DynamicMelee"/>

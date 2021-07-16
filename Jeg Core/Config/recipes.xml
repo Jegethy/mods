@@ -2101,5 +2101,15 @@
 			<ingredient name="resourceGlue" count="5" />
 		</recipe>
 	</append>
+	
+	<append xpath="/recipes">
+		<recipe name="itemAdvWrench" count="1" craft_area="workbench" tags="perkAdvancedWrench,learnable" craft_time="24">
+			<ingredient name="resourceForgedSteel" count="90"/>
+			<ingredient name="itemPartsTemplateMaster" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="24"/>
+			<ingredient name="resourceGlue" count="24"/>
+			<ingredient name="resourceLeather" count="48"/>
+		</recipe>
+	</append>
 
 </configs>

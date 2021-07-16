@@ -1,0 +1,23 @@
+<configs>
+
+	<append xpath="/progression/perks">
+		<perk name="perkAdvancedWrench" base_skill_point_cost="5" max_level="1" parent="skillIntellectInfluence" name_key="perkAdvancedWrenchName" desc_key="perkAdvancedWrenchDesc" icon="jeg_advwrench">
+
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="10" desc_key="reqFortitudeLevel10"/>
+				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
+				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+
+			<effect_group>
+
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="itemAdvWrench"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="1" value="5" tags="advWrench"/>
+
+				<effect_description level="1" desc_key="perkAdvancedWrench1Desc" long_desc_key="perkAdvancedWrench1LongDesc"/>
+
+			</effect_group>
+		</perk>
+	</append>
+
+</configs>

@@ -1,0 +1,127 @@
+<configs>
+
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='armor']"/>
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='armorLight']"/>
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='armorLightStealth']"/>
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='armorLightTempResist']"/>
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='armorHeavy']"/>
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='armorHeavyHeatResist']"/>
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='armorGasmask']"/>
+	
+	<append xpath="/ui_display_info/item_display">
+			<item_display_info display_type="armor" display_group="groupAttire" >
+			<!-- This works to display individual resistances
+			<display_entry name="BuffResistance" title_key="statBuffResistance1" tags="buffInjuryBleeding"/>
+			<display_entry name="BuffResistance" title_key="statBuffResistance2" tags="buffInjuryStunned01"/>
+			<display_entry name="BuffResistance" title_key="statBuffResistance3" tags="buffInfectionCatch"/> -->
+			<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResist" display_type="Decimal"/>
+			<display_entry name="BuffResistance" title_key="statBuffResistance" display_type="Percent" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger" show_inverted="true"/>
+			<display_entry name="dStaminaChangeOT" title_key="statStaminaChangeOT" display_type="Decimal"/>
+			<display_entry name="Mobility" title_key="statMobility" display_type="Percent" show_inverted="true" negative_preferred="false"/>
+			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorLight" display_group="groupAttire" >
+			<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResistLight" display_type="Decimal"/>
+			<display_entry name="ElementalDamageResist" title_key="statExplosionResistance" display_type="Decimal" tags="heat,electrical"/>
+			<display_entry name="BuffResistance" title_key="statBuffResistance" display_type="Percent" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger" show_inverted="true"/>
+			<display_entry name="dStaminaChangeOT" title_key="statStaminaChangeOT" display_type="Decimal"/>
+			<display_entry name="Mobility" title_key="statMobility" display_type="Percent" show_inverted="true" negative_preferred="false"/>
+			<display_entry name="dNoiseMultiplier" title_key="statNoiseIncrease" display_type="Percent" show_inverted="false" negative_preferred="true"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="lightArmorDeg,admin"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorLightStealth" display_group="groupAttire" >
+			<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResistLight" display_type="Decimal"/>
+			<display_entry name="ElementalDamageResist" title_key="statExplosionResistance" display_type="Decimal" tags="heat,electrical"/>
+			<display_entry name="BuffResistance" title_key="statBuffResistance" display_type="Percent" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger" show_inverted="true"/>
+			<display_entry name="dStaminaChangeOT" title_key="statStaminaChangeOT" display_type="Decimal"/>
+			<display_entry name="Mobility" title_key="statMobility" display_type="Percent" show_inverted="true" negative_preferred="false"/>
+			<display_entry name="dNoiseMultiplier" title_key="statNoiseIncrease" display_type="Percent" show_inverted="false" negative_preferred="true"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="lightArmorDeg,admin"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorLightTempResist" display_group="groupAttire" >
+			<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResistLight" display_type="Decimal"/>
+			<display_entry name="ElementalDamageResist" title_key="statExplosionResistance" display_type="Decimal" tags="heat,electrical"/>
+			<display_entry name="BuffResistance" title_key="statBuffResistance" display_type="Percent" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger" show_inverted="true"/>
+			<display_entry name="dStaminaChangeOT" title_key="statStaminaChangeOT" display_type="Decimal"/>
+			<display_entry name="Mobility" title_key="statMobility" display_type="Percent" show_inverted="true" negative_preferred="false"/>
+			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="lightArmorDeg,admin"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorHeavy" display_group="groupAttire" >
+			<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResistHeavy" display_type="Decimal"/>
+			<display_entry name="ElementalDamageResist" title_key="statExplosionResistance" display_type="Decimal" tags="heat,electrical"/>
+			<display_entry name="BuffResistance" title_key="statBuffResistance" display_type="Percent" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger" show_inverted="true"/>
+			<display_entry name="dStaminaChangeOT" title_key="statStaminaChangeOT" display_type="Decimal"/>
+			<display_entry name="Mobility" title_key="statMobility" display_type="Percent" show_inverted="true" negative_preferred="false"/>
+			<display_entry name="dNoiseMultiplier" title_key="statNoiseIncrease" display_type="Percent" show_inverted="false" negative_preferred="true"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="heavyArmorDeg,admin"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorHeavyHeatResist" display_group="groupAttire" >
+			<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResistHeavy" display_type="Decimal"/>
+			<display_entry name="BuffResistance" title_key="statBuffResistance" display_type="Percent" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger" show_inverted="true"/>
+			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="dStaminaChangeOT" title_key="statStaminaChangeOT" display_type="Decimal"/>
+			<display_entry name="Mobility" title_key="statMobility" display_type="Percent" show_inverted="true" negative_preferred="false"/>
+			<display_entry name="dNoiseMultiplier" title_key="statNoiseIncrease" display_type="Percent" show_inverted="false" negative_preferred="true"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="heavyArmorDeg,admin"/>
+		</item_display_info>
+
+		<item_display_info display_type="armorGasmask" display_group="groupAttire">
+			<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResist" display_type="Decimal"/>
+			<display_entry name="ElementalDamageResist" title_key="statToxicResist" tags="toxic"/>
+			<display_entry name="dStaminaChangeOT" title_key="statStaminaChangeOT"/>
+			<display_entry name="Mobility" title_key="statMobility" display_type="Percent" show_inverted="true"  negative_preferred="false"/>
+			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax"/>
+		</item_display_info>
+	</append>
+
+	<remove xpath="/ui_display_info/character_stat_display"/>
+	<append xpath="/ui_display_info">
+	<character_stat_display>
+		<display_entry name="HealthMaxBlockage" title_key="statHealthMaxBlockage" display_type="Decimal"/>
+		<display_entry name="StaminaMaxBlockage" title_key="statStaminaMaxBlockage" display_type="Decimal"/>
+		<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResist" display_type="Decimal"/>
+		<display_entry name="ElementalDamageResist" title_key="statExplosionResistance" display_type="Decimal" tags="heat,electrical"/>
+		<display_entry name="BuffResistance" title_key="statBuffResistance" display_type="Percent" show_inverted="true" tags="buffLaceration"/>
+		<!-- <display_entry name="BuffResistance" title_key="total crit resist" display_type="Percent" tags="buffLaceration"/>-->
+		<display_entry name="StaminaChangeOT" title_key="statStaminaChangeOT" display_type="Decimal"/>
+		<display_entry name="HealthChangeOT" title_key="statHealthChangeOT" display_type="Decimal"/>
+		<display_entry name="HealthMaxModifierOT" title_key="statHealthMaxModifierOT" display_type="Decimal"/>
+		<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
+		<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
+		<display_entry name="Mobility" title_key="statMobility" display_type="Percent"/>
+		<display_entry name="JumpStrength" title_key="statJumpStrength" display_type="Percent"/>
+		<display_entry name="CarryCapacity" title_key="statCarryCapacity"/>
+		<!--
+		<display_entry name="LootGamestage" title_key="statLootGamestage"/>
+		<display_entry name="TreasureRadius" title_key="statTreasureRadius"/>
+		<display_entry name="CraftingTier" title_key="statCraftingTier"/>
+		<display_entry name="PlayerExpGain" title_key="statPlayerExpGain" display_type="Percent"/>-->
+		<display_entry name="EntityDamage" title_key="statEntityDamage"/>
+		<display_entry name="BlockDamage" title_key="statBlockDamage"/>
+		<display_entry name="RoundsPerMinute" title_key="statRoundsPerMinute"/>
+		<display_entry name="AttacksPerMinute" title_key="statAttacksPerMinute"/>
+
+		<!--
+		<display_entry name="HealthChangeOT" title_key="statJumpStrength" display_type="Percent"/>
+
+		<display_entry name="BuffResistance" title_key="statArmorResistStun" display_type="Percent"/>
+		<display_entry name="BuffResistance" title_key="statArmorResistBleed" display_type="Percent" tags="buffInjuryBleeding"/>
+		<display_entry name="BuffResistance" title_key="statArmorResistInfection" display_type="Percent" tags="buffInfectionCatch"/>
+		-->
+	</character_stat_display>
+	</append>
+
+</configs>
+
+
+

@@ -1,9 +1,0 @@
-<configs>
-	<append xpath="/recipes">
-		<recipe name="itemPilotHandbook" count="1" craft_area="workbench" craft_time="450" tags="perkPilotTraining,learnable">
-			<ingredient name="casinoCoin" count="30000"/>
-			<ingredient name="oldCash" count="3000"/>
-			<ingredient name="resourceLeather" count="300"/>
-		</recipe>
-	</append>
-</configs>

@@ -1,6 +1,14 @@
 <configs>
 
 	<append xpath="/recipes">
+		<recipe name="itemPilotHandbook" count="1" craft_area="workbench" craft_time="450" tags="perkPilotTraining,learnable">
+			<ingredient name="casinoCoin" count="30000"/>
+			<ingredient name="oldCash" count="3000"/>
+			<ingredient name="resourceLeather" count="300"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
 		<recipe name="foodOmelette" count="2" craft_area="campfire" craft_tool="toolCookingPot" tags="perkCharismaticNature,learnable" craft_time="15">
 			<ingredient name="resourceGoldenEgg" count="1"/>
 			<ingredient name="foodEgg" count="3"/>
@@ -882,7 +890,7 @@
 	</append>
 
 	<append xpath="/recipes/recipe[@name='farmPlotBlockPlayer']">
-		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="drinkJarRiverWater" count="5"/>
 		<ingredient name="itemFertileSoil" count="10"/>
 	</append>
 
@@ -1153,16 +1161,6 @@
 			<ingredient name="resourceForgedIron" count="8"/>
 			<ingredient name="resourceDuctTape" count="3"/>
 			<ingredient name="resourceLeather" count="3"/>
-		</recipe>
-	</append>
-
-	<append xpath="/recipes">
-		<recipe name="accessoryJewerlyBox6" count="1" craft_area="workbench" tags="workbenchCrafting,learnable,perkCharismaticNature" craft_time="18">
-			<ingredient name="accessorySilverRing" count="1"/>
-			<ingredient name="accessoryGoldFlowerRing" count="1"/>
-			<ingredient name="accessoryGoldStuddedRing" count="1"/>
-			<ingredient name="accessoryRubyDiamondRing" count="1"/>
-			<ingredient name="accessoryRubyHeartRing" count="1"/>
 		</recipe>
 	</append>
 
@@ -2101,7 +2099,7 @@
 			<ingredient name="resourceGlue" count="5" />
 		</recipe>
 	</append>
-	
+
 	<append xpath="/recipes">
 		<recipe name="itemAdvWrench" count="1" craft_area="workbench" tags="perkAdvancedWrench,learnable" craft_time="24">
 			<ingredient name="resourceForgedSteel" count="90"/>

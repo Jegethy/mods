@@ -150,10 +150,10 @@
 
 	<!-- Greatly reduces the amount of block damage zombies deal to hardened materials -->
 	<append xpath="/items/item[@name='meleeHandMaster']/effect_group[@name='meleeHandMaster']">
-		<passive_effect name="DamageModifier" operation="perc_add" value="-80" tags="concrete,metal,stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-40" tags="concrete,metal,stone"/>
 	</append>
 	<append xpath="/items/item[starts-with(@name, 'meleeHandZombie')]/effect_group[starts-with(@name, 'meleeHandZombie')]">
-		<passive_effect name="DamageModifier" operation="perc_add" value="-80" tags="concrete,metal,stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-40" tags="concrete,metal,stone"/>
 	</append>
 
 	<!-- Moderately reduces the amount of block damage zombies deal to other materials -->
@@ -214,15 +214,15 @@
 	<set xpath="/items/item[@name='partsMaster']/property[@name='Stacknumber']/@value">250</set>
 
 	<!-- Adjusts the movement speed penalty of armour - A18 Updated-->
-	<set xpath="/items/item[contains(@name,'armorScrap')]/effect_group/passive_effect[@name='Mobility']/@value">-.02</set>
-	<set xpath="/items/item[contains(@name,'armorLeather')]/effect_group/passive_effect[@name='Mobility']/@value">-.02</set>
-	<set xpath="/items/item[contains(@name,'armorIron')]/effect_group/passive_effect[@name='Mobility']/@value">-.03</set>
-	<set xpath="/items/item[contains(@name,'armorMilitary')]/effect_group/passive_effect[@name='Mobility']/@value">-.02</set>
-	<set xpath="/items/item[contains(@name,'armorSteel')]/effect_group/passive_effect[@name='Mobility']/@value">-.03</set>
-	<set xpath="/items/item[@name='armorMiningHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[@name='Mobility']/@value">-.02</set>
-	<set xpath="/items/item[@name='armorSwatHelmet']/effect_group[@name='steel armor']/passive_effect[@name='Mobility']/@value">-.03</set>
-	<set xpath="/items/item[@name='armorFootballHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[@name='Mobility']/@value">-.02</set>
-	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group[@name='military armor']/passive_effect[@name='Mobility']/@value">-.02</set>
+	<set xpath="/items/item[contains(@name,'armorScrap')]/effect_group/passive_effect[@name='Mobility']/@value">-.03</set>
+	<set xpath="/items/item[contains(@name,'armorLeather')]/effect_group/passive_effect[@name='Mobility']/@value">-.03</set>
+	<set xpath="/items/item[contains(@name,'armorIron')]/effect_group/passive_effect[@name='Mobility']/@value">-.04</set>
+	<set xpath="/items/item[contains(@name,'armorMilitary')]/effect_group/passive_effect[@name='Mobility']/@value">-.03</set>
+	<set xpath="/items/item[contains(@name,'armorSteel')]/effect_group/passive_effect[@name='Mobility']/@value">-.04</set>
+	<set xpath="/items/item[@name='armorMiningHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[@name='Mobility']/@value">-.03</set>
+	<set xpath="/items/item[@name='armorSwatHelmet']/effect_group[@name='steel armor']/passive_effect[@name='Mobility']/@value">-.04</set>
+	<set xpath="/items/item[@name='armorFootballHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[@name='Mobility']/@value">-.03</set>
+	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group[@name='military armor']/passive_effect[@name='Mobility']/@value">-.03</set>
 
 	<!-- Speeds up forge smelting -->
 	<append xpath="/items/item[starts-with(@name,'resource') and not (contains(@name,'MeltTimePerUnit'))]">
@@ -596,11 +596,8 @@
 	<set xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.RadiusBlocks']/@value">10</set>
 
 	<!-- Clothing items now provide the same thermal resistance -->
-	<set xpath="/items/item/effect_group/passive_effect[@name='HypothermalResist']/@value">2</set>
-	<set xpath="/items/item/effect_group/passive_effect[@name='HyperthermalResist']/@value">2</set>
-
-	<!-- Modifies tier bonus damage for weapons and tools 
-	<set xpath="/items/item/effect_group/passive_effect[@value='.1,.5']/@value">.2,1</set> -->
+	<set xpath="/items/item/effect_group/passive_effect[@name='HypothermalResist']/@value">1,4</set>
+	<set xpath="/items/item/effect_group/passive_effect[@name='HyperthermalResist']/@value">1,4</set>
 
 	<!-- Adds the advanced wrench -->
 	<append xpath="/items">

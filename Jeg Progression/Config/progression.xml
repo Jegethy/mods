@@ -534,6 +534,9 @@ Craftable candies?
 
 	<!-- Removed Charismatic Nature -->
 	<remove xpath="/progression/perks/perk[@name='perkCharismaticNature']" />
+	
+	<!-- Updates Pack Mule for the increased inventory size -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">15,30,45,60,90</set>
 
 	<!-- Adds Advanced Forge -->
 	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,forgeAdv</append>

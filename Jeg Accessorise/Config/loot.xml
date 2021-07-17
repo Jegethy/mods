@@ -1,3 +1,92 @@
 <config>
 
+	<!-- Adds loot group for the accessories -->
+	<insertBefore xpath="/lootcontainers/lootgroup[1]">
+		<lootgroup name="accessories" count="1">
+			<item name="accessorySilverRing" count="1"/>
+			<item name="accessoryGoldFlowerRing" count="1"/>
+			<item name="accessoryGoldStuddedRing" count="1"/>
+			<item name="accessoryRubyDiamondRing" count="1"/>
+			<item name="accessoryRubyHeartRing" count="1"/>
+		</lootgroup>
+	</insertBefore>
+
+	<!-- Adds accessories to loot -->
+	<!-- Junk -->
+	<append xpath="/lootcontainers/lootgroup[@name='junk']">
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+
+	<!-- Cupboards -->
+	<append xpath="/lootcontainers/lootgroup[@name='cupboard']">
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+	
+	<!-- Workstations -->
+	<append xpath="/lootcontainers/lootgroup[@name='workbenchLoot']">
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='forgeLoot']">
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='cementMixerLoot']">
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='chemistryStationLoot']">
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+
+	<!-- Air Drop -->
+	<append xpath="/lootcontainers/lootcontainer[@id='34']" >
+		<item group="accessories" count="1" prob="0.009"/>
+	</append>
+
+	<!-- Zombie Loot Bags -->
+	<append xpath="/lootcontainers/lootcontainer[@id='70']" > <!-- Regular Loot -->
+		<item group="accessories" count="1" prob="0.005"/>
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='71']" > <!-- Strong Loot -->
+		<item group="accessories" count="1" prob="0.007"/>
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='73']" > <!-- Boss Loot -->
+		<item group="accessories" count="1" prob="0.009"/>
+	</append>
+
+	<!-- Ammo Piles -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupAmmoPileLoot']" >
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+
+	<!-- Automotive -->
+	<append xpath="/lootcontainers/lootgroup[@name='automotive']" >
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+
+	<!-- Mods -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupModAllScaled']" >
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+
+	<!-- Weapons -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsAllScaled']" >
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsAllScaledTPlus']" >
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+
+	<!-- Armour -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupArmorScaled']" >
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupArmorScaledTPlus']" >
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+
+	<!-- Books --> 
+	<append xpath="/lootcontainers/lootgroup[@name='booksAllScaled']" >
+		<item group="accessories" count="1" prob="0.003"/>
+	</append>
+
+
 </config>

@@ -4,11 +4,12 @@
 
 	<append xpath="/items">	
 		<item name="accessorySilverRing">
-			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
+			<property name="Tags" value="moddedHead,head,clothing"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessorySilverRing"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="DescriptionKey" value="accessorySilverRingDesc" />
+			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
@@ -26,8 +27,6 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessorySilverRing"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessorySilverRing"/>
 			</effect_group>
@@ -36,11 +35,12 @@
 		<!-- Gold Flower Ring, localised: Gold Flower Ring -->
 
 		<item name="accessoryGoldFlowerRing">
-			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
+			<property name="Tags" value="moddedHead,head,clothing"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryGoldFlowerRing"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="DescriptionKey" value="accessoryGoldFlowerRingDesc" />
+			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
@@ -58,8 +58,6 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryGoldFlowerRing"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryGoldFlowerRing"/>
 			</effect_group>
@@ -68,11 +66,12 @@
 		<!-- Gold Studded Ring, localised: Diamond Studded Gold Ring -->
 
 		<item name="accessoryGoldStuddedRing">
-			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
+			<property name="Tags" value="moddedHead,head,clothing"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryGoldStuddedRing"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="DescriptionKey" value="accessoryGoldStuddedRingDesc" />
+			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
@@ -90,8 +89,6 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryGoldStuddedRing"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryGoldStuddedRing"/>
 			</effect_group>
@@ -100,11 +97,12 @@
 		<!-- Ruby Diamond Ring, localised: Ruby Diamond Studded Ring -->
 
 		<item name="accessoryRubyDiamondRing">
-			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
+			<property name="Tags" value="moddedHead,head,clothing"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryRubyDiamondRing"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="DescriptionKey" value="accessoryRubyDiamondRingDesc" />
+			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
@@ -122,19 +120,20 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryRubyDiamondRing"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryRubyDiamondRing"/>
 			</effect_group>
 		</item>
 
 		<!-- Ruby Heart Ring, localised: Ruby Heart Ring -->
 
 		<item name="accessoryRubyHeartRing">
-			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
+			<property name="Tags" value="moddedHead,head,clothing"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryRubyHeartRing"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="DescriptionKey" value="accessoryRubyHeartRingDesc" />
+			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
@@ -152,19 +151,22 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryRubyHeartRing"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryRubyHeartRing"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryRubyHeartRingDay"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryRubyHeartRingNight"/>
 			</effect_group>
 		</item>
 
 		<!-- Combined Rings, localised: Swag Necklace [WIP] -->
 
 		<item name="accessoryCombinedRings">
-			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
+			<property name="Tags" value="moddedHead,head,clothing"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryCombinedRings"/>
-			<property name="Material" value="Mmetal"/>
+			<property name="DescriptionKey" value="accessoryCombinedRingsDesc" />
+			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
@@ -182,8 +184,8 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
 			</effect_group>
 		</item>			
 	</append>
@@ -255,7 +257,6 @@
 		<!-- Combined Rings Box -->
 		<item name="accessoryJewerlyBox6">
 			<property name="Extends" value="resourceRockSmallBundle"/>
-			<property name="UnlockedBy" value="perkCharismaticNature"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
 			<property name="DescriptionKey" value="accessoryCombinedDesc" />

@@ -9,8 +9,8 @@
 	<set xpath="/blocks/block[@name='generatorbank']/property[@name='MaxFuel']/@value">8000</set>
 
 	<!-- Changes bulletproof glass repair item -->
-	<set xpath="/blocks/block[@name='glassBulletproofMaster']/property[@class='RepairItems']/property[@name='glassBulletproofBlockVariantHelper']/@name">resourceForgedIron</set>
-	<set xpath="/blocks/block[@name='windowStoreCornerBulletproof']/property[@class='RepairItems']/property[@name='glassBulletproofBlockVariantHelper']/@name">resourceForgedIron</set>
+	<set xpath="/blocks/block[@name='glassBulletproofMaster']/property[@class='RepairItems']/property[@name='glassBulletproofBlockVariantHelper']/@name">resourceForgedSteel</set>
+	<set xpath="/blocks/block[@name='windowStoreCornerBulletproof']/property[@class='RepairItems']/property[@name='glassBulletproofBlockVariantHelper']/@name">resourceForgedSteel</set>
 	<set xpath="/blocks/block[@name='glassBulletproofMaster']/property[@class='RepairItems']/property[@name='resourceForgedSteel']/@value">10</set>
 	<set xpath="/blocks/block[@name='windowStoreCornerBulletproof']/property[@class='RepairItems']/property[@name='resourceForgedSteel']/@value">10</set>
 

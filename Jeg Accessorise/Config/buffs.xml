@@ -71,44 +71,85 @@
 		</buff>
 	</append>
 
-	<!-- Ruby Diamond Ring - Effect WIP -->
+	<!-- Ruby Diamond Ring - Maximum Health is 100, 10 life/sec, 25% Damage Mitigation, Immune to Stuns -->
 
 	<append xpath="/buffs">	
-		<buff name="buffaccessoryGoldStuddedRing" name_key="buffaccessoryGoldStuddedRingName" description_key="buffaccessoryGoldStuddedRingDesc" tooltip_key="buffaccessoryGoldStuddedRingTooltip" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryRubyDiamondRing" name_key="buffaccessoryRubyDiamondRingName" description_key="buffaccessoryRubyDiamondRingDesc" tooltip_key="buffaccessoryRubyDiamondRingTooltip" icon="100maxhealth" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
 				<requirement name="PlayerLevel" operation="LT" value="1000"/>
 				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
-				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldStuddedRing"/>
-				<passive_effect name="DisableItem" operation="base_set" value="1" tags="heavyArmor,lightArmor" />
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryRubyDiamondRing"/>
 			</effect_group>
 
 			<effect_group>
-
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthLoss" operation="perc_add" level="1" value="-.25"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".25"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="10"/>
 			</effect_group>
 		</buff>
 	</append>
 
-	<!-- Ruby Heart Ring - Effect WIP -->
+	<!-- Ruby Heart Ring - -100 Loot Stage and -50% damage during the day, +100 Loot Stage and +50% damage during the night -->
 
 	<append xpath="/buffs">	
-		<buff name="buffaccessoryGoldStuddedRing" name_key="buffaccessoryGoldStuddedRingName" description_key="buffaccessoryGoldStuddedRingDesc" tooltip_key="buffaccessoryGoldStuddedRingTooltip" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryRubyHeartRing" remove_on_death="false" hidden="true">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffaccessoryRubyHeartRingDay">
+					<requirement name="IsDay"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffaccessoryRubyHeartRingNight">
+					<requirement name="IsNight"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+	</append>
+
+	<append xpath="/buffs">	
+		<buff name="buffaccessoryRubyHeartRingDay" name_key="buffaccessoryRubyHeartRingDayName" description_key="buffaccessoryRubyHeartRingDayDesc" tooltip_key="buffaccessoryRubyHeartRingDayTooltip" icon="ringDayDebuff" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<update_rate value="0.5"/>
+
+			<effect_group>
 				<requirement name="PlayerLevel" operation="LT" value="1000"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
-				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldStuddedRing"/>
-				<passive_effect name="DisableItem" operation="base_set" value="1" tags="heavyArmor,lightArmor" />
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryRubyHeartRing"/>
 			</effect_group>
 
 			<effect_group>
+				<requirement name="IsDay"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="-5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="-5"/>
+				<passive_effect name="LootGamestage" operation="base_subtract" value="100"/>
+				<passive_effect name="EntityDamage" operation="perc_subtract" value=".8"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffaccessoryRubyHeartRingNight"/>
+			</effect_group>
 
+		</buff>
+	</append>
+
+	<append xpath="/buffs">	
+		<buff name="buffaccessoryRubyHeartRingNight" name_key="buffaccessoryRubyHeartRingNightName" description_key="buffaccessoryRubyHeartRingNightDesc" tooltip_key="buffaccessoryRubyHeartRingNightTooltip" icon="ringNightBuff" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<update_rate value="0.5"/>
+
+			<effect_group>
+				<requirement name="PlayerLevel" operation="LT" value="1000"/>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryRubyHeartRing"/>
+			</effect_group>
+
+			<effect_group>	
+				<requirement name="IsNight"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="100"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffaccessoryRubyHeartRingDay"/>
 			</effect_group>
 		</buff>
 	</append>
@@ -116,16 +157,14 @@
 	<!-- Combined Rings - Effect WIP -->
 
 	<append xpath="/buffs">	
-		<buff name="buffaccessoryGoldStuddedRing" name_key="buffaccessoryGoldStuddedRingName" description_key="buffaccessoryGoldStuddedRingDesc" tooltip_key="buffaccessoryGoldStuddedRingTooltip" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryCombinedRings" name_key="buffaccessoryCombinedRingsName" description_key="buffaccessoryCombinedRingsDesc" tooltip_key="buffaccessoryCombinedRingsTooltip" icon="noarmour" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
 				<requirement name="PlayerLevel" operation="LT" value="1000"/>
 				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
-				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldStuddedRing"/>
-				<passive_effect name="DisableItem" operation="base_set" value="1" tags="heavyArmor,lightArmor" />
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryCombinedRings"/>
 			</effect_group>
 
 			<effect_group>

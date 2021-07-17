@@ -1,6 +1,6 @@
 <configs>
 
-	<set xpath="/materials/material[@id='MmetalDrawbridge']/property[@name='MaxDamage']/@value">75000</set>
+	<set xpath="/materials/material[@id='MmetalDrawbridge']/property[@name='MaxDamage']/@value">50000</set>
 	<set xpath="/materials/material[@id='MmetalDrawbridge']/property[@name='explosionresistance']/@value">32</set>
 	<set xpath="/materials/material[@id='MmetalDrawbridge']/property[@name='Hardness']/@value">5</set>
 
@@ -88,7 +88,7 @@
 			<property name="stability_glue" value="600"/>
 			<property name="Mass" type="int" value="10"/>
 			<property name="explosionresistance" value="2.7"/>
-			<property name="MaxDamage" value="75000"/>
+			<property name="MaxDamage" value="50000"/>
 			<property name="Experience" value="2"/>
 		</material>
 	</append>
@@ -97,7 +97,7 @@
 		<material id="resourceAdamantium">
 			<property name="damage_category" value="metal"/>
 			<property name="surface_category" value="metal"/>
-			<property name="forge_category" value="resourceAdamantium"/>
+			<property name="forge_category" value="glass"/>
 			<property name="Hardness" type="float" value="1"/>
 			<property name="stepsound" value="wood"/>
 			<property name="stability_glue" value="20"/>
@@ -117,7 +117,7 @@
 			<property name="stability_glue" value="500"/>
 			<property name="Mass" type="int" value="10"/>
 			<property name="explosionresistance" value="3"/>
-			<property name="MaxDamage" value="37500"/>
+			<property name="MaxDamage" value="30000"/>
 			<property name="Experience" value="6"/>
 		</material>
 	</append>
@@ -132,7 +132,7 @@
 			<property name="stepsound" value="metal"/>
 			<property name="stability_glue" value="400"/>
 			<property name="Mass" type="int" value="5"/>
-			<property name="MaxDamage" value="100000"/>
+			<property name="MaxDamage" value="45000"/>
 			<property name="Experience" value="2"/>
 			<property name="explosionresistance" value="36"/>
 		</material>
@@ -145,7 +145,7 @@
 			<property name="stepsound" value="metal"/>
 			<property name="stability_glue" value="400"/>
 			<property name="Mass" type="int" value="5"/>
-			<property name="MaxDamage" value="50000"/>
+			<property name="MaxDamage" value="30000"/>
 			<property name="Experience" value="2"/>
 			<property name="explosionresistance" value="18"/>
 		</material>
@@ -158,7 +158,7 @@
 			<property name="stepsound" value="metal"/>
 			<property name="stability_glue" value="400"/>
 			<property name="Mass" type="int" value="5"/>
-			<property name="MaxDamage" value="20000"/>
+			<property name="MaxDamage" value="15000"/>
 			<property name="Experience" value="2"/>
 			<property name="explosionresistance" value="9"/>
 		</material>

@@ -749,7 +749,7 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="1"/>
-				<passive_effect name="LootGamestage" operation="base_add" value="5"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="2"/>
 				<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-1"/>
 				<display_value name="dTreasureBlocksPerReduction" value="-1"/>
 				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
@@ -775,7 +775,7 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="1"/>
-				<passive_effect name="LootGamestage" operation="base_add" value="5"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="2"/>
 				<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-1"/>
 				<display_value name="dTreasureBlocksPerReduction" value="-1"/>
 				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
@@ -803,7 +803,7 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="1"/>
-				<passive_effect name="LootGamestage" operation="base_add" value="5"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="2"/>
 				<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-1"/>
 				<display_value name="dTreasureBlocksPerReduction" value="-1"/>
 				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
@@ -831,7 +831,7 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="1"/>
-				<passive_effect name="LootGamestage" operation="base_add" value="5"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="2"/>
 				<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-1"/>
 				<display_value name="dTreasureBlocksPerReduction" value="-1"/>
 				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
@@ -858,7 +858,7 @@
 			<property name="EconomicValue" value="1000"/>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="1"/>
-				<passive_effect name="LootGamestage" operation="base_add" value="5"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="2"/>
 				<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-1"/>
 				<display_value name="dTreasureBlocksPerReduction" value="-1"/>
 				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>

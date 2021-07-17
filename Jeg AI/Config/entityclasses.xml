@@ -30,6 +30,45 @@
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='SightRange']" >
 		<property name="DismemberMultiplierHead" value="0"/>
 	</insertAfter>
+	
+	<!-- Increased debuff probability -->
+	<remove xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='-.1']"></remove>
+	<!-- Fatigued: default = 0 -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
+		<passive_effect name="BuffResistance" operation="base_add" value="-.5" tags="buffFatiguedTrigger"/>
+	</insertAfter>
+	<!-- Sprained/broken arm: default = 0 -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
+		<passive_effect name="BuffResistance" operation="base_add" value="-.5" tags="buffArmSprainedCHTrigger"/>
+	</insertAfter>
+	<!-- Sprained/broken leg: default = 0 -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
+		<passive_effect name="BuffResistance" operation="base_add" value="-.5" tags="buffLegSprainedCHTrigger"/>
+	</insertAfter>
+	<!-- Laceration: default = 0 -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
+		<passive_effect name="BuffResistance" operation="base_add" value="-.5" tags="buffLaceration"/>
+	</insertAfter>
+	<!-- Abrasion: default = 0 -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
+		<passive_effect name="BuffResistance" operation="base_add" value="-.5" tags="buffAbrasionCatch"/>
+	</insertAfter>
+	<!-- Infection: default = 0 -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
+		<passive_effect name="BuffResistance" operation="base_add" value="-.1" tags="buffInfectionCatch"/>
+	</insertAfter>
+	<!-- Stunned: default = -.1 -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
+		<passive_effect name="BuffResistance" operation="base_add" value="-.1" tags="buffInjuryStunned01CHTrigger"/>
+	</insertAfter>
+	<!-- Bleeding: default = -.1 -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
+		<passive_effect name="BuffResistance" operation="base_add" value="-.1" tags="buffInjuryBleedingTwo"/>
+	</insertAfter>
+	<!-- Bleeding barbed wire: default = 0 -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
+		<passive_effect name="BuffResistance" operation="base_add" value="-.7" tags="buffInjuryBleedingBarbedWire"/>
+	</insertAfter>
 
 	<!-- Modifies the experience granted by all animals and zombies based on their health values -->
 	<!--Rabbit-->

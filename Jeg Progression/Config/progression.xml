@@ -538,13 +538,6 @@ Craftable candies?
 	<!-- Updates Pack Mule for the increased inventory size -->
 	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">15,30,45,60,90</set>
 
-	<!-- Adds Advanced Forge -->
-	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,forgeAdv</append>
-
-	<!-- Adds helicopter parts to perk unlocks -->
-	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='5']/@tags">,bigEngine</append>
-	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='5']/@tags">,vehicleHelicopterRotor,vehicleHelicopterChassis</append>
-
 	<!-- Increased damage with Miner 69er -->
 	<set xpath="/progression/perks/perk[@name='perkMiner69r']/effect_group/passive_effect[@name='BlockDamage'][@value='.3,1.5']/@value">.4,2</set>
 
@@ -595,6 +588,13 @@ Craftable candies?
 	<append xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='1,3']/@tags">,Jeg_Coop</append>
 	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='2,5']/@tags">,foodCookedRibs,foodGrilledChickenLeg</append>
 	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='4,5']/@tags">,foodBearStew</append>
+	
+	<!-- Adds Advanced Forge -->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,forgeAdv</append>
+
+	<!-- Adds helicopter parts to perk unlocks -->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='5']/@tags">,bigEngine</append>
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='5']/@tags">,vehicleHelicopterRotor,vehicleHelicopterChassis</append>
 
 	<!-- Pilot Training Skill Tree -->
 	<append xpath="/progression/perks" >

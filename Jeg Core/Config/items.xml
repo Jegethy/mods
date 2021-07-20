@@ -2014,5 +2014,19 @@
 	<!-- Restricts pocket mods to chest and legs -->
 	<append xpath="/items/item/property[@name='Tags' and contains(@value, 'armorChest')]/@value">,armorPocketSlot</append>
 	<append xpath="/items/item/property[@name='Tags' and contains(@value, 'armorLegs')]/@value">,armorPocketSlot</append>
+	
+	<!-- Bundle of starter items to complete quests for testing -->
+	<append xpath="/items">
+		<item name="adminStarterBundle" >
+			<property name="Extends"  value="ammoBundle9mmBulletBall"/>
+			<property name="DisplayType"  value="ammoBulletFake" />
+			<property name="CustomIcon"  value="backpackMedium" />
+			<property name="EconomicValue"  value="10000" />
+			<property class="Action0" >				  
+				<property name="Create_item"  value="1000,1000,1000,500" />
+				<property name="Create_item_count"  value="resourceWood,resourceRockSmall,resourceYuccaFibers,resourceFeather" />
+			</property>
+		</item>
+	</append>
 
 </configs>

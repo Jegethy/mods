@@ -28,6 +28,7 @@
 	<append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
 		<reward type="SkillPoints" value="3" />
 		<reward type="Item" id="vehicleBicyclePlaceable" value="1"/>
+		<reward type="Item" id="boxMedicalSupplies" value="1"/>
 	</append>
 
 	<!-- Adds skill page rewards to quests -->

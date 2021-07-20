@@ -2014,19 +2014,43 @@
 	<!-- Restricts pocket mods to chest and legs -->
 	<append xpath="/items/item/property[@name='Tags' and contains(@value, 'armorChest')]/@value">,armorPocketSlot</append>
 	<append xpath="/items/item/property[@name='Tags' and contains(@value, 'armorLegs')]/@value">,armorPocketSlot</append>
-	
+
 	<!-- Bundle of starter items to complete quests for testing -->
-	<append xpath="/items">
-		<item name="adminStarterBundle" >
-			<property name="Extends"  value="ammoBundle9mmBulletBall"/>
-			<property name="DisplayType"  value="ammoBulletFake" />
-			<property name="CustomIcon"  value="backpackMedium" />
-			<property name="EconomicValue"  value="10000" />
-			<property class="Action0" >				  
-				<property name="Create_item"  value="1000,1000,1000,500" />
-				<property name="Create_item_count"  value="resourceWood,resourceRockSmall,resourceYuccaFibers,resourceFeather" />
+	<append xpath="/items" >
+		<item name="adminStarterBundle">
+			<property name="Extends" value="noteTestersDelightAdmin"/>
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="questChestReward"/>
+			<property name="CustomIconTint" value="B0E7FF"/>
+			<property name="DescriptionKey" value="chestReward1Desc"/>
+			<property class="Action0">
+				<property name="Sound_start" value="open_cash_register"/>
+				<property name="Create_item" value="resourceWood,resourceRockSmall,resourceYuccaFibers,resourceFeather"/>
+				<property name="Create_item_count" value="1000,1000,1000,500"/>
 			</property>
 		</item>
 	</append>
+
+	<!-- Starter Medical Supplies -->
+	<append xpath="/items" >
+		<item name="boxMedicalSupplies">
+			<property name="Extends" value="noteTestersDelightAdmin"/>
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="boxMedicalSupplies"/>
+			<property name="CustomIconTint" value="FFFFFF"/>
+			<property name="DescriptionKey" value="boxMedicalSuppliesDesc"/>
+			<property class="Action0">
+				<property name="Sound_start" value="open_cash_register"/>
+				<property name="Create_item" value="medicalFirstAidBandage,drugPainkillers,medicalSplint,foodMedicalHoney"/>
+				<property name="Create_item_count" value="2,2,2,2"/>
+			</property>
+		</item>
+	</append>
+
+	<!-- Changes the icon shown on perk books -->
+	<set xpath="/items/item[@name='schematicMaster']/property[@name='ItemTypeIcon']/@value">unreadbook</set>
+	<set xpath="/items/item[@name='schematicMaster']/property[@name='AltItemTypeIcon']/@value">readbook</set>
 
 </configs>

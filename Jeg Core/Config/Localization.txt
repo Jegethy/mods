@@ -1,6 +1,5 @@
 Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
 buffNewbieCoatDesc,buffs,Buff,New,"You are temporarily protected from heat and cold.\n\nThis protection will decrease and disappear at level 5 so think ahead.",,,,,
-ttResurrectXPLost,UI,Tooltip,New,"You've been offered a second chance at life. Try not to waste it this time.",,,,,
 foodMedicalHoney,items,Food,KgNone,[60CCFF]Jar of Medicinal Honey,Pot de miel,Glas Honig,,Tarro de miel,
 foodMedicalHoneyDesc,items,Food,EnChanged,"[60CCFF]Medicinal honey can help fight off early stages of infection and pneumonia better than standard honey.\n\n(May cause nausea, bloating, headaches, internal bleeding, or immediate and agonising death. Consult a physician before taking.)","Le miel est l'un des miracles de Mère nature. Il restaure votre endurance, améliore votre bien-être et peut également traiter le début d'une infection.","Honig ist eines der Wunder von Mutter Natur. Er stellt nicht nur Ausdauer wieder her und erhöht dein Wohlbefinden, er kann auch das erste Stadium einer Infektion heilen.",,"La miel es uno de los milagros de la madre naturaleza. No solo restaura la resistencia y proporciona bienestar, sino que también cura infecciones de primer grado.",
 modLightweightMasterFitting,item_modifiers,mod,New,[60CCFF]Lightweight Armour Plating Mod,,,,,
@@ -163,8 +162,4 @@ perkAdvancedWrench1LongDesc,progression,PerkBook,New,"[60CCFF]Allows crafting of
 perkAdvancedWrench2Desc,progression,PerkBook,New,"[60CCFF]More Mods = Betterer",,,,,
 perkAdvancedWrench2LongDesc,progression,PerkBook,New,"[60CCFF]Allows crafting of combination mods that provide the effects of two or more mods in one. Also allows crafting of reinforced armour mods.",,,,,
 perkAdvancedWrench3Desc,progression,PerkBook,New,"[60CCFF]Speed and Scrap",,,,,
-perkAdvancedWrench4LongDesc,progression,PerkBook,New,"[60CCFF]Allows you to craft vehicle mods and the level 6 Advanced Wrench.",,,,,
-jailDoor,blocks,Block,New,"[60CCFF]Jail Door",,,,,
-jailDoorDesc,blocks,Block,New,"You're not going anywhere!",,,,,
-jailDoorPowered,blocks,Door,New,"[60CCFF]Powered Jail Door,,,,,
-jailDoorPoweredDesc,blocks,Block,New,"[60CCFF]No way out!",,,,,
+perkAdvancedWrench3LongDesc,progression,PerkBook,New,"[60CCFF]Allows you to craft vehicle mods and the level 6 Advanced Wrench.",,,,,

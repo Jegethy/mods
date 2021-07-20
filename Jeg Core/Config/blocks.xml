@@ -822,6 +822,7 @@
 			<property name="PassThroughDamage" value="true"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property name="DescriptionKey" value="jailDoorDesc"/>
 			<property name="Tag" value="Door"/>
 			<property name="Place" value="Door"/>
 			<property name="PlaceEverywhere" value="true"/>
@@ -844,6 +845,9 @@
 			<property name="Class" value="PoweredDoor"/>
 			<property name="Material" value="Msteel"/>
 			<property name="CustomIcon" value="jailDoorStatic" />
+			<property name="name_key" value="jailDoorPowered" />
+			<property name="DescriptionKey" value="jailDoorPoweredDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
 			<property name="PassThroughDamage" value="true"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
@@ -864,8 +868,6 @@
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<property name="Group" value="Building,advBuilding"/>
 			<property name="FilterTags" value="fdecor,fdoors"/>
-			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
 		</block>
 	</append>
-
 </config>

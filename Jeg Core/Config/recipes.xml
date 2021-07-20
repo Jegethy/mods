@@ -2118,7 +2118,7 @@
 			<ingredient name="resourceMechanicalParts" count="6"/>
 			<ingredient name="itemPartsTemplateMaster" count="2"/>
 		</recipe>
-		<recipe name="jailDoorPowered" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" craft_time="24">
+		<recipe name="jailDoorPowered" count="1" craft_area="workbench" tags="poweredDoorsSchematic,perkAdvancedEngineering,learnable" craft_time="24">
 			<ingredient name="resourceForgedSteel" count="24"/>
 			<ingredient name="resourceSpring" count="8"/>
 			<ingredient name="resourceMechanicalParts" count="8"/>

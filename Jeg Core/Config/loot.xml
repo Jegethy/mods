@@ -57,7 +57,12 @@
 		<lootcontainer id="34" count="14" size="8,6" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
 			<item name="itemTraderbook" count="2"/>
 			<item name="itemLearningbook" count="1"/>
-			<item name="resourceAdamantium" count="2"/>		
+			<item name="resourceAdamantium" count="2"/>	
+			<item name="accessorySilverRing" count="1" prob="0.8"/>
+			<item name="accessoryGoldFlowerRing" count="1" prob="0.8"/>
+			<item name="accessoryGoldStuddedRing" count="1" prob="0.8"/>
+			<item name="accessoryRubyDiamondRing" count="1" prob="0.8"/>
+			<item name="accessoryRubyHeartRing" count="1" prob="0.8"/>			
 			<item name="resourceSilverNugget" count="10,20"/>
 			<item name="resourceGoldNugget" count="8,16"/>
 			<item name="resourceRawDiamond" count="6,12"/>	

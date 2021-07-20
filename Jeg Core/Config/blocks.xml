@@ -1,10 +1,35 @@
 <config>
 
 	<!-- Campfires are now more deadly -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']/@value">66.6</set>
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapTime']/@value">250</set> 
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapFrequency']/@value">50</set> 
-	<set xpath="/blocks/block[@name='campfire']/property[@name='BuffsWhenWalkedOn']/@value">buffBurningFlamingArrow</set> 
+	<set xpath="/blocks/block[@name='campfire']/property[@name='BuffsWhenWalkedOn']/@value">buffBurningFlamingArrow</set>
+
+	<!-- Safes are harder to smash open -->
+	<append xpath="/blocks/block[@name='cntWallSafe']" >
+		<property name="MaxDamage" value="9000"/> <!-- original: 2500  -->
+	</append>
+	<append xpath="/blocks/block[@name='cntGunSafe']" >
+		<property name="MaxDamage" value="18000"/><!-- original: 5000  -->
+	</append>
+	<append xpath="/blocks/block[@name='cntHardenedChestSecure']" >
+		<property name="MaxDamage" value="30000"/><!-- original: 10000  -->
+	</append>
+
+	<!-- Campfire, force and work stations cause more heat -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']/@value">6</set>        <!-- original: 5    -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapTime']/@value">6000</set>         <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapFrequency']/@value">1500</set>    <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']/@value">7</set>           <!-- original: 6    -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapTime']/@value">6000</set>            <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapFrequency']/@value">1500</set>       <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']/@value">3</set>       <!-- original: 2    -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapTime']/@value">6000</set>        <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapFrequency']/@value">1500</set>   <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']/@value">3</set>     <!-- original: 2    -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapTime']/@value">6000</set>      <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapFrequency']/@value">1500</set> <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapStrength']/@value">6</set><!-- original: 5    -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapTime']/@value">6000</set> <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapFrequency']/@value">1500</set> <!-- original: 1000 -->
 
 	<!-- Triples the fuel capacity of generators -->
 	<set xpath="/blocks/block[@name='generatorbank']/property[@name='MaxFuel']/@value">8000</set>
@@ -661,9 +686,9 @@
 			<property name="ParticleOffset" value="0.5,0,0.5"/>
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="HeatMapStrength" value="6"/>
-			<property name="HeatMapTime" value="5000"/>
-			<property name="HeatMapFrequency" value="1000"/>
+			<property name="HeatMapStrength" value="7"/>
+			<property name="HeatMapTime" value="6500"/>
+			<property name="HeatMapFrequency" value="1700"/>
 			<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
 			<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
 
@@ -777,7 +802,6 @@
 	</append>
 
 	<!-- Updated flagpole -->
-
 	<set xpath="/blocks/block[@name='flagPoleWhiteRiver']/property[@name='Material']/@value">Mmetal_harder</set>
 	<set xpath="/blocks/block[@name='flagPoleAmerican']/property[@name='Material']/@value">Mmetal_harder</set>
 
@@ -787,6 +811,61 @@
 
 	<append xpath="/blocks/block[@name='flagPoleAmerican']">
 		<property class="RepairItems"> <property name="resourceForgedSteel" value="5"/> </property>
+	</append>
+
+	<!-- Jail doors returned -->
+	<append xpath="/blocks">
+		<block name="jailDoor">
+			<property name="Class" value="DoorSecure"/>
+			<property name="Material" value="Msteel"/>
+			<property name="CustomIcon" value="jailDoorStatic" />
+			<property name="PassThroughDamage" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property name="Tag" value="Door"/>
+			<property name="Place" value="Door"/>
+			<property name="PlaceEverywhere" value="true"/>
+			<property name="Model" value="Entities/Doors/jail_doorPrefab"/> <property name="ModelOffset" value="0,.5,0"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="OpenSound" value="open_door_jail"/>
+			<property name="CloseSound" value="close_door_jail"/>
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="12"/> </property>
+			<drop event="Harvest" name="" count="0" tool_category="Disassemble"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Destroy" name="resourceSpring" count="0,2" prob="1" tool_category="Disassemble"/>
+			<drop event="Destroy" name="resourceMechanicalParts" count="0,2" prob="1" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceScrapIron" count="20,60"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fdoors"/>
+		</block>
+		
+		<block name="jailDoorPowered">
+			<property name="Class" value="PoweredDoor"/>
+			<property name="Material" value="Msteel"/>
+			<property name="CustomIcon" value="jailDoorStatic" />
+			<property name="PassThroughDamage" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property name="Tag" value="Door"/>
+			<property name="Place" value="Door"/>
+			<property name="PlaceEverywhere" value="true"/>
+			<property name="Model" value="Entities/Doors/jail_doorPrefab"/> <property name="ModelOffset" value="0,.5,0"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="OpenSound" value="open_door_jail"/>
+			<property name="CloseSound" value="close_door_jail"/>
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="12"/> </property>
+			<drop event="Harvest" name="" count="0" tool_category="Disassemble"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Destroy" name="resourceSpring" count="0,2" prob="1" tool_category="Disassemble"/>
+			<drop event="Destroy" name="resourceMechanicalParts" count="0,2" prob="1" tool_category="Disassemble"/>
+			<drop event="Destroy" name="resourceElectricParts" count="0,2" prob="1" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceScrapIron" count="20,60"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fdoors"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
+		</block>
 	</append>
 
 </config>

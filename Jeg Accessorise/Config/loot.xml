@@ -1,59 +1,79 @@
 <config>
 
-	<!-- Adds loot group for the accessories -->
-	<insertBefore xpath="/lootcontainers/lootgroup[1]">
-		<lootgroup name="accessories" count="1">
-			<item name="accessorySilverRing" count="1"/>
-			<item name="accessoryGoldFlowerRing" count="1"/>
-			<item name="accessoryGoldStuddedRing" count="1"/>
-			<item name="accessoryRubyDiamondRing" count="1"/>
-			<item name="accessoryRubyHeartRing" count="1"/>
-		</lootgroup>
-	</insertBefore>
-
 	<!-- Adds accessories to loot -->
-	<!-- Junk -->
-	<append xpath="/lootcontainers/lootgroup[@name='junk']">
-		<item group="accessories" count="1" prob="0.001"/>
-	</append>
-
-	<!-- Cupboards -->
-	<append xpath="/lootcontainers/lootgroup[@name='cupboard']">
-		<item group="accessories" count="1" prob="0.001"/>
-	</append>
-	
-	<!-- Workstations -->
-	<append xpath="/lootcontainers/lootgroup[@name='workbenchLoot']">
-		<item group="accessories" count="1" prob="0.002"/>
-	</append>
-	<append xpath="/lootcontainers/lootgroup[@name='forgeLoot']">
-		<item group="accessories" count="1" prob="0.002"/>
-	</append>
 
 	<!-- Air Drop -->
-	<append xpath="/lootcontainers/lootcontainer[@id='34']" >
-		<item group="accessories" count="1" prob="0.009"/>
-	</append>
+	<!-- Added to Jeg's Core Mod items.xml which rewrites the Air Drop loot group -->
 
 	<!-- Zombie Loot Bags -->
-	<append xpath="/lootcontainers/lootcontainer[@id='70']" > <!-- Regular Loot -->
-		<item group="accessories" count="1" prob="0.005"/>
+	<!-- Regular Loot -->
+	<append xpath="/lootcontainers/lootcontainer[@id='70']" >
+		<item name="accessorySilverRing" count="1" prob="0.08"/>
+		<item name="accessoryGoldFlowerRing" count="1" prob="0.08"/>
+		<item name="accessoryGoldStuddedRing" count="1" prob="0.08"/>
+		<item name="accessoryRubyDiamondRing" count="1" prob="0.08"/>
+		<item name="accessoryRubyHeartRing" count="1" prob="0.08"/>
 	</append>
-	<append xpath="/lootcontainers/lootcontainer[@id='71']" > <!-- Strong Loot -->
-		<item group="accessories" count="1" prob="0.007"/>
+	<!-- Strong Loot -->
+	<append xpath="/lootcontainers/lootcontainer[@id='71']" >
+		<item name="accessorySilverRing" count="1" prob="0.1"/>
+		<item name="accessoryGoldFlowerRing" count="1" prob="0.1"/>
+		<item name="accessoryGoldStuddedRing" count="1" prob="0.1"/>
+		<item name="accessoryRubyDiamondRing" count="1" prob="0.1"/>
+		<item name="accessoryRubyHeartRing" count="1" prob="0.1"/>
 	</append>
-	<append xpath="/lootcontainers/lootcontainer[@id='73']" > <!-- Boss Loot -->
-		<item group="accessories" count="1" prob="0.009"/>
+	<!-- Boss Loot -->
+	<append xpath="/lootcontainers/lootcontainer[@id='73']" >
+		<item name="accessorySilverRing" count="1" prob="0.2"/>
+		<item name="accessoryGoldFlowerRing" count="1" prob="0.2"/>
+		<item name="accessoryGoldStuddedRing" count="1" prob="0.2"/>
+		<item name="accessoryRubyDiamondRing" count="1" prob="0.2"/>
+		<item name="accessoryRubyHeartRing" count="1" prob="0.2"/>
 	</append>
 
-	<!-- Automotive -->
-	<append xpath="/lootcontainers/lootgroup[@name='automotive']" >
-		<item group="accessories" count="1" prob="0.002"/>
+	<!-- Lockers -->
+	<append xpath="/lootcontainers/lootcontainer[@id='43']" >
+		<item name="accessorySilverRing" count="1" prob="0.03"/>
+		<item name="accessoryGoldFlowerRing" count="1" prob="0.03"/>
+		<item name="accessoryGoldStuddedRing" count="1" prob="0.03"/>
+		<item name="accessoryRubyDiamondRing" count="1" prob="0.03"/>
+		<item name="accessoryRubyHeartRing" count="1" prob="0.03"/>
 	</append>
 
-	<!-- Loot Chests -->
-	<append xpath="/lootcontainers/lootgroup[@name='groupHeroChestLoot']" >
-		<item group="accessories" count="1" prob="0.003"/>
+	<!-- Desk/Dresser -->
+	<append xpath="/lootcontainers/lootcontainer[@id='42']" >
+		<item name="accessorySilverRing" count="1" prob="0.03"/>
+		<item name="accessoryGoldFlowerRing" count="1" prob="0.03"/>
+		<item name="accessoryGoldStuddedRing" count="1" prob="0.03"/>
+		<item name="accessoryRubyDiamondRing" count="1" prob="0.03"/>
+		<item name="accessoryRubyHeartRing" count="1" prob="0.03"/>
+	</append>
+
+	<!-- Metal Desk -->
+	<append xpath="/lootcontainers/lootcontainer[@id='24']" >
+		<item name="accessorySilverRing" count="1" prob="0.03"/>
+		<item name="accessoryGoldFlowerRing" count="1" prob="0.03"/>
+		<item name="accessoryGoldStuddedRing" count="1" prob="0.03"/>
+		<item name="accessoryRubyDiamondRing" count="1" prob="0.03"/>
+		<item name="accessoryRubyHeartRing" count="1" prob="0.03"/>
+	</append>
+
+	<!-- Suitcase/Luggage -->
+	<append xpath="/lootcontainers/lootcontainer[@id='36']" >
+		<item name="accessorySilverRing" count="1" prob="0.03"/>
+		<item name="accessoryGoldFlowerRing" count="1" prob="0.03"/>
+		<item name="accessoryGoldStuddedRing" count="1" prob="0.03"/>
+		<item name="accessoryRubyDiamondRing" count="1" prob="0.03"/>
+		<item name="accessoryRubyHeartRing" count="1" prob="0.03"/>
+	</append>
+
+	<!-- Big Loot Chests -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupHeroChestLootSub']">
+		<item name="accessorySilverRing" count="1" prob="0.06"/>
+		<item name="accessoryGoldFlowerRing" count="1" prob="0.06"/>
+		<item name="accessoryGoldStuddedRing" count="1" prob="0.06"/>
+		<item name="accessoryRubyDiamondRing" count="1" prob="0.06"/>
+		<item name="accessoryRubyHeartRing" count="1" prob="0.06"/>
 	</append>
 
 </config>

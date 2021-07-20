@@ -1,18 +1,25 @@
 <configs>
+
 	<remove xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtender']" />
+
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@installable_tags">clothing,armorFeet</set>
+
 	<!-- Remove crosshair from reflex sight mod -->
 	<set xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']/item_property_overrides/property[@name='CrosshairOnAim']/@value">false</set>
+
 	<!-- Remove crosshair from laser sight mod -->
 	<set xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']/item_property_overrides/property[@name='CrosshairOnAim']/@value">false</set>
+
 	<!-- Remove penalty from silencers -->
 	<set xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">0</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']/effect_group/passive_effect[@name='MaxRange']/@value">0</set>
+
 	<!-- Gun and Helm Flashlights no longer carry a light value -->
 	<set xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']/property[@name='LightValue']/@value">0</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/property[@name='LightValue']/@value">0</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@installable_tags">head,armor,armorHead</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@blocked_tags">armorChest,armorHands,armorLegs,armorFeet</set>
+
 	<!-- Adding the modded customised fittings items -->	
 	<append xpath="/item_modifiers">
 		<item_modifier name="modLightweightMasterFitting" installable_tags="lightarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">
@@ -2700,5 +2707,8 @@
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 		</item_modifier>
 	</append>
+
+	<!-- Restricts pocket mods to chest and legs -->
+	<set xpath="/item_modifiers/item_modifier[contains(@name, 'StoragePocket') and contains(@name, 'Armor')]/@installable_tags">armorPocketSlot</set>
 
 </configs>

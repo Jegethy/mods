@@ -1,7 +1,7 @@
 <configs>
 	<!-- Adds the stone harvests for the gold digger perk -->
 	<append xpath="/blocks/block[@name='terrStone']">
-		<drop event="Harvest" name="resourceScrapIron" prob=".12" count="1,8" tag="ironleadharvest"/>
+		<drop event="Harvest" name="resourceIronFragment" prob=".12" count="1,8" tag="ironleadharvest"/>
 		<drop event="Harvest" name="resourceScrapLead" prob=".12" count="1,8" tag="ironleadharvest"/>
 		<drop event="Harvest" name="resourceCoal" prob=".12" count="1,8" tag="coaloilharvest"/>
 		<drop event="Harvest" name="resourceOilShale" prob=".12" count="1,8" tag="coaloilharvest"/>

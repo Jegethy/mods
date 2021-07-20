@@ -13,6 +13,11 @@
 	<remove xpath="/items/item[@name='apparelCoatJacketLetterZU']"/>
 	<remove xpath="/items/item[@name='coolLootShadesAdmin200']"/>
 
+	<!-- Jail doors readded -->
+	<append xpath="/items/item[@name='poweredDoorsSchematic']/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jailDoorPowered" operation="set" value="1"/>
+	</append>
+
 	<!-- Removes the grazing hits mechanic -->
 	<set xpath="//property[@name='UseGrazingHits']/@value">false</set>
 
@@ -975,8 +980,8 @@
 			<property name="Tags" value="gems"/>
 			<property name="EconomicValue" value="5000"/>
 			<property name="CraftingIngredientTime" value="15"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property name="DescriptionKey" value="resourceGoldenEggDesc"/>
-			<property name="UnlockedBy" value="perkCharismaticNature"/>
 		</item>
 
 		<item name="foodOmelette">
@@ -989,7 +994,7 @@
 			<property name="Material" value="Morganic"/>
 			<property name="Stacknumber" value="250"/> <!-- STK food -->
 			<property name="EconomicValue" value="16"/>
-			<property name="UnlockedBy" value="perkCharismaticNature"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1097,8 +1102,8 @@
 			<property name="CraftingIngredientTime" value="10"/>
 			<property name="CustomIcon" value="FoodDeliSandwichSlicedAngus"/>
 			<property name="DescriptionKey" value="foodBearEggSandwichDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<!-- 14 is large round hold -->
-			<property name="UnlockedBy" value="perkCharismaticNature"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1148,7 +1153,7 @@
 			<property name="CustomIcon" value="foodBearStew"/>
 			<property name="DescriptionKey" value="foodBearStewDesc"/>
 			<!-- 14 is large round hold -->
-			<property name="UnlockedBy" value="perkMasterChef"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -2005,5 +2010,9 @@
 
 	<!-- Increases Dev hammer block damage -->
 	<set xpath="/items/item[@name='meleeToolHammerOfGodAdmin']/effect_group/passive_effect[@name='BlockDamage']/@value">50000</set>
+
+	<!-- Restricts pocket mods to chest and legs -->
+	<append xpath="/items/item/property[@name='Tags' and contains(@value, 'armorChest')]/@value">,armorPocketSlot</append>
+	<append xpath="/items/item/property[@name='Tags' and contains(@value, 'armorLegs')]/@value">,armorPocketSlot</append>
 
 </configs>

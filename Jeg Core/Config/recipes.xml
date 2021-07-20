@@ -9,7 +9,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="foodOmelette" count="2" craft_area="campfire" craft_tool="toolCookingPot" tags="perkCharismaticNature,learnable" craft_time="15">
+		<recipe name="foodOmelette" count="2" craft_area="campfire" craft_tool="toolCookingPot" tags="perkAdvancedWrench,learnable" craft_time="15">
 			<ingredient name="resourceGoldenEgg" count="1"/>
 			<ingredient name="foodEgg" count="3"/>
 			<ingredient name="foodRapeseedOil" count="2"/>
@@ -40,7 +40,7 @@
 
 	<!-- Adds recipe for modded customised fittings -->
 	<append xpath="/recipes">
-		<recipe name="modLightweightMasterFitting" count="1" craft_time="90" craft_area="workbench">
+		<recipe name="modLightweightMasterFitting" count="1" craft_time="90" craft_area="workbench" tags="perkMasterChef,learnable">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="50"/>
 			<ingredient name="resourceDuctTape" count="15"/>
@@ -48,7 +48,7 @@
 			<ingredient name="resourceForgedSteel" count="30"/>
 		</recipe>
 
-		<recipe name="modReinforcedMasterFitting" count="1" craft_time="90" craft_area="workbench">
+		<recipe name="modReinforcedMasterFitting" count="1" craft_time="90" craft_area="workbench" tags="perkMasterChef,learnable">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="50"/>
 			<ingredient name="resourceDuctTape" count="15"/>
@@ -778,7 +778,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="foodBearStew" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable" craft_time="12">
+		<recipe name="foodBearStew" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkAdvancedWrench,learnable" craft_time="12">
 			<ingredient name="foodBearSteak" count="1"/>
 			<ingredient name="foodCropPotato" count="3"/>
 			<ingredient name="foodCropCorn" count="3"/>
@@ -788,7 +788,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="foodBearEggSandwich" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkCharismaticNature,learnable" craft_time="12">
+		<recipe name="foodBearEggSandwich" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable" craft_time="12">
 			<ingredient name="foodBearSteak" count="2"/>
 			<ingredient name="resourceGoldenEgg" count="1"/>
 			<ingredient name="foodRapeseedOil" count="5"/>
@@ -959,7 +959,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="resourceGoldenEgg" count="1" craft_time="2" tags="learnable,perkCharismaticNature">
+		<recipe name="resourceGoldenEgg" count="1" craft_time="2" tags="learnable,perkAdvancedWrench">
 			<ingredient name="resourceGoldNugget" count="5"/>
 			<ingredient name="foodEgg" count="1"/>
 			<ingredient name="foodRapeseedOil" count="1"/>
@@ -967,7 +967,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="modGunMeleeRadRemover_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkCharismaticNature" craft_time="60">
+		<recipe name="modGunMeleeRadRemover_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkAdvancedWrench" craft_time="60">
 			<ingredient name="modGunMeleeRadRemover" count="1"/>
 			<ingredient name="modGunMeleeTheHunter" count="1"/>
 			<ingredient name="resourceGlue" count="2"/>
@@ -975,7 +975,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="modArmorInsulatedLiner_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkCharismaticNature" craft_time="60">
+		<recipe name="modArmorInsulatedLiner_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkAdvancedWrench" craft_time="60">
 			<ingredient name="modArmorCoolingMesh" count="1"/>
 			<ingredient name="modArmorInsulatedLiner" count="1"/>
 			<ingredient name="resourceGlue" count="2"/>
@@ -983,7 +983,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="modMeleeStructuralBrace_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkCharismaticNature" craft_time="60">
+		<recipe name="modMeleeStructuralBrace_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkAdvancedWrench" craft_time="60">
 			<ingredient name="modMeleeStructuralBrace" count="1"/>
 			<ingredient name="modMeleeErgonomicGrip" count="1"/>
 			<ingredient name="modMeleeFortifyingGrip" count="1"/>
@@ -992,7 +992,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="modGunBarrelExtender_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkCharismaticNature" craft_time="60">
+		<recipe name="modGunBarrelExtender_2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting,perkAdvancedWrench" craft_time="60">
 			<ingredient name="modGunBarrelExtender" count="1"/>
 			<ingredient name="modGunSoundSuppressorSilencer" count="1"/>
 			<ingredient name="resourceGlue" count="2"/>
@@ -1002,19 +1002,19 @@
 	<!-- Makes vehicle mods craftable -->
 
 	<append xpath="/recipes">
-		<recipe name="modVehicleFuelSaver" count="1" craft_area="workbench" craft_time="60" tags="learnable,workbenchCrafting,perkCharismaticNature">
+		<recipe name="modVehicleFuelSaver" count="1" craft_area="workbench" craft_time="60" tags="learnable,workbenchCrafting,perkAdvancedWrench">
 			<ingredient name="resourceForgedSteel" count="30"/>
 			<ingredient name="resourceMechanicalParts" count="12"/>
 			<ingredient name="resourceScrapLead" count="12"/>
 			<ingredient name="resourceAirFilter" count="1"/>
 		</recipe>
-		<recipe name="modVehicleHeadlights" count="1" craft_area="workbench" craft_time="60" tags="learnable,workbenchCrafting,perkCharismaticNature">
+		<recipe name="modVehicleHeadlights" count="1" craft_area="workbench" craft_time="60" tags="learnable,workbenchCrafting,perkAdvancedWrench">
 			<ingredient name="resourceForgedSteel" count="30"/>
 			<ingredient name="resourceElectricParts" count="12"/>
 			<ingredient name="resourceBrokenGlass" count="12"/>
 			<ingredient name="carBattery" count="1"/>
 		</recipe>
-		<recipe name="modVehicleSpeed" count="1" craft_area="workbench" craft_time="60" tags="learnable,workbenchCrafting,perkCharismaticNature">
+		<recipe name="modVehicleSpeed" count="1" craft_area="workbench" craft_time="60" tags="learnable,workbenchCrafting,perkAdvancedWrench">
 			<ingredient name="resourceForgedSteel" count="30"/>
 			<ingredient name="resourceMechanicalParts" count="12"/>
 			<ingredient name="resourceDuctTape" count="5"/>
@@ -2107,6 +2107,23 @@
 			<ingredient name="resourceMechanicalParts" count="24"/>
 			<ingredient name="resourceGlue" count="24"/>
 			<ingredient name="resourceLeather" count="48"/>
+		</recipe>
+	</append>
+
+	<!-- Jail doors -->
+	<append xpath="/recipes">
+		<recipe name="jailDoor" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="24">
+			<ingredient name="resourceForgedIron" count="24"/>
+			<ingredient name="resourceSpring" count="6"/>
+			<ingredient name="resourceMechanicalParts" count="6"/>
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
+		</recipe>
+		<recipe name="jailDoorPowered" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" craft_time="24">
+			<ingredient name="resourceForgedSteel" count="24"/>
+			<ingredient name="resourceSpring" count="8"/>
+			<ingredient name="resourceMechanicalParts" count="8"/>
+			<ingredient name="resourceElectricParts" count="8"/>
+			<ingredient name="itemPartsTemplateMaster" count="4"/>
 		</recipe>
 	</append>
 

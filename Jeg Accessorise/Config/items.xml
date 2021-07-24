@@ -165,6 +165,7 @@
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessorySwaggerNecklace"/>
+			<property name="NameKey" value="accessorySwaggerNecklace"/>
 			<property name="DescriptionKey" value="accessorySwaggerNecklaceDesc" />
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>

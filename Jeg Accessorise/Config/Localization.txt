@@ -64,7 +64,7 @@ accessoryCrimsonEarringDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60
 accessoryDiamondEarringDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
 accessoryEmeraldNecklaceDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
 accessoryExquisiteNecklaceDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
-accessoryGoldChain,itemsDesc,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
+accessoryGoldChainDesc,itemsDesc,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
 accessoryLavenderEarringDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
 accessoryRubyNecklaceDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
 accessoryTwinNecklaceDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."

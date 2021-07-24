@@ -32,9 +32,9 @@
 				<property name="chainquest" value="false"/>
 			</reward>
 
-			<reward type="SkillPoints" value="1"/>
-			<reward type="Exp" value="2000"/>
-			<reward type="Item" id="casinoCoin" value="500"/>
+			<reward type="Exp" value="5000"/>
+			<reward type="Item" id="casinoCoin" value="200"/>
+			<reward type="Item" id="itemSkillbookPage" value="5"/>
 
 		</quest>
 	</append>	

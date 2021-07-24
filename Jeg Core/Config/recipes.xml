@@ -19,6 +19,7 @@
 	<append xpath="/recipes">
 		<recipe name="foodCookedRibs" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
 			<ingredient name="foodRawRibs" count="1"/>
+			<ingredient name="foodEgg" count="2"/>
 			<ingredient name="foodBakingFlour" count="2"/>
 			<ingredient name="foodRapeseedOil" count="2"/>
 		</recipe>
@@ -27,6 +28,7 @@
 	<append xpath="/recipes">
 		<recipe name="foodGrilledChickenLeg" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
 			<ingredient name="foodChickenLeg" count="1"/>
+			<ingredient name="foodEgg" count="2"/>
 			<ingredient name="foodBakingFlour" count="2"/>
 			<ingredient name="foodRapeseedOil" count="2"/>
 		</recipe>

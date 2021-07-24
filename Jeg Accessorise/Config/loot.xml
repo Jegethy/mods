@@ -8,27 +8,54 @@
 	<!-- Zombie Loot Bags -->
 	<!-- Regular Loot -->
 	<append xpath="/lootcontainers/lootcontainer[@id='70']" >
-		<item name="accessorySilverRing" count="1" prob="0.08"/>
-		<item name="accessoryGoldFlowerRing" count="1" prob="0.08"/>
-		<item name="accessoryGoldStuddedRing" count="1" prob="0.08"/>
-		<item name="accessoryRubyDiamondRing" count="1" prob="0.08"/>
-		<item name="accessoryRubyHeartRing" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox1" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox2" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox3" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox4" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox5" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox6" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox7" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox8" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox9" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox10" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox11" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox12" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox13" count="1" prob="0.08"/>
+		<item name="accessoryJewerlyBox14" count="1" prob="0.08"/>
 	</append>
 	<!-- Strong Loot -->
 	<append xpath="/lootcontainers/lootcontainer[@id='71']" >
-		<item name="accessorySilverRing" count="1" prob="0.1"/>
-		<item name="accessoryGoldFlowerRing" count="1" prob="0.1"/>
-		<item name="accessoryGoldStuddedRing" count="1" prob="0.1"/>
-		<item name="accessoryRubyDiamondRing" count="1" prob="0.1"/>
-		<item name="accessoryRubyHeartRing" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox1" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox2" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox3" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox4" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox5" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox6" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox7" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox8" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox9" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox10" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox11" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox12" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox13" count="1" prob="0.1"/>
+		<item name="accessoryJewerlyBox14" count="1" prob="0.1"/>
 	</append>
 	<!-- Boss Loot -->
 	<append xpath="/lootcontainers/lootcontainer[@id='73']" >
-		<item name="accessorySilverRing" count="1" prob="0.2"/>
-		<item name="accessoryGoldFlowerRing" count="1" prob="0.2"/>
-		<item name="accessoryGoldStuddedRing" count="1" prob="0.2"/>
-		<item name="accessoryRubyDiamondRing" count="1" prob="0.2"/>
-		<item name="accessoryRubyHeartRing" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox1" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox2" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox3" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox4" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox5" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox6" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox7" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox8" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox9" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox10" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox11" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox12" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox13" count="1" prob="0.2"/>
+		<item name="accessoryJewerlyBox14" count="1" prob="0.2"/>
 	</append>
 
 </config>

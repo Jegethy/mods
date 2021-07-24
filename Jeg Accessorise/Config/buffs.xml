@@ -157,7 +157,7 @@
 	<!-- Combined Rings - Effect WIP -->
 
 	<append xpath="/buffs">	
-		<buff name="buffaccessoryCombinedRings" name_key="buffaccessoryCombinedRingsName" description_key="buffaccessoryCombinedRingsDesc" tooltip_key="buffaccessoryCombinedRingsTooltip" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryCombinedRings" name_key="buffaccessorySwaggerNecklaceName" description_key="buffaccessorySwaggerNecklaceDesc" tooltip_key="buffaccessorySwaggerNecklaceTooltip" icon="noarmour" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>

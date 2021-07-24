@@ -599,6 +599,9 @@ Craftable candies?
 	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='2,5']/@tags">,foodCookedRibs,foodGrilledChickenLeg</append>
 	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='4,5']/@tags">,foodBearStew</append>
 
+	<!-- Adds parts to advanced engineering tier 5 -->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,meleeWpnClubT3SteelClubParts,gunShotgunT1DoubleBarrelParts,meleeToolAxeT3ChainsawParts,armorMilitarySetParts,gunHandgunT1PistolParts,gunBowT1WoodenBowParts,meleeToolAllSteelParts,armorSteelSetParts,gunRifleT1HuntingRifleParts,gunMGT1AK47Parts,gunExplosivesT3RocketLauncherParts,gunBotRoboticsParts,meleeWpnBatonT2StunBatonParts,meleeWpnKnucklesT3SteelKnucklesParts,meleeWpnBladeT3MacheteParts,meleeWpnSpearT3SteelSpearParts,meleeWpnSledgeT3SteelSledgehammerParts</append>
+
 	<!-- Adds Advanced Forge -->
 	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,forgeAdv</append>
 

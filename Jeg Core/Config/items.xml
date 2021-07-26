@@ -235,6 +235,7 @@
 	</append>
 
 	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">.2</set>
+	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.05</set>
 
 	<!-- Increases the Nailgun speed and removed the quality display as it only comes in 1 tier -->
 	<set xpath="/items/item[@name='meleeToolRepairT3Nailgun']/property[@class='Action1']/property[@name='Delay']/@value">0.25</set>

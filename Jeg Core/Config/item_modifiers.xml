@@ -2447,9 +2447,9 @@
 	<!-- Add Vehicle Mods -->
 	<remove xpath="/item_modifiers/item_modifier[@name='modVehicleMega']"/>
 	<set xpath="/item_modifiers/item_modifier[@name='modVehicleHeadlights']/effect_group/passive_effect[@name='LightIntensity']/@value">2</set>
-	<set xpath="/item_modifiers/item_modifier[@name='modVehicleHeadlights']/property[@name='UnlockedBy']/@value">perkCharismaticNature</set>
-	<set xpath="/item_modifiers/item_modifier[@name='modVehicleFuelSaver']/property[@name='UnlockedBy']/@value">perkCharismaticNature</set>
-	<set xpath="/item_modifiers/item_modifier[@name='modVehicleSpeed']/property[@name='UnlockedBy']/@value">perkCharismaticNature</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modVehicleHeadlights']/property[@name='UnlockedBy']/@value">perkAdvancedWrench</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modVehicleFuelSaver']/property[@name='UnlockedBy']/@value">perkAdvancedWrench</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modVehicleSpeed']/property[@name='UnlockedBy']/@value">perkAdvancedWrench</set>
 	<remove xpath="/item_modifiers/item_modifier[starts-with(@name, 'modVehicle')]/property[@name='CreativeMode']"/>
 	<append xpath="/item_modifiers/item_modifier[starts-with(@name, 'modVehicle')]">
 		<property name="EconomicValue" value="1000" />
@@ -2489,7 +2489,7 @@
 
 	<append xpath="/item_modifiers">
 		<item_modifier name="modArmorInsulatedLiner_2" installable_tags="armor" modifier_tags="thermal,temperature" blocked_tags="noMods" type="attachment">
-			<property name="UnlockedBy" value="perkCharismaticNature"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property name="CustomIcon" value="modArmorInsulatedLiner"/> <property name="CustomIconTint" value="b0e7ff"/>
 			<property name="DisplayType" value="modTempResist"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
@@ -2507,7 +2507,7 @@
 
 	<append xpath="/item_modifiers">
 		<item_modifier name="modGunMeleeRadRemover_2" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
-			<property name="UnlockedBy" value="perkCharismaticNature"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property name="CustomIcon" value="modGunMeleeRadRemover"/> <property name="CustomIconTint" value="b0e7ff"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -2527,7 +2527,7 @@
 
 	<append xpath="/item_modifiers">
 		<item_modifier name="modMeleeStructuralBrace_2" installable_tags="melee,perkArchery" modifier_tags="durability" blocked_tags="noMods" type="attachment">
-			<property name="UnlockedBy" value="perkCharismaticNature"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property name="CustomIcon" value="modMeleeStructuralBrace"/> <property name="CustomIconTint" value="b0e7ff"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -2559,7 +2559,7 @@
 
 	<append xpath="/item_modifiers">
 		<item_modifier name="modGunBarrelExtender_2" installable_tags="gun,barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods,noSilencer" type="attachment">
-			<property name="UnlockedBy" value="perkCharismaticNature"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property name="CustomIcon" value="modGunBarrelExtender"/> <property name="CustomIconTint" value="b0e7ff"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>

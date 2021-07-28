@@ -30,7 +30,7 @@
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='SightRange']" >
 		<property name="DismemberMultiplierHead" value="0"/>
 	</insertAfter>
-	
+
 	<!-- Increased debuff probability -->
 	<remove xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='-.1']"></remove>
 	<!-- Fatigued: default = 0 -->
@@ -2673,4 +2673,5 @@
 			</effect_group>
 		</entity_class>
 	</append>
+
 </config>

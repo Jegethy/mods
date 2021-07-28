@@ -1025,67 +1025,67 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="ammo9mmBulletAP" count="250" always_unlocked="true" craft_time="8">
+			<recipe name="ammo9mmBulletBall" count="500" always_unlocked="true" craft_time="8">
+			<ingredient name="resourceAmmoToken" count="1"/>
+		</recipe>
+	
+		<recipe name="ammo9mmBulletAP" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammo9mmBulletHP" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammo9mmBulletHP" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammo9mmBulletBall" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammo762mmBulletBall" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammo762mmBulletAP" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammo762mmBulletHP" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammo762mmBulletHP" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammo762mmBulletAP" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammo762mmBulletAP" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammo44MagnumBulletBall" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammo44MagnumBulletBall" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammo44MagnumBulletAP" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammo44MagnumBulletAP" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammo44MagnumBulletHP" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammo44MagnumBulletHP" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammoShotgunShell" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammoShotgunShell" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammoShotgunSlug" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammoShotgunSlug" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammoArrowIron" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammoArrowIron" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammoArrowSteelAP" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammoArrowSteelAP" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammoCrossbowBoltIron" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammoCrossbowBoltIron" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammoCrossbowBoltSteelAP" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 
-		<recipe name="ammoCrossbowBoltSteelAP" count="250" always_unlocked="true" craft_time="8">
-			<ingredient name="resourceAmmoToken" count="1"/>
-		</recipe>
-
-		<recipe name="ammoBlunderbuss" count="250" always_unlocked="true" craft_time="8">
+		<recipe name="ammoBlunderbuss" count="500" always_unlocked="true" craft_time="8">
 			<ingredient name="resourceAmmoToken" count="1"/>
 		</recipe>
 	</append>

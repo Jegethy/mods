@@ -24,7 +24,7 @@
 			<effect_group>
 
 				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="resourceGoldenEgg,foodOmelette,foodBearStew,foodBearEggSandwich"/>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="modGunMeleeRadRemover_2,modArmorInsulatedLiner_2,modGunBarrelExtender_2,modMeleeStructuralBrace_2"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="modGunMeleeRadRemover_2,modArmorInsulatedLiner_2,modGunBarrelExtender_2,modMeleeStructuralBrace_2,modReinforcedMasterFitting,modLightweightMasterFitting"/>
 				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,3" value="1" tags="itemAdvWrench,modVehicleFuelSaver,modVehicleHeadlights,modVehicleSpeed"/>
 				<passive_effect name="CraftingTier" operation="base_add" level="1" value="5" tags="advWrench"/>
 

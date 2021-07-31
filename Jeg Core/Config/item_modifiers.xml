@@ -31,6 +31,7 @@
 			<property name="CustomIcon" value="modArmorPlatingBasic" />
 			<property name="CustomIconTint" value="171,171,255"/>
 			<property name="EconomicValue" value="385"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="Mobility" operation="perc_add" value="0.015"/>
@@ -51,6 +52,7 @@
 			<property name="CustomIcon" value="modArmorPlatingReinforced" />
 			<property name="CustomIconTint" value="171,171,255"/>
 			<property name="EconomicValue" value="542"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="Mobility" operation="perc_add" value="0.02"/>

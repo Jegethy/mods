@@ -36,7 +36,7 @@
 
 	<!-- Hammer Time drunk speed and damage buff -->
 	<append xpath="/buffs">
-		<buff name="buffHammerTimeDrunk" name_key="buffHammerTimeDrunkName" description_key="buffHammerTimeDrunkDesc" showonhud="false" icon="ui_game_symbol_sledge" icon_color="0,255,0">
+		<buff name="buffHammerTimeDrunk" name_key="buffHammerTimeDrunkName" description_key="buffHammerTimeDrunkDesc" showonhud="true" icon="ui_game_symbol_sledge" icon_color="0,255,0">
 			<duration value="30"/>
 			<stack_type value="replace"/>
 			<effect_group>

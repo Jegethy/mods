@@ -36,7 +36,7 @@
 
 	<!-- Maximum health buff -->
 	<append xpath="/progression/perks">
-		<perk name="extraMaxHealth" base_skill_point_cost="5" parent="extraCharacterPerks" name_key="extraMaxHealthName" desc_key="extraMaxHealthDesc" icon="jeg_health">
+		<perk name="extraMaxHealth" base_skill_point_cost="2" parent="extraCharacterPerks" name_key="extraMaxHealthName" desc_key="extraMaxHealthDesc" icon="jeg_health">
 			<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayerLevel100"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="2" desc_key="Fortitude Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="2" desc_key="Strength Level 2"/>
@@ -611,7 +611,8 @@ Craftable candies?
 
 	<!-- Pilot Training Skill Tree -->
 	<append xpath="/progression/perks" >
-		<perk name="perkPilotTraining" max_level="5" base_skill_point_cost="5" parent="skillIntellectCraftsmanship" name_key="perkPilotTrainingName" desc_key="perkPilotTrainingDesc" icon="pilot-icon">
+		<perk name="perkPilotTraining" base_skill_point_cost="5" max_level="5" parent="skillIntellectCraftsmanship" name_key="perkPilotTrainingName" desc_key="perkPilotTrainingDesc" icon="pilot-icon">
+
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>

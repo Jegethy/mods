@@ -1,0 +1,41 @@
+<configs>
+
+	<append xpath="/buffs">
+		<buff name="buffHordeNightQuestTracker" name_key="buffHammerTimeDrunkName" description_key="buffHammerTimeDrunkDesc" showonhud="true" icon="ui_game_symbol_sledge" icon_color="0,255,0">
+			<stack_type value="ignore"/>
+			<update_rate value=".2"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/>
+			</effect_group>
+		</buff>
+	</append>
+	
+	<append xpath="/buffs">
+		<buff name="buffHordeNightQuestTrackerNight" name_key="buffHammerTimeDrunkName" description_key="buffHammerTimeDrunkDesc" showonhud="true" icon="ui_game_symbol_pistol" icon_color="255,255,0">
+			<stack_type value="ignore"/>
+			<update_rate value=".2"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/>
+			</effect_group>
+		</buff>
+	</append>
+
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHordeNightQuestTracker">
+			<requirement name="NotHasBuff" buff="buffHordeNightQuestTracker"/>
+			<requirement name="IsDay" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHordeNightQuestTracker">
+			<requirement name="HasBuff" buff="buffHordeNightQuestTracker"/>
+			<requirement name="IsNight" />
+			<requirement name="RequirementIsBloodMoonDMT, Mods" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHordeNightQuestTrackerNight">
+			<requirement name="NotHasBuff" buff="buffHordeNightQuestTracker"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHordeNightQuestTrackerNight">
+			<requirement name="HasBuff" buff="buffHordeNightQuestTracker"/>
+		</triggered_effect>
+	</append>
+
+</configs>

@@ -12,6 +12,10 @@
 	<remove xpath="/items/item[@name='apparelFacialPiercings']"/>
 	<remove xpath="/items/item[@name='apparelCoatJacketLetterZU']"/>
 	<remove xpath="/items/item[@name='coolLootShadesAdmin200']"/>
+	
+	<!-- Wood and Coal burn longer -->
+	<set xpath="/items/item[@name='resourceCoal']/property[@name='FuelValue']/@value">500</set>
+	<set xpath="/items/item[@name='resourceWood']/property[@name='FuelValue']/@value">250</set>
 
 	<!-- Jail doors readded -->
 	<append xpath="/items/item[@name='poweredDoorsSchematic']/effect_group">

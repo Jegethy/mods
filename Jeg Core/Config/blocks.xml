@@ -13,6 +13,11 @@
 	<append xpath="/blocks/block[@name='cntHardenedChestSecure']" >
 		<property name="MaxDamage" value="30000"/><!-- original: 10000  -->
 	</append>
+	
+	<!-- Lootable Tires -->
+	<append xpath="/blocks/block[contains (@name, 'decoCarTireSmallFlat')]">
+		<property name="CanPickup" value="true"/>
+	</append>
 
 	<!-- Campfire, force and work stations cause more heat -->
 	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']/@value">7</set>        <!-- original: 5    -->

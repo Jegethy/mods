@@ -16,6 +16,10 @@
 
 	<!-- Remove Radiated Zombie Vultures -->
 	<remove xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/property[@name='Radiated']" />
+	
+	<!-- Slower Chickens and Rabbits -->
+	<set xpath="/entity_classes/entity_class[@name='animalChicken']/property[@name='MoveSpeedPanic'][@value='1.3']/@value">.8</set>
+	<set xpath="/entity_classes/entity_class[@name='animalRabbit']/property[@name='MoveSpeedPanic'][@value='1.55']/@value">1.1</set>
 
 	<!-- Removes dismember chance on animals -->
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='Mesh']" >

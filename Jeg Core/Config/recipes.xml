@@ -33,6 +33,22 @@
 			<ingredient name="unit_clay" count="5"/>
 		</recipe>
 	</append>
+
+	<!-- Changes wheel crafting recipe -->
+	<remove xpath="/recipes/recipe[@name='vehicleWheels']"/>
+
+	<append xpath="/recipes">
+		<recipe name="vehicleWheels" count="1" tags="perkGreaseMonkey,learnable">
+			<ingredient name="decoCarTireSmallFlat" count="1"/>
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceOil" count="2"/>
+			<ingredient name="resourceCoal" count="10"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0" value=".5" tags="resourceOil,resourceForgedIron,resourceCoal"/>
+			</effect_group>
+		</recipe>
+	</append>
+
 	<append xpath="/recipes">
 		<recipe name="itemPilotHandbook" count="1" craft_area="workbench" craft_time="450" tags="perkGreaseMonkey,learnable">
 			<ingredient name="casinoCoin" count="30000"/>

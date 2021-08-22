@@ -32,4 +32,5 @@
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffTraderProtectionStarter"/>
 		</effect_group>
 	</append>
+	
 </configs>

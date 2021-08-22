@@ -1,4 +1,5 @@
 <configs>
+
 	<insertAfter xpath="/quests/quest[@id='quest_whiteRiverCitizen1']/reward[@type='Exp']" >
 		<reward type="Quest" id="questZombieVanguard1">
 			<property name="chainquest" value="false"/>
@@ -38,5 +39,101 @@
 			<reward type="Item" id="itemSkillbookPage" value="5"/>
 
 		</quest>
-	</append>	
+	</append>
+	
+	<!-- Adds reward to tier completion quests -->
+	<!-- Tier 1 -->
+	<append xpath="/quests/quest[@id='quest_tier1complete']">
+		<reward type="Quest" id="quest_tier1completeBonus">
+			<property name="chainquest" value="false"/>
+		</reward>
+		<reward type="SkillPoints" value="1" />
+	</append>
+	<!-- Tier 2 -->
+	<append xpath="/quests/quest[@id='quest_tier2complete']">
+		<reward type="SkillPoints" value="1" />
+	</append>
+	<!-- Tier 3 -->
+	<append xpath="/quests/quest[@id='quest_tier3complete']">
+		<reward type="SkillPoints" value="2" />
+	</append>
+	<!-- Tier 4 -->
+	<append xpath="/quests/quest[@id='quest_tier4complete']">
+		<reward type="SkillPoints" value="2" />
+	</append>
+	<!-- Tier 5 -->
+	<append xpath="/quests/quest[@id='quest_tier5complete']">
+		<reward type="SkillPoints" value="3" />
+	</append>
+	<!-- Tier 6 -->
+	<append xpath="/quests/quest[@id='quest_tier6complete']">
+		<reward type="SkillPoints" value="3" />
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="quest_tier1completeBonus">
+
+			<property name="group_name_key" value="quest_tier1completeBonus_group2"/>
+			<property name="name_key" value="quest_tier1completeBonus"/>
+			<property name="subtitle_key" value="quest_tier1completeBonus_subtitle"/>
+			<property name="description_key" value="quest_tier1completeBonus_description"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="hard"/>
+			<property name="offer_key" value="quest_tier1completeBonus_description"/>
+			<property name="shareable" value="false"/>
+
+			<action type="ShowTip" value="quest_tier1completeBonusTip">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="TrackQuest">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ZombieKill" value="500" phase="1"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="1"/>
+
+			<reward type="Quest" id="quest_tier1completeBonusExtra">
+				<property name="chainquest" value="false"/>
+			</reward>
+
+			<reward type="Exp" value="50000"/>
+			<reward type="Item" id="casinoCoin" value="500"/>
+			<reward type="Item" id="itemSkillbookPage" value="10"/>
+
+		</quest>
+	</append>
+	
+	<append xpath="/quests">
+		<quest id="quest_tier1completeBonusExtra">
+
+			<property name="group_name_key" value="quest_tier1completeBonusExtra_group2"/>
+			<property name="name_key" value="quest_tier1completeBonusExtra"/>
+			<property name="subtitle_key" value="quest_tier1completeBonusExtra_subtitle"/>
+			<property name="description_key" value="quest_tier1completeBonusExtra_description"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="hard"/>
+			<property name="offer_key" value="quest_tier1completeBonusExtra_description"/>
+			<property name="shareable" value="false"/>
+
+			<action type="ShowTip" value="quest_tier1completeBonusExtraTip">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="TrackQuest">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ZombieKill" value="5000" phase="1"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="1"/>
+			
+			<reward type="Exp" value="500000"/>
+			<reward type="Item" id="casinoCoin" value="5000"/>
+			<reward type="Item" id="itemSkillbookPage" value="100"/>
+
+		</quest>
+	</append>
+	
 </configs>	

@@ -1,4 +1,5 @@
 <configs>
+
 	<!-- Makes placeable vehicles require the necessary perk level -->
 	<append xpath="/recipes/recipe[@name='vehicleBicyclePlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
 	<append xpath="/recipes/recipe[@name='vehicleMinibikePlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
@@ -13,7 +14,18 @@
 	<set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']" name="count">1</set>
 	<set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']" name="count">1</set>
 	<set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']" name="count">1</set>
-	
+
+	<!-- Skill reset drink is now craftable -->
+	<append xpath="/recipes">
+		<recipe name="drinkJarGrandpasForgettingElixir" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+			<ingredient name="foodCanCatfood" count="3"/>
+			<ingredient name="drinkJarGrandpasMoonshine" count="2"/>
+			<ingredient name="drinkJarGrainAlcohol" count="5"/>
+			<ingredient name="resourceTestosteroneExtract" count="2"/>
+			<ingredient name="drinkJarBeer" count="5"/>
+		</recipe>
+	</append>
+
 	<!-- Adds Beaker recipe to the forge -->
 	<append xpath="/recipes">
 		<recipe name="toolBeaker" count="1" craft_area="forge" tags="perkPhysician,learnable" material_based="true">

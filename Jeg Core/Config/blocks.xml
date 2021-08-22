@@ -15,21 +15,21 @@
 	</append>
 
 	<!-- Campfire, force and work stations cause more heat -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']/@value">6</set>        <!-- original: 5    -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapTime']/@value">6000</set>         <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapFrequency']/@value">1500</set>    <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']/@value">7</set>           <!-- original: 6    -->
-	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapTime']/@value">6000</set>            <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapFrequency']/@value">1500</set>       <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']/@value">3</set>       <!-- original: 2    -->
-	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapTime']/@value">6000</set>        <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapFrequency']/@value">1500</set>   <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']/@value">3</set>     <!-- original: 2    -->
-	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapTime']/@value">6000</set>      <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapFrequency']/@value">1500</set> <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapStrength']/@value">6</set><!-- original: 5    -->
-	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapTime']/@value">6000</set> <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapFrequency']/@value">1500</set> <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']/@value">7</set>        <!-- original: 5    -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapTime']/@value">7000</set>         <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapFrequency']/@value">2000</set>    <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']/@value">8</set>           <!-- original: 6    -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapTime']/@value">7000</set>            <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapFrequency']/@value">2000</set>       <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']/@value">4</set>       <!-- original: 2    -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapTime']/@value">7000</set>        <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapFrequency']/@value">2500</set>   <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']/@value">4</set>     <!-- original: 2    -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapTime']/@value">7000</set>      <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapFrequency']/@value">2500</set> <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapStrength']/@value">7</set><!-- original: 5    -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapTime']/@value">7000</set> <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapFrequency']/@value">2500</set> <!-- original: 1000 -->
 
 	<!-- Triples the fuel capacity of generators -->
 	<set xpath="/blocks/block[@name='generatorbank']/property[@name='MaxFuel']/@value">8000</set>

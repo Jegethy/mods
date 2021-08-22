@@ -37,5 +37,6 @@
 	</append>
 
 	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='4,5']/@tags">,jailDoorPowered</append>
+	<append xpath="/progression/perks/perk[@name='perkPhysician']/effect_group/passive_effect[@level='2,4']/@tags">,toolBeaker</append>
 
 </configs>

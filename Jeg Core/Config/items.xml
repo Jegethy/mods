@@ -2076,4 +2076,9 @@
 		<property name="UnlockedBy" value="perkGreaseMonkey"/>
 	</insertAfter>
 
+	<!-- Makes breakers craftable -->
+	<append xpath="/items/item[@name='toolBeaker']">
+		<property name="UnlockedBy" value="perkPhysician"/>
+	</append>
+
 </configs>

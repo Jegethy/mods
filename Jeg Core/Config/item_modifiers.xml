@@ -1,6 +1,6 @@
 <configs>
 
-	<remove xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtender']" />
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtender']"/>
 
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@installable_tags">clothing,armorFeet</set>
 
@@ -20,15 +20,15 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@installable_tags">head,armor,armorHead</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@blocked_tags">armorChest,armorHands,armorLegs,armorFeet</set>
 
-	<!-- Adding the modded customised fittings items -->	
+	<!-- Adding the modded customised fittings items -->
 	<append xpath="/item_modifiers">
 		<item_modifier name="modLightweightMasterFitting" installable_tags="lightarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">
 			<property name="DisplayType" value="modArmorMobilityCustom"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="modCustom"/>
-			<property name="name_key" value="modLightweightMasterFitting" />
-			<property name="description_key" value="modLightweightMasterFittingDesc" />
-			<property name="CustomIcon" value="modArmorPlatingBasic" />
+			<property name="name_key" value="modLightweightMasterFitting"/>
+			<property name="description_key" value="modLightweightMasterFittingDesc"/>
+			<property name="CustomIcon" value="modArmorPlatingBasic"/>
 			<property name="CustomIconTint" value="171,171,255"/>
 			<property name="EconomicValue" value="385"/>
 			<property name="UnlockedBy" value="perkAdvancedWrench"/>
@@ -38,7 +38,7 @@
 				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.0281" tags="walking"/>
 				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.0562" tags="running"/>
 				<display_value name="dStaminaChangeOT" value="0.562"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.02" /><display_value name="dNoiseMultiplier" value="-.02"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.02"/><display_value name="dNoiseMultiplier" value="-.02"/>
 			</effect_group>
 		</item_modifier>
 
@@ -47,9 +47,9 @@
 			<property name="DisplayType" value="modArmorMobilityCustom"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="modCustom"/>
-			<property name="name_key" value="modReinforcedMasterFitting" />
-			<property name="description_key" value="modReinforcedMasterFittingDesc" />
-			<property name="CustomIcon" value="modArmorPlatingReinforced" />
+			<property name="name_key" value="modReinforcedMasterFitting"/>
+			<property name="description_key" value="modReinforcedMasterFittingDesc"/>
+			<property name="CustomIcon" value="modArmorPlatingReinforced"/>
 			<property name="CustomIconTint" value="171,171,255"/>
 			<property name="EconomicValue" value="542"/>
 			<property name="UnlockedBy" value="perkAdvancedWrench"/>
@@ -59,7 +59,7 @@
 				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.045" tags="walking"/>
 				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.09" tags="running"/>
 				<display_value name="dStaminaChangeOT" value="0.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.12" /><display_value name="dNoiseMultiplier" value="-.12"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.12"/><display_value name="dNoiseMultiplier" value="-.12"/>
 			</effect_group>
 		</item_modifier>
 	</append>
@@ -97,8 +97,8 @@
 
 	<append xpath="/item_modifiers">
 		<item_modifier name="modArmorInvisible" installable_tags="armor" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
-			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modDyeWhite"/><property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="EconomicValue" value="440"/>
 			<item_property_overrides name="*">
@@ -111,8 +111,8 @@
 		</item_modifier>
 
 		<item_modifier name="modArmorInvisibleFace" installable_tags="moddedHead" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
-			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modDyeWhite"/><property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="EconomicValue" value="440"/>
 			<item_property_overrides name="*">
@@ -125,8 +125,8 @@
 		</item_modifier>
 
 		<item_modifier name="modArmorInvisibleGoth" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
-			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modDyeWhite"/><property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="EconomicValue" value="440"/>
 			<item_property_overrides name="*">
@@ -139,8 +139,8 @@
 		</item_modifier>
 
 		<item_modifier name="modArmorInvisibleCowboy" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
-			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modDyeWhite"/><property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="EconomicValue" value="440"/>
 			<item_property_overrides name="*">
@@ -153,8 +153,8 @@
 		</item_modifier>
 
 		<item_modifier name="modArmorInvisibleRunning" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
-			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modDyeWhite"/><property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="EconomicValue" value="440"/>
 			<item_property_overrides name="*">
@@ -169,8 +169,8 @@
 		</item_modifier>
 
 		<item_modifier name="modArmorInvisibleDress" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
-			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modDyeWhite"/><property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="EconomicValue" value="440"/>
 			<item_property_overrides name="*">
@@ -185,8 +185,8 @@
 		</item_modifier>
 
 		<item_modifier name="modArmorInvisibleWorn" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
-			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modDyeWhite"/><property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="EconomicValue" value="440"/>
 			<item_property_overrides name="*">
@@ -207,7 +207,7 @@
 			<property name="Stacknumber" value="1"/>
 			<effect_group tiered="false">
 				<passive_effect name="BlockDamage" operation="perc_add" value=".5"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="wood"/>	
+				<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="wood"/>
 			</effect_group>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 		</item_modifier>
@@ -230,7 +230,7 @@
 			<property name="Stacknumber" value="1"/>
 			<effect_group tiered="false">
 				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".2"/>
-				<passive_effect name="MagazineSize" operation="perc_add" value=".2" />	
+				<passive_effect name="MagazineSize" operation="perc_add" value=".2"/>
 			</effect_group>
 			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 		</item_modifier>
@@ -246,8 +246,8 @@
 
 		<item_modifier name="modAdvTurretRadar" installable_tags="AdvTurretMod" modifier_tags="sideAttachment" type="attachment" rarity="0.5">
 			<property name="CustomIcon" value="modAdvTurretRadar"/>
-			<property name="name_key" value="modAdvTurretRadar" />
-			<property name="description_key" value="modAdvTurretRadarDesc" />
+			<property name="name_key" value="modAdvTurretRadar"/>
+			<property name="description_key" value="modAdvTurretRadarDesc"/>
 			<property name="Stacknumber" value="1"/>
 			<effect_group tiered="false">
 				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="0"/>
@@ -259,7 +259,7 @@
 		</item_modifier>
 	</append>
 
-	<append xpath="/item_modifiers">	
+	<append xpath="/item_modifiers">
 		<item_modifier name="modDyeRoyalPurple" installable_tags="clothing,armor,weapon,tool,vehicle" modifier_tags="dye" type="attachment" cosmetic_install_chance=".1">
 			<property name="DescriptionKey" value="modDyeGroupDesc"/>
 			<property name="Stacknumber" value="1"/>
@@ -1282,7 +1282,7 @@
 			<item_property_overrides name="apparelCoatLeatherDuster">
 				<property name="UMA.Overlay0Tint" value="0,255,255"/>
 			</item_property_overrides>
-			<property name="PickupJournalEntry" value="augmentGunsTip"/>	
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 		</item_modifier>
 
 		<item_modifier name="modDyeAquamarine" installable_tags="clothing,armor,weapon,tool,vehicle" modifier_tags="dye" type="attachment" rarity="0.2" cosmetic_install_chance="1">
@@ -1359,7 +1359,7 @@
 			<item_property_overrides name="apparelCoatLeatherDuster">
 				<property name="UMA.Overlay0Tint" value="127,255,212"/>
 			</item_property_overrides>
-			<property name="PickupJournalEntry" value="augmentGunsTip"/>	
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 		</item_modifier>
 
 		<item_modifier name="modDyeTeal" installable_tags="clothing,armor,weapon,tool,vehicle" modifier_tags="dye" type="attachment" rarity="0.2" cosmetic_install_chance="1">
@@ -2454,15 +2454,15 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modVehicleSpeed']/property[@name='UnlockedBy']/@value">perkAdvancedWrench</set>
 	<remove xpath="/item_modifiers/item_modifier[starts-with(@name, 'modVehicle')]/property[@name='CreativeMode']"/>
 	<append xpath="/item_modifiers/item_modifier[starts-with(@name, 'modVehicle')]">
-		<property name="EconomicValue" value="1000" />
+		<property name="EconomicValue" value="1000"/>
 	</append>
 
 	<append xpath="/item_modifiers">
 		<item_modifier name="Night Vision Mod" installable_tags="armorHead" blocked_tags="noMods" type="attachment">
-			<property name="CustomIcon" value="apparelNightvisionGoggles"/> <property name="CustomIconTint" value="38bbda"/>
+			<property name="CustomIcon" value="apparelNightvisionGoggles"/><property name="CustomIconTint" value="38bbda"/>
 			<property name="DescriptionKey" value="apparelNightvisionGogglesDesc"/>
 			<property name="Material" value="Msteel"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="UnlockedBy" value="perkLightArmor"/>
 
@@ -2492,9 +2492,9 @@
 	<append xpath="/item_modifiers">
 		<item_modifier name="modArmorInsulatedLiner_2" installable_tags="armor" modifier_tags="thermal,temperature" blocked_tags="noMods" type="attachment">
 			<property name="UnlockedBy" value="perkAdvancedWrench"/>
-			<property name="CustomIcon" value="modArmorInsulatedLiner"/> <property name="CustomIconTint" value="b0e7ff"/>
+			<property name="CustomIcon" value="modArmorInsulatedLiner"/><property name="CustomIconTint" value="b0e7ff"/>
 			<property name="DisplayType" value="modTempResist"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 
 			<effect_group tiered="false">
@@ -2510,8 +2510,8 @@
 	<append xpath="/item_modifiers">
 		<item_modifier name="modGunMeleeRadRemover_2" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
 			<property name="UnlockedBy" value="perkAdvancedWrench"/>
-			<property name="CustomIcon" value="modGunMeleeRadRemover"/> <property name="CustomIconTint" value="b0e7ff"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modGunMeleeRadRemover"/><property name="CustomIconTint" value="b0e7ff"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<!-- Increases damage against irradiated enemies, all melee only -->
 			<effect_group tiered="false">
@@ -2530,8 +2530,8 @@
 	<append xpath="/item_modifiers">
 		<item_modifier name="modMeleeStructuralBrace_2" installable_tags="melee,perkArchery" modifier_tags="durability" blocked_tags="noMods" type="attachment">
 			<property name="UnlockedBy" value="perkAdvancedWrench"/>
-			<property name="CustomIcon" value="modMeleeStructuralBrace"/> <property name="CustomIconTint" value="b0e7ff"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modMeleeStructuralBrace"/><property name="CustomIconTint" value="b0e7ff"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 
 			<!-- Increases durability, increases block efficiency, all melee -->
@@ -2562,8 +2562,8 @@
 	<append xpath="/item_modifiers">
 		<item_modifier name="modGunBarrelExtender_2" installable_tags="gun,barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods,noSilencer" type="attachment">
 			<property name="UnlockedBy" value="perkAdvancedWrench"/>
-			<property name="CustomIcon" value="modGunBarrelExtender"/> <property name="CustomIconTint" value="b0e7ff"/>
-			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="CustomIcon" value="modGunBarrelExtender"/><property name="CustomIconTint" value="b0e7ff"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 
 			<!--Decreases sound footprint by x% -->
@@ -2712,5 +2712,10 @@
 
 	<!-- Restricts pocket mods to chest and legs -->
 	<set xpath="/item_modifiers/item_modifier[contains(@name, 'StoragePocket') and contains(@name, 'Armor')]/@installable_tags">armorPocketSlot</set>
+
+	<!-- Updates the scope texture to a less shit one -->
+	<set xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']/item_property_overrides[@name='*']/property[@name='Zoom_overlay']/@value">#@modfolder:Resources/Optics.unity3d?2x.png</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']/item_property_overrides[@name='*']/property[@name='Zoom_overlay']/@value">#@modfolder:Resources/Optics.unity3d?4x.png</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modGunScopeLarge']/item_property_overrides[@name='*']/property[@name='Zoom_overlay']/@value">#@modfolder:Resources/Optics.unity3d?8x.png</set>
 
 </configs>

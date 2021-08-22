@@ -68,3 +68,5 @@ accessoryGoldChainDesc,itemsDesc,Item,,,"[E30000]Placeholder Description\n\n[60C
 accessoryLavenderEarringDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
 accessoryRubyNecklaceDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
 accessoryTwinNecklaceDesc,items,Item,,,"[E30000]Placeholder Description\n\n[60CCFF]This item currently provides no effects\n\nHold on to this item as it will be updated in future."
+modAccessoriseMovementSpeed,item_modifiers,mod,,,"[60CCFF]Accessory Mod: Movement Speed"
+modAccessoriseMovementSpeedDesc,item_modifiers,mod,,,"[60CCFF]Increases walking and running speed by 10% when socketed into an accessory"

@@ -1,7 +1,13 @@
 <configs>
 
+<append xpath="/recipes/recipe[@name='vehicleBicyclePlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
+<append xpath="/recipes/recipe[@name='vehicleMinibikePlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
+<append xpath="/recipes/recipe[@name='vehicleMotorcyclePlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
+	<append xpath="/recipes/recipe[@name='vehicle4x4TruckPlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
+	<append xpath="/recipes/recipe[@name='vehicleGyrocopterPlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
+
 	<append xpath="/recipes">
-		<recipe name="itemPilotHandbook" count="1" craft_area="workbench" craft_time="450" tags="perkPilotTraining,learnable">
+		<recipe name="itemPilotHandbook" count="1" craft_area="workbench" craft_time="450" tags="perkGreaseMonkey,learnable">
 			<ingredient name="casinoCoin" count="30000"/>
 			<ingredient name="oldCash" count="3000"/>
 			<ingredient name="resourceLeather" count="300"/>
@@ -866,7 +872,7 @@
 			<ingredient name="resourceGlue" count="30"/>
 		</recipe>
 
-		<recipe name="bigEngine" count="1" craft_area="workbench" craft_time="360" tags="learnable,perkAdvancedEngineering">
+		<recipe name="bigEngine" count="1" craft_area="workbench" craft_time="360" tags="learnable,perkGreaseMonkey">
 			<ingredient name="resourceForgedSteel" count="180"/>
 			<ingredient name="resourceMechanicalParts" count="165"/>
 			<ingredient name="resourceSpring" count="42"/>
@@ -874,7 +880,7 @@
 			<ingredient name="smallEngine" count="3"/>
 		</recipe>
 
-		<recipe name="vehicleHelicopterPlaceable" count="1" craft_area="workbench" craft_time="1800">
+		<recipe name="vehicleHelicopterPlaceable" count="1" tags="learnable,perkGreaseMonkey" craft_area="workbench" craft_time="1800">
 			<ingredient name="itemPilotHandbook" count="1"/>
 			<ingredient name="vehicleHelicopterChassis" count="1"/>
 			<ingredient name="vehicleHelicopterRotor" count="4"/>
@@ -951,7 +957,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="resourceAcid" count="1" always_unlocked="true" craft_time="2">
+		<recipe name="resourceAcid" count="1" tags="learnable,perkGreaseMonkey" craft_time="2">
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="resourceCoal" count="1"/>
 			<ingredient name="resourcePotassiumNitratePowder" count="1"/>

@@ -1319,7 +1319,7 @@
 			<property name="EconomicValue" value="5000"/>
 			<property name="Group" value="Resources"/>
 			<property name="DegradationBreaksAfter" value="false"/>
-			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="UnlockedBy" value="perkGreaseMonkey"/>
 		</item>
 	</insertAfter>
 
@@ -1378,6 +1378,7 @@
 			<property name="DescriptionKey" value="vehicleHelicopterPlaceableDesc"/>
 			<property name="Meshfile" value="#@modfolder:Resources/manux_HelicopterOH58.unity3d?HelicopterOH58Prefab_A17.prefab"/>
 			<property name="EconomicValue" value="220000"/>
+			<property name="UnlockedBy" value="perkGreaseMonkey"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleHelicopter"/>
 				<!-- <property name="VehicleSize" value="4, 4, 13"/> -->
@@ -2053,5 +2054,26 @@
 	<!-- Changes the icon shown on perk books -->
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='ItemTypeIcon']/@value">unreadbook</set>
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='AltItemTypeIcon']/@value">readbook</set>
+	
+	<!-- Updates placeable vehicles to require Grease Monkey -->
+	<insertAfter xpath="/items/item[@name='vehicleBicyclePlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
+
+	<insertAfter xpath="/items/item[@name='vehicleMinibikePlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/items/item[@name='vehicleMotorcyclePlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/items/item[@name='vehicle4x4TruckPlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/items/item[@name='vehicleGyrocopterPlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
 
 </configs>

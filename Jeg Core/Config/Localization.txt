@@ -162,7 +162,7 @@ perkAdvancedWrench1LongDesc,progression,PerkBook,New,"[60CCFF]Allows crafting of
 perkAdvancedWrench2Desc,progression,PerkBook,New,"[60CCFF]More Mods = Betterer",,,,,
 perkAdvancedWrench2LongDesc,progression,PerkBook,New,"[60CCFF]Allows crafting of combination mods that provide the effects of two or more mods in one. Also allows crafting of reinforced armour mods.",,,,,
 perkAdvancedWrench3Desc,progression,PerkBook,New,"[60CCFF]Speed and Scrap",,,,,
-perkAdvancedWrench3LongDesc,progression,PerkBook,New,"[60CCFF]Allows you to craft vehicle mods and the level 6 Advanced Wrench.",,,,,
+perkAdvancedWrench3LongDesc,progression,PerkBook,New,"[60CCFF]Allows you to craft vehicle mods and Advanced Wrenches.",,,,,
 buffTraderProtectionEffectTooltip,buffs,Buff,New,"[60CCFF]A nearby trader is protecting you from harm",,,,,
 buffTraderProtectionEffectNameShort,buffs,Buff,New,"[60CCFF]     Protected",,,,,
 buffTraderProtectionEffectName,buffs,Buff,New,"[60CCFF]Guardian Angel",,,,,

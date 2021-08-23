@@ -223,7 +223,7 @@
 
 	<!-- Hot and Cold resistance -->
 	<append xpath="/progression/perks">
-		<perk name="extraThermalProt" parent="extraCharacterPerks" name_key="extraThermalProtName" desc_key="extraThermalProtDesc" icon="jeg_thermal">
+		<perk name="extraThermalProt" parent="extraCharacterPerks" name_key="extraThermalProtName" desc_key="extraThermalProtDesc" icon="jeg_thermal" max_level="3">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="2" desc_key="Fortitude Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="2" desc_key="Strength Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="2" desc_key="Agility Level 2"/>

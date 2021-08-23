@@ -14,9 +14,9 @@
 	
 	<!-- Increased vehicle storage size -->
 	<!-- Bicycle -->
-	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">6,8</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">6,5</set>
 	<!-- Minibike -->
-	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">8,8</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='77']/@size">6,7</set>
 	<!-- Motorcycle -->
 	<set xpath="/lootcontainers/lootcontainer[@id='78']/@size">11,13</set>
 	<!-- 4x4Truck -->

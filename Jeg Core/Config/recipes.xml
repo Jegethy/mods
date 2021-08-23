@@ -2054,6 +2054,59 @@
 		</recipe>
 	</append>
 
+	<!-- Adjusts the recipe for Motocycles and 4x4 Trucks -->
+	<remove xpath="/recipes/recipe[@name='vehicleMotorcycleChassis']"/>
+	<remove xpath="/recipes/recipe[@name='vehicleMotorcycleHandlebars']"/>
+	<remove xpath="/recipes/recipe[@name='vehicle4x4TruckAccessories']"/>
+	<remove xpath="/recipes/recipe[@name='vehicle4x4TruckChassis']"/>
+
+	<append xpath="/recipes">
+		<recipe name="vehicleMotorcycleChassis" count="1" craft_time="150" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="125"/>
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceLeather" count="20"/>
+			<ingredient name="resourceElectricParts" count="8"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,2" value=".5,.5" tags="resourceForgedSteel,resourceMechanicalParts,resourceDuctTape,resourceLeather,resourceElectricParts"/>
+			</effect_group>
+		</recipe>
+
+		<recipe name="vehicleMotorcycleHandlebars" count="1" craft_time="150" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+			<ingredient name="resourceElectricParts" count="15"/>
+			<ingredient name="resourceHeadlight" count="4"/>
+			<ingredient name="resourceMetalPipe" count="25"/>
+			<ingredient name="resourceSpring" count="4"/>
+			<ingredient name="resourceMechanicalParts" count="8"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,2" value=".5,.5" tags="resourceMechanicalParts,resourceMetalPipe,resourceElectricParts,resourceSpring"/>
+			</effect_group>
+		</recipe>
+
+		<recipe name="vehicle4x4TruckChassis" count="1" craft_time="150" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="125"/>
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceLeather" count="20"/>
+			<ingredient name="resourceElectricParts" count="8"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,2" value=".5,.5" tags="resourceForgedSteel,resourceMechanicalParts,resourceDuctTape,resourceLeather,resourceElectricParts"/>
+			</effect_group>
+		</recipe>
+
+		<recipe name="vehicle4x4TruckAccessories" count="1" craft_time="150" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+			<ingredient name="resourceElectricParts" count="15"/>
+			<ingredient name="resourceHeadlight" count="4"/>
+			<ingredient name="resourceMetalPipe" count="25"/>
+			<ingredient name="resourceSpring" count="4"/>
+			<ingredient name="resourceMechanicalParts" count="8"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,2" value=".5,.5" tags="resourceMechanicalParts,resourceMetalPipe,resourceElectricParts,resourceSpring"/>
+			</effect_group>
+		</recipe>
+
+	</append>
+
 	<!-- Makes placeable vehicles require the necessary perk level -->
 	<remove xpath="/recipes/recipe[@name='vehicleBicyclePlaceable']"/>
 	<remove xpath="/recipes/recipe[@name='vehicleMinibikePlaceable']"/>
@@ -2085,7 +2138,7 @@
 			<ingredient name="carBattery" count="1"/>
 		</recipe>
 
-		<recipe name="vehicle4x4TruckPlaceable" count="1" craft_time="210" craft_area="workbench" tags="workbenchCrafting,learnable,perkGreaseMonkey">
+		<recipe name="vehicle4x4TruckPlaceable" count="1" craft_time="150" craft_area="workbench" tags="workbenchCrafting,learnable,perkGreaseMonkey">
 			<ingredient name="vehicleWheels" count="4"/>
 			<ingredient name="vehicle4x4TruckChassis" count="1"/>
 			<ingredient name="vehicle4x4TruckAccessories" count="1"/>
@@ -2093,7 +2146,7 @@
 			<ingredient name="carBattery" count="1"/>
 		</recipe>
 
-		<recipe name="vehicleGyrocopterPlaceable" count="1" craft_time="270" craft_area="workbench" tags="workbenchCrafting,learnable,perkGreaseMonkey">
+		<recipe name="vehicleGyrocopterPlaceable" count="1" craft_time="220" craft_area="workbench" tags="workbenchCrafting,learnable,perkGreaseMonkey">
 			<ingredient name="vehicleWheels" count="3"/>
 			<ingredient name="vehicleGyroCopterChassis" count="1"/>
 			<ingredient name="vehicleGyroCopterAccessories" count="1"/>

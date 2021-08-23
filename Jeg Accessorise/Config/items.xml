@@ -13,7 +13,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -44,7 +44,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -75,7 +75,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -106,7 +106,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -137,7 +137,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -171,7 +171,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -202,7 +202,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -233,7 +233,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -264,7 +264,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -295,7 +295,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -326,7 +326,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -357,7 +357,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -388,7 +388,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -419,7 +419,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>

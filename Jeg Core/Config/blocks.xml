@@ -590,11 +590,11 @@
 	</insertAfter>
 
 	<insertAfter xpath="/blocks/block[@name='treeGrassMaster']/property[@name='HarvestOverdamage']">
-		<drop event="Harvest" name="foodCropWheat" prob=".33" count="1,4" tag="allHarvest"/>
+		<drop event="Harvest" name="foodCropWheat" prob=".33" count="1,4" tag="allHarvest,wildCropsHarvest"/>
 	</insertAfter>
 
 	<insertAfter xpath="/blocks/block[@name='treeCactus01']/property[@name='CanPlayersSpawnOn']">
-		<drop event="Harvest" name="foodCropWheat" prob=".06" count="1,6" tag="allHarvest"/>
+		<drop event="Harvest" name="foodCropWheat" prob=".33" count="1,6" tag="allHarvest,wildCropsHarvest"/>
 	</insertAfter>
 
 	<set xpath="/blocks/block[@name='stainlessSteelMaster']/property[@name='Material']/@value">MstainlessSteelX</set>

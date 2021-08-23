@@ -238,8 +238,8 @@
 		<combobox depth="3" name="cbxLockedSlots" pos="70,-7" width="100" height="30" tooltip_key="xuiStashLockedSlots" type="ComboBoxInt" value_min="0" value_max="{container_slots}" value_wrap="true" value_increment="1" />
 	</append>
 
-	<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@rows">13</set>
-	<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cols">11</set>
+	<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@rows">15</set>
+	<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cols">15</set>
 
 	<!-- Player backpack window -->
 	<set xpath="/windows/window[@name='windowBackpack']/@width">1008</set>

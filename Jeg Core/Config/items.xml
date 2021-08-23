@@ -43,7 +43,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
-			<property name="Stacknumber" value="1000"/>
+			<property name="Stacknumber" value="250"/>
 			<property name="EconomicValue" value="100"/>
 			<property name="Weight" value="1"/>
 			<property name="Group" value="Resources"/>
@@ -196,21 +196,22 @@
 	<set xpath="/items/item[contains(@name, 'drink')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
 	<!-- Food -->
 	<set xpath="/items/item[contains(@name, 'food') and not (contains(@name, 'RawMeat'))]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
-	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">1000</set>
+	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">250</set>
 	<!-- Health -->
 	<set xpath="/items/item[contains(@name, 'drug')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
 	<set xpath="/items/item[contains(@name, 'medical')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
 	<!-- Magazines & Schematics -->
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">250</set>
+	<set xpath="/items/item[contains(@name, 'book')]/property[@name='Stacknumber']/@value">250</set>
 	<!-- Ammo & thrown -->
-	<set xpath="/items/item[contains(@name, 'ammo') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">10000</set>
-	<set xpath="/items/item[contains(@name, 'thrown') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">10000</set>
-	<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[contains(@name, 'ammo') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">2000</set>
+	<set xpath="/items/item[contains(@name, 'thrown') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">2000</set>
+	<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">10000</set>
 	<!-- Misc -->
-	<set xpath="/items/item[contains(@name, 'resource')]/property[@name='Stacknumber' and not(@value='1')]/@value">30000</set>
+	<set xpath="/items/item[contains(@name, 'resource')]/property[@name='Stacknumber' and not(@value='1')]/@value">10000</set>
 	<set xpath="/items/item[contains(@name, 'tool')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
-	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">30000</set>
-	<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">10000</set>
 	<set xpath="/items/item[contains(@name, 'parts')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
 	<set xpath="/items/item[@name='partsMaster']/property[@name='Stacknumber']/@value">250</set>
 
@@ -276,7 +277,7 @@
 			<property name="name_key" value="foodMedicalHoney"/>
 			<property name="description_key" value="foodMedicalHoneyDesc"/>
 			<property name="Group" value="Science,CFChemicals,Medical"/>
-			<property name="Stacknumber" value="50"/><!-- STK loot -->
+			<property name="Stacknumber" value="250"/><!-- STK loot -->
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -316,7 +317,7 @@
 			<property name="name_key" value="itemLearningbook"/>
 			<property name="desc_key" value="itemLearningbookDesc"/>
 			<property name="CustomIcon" value="itemLearningbook"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -341,7 +342,7 @@
 			<property name="name_key" value="itemSkillbook"/>
 			<property name="desc_key" value="itemSkillbookDesc"/>
 			<property name="CustomIcon" value="skillPointBook"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -353,7 +354,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="5"/>
-			<property name="Stacknumber" value="200"/><!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="6"/>
 			<property name="EconomicBundleSize" value="10"/>
 			<property name="SellableToTrader" value="false"/>
@@ -386,7 +387,7 @@
 			<property name="desc_key" value="itemSkillbook100Desc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="ff9fd4"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -411,7 +412,7 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -673,7 +674,7 @@
 			<property name="EconomicValue" value="250"/>
 			<property name="SellableToTrader" value="true"/>
 			<property name="Material" value="resourceTornPage"/>
-			<property name="Stacknumber" value="1000"/><!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="FuelValue" value="1"/>
 			<property name="Weight" value="1"/>
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
@@ -697,7 +698,7 @@
 			<property name="CustomIcon" value="Adamantium"/>
 			<property name="DescriptionKey" value="resourceAdamantiumDesc"/>
 			<property name="Material" value="resourceAdamantium"/>
-			<property name="Stacknumber" value="50"/><!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="SellableToTrader" value="true"/>
 			<property name="EconomicValue" value="150000"/>
 			<property name="CraftingIngredientTime" value="15"/>
@@ -714,7 +715,7 @@
 			<property name="name_key" value="resourceAdamantium2"/>
 			<property name="DescriptionKey" value="resourceAdamantium2Desc"/>
 			<property name="Material" value="resourceAdamantium"/>
-			<property name="Stacknumber" value="50"/><!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicValue" value="5000"/>
 			<property name="CraftingIngredientTime" value="15"/>
@@ -972,6 +973,7 @@
 			<property name="CustomIcon" value="foodEggGolden"/>
 			<property name="Tags" value="gems"/>
 			<property name="EconomicValue" value="5000"/>
+			<property name="Stacknumber" value="250"/>
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property name="DescriptionKey" value="resourceGoldenEggDesc"/>
@@ -1189,7 +1191,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MfoodRawMeat"/>
-			<property name="Stacknumber" value="1000"/><!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="CraftingIngredientTime" value="3"/>
@@ -1227,7 +1229,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MfoodRawMeat"/>
-			<property name="Stacknumber" value="1000"/><!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="CraftingIngredientTime" value="3"/>
@@ -1265,7 +1267,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MfoodRawMeat"/>
-			<property name="Stacknumber" value="1000"/><!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="CraftingIngredientTime" value="3"/>
@@ -1394,7 +1396,7 @@
 			<property name="name_key" value="itemPilotHandbook"/>
 			<property name="DescriptionKey" value="itemPilotHandbookDesc"/>
 			<property name="Material" value="Mpaper"/>
-			<property name="Stacknumber" value="50"/><!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="SellableToTrader" value="true"/>
 			<property name="EconomicValue" value="200"/>
 			<property name="CraftingIngredientTime" value="180"/>
@@ -1416,7 +1418,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MresourceClayLump"/>
 			<property name="Weight" value="5"/>
-			<property name="Stacknumber" value="200"/><!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="6"/>
 			<property name="EconomicBundleSize" value="10"/>
 			<property name="Group" value="Resources"/>
@@ -1433,7 +1435,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
-			<property name="Stacknumber" value="10"/><!-- STK drink -->
+			<property name="Stacknumber" value="250"/><!-- STK drink -->
 			<property name="EconomicValue" value="48"/>
 			<property name="UnlockedBy" value="perkMasterChef"/>
 			<property class="Action0">
@@ -1473,7 +1475,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
-			<property name="Stacknumber" value="10"/><!-- STK drink -->
+			<property name="Stacknumber" value="250"/><!-- STK drink -->
 			<property name="EconomicValue" value="48"/>
 			<property name="UnlockedBy" value="perkMasterChef"/>
 			<property class="Action0">
@@ -1509,7 +1511,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
-			<property name="Stacknumber" value="10"/><!-- STK drink -->
+			<property name="Stacknumber" value="250"/><!-- STK drink -->
 			<property name="EconomicValue" value="48"/>
 			<property name="UnlockedBy" value="perkMasterChef"/>
 			<property class="Action0">
@@ -1553,7 +1555,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="CustomIcon" value="foodCropWheat"/>
 			<property name="Material" value="MresourceCrop"/>
-			<property name="Stacknumber" value="500"/><!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="12"/>
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="CraftingIngredientTime" value="5"/>
@@ -1569,7 +1571,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="CustomIcon" value="foodBakingFlour"/>
 			<property name="Material" value="MresourceCrop"/>
-			<property name="Stacknumber" value="500"/><!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="12"/>
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="CraftingIngredientTime" value="5"/>
@@ -1631,7 +1633,7 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -1672,7 +1674,7 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -1713,7 +1715,7 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -1754,7 +1756,7 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -1795,7 +1797,7 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -1836,7 +1838,7 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -1877,7 +1879,7 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -1918,7 +1920,7 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -1947,7 +1949,7 @@
 			<property name="name_key" value="resourceAmmoToken"/>
 			<property name="DescriptionKey" value="resourceAmmoTokenDesc"/>
 			<property name="Material" value="resourceAdamantium"/>
-			<property name="Stacknumber" value="50"/><!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicValue" value="5000"/>
 			<property name="CraftingIngredientTime" value="15"/>

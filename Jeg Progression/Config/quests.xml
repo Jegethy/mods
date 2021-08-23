@@ -21,10 +21,10 @@
 			<property name="shareable" value="false"/>
 
 			<action type="ShowTip" value="questZombieVanguard1Tip">
-				<property name="delay" value="10"/>
+				<property name="delay" value="3"/>
 			</action>
 			<action type="TrackQuest">
-				<property name="delay" value="10"/>
+				<property name="delay" value="3"/>
 			</action>
 
 			<objective type="ZombieKill" value="100" phase="1"/>

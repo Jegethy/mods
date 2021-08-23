@@ -1,19 +1,12 @@
 <configs>
 
-	<!-- Makes placeable vehicles require the necessary perk level -->
-	<append xpath="/recipes/recipe[@name='vehicleBicyclePlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
-	<append xpath="/recipes/recipe[@name='vehicleMinibikePlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
-	<append xpath="/recipes/recipe[@name='vehicleMotorcyclePlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
-	<append xpath="/recipes/recipe[@name='vehicle4x4TruckPlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
-	<append xpath="/recipes/recipe[@name='vehicleGyrocopterPlaceable']/property[@name='Tags']/@value">,learnable,perkGreaseMonkey</append>
-
 	<!-- Reduces the amount of meat required in several recipes -->
-	<set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']" name="count">1</set>
-	<set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']" name="count">1</set>
-	<set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']" name="count">1</set>
-	<set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']" name="count">1</set>
-	<set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']" name="count">1</set>
-	<set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']" name="count">1</set>
+	<set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']/@count">2</set>
 
 	<!-- Skill reset drink is now craftable -->
 	<append xpath="/recipes">
@@ -2060,4 +2053,53 @@
 			<ingredient name="resourceForgedSteel" count="30"/>
 		</recipe>
 	</append>
+
+	<!-- Makes placeable vehicles require the necessary perk level -->
+	<remove xpath="/recipes/recipe[@name='vehicleBicyclePlaceable']"/>
+	<remove xpath="/recipes/recipe[@name='vehicleMinibikePlaceable']"/>
+	<remove xpath="/recipes/recipe[@name='vehicleMotorcyclePlaceable']"/>
+	<remove xpath="/recipes/recipe[@name='vehicle4x4TruckPlaceable']"/>
+	<remove xpath="/recipes/recipe[@name='vehicleGyrocopterPlaceable']"/>
+
+	<append xpath="/recipes">
+		<recipe name="vehicleBicyclePlaceable" count="1" craft_time="30" tags="workbenchCrafting,learnable,perkGreaseMonkey">
+			<ingredient name="vehicleWheels" count="2"/>
+			<ingredient name="vehicleBicycleChassis" count="1"/>
+			<ingredient name="vehicleBicycleHandlebars" count="1"/>
+			<ingredient name="resourceMechanicalParts" count="1"/>
+		</recipe>
+
+		<recipe name="vehicleMinibikePlaceable" count="1" craft_time="90" craft_area="workbench" tags="workbenchCrafting,learnable,perkGreaseMonkey">
+			<ingredient name="vehicleWheels" count="2"/>
+			<ingredient name="vehicleMinibikeChassis" count="1"/>
+			<ingredient name="vehicleMinibikeHandlebars" count="1"/>
+			<ingredient name="smallEngine" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+
+		<recipe name="vehicleMotorcyclePlaceable" count="1" craft_time="150" craft_area="workbench" tags="workbenchCrafting,learnable,perkGreaseMonkey">
+			<ingredient name="vehicleWheels" count="2"/>
+			<ingredient name="vehicleMotorcycleChassis" count="1"/>
+			<ingredient name="vehicleMotorcycleHandlebars" count="1"/>
+			<ingredient name="smallEngine" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+
+		<recipe name="vehicle4x4TruckPlaceable" count="1" craft_time="210" craft_area="workbench" tags="workbenchCrafting,learnable,perkGreaseMonkey">
+			<ingredient name="vehicleWheels" count="4"/>
+			<ingredient name="vehicle4x4TruckChassis" count="1"/>
+			<ingredient name="vehicle4x4TruckAccessories" count="1"/>
+			<ingredient name="smallEngine" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+
+		<recipe name="vehicleGyrocopterPlaceable" count="1" craft_time="270" craft_area="workbench" tags="workbenchCrafting,learnable,perkGreaseMonkey">
+			<ingredient name="vehicleWheels" count="3"/>
+			<ingredient name="vehicleGyroCopterChassis" count="1"/>
+			<ingredient name="vehicleGyroCopterAccessories" count="1"/>
+			<ingredient name="smallEngine" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+	</append>
+
 </configs>

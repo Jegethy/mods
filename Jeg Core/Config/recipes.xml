@@ -7,6 +7,17 @@
 	<set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">2</set>
 	<set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">2</set>
 	<set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']/@count">2</set>
+	
+	<!-- BioFuel -->
+	<append xpath="/recipes">
+		<recipe name="resourceBioFuel" count="1" craft_area="chemistryStation" tags="perkMasterChef,learnable">
+			<ingredient name="foodRawMeat" count="3"/>
+			<ingredient name="foodEgg" count="2"/>
+			<ingredient name="foodRapeseedOil" count="2"/>
+			<ingredient name="resourceYuccaFibers" count="10"/>
+			<ingredient name="drinkJarRiverWater" count="1"/>
+		</recipe>
+	</append>
 
 	<!-- Skill reset drink is now craftable -->
 	<append xpath="/recipes">
@@ -790,7 +801,7 @@
 	</append>
 	<append xpath="/recipes">
 		<recipe name="foodCanBeef" count="1" craft_area="campfire" craft_tool="toolCookingPot" always_unlocked="true" craft_time="8">
-			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="foodRawMeat" count="2"/>
 			<ingredient name="foodCropPotato" count="3"/>
 			<ingredient name="foodRapeseedOil" count="3"/>
 			<ingredient name="foodCornMeal" count="3"/>
@@ -807,7 +818,7 @@
 	</append>
 	<append xpath="/recipes">
 		<recipe name="foodCanStock" count="1" craft_area="campfire" craft_tool="toolCookingPot" always_unlocked="true" craft_time="8">
-			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="foodRawMeat" count="2"/>
 			<ingredient name="foodCropPotato" count="3"/>
 			<ingredient name="foodRapeseedOil" count="3"/>
 			<ingredient name="foodCornMeal" count="3"/>
@@ -816,7 +827,7 @@
 	</append>
 	<append xpath="/recipes">
 		<recipe name="foodCanSoup" count="1" craft_area="campfire" craft_tool="toolCookingPot" always_unlocked="true" craft_time="8">
-			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="foodRawMeat" count="2"/>
 			<ingredient name="foodCropPotato" count="3"/>
 			<ingredient name="foodRapeseedOil" count="3"/>
 			<ingredient name="foodCornMeal" count="3"/>
@@ -2152,6 +2163,14 @@
 			<ingredient name="vehicleGyroCopterAccessories" count="1"/>
 			<ingredient name="smallEngine" count="1"/>
 			<ingredient name="carBattery" count="1"/>
+		</recipe>
+	</append>
+
+	<!-- Crude Key - Minibike reward -->
+	<append xpath="/recipes">
+		<recipe name="itemCrudeKey" always_unlocked="true" count="1" craft_time="10" tags="perkMasterChef,learnable">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceElectricParts" count="5"/>
 		</recipe>
 	</append>
 

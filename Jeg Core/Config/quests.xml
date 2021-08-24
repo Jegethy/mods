@@ -2,31 +2,31 @@
 
 	<!-- Adds skill point rewards to the starter quests -->
 	<append xpath="/quests/quest[@id='quest_BasicSurvival1']">
-		<reward type="SkillPoints" value="1" />
+		<reward type="SkillPoints" value="1"/>
 	</append>
 	<append xpath="/quests/quest[@id='quest_BasicSurvival2']">
-		<reward type="SkillPoints" value="1" />
+		<reward type="SkillPoints" value="1"/>
 	</append>
 	<append xpath="/quests/quest[@id='quest_BasicSurvival3']">
-		<reward type="SkillPoints" value="1" />
+		<reward type="SkillPoints" value="1"/>
 	</append>
 	<append xpath="/quests/quest[@id='quest_BasicSurvival3']">
 		<reward type="Item" id="chestReward1" value="1"/>
 	</append>
 	<append xpath="/quests/quest[@id='quest_BasicSurvival4']">
-		<reward type="SkillPoints" value="1" />
+		<reward type="SkillPoints" value="1"/>
 	</append>
 	<append xpath="/quests/quest[@id='quest_BasicSurvival5']">
-		<reward type="SkillPoints" value="1" />
+		<reward type="SkillPoints" value="1"/>
 	</append>
 	<append xpath="/quests/quest[@id='quest_BasicSurvival6']">
-		<reward type="SkillPoints" value="1" />
+		<reward type="SkillPoints" value="1"/>
 	</append>
 	<append xpath="/quests/quest[@id='quest_BasicSurvival7']">
-		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="2"/>
 	</append>
 	<append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
-		<reward type="SkillPoints" value="3" />
+		<reward type="SkillPoints" value="3"/>
 		<reward type="Item" id="vehicleBicyclePlaceable" value="1"/>
 		<reward type="Item" id="boxMedicalSupplies" value="1"/>
 	</append>
@@ -58,46 +58,46 @@
 
 	<append xpath="/quests">
 		<quest id="quest_SkillPointReward">
-			<property name="group_name_key" value="quest_SkillPointReward" />
-			<property name="name_key" value="Book of Skill Reward" />
-			<property name="subtitle_key" value="1 Skill Point" />
-			<property name="description_key" value="You've gained 1 Skill Point. Congratuwelldone!" />
-			<property name="icon" value="ui_game_symbol_map_bed" />
-			<property name="category_key" value="quest" />
+			<property name="group_name_key" value="quest_SkillPointReward"/>
+			<property name="name_key" value="Book of Skill Reward"/>
+			<property name="subtitle_key" value="1 Skill Point"/>
+			<property name="description_key" value="You've gained 1 Skill Point. Congratuwelldone!"/>
+			<property name="icon" value="ui_game_symbol_map_bed"/>
+			<property name="category_key" value="quest"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="offer_key" value="You've gained 1 Skill Point. Congratuwelldone!" />
-			<property name="shareable" value="false" />
-			<reward type="SkillPoints" value="1" />
+			<property name="offer_key" value="You've gained 1 Skill Point. Congratuwelldone!"/>
+			<property name="shareable" value="false"/>
+			<reward type="SkillPoints" value="1"/>
 		</quest>
 	</append>
 	<append xpath="/quests">
 		<quest id="quest_SkillPointReward100">
-			<property name="group_name_key" value="quest_SkillPointReward100" />
-			<property name="name_key" value="Admin: Book of Skill Reward" />
-			<property name="subtitle_key" value="100 Skill Points" />
-			<property name="description_key" value="You've earned 100 Skill Points" />
-			<property name="icon" value="ui_game_symbol_map_bed" />
-			<property name="category_key" value="quest" />
+			<property name="group_name_key" value="quest_SkillPointReward100"/>
+			<property name="name_key" value="Admin: Book of Skill Reward"/>
+			<property name="subtitle_key" value="100 Skill Points"/>
+			<property name="description_key" value="You've earned 100 Skill Points"/>
+			<property name="icon" value="ui_game_symbol_map_bed"/>
+			<property name="category_key" value="quest"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="offer_key" value="You've been granted an additional 100 skill points by an Administrator!\n\nIt's impossible to spend them all in one place!" />
-			<property name="shareable" value="false" />
-			<reward type="SkillPoints" value="100" />
+			<property name="offer_key" value="You've been granted an additional 100 skill points by an Administrator!\n\nIt's impossible to spend them all in one place!"/>
+			<property name="shareable" value="false"/>
+			<reward type="SkillPoints" value="100"/>
 		</quest>
 	</append>
 
 	<!-- Adds learning book rewards from quests -->
 	<append xpath="/quests">
 		<quest id="quest_LearningBookReward">
-			<property name="group_name_key" value="quest_LearningBookReward" />
-			<property name="name_key" value="Mysterious Tome" />
-			<property name="subtitle_key" value="Bonus Experience" />
-			<property name="description_key" value="You've earned 500,000 Experience" />
-			<property name="icon" value="ui_game_symbol_map_bed" />
-			<property name="category_key" value="quest" />
+			<property name="group_name_key" value="quest_LearningBookReward"/>
+			<property name="name_key" value="Mysterious Tome"/>
+			<property name="subtitle_key" value="Bonus Experience"/>
+			<property name="description_key" value="You've earned 500,000 Experience"/>
+			<property name="icon" value="ui_game_symbol_map_bed"/>
+			<property name="category_key" value="quest"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="offer_key" value="You've read a mysterious tome which has granted you 500,000 experience!" />
-			<property name="shareable" value="true" />
-			<reward type="Exp" value="50000" />
+			<property name="offer_key" value="You've read a mysterious tome which has granted you 500,000 experience!"/>
+			<property name="shareable" value="true"/>
+			<reward type="Exp" value="50000"/>
 			<reward type="Item" id="itemSkillbookPage" value="5"/>
 		</quest>
 	</append>
@@ -144,46 +144,46 @@
 	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@id='casinoCoin']/@value">1500</set>
 
 	<!-- Adds trader advert quest item -->
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="quest_TraderAdvert">
-			<property name="group_name" value="Local Trader Advertisement" />
-			<property name="offer" value="Hankering for some new pants, need some gunpowder to fuel your slaughter, or just want a safe place to chill out during the day?\n\nCome and visit your local Trader!" />
-			<property name="name" value="Go To The Trader" />
-			<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitleNEW" />
-			<property name="description_key" value="quest_WhiteRiverCitizen1_descriptionNEW" />
-			<property name="icon" value="ui_game_symbol_map_trader" />
-			<property name="category_key" value="quest" />
-			<property name="difficulty" value="medium" />
-			<property name="shareable" value="true" />
-			<property name="repeatable" value="true" />
+			<property name="group_name" value="Local Trader Advertisement"/>
+			<property name="offer" value="Hankering for some new pants, need some gunpowder to fuel your slaughter, or just want a safe place to chill out during the day?\n\nCome and visit your local Trader!"/>
+			<property name="name" value="Go To The Trader"/>
+			<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitleNEW"/>
+			<property name="description_key" value="quest_WhiteRiverCitizen1_descriptionNEW"/>
+			<property name="icon" value="ui_game_symbol_map_trader"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="medium"/>
+			<property name="shareable" value="true"/>
+			<property name="repeatable" value="true"/>
 
-			<objective type="Goto" id="trader" value="5" phase="1" />
+			<objective type="Goto" id="trader" value="5" phase="1"/>
 
 			<objective type="InteractWithNPC">
 				<property name="phase" value="2"/>
-				<property name="nav_object" value="return_to_trader" />
+				<property name="nav_object" value="return_to_trader"/>
 			</objective>
 
-			<reward type="Exp" value="7500" />
+			<reward type="Exp" value="7500"/>
 			<reward type="Item" id="itemSkillbookPage" value="15"/>
 		</quest>
 	</append>
 
-	<append xpath="/quests/quest_items" >
+	<append xpath="/quests/quest_items">
 		<quest_item id="3" name="Long-Forgotten Supplies" icon="questJegSupplies" icon_color="255,255,255"/>
 	</append>
 
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="quest_MysticalTome">
-			<property name="group_name" value="Mystical Tome" />
+			<property name="group_name" value="Mystical Tome"/>
 			<property name="name_key" value="quest_MysticalTome_supplies"/>
 			<property name="subtitle_key" value="quest_MysticalTome_subtitle"/>
-			<property name="description_key" value="quest_MysticalTome_description" />
-			<property name="icon" value="ui_game_symbol_map_trader" />
-			<property name="category_key" value="quest" />
-			<property name="difficulty" value="insane" />
-			<property name="shareable" value="true" />
-			<property name="repeatable" value="true" />
+			<property name="description_key" value="quest_MysticalTome_description"/>
+			<property name="icon" value="ui_game_symbol_map_trader"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="insane"/>
+			<property name="shareable" value="true"/>
+			<property name="repeatable" value="true"/>
 			<property name="statement_key" value="quest_MysticalTome_statement"/>
 			<property name="response_key" value="quest_MysticalTome_response"/>
 			<property name="completiontype" value="TurnIn"/>
@@ -195,10 +195,10 @@
 				<property name="distance" value="100-500"/>
 				<property name="default_radius" value="12"/>
 				<property name="container_type" value="Supplies"/>
-				<property name="nav_object" value="treasure" />
-				<property name="direct_nav_object" value="treasure_direct" />
-				<property name="blocks_per_reduction" value="10" />
-				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+				<property name="nav_object" value="treasure"/>
+				<property name="direct_nav_object" value="treasure_direct"/>
+				<property name="blocks_per_reduction" value="10"/>
+				<property name="radius_reduction_sound" value="ui_radius_shrink"/>
 			</objective>
 
 			<objective type="FetchFromTreasure" phase="1">
@@ -210,17 +210,17 @@
 			<action type="SpawnEnemy" id="zombieWightFeral,zombieWightRadiated,zombieBehemoth,zombieBoeFeral,zombieBoeRadiated,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieJoeFeral,zombieJoeRadiated,zombieMoeFeral,zombieMoeRadiated,zombieArleneFeral,zombieArleneRadiated,zombieLabFeral,zombieLabRadiated,legendaryZombieLab,zombieScreamerFeral,zombieScreamerRadiated,zombieDarleneFeral,zombieDarleneRadiated,zombieMarleneFeral,zombieMarleneRadiated,zombieYoFeral,zombieYoRadiated,zombieSteveFeral,zombieSteveRadiated,zombieBusinessManFeral,legendaryZombieBusinessMan,zombieSnowFeral,zombieSpiderFeral,zombieSpiderRadiated,zombieBurnt,zombieNurseFeral,zombieFatHawaiianFeral,zombieFatCopFeral,zombieFatCopRadiated,zombieUtilityWorkerFeral,legendaryZombieUtilityWorker,zombieSoldierFeral,zombieSoldierRadiated,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieCheerleaderFeral,zombieCheerleaderRadiated,zombieOldTimerFeral,zombieOldTimerRadiated,zombieBikerFeral,zombieBikerRadiated,legendaryZombieBiker,zombieFarmerFeral,zombieStripperFeral,animalZombieBear,animalDireWolf,animalZombieDog" value="20-26" phase="2"/>
 
 			<objective type="Goto" id="trader" value="5" phase="2">
-				<property name="nav_object" value="go_to_trader" />
+				<property name="nav_object" value="go_to_trader"/>
 			</objective>
 
 			<objective type="InteractWithNPC">
 				<property name="phase" value="3"/>
-				<property name="nav_object" value="return_to_trader" />
-				<property name="use_closest" value="true" />
+				<property name="nav_object" value="return_to_trader"/>
+				<property name="use_closest" value="true"/>
 			</objective>
 
-			<reward type="Exp" value="50000" />
-			<reward type="SkillPoints" value="5" />
+			<reward type="Exp" value="50000"/>
+			<reward type="SkillPoints" value="5"/>
 			<reward type="Item" id="itemSkillbookPage" value="30"/>
 			<reward type="Item" id="casinoCoin" value="15000"/>
 			<reward type="LootItem" id="perkBooks" ischosen="true" value="7"/>
@@ -255,10 +255,10 @@
 				<property name="distance" value="500-750"/>
 				<property name="default_radius" value="8"/>
 				<property name="container_type" value="Supplies"/>
-				<property name="nav_object" value="treasure" />
-				<property name="direct_nav_object" value="treasure_direct" />
-				<property name="blocks_per_reduction" value="10" />
-				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+				<property name="nav_object" value="treasure"/>
+				<property name="direct_nav_object" value="treasure_direct"/>
+				<property name="blocks_per_reduction" value="10"/>
+				<property name="radius_reduction_sound" value="ui_radius_shrink"/>
 			</objective>
 
 			<objective type="FetchFromTreasure">
@@ -271,17 +271,17 @@
 
 			<objective type="ReturnToNPC">
 				<property name="phase" value="2"/>
-				<property name="nav_object" value="return_to_trader" />
+				<property name="nav_object" value="return_to_trader"/>
 			</objective>
 
 			<objective type="InteractWithNPC">
 				<property name="phase" value="2"/>
-				<property name="nav_object" value="return_to_trader" />
+				<property name="nav_object" value="return_to_trader"/>
 			</objective>
 
 			<reward type="Exp" value="3000"/>
 			<reward type="Item" id="casinoCoin" value="600"/>
-			<reward type="Item" id="itemSkillbookPage" value="3" />
+			<reward type="Item" id="itemSkillbookPage" value="3"/>
 
 			<reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
 			<reward type="LootItem" id="groupQuestWeapons,groupQuestArmor" ischosen="true" isfixed="true" value="3"/>
@@ -312,10 +312,10 @@
 				<property name="distance" value="500-750"/>
 				<property name="default_radius" value="9"/>
 				<property name="container_type" value="Supplies"/>
-				<property name="nav_object" value="treasure" />
-				<property name="direct_nav_object" value="treasure_direct" />
-				<property name="blocks_per_reduction" value="10" />
-				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+				<property name="nav_object" value="treasure"/>
+				<property name="direct_nav_object" value="treasure_direct"/>
+				<property name="blocks_per_reduction" value="10"/>
+				<property name="radius_reduction_sound" value="ui_radius_shrink"/>
 			</objective>
 
 			<objective type="FetchFromTreasure">
@@ -328,17 +328,17 @@
 
 			<objective type="ReturnToNPC">
 				<property name="phase" value="2"/>
-				<property name="nav_object" value="return_to_trader" />
+				<property name="nav_object" value="return_to_trader"/>
 			</objective>
 
 			<objective type="InteractWithNPC">
 				<property name="phase" value="2"/>
-				<property name="nav_object" value="return_to_trader" />
+				<property name="nav_object" value="return_to_trader"/>
 			</objective>
 
 			<reward type="Exp" value="4000"/>
 			<reward type="Item" id="casinoCoin" value="800"/>
-			<reward type="Item" id="itemSkillbookPage" value="4" />
+			<reward type="Item" id="itemSkillbookPage" value="4"/>
 
 			<reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="4"/>
 			<reward type="LootItem" id="groupQuestWeapons,groupQuestArmor" ischosen="true" isfixed="true" value="4"/>
@@ -369,10 +369,10 @@
 				<property name="distance" value="500-750"/>
 				<property name="default_radius" value="11"/>
 				<property name="container_type" value="Supplies"/>
-				<property name="nav_object" value="treasure" />
-				<property name="direct_nav_object" value="treasure_direct" />
-				<property name="blocks_per_reduction" value="10" />
-				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+				<property name="nav_object" value="treasure"/>
+				<property name="direct_nav_object" value="treasure_direct"/>
+				<property name="blocks_per_reduction" value="10"/>
+				<property name="radius_reduction_sound" value="ui_radius_shrink"/>
 			</objective>
 
 			<objective type="FetchFromTreasure">
@@ -385,17 +385,17 @@
 
 			<objective type="ReturnToNPC">
 				<property name="phase" value="2"/>
-				<property name="nav_object" value="return_to_trader" />
+				<property name="nav_object" value="return_to_trader"/>
 			</objective>
 
 			<objective type="InteractWithNPC">
 				<property name="phase" value="2"/>
-				<property name="nav_object" value="return_to_trader" />
+				<property name="nav_object" value="return_to_trader"/>
 			</objective>
 
 			<reward type="Exp" value="5000"/>
 			<reward type="Item" id="casinoCoin" value="1000"/>
-			<reward type="Item" id="itemSkillbookPage" value="5" />
+			<reward type="Item" id="itemSkillbookPage" value="5"/>
 
 			<reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="5"/>
 			<reward type="LootItem" id="groupQuestWeapons,groupQuestArmor" ischosen="true" isfixed="true" value="5"/>
@@ -416,7 +416,7 @@
 		<quest id="tier5_buried_supplies"/>
 	</insertAfter>
 
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="summon_Bear">
 			<property name="name_key" value="itemSpawnerBookBear"/>
 			<property name="subtitle_key" value="itemSpawnerBookBear"/>
@@ -435,7 +435,7 @@
 		</quest>
 	</append>
 
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="summon_Direwolf">
 			<property name="name_key" value="itemSpawnerBookDirewolf"/>
 			<property name="subtitle_key" value="itemSpawnerBookDirewolf"/>
@@ -454,7 +454,7 @@
 		</quest>
 	</append>
 
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="summon_Pig">
 			<property name="name_key" value="itemSpawnerBookPig"/>
 			<property name="subtitle_key" value="itemSpawnerBookPig"/>
@@ -473,7 +473,7 @@
 		</quest>
 	</append>
 
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="summon_Chickens">
 			<property name="name_key" value="itemSpawnerBookChickens"/>
 			<property name="subtitle_key" value="itemSpawnerBookChickens"/>
@@ -492,7 +492,7 @@
 		</quest>
 	</append>
 
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="summon_Nurse">
 			<property name="name_key" value="itemSpawnerBookNurse"/>
 			<property name="subtitle_key" value="itemSpawnerBookNurse"/>
@@ -511,7 +511,7 @@
 		</quest>
 	</append>
 
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="summon_Workmen">
 			<property name="name_key" value="itemSpawnerBookWorkmen"/>
 			<property name="subtitle_key" value="itemSpawnerBookWorkmen"/>
@@ -530,7 +530,7 @@
 		</quest>
 	</append>
 
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="summon_Cops">
 			<property name="name_key" value="itemSpawnerBookCop"/>
 			<property name="subtitle_key" value="itemSpawnerBookCop"/>
@@ -549,7 +549,7 @@
 		</quest>
 	</append>
 
-	<append xpath="/quests" >
+	<append xpath="/quests">
 		<quest id="summon_Demolisher">
 			<property name="name_key" value="itemSpawnerBookDemo"/>
 			<property name="subtitle_key" value="itemSpawnerBookDemo"/>
@@ -567,4 +567,59 @@
 			<reward type="Item" id="chestRewardDemo" value="1"/>
 		</quest>
 	</append>
+
+	<append xpath="/quests">
+		<quest id="quest_MiniBikeSpecial">
+			<property name="group_name" value="Minibike Special"/>
+			<property name="name_key" value="quest_MiniBikeSpecial"/>
+			<property name="subtitle_key" value="quest_MiniBikeSpecial_subtitle"/>
+			<property name="description_key" value="quest_MiniBikeSpecial_description"/>
+			<property name="icon" value="ui_game_symbol_map_trader"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>
+			<property name="repeatable" value="false"/>
+			<property name="statement_key" value="quest_MiniBikeSpecial_statement"/>
+			<property name="response_key" value="quest_MiniBikeSpecial_response"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_MiniBikeSpecial_completion"/>
+			<property name="offer_key" value="quest_MiniBikeSpecial_offer"/>
+
+			<objective type="TreasureChest" phase="1">
+				<property name="block" value="treasureChestJeg"/>
+				<property name="distance" value="100-500"/>
+				<property name="default_radius" value="12"/>
+				<property name="container_type" value="Supplies"/>
+				<property name="nav_object" value="treasure"/>
+				<property name="direct_nav_object" value="treasure_direct"/>
+				<property name="blocks_per_reduction" value="10"/>
+				<property name="radius_reduction_sound" value="ui_radius_shrink"/>
+			</objective>
+
+			<objective type="FetchFromTreasure" phase="1">
+				<property name="block" value="treasureChestJeg"/>
+				<property name="quest_item_ID" value="3"/>
+				<property name="item_count" value="1"/>
+			</objective>
+
+			<action type="SpawnEnemy" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo" value="5-7" phase="2"/>
+			
+			<objective type="Goto" id="trader" value="5" phase="2">
+				<property name="nav_object" value="go_to_trader"/>
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader"/>
+				<property name="use_closest" value="true"/>
+			</objective>
+
+			<reward type="Exp" value="2500"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Item" id="vehicleMinibikePlaceable" value="1"/>
+			<reward type="Item" id="ammoGasCan" value="1000"/>
+
+		</quest>
+	</append>
+
 </configs>

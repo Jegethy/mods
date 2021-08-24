@@ -12,10 +12,6 @@
 	<remove xpath="/items/item[@name='apparelFacialPiercings']"/>
 	<remove xpath="/items/item[@name='apparelCoatJacketLetterZU']"/>
 	<remove xpath="/items/item[@name='coolLootShadesAdmin200']"/>
-	
-	<!-- Wood and Coal burn longer -->
-	<set xpath="/items/item[@name='resourceCoal']/property[@name='FuelValue']/@value">500</set>
-	<set xpath="/items/item[@name='resourceWood']/property[@name='FuelValue']/@value">250</set>
 
 	<!-- Jail doors readded -->
 	<append xpath="/items/item[@name='poweredDoorsSchematic']/effect_group">
@@ -56,6 +52,23 @@
 	<insertAfter xpath="/items/item[contains(@name, 'meleeWpnSledge')]/effect_group[contains(@name, 'meleeWpnSledge')]/passive_effect[@name='HarvestCount' and @tags='oreWoodHarvest']">
 		<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="earth"/>
 	</insertAfter>
+	
+	<!-- Quest Weapon Package -->
+	<append xpath="/items">
+		<item name="chestWeaponPackage">
+			<property name="Extends" value="noteTestersDelightAdmin"/>
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="questChestReward"/>
+			<property name="CustomIconTint" value="B0E7FF"/>
+			<property name="DescriptionKey" value="chestReward1Desc"/>
+			<property class="Action0">
+				<property name="Sound_start" value="open_cash_register"/>
+				<property name="Create_item" value="gunBowT0PrimitiveBow,meleeWpnClubT0WoodenClub,meleeWpnSledgeT0StoneSledgehammer,ammoArrowStone"/>
+				<property name="Create_item_count" value="1,1,1,25"/>
+			</property>
+		</item>
+	</append>
 
 	<!-- Improves the Auger in every way -->
 	<set xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group/passive_effect[@name='BlockDamage' and @operation='base_set']/@value">30</set>
@@ -202,7 +215,7 @@
 	<set xpath="/items/item[contains(@name, 'medical')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
 	<!-- Magazines & Schematics -->
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">250</set>
-	<set xpath="/items/item[contains(@name, 'book')]/property[@name='Stacknumber']/@value">250</set>
+	<set xpath="/items/item[starts-with(@name, 'book')]/property[@name='Stacknumber']/@value">250</set>
 	<!-- Ammo & thrown -->
 	<set xpath="/items/item[contains(@name, 'ammo') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">2000</set>
 	<set xpath="/items/item[contains(@name, 'thrown') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">2000</set>
@@ -676,7 +689,7 @@
 			<property name="Material" value="resourceTornPage"/>
 			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="FuelValue" value="1"/>
-			<property name="Weight" value="1"/>
+			<property name="Weight" value="1000"/>
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 			<property name="name_key" value="resourceTornPage"/>
 			<property name="desc_key" value="resourceTornPageDesc"/>
@@ -685,7 +698,7 @@
 	</append>
 
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='Material']/@value">resourceTornPage</set>
-	<set xpath="/items/item[@name='schematicMaster']/property[@name='Weight']/@value">1</set>
+	<set xpath="/items/item[@name='schematicMaster']/property[@name='Weight']/@value">1337</set>
 
 	<set xpath="/items/item[@name='resourceIronFragment']/property[@name='Weight']/@value">15</set>
 
@@ -2842,5 +2855,56 @@
 	<setattribute xpath="/items/item[@name='armorFootballHelmetZU']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
 	<setattribute xpath="/items/item[@name='armorFootballHelmetZU']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
 	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<append xpath="/items">
+		<item name="resourceBioFuel">
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="#Other/Items?Food/honeyPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Weight" value="10"/>
+			<property name="FuelValue" value="1000"/>
+			<property name="UnlockedBy" value="perkPhysician"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="Group" value="Chemicals,CFChemicals"/>
+		</item>
+	</append>
+
+	<append xpath="/items">
+		<item name="itemCrudeKey">
+			<property name="Extends" value="resourceSilverNugget"/>
+			<property name="Tags" value="junk"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="CraftingIngredientTime" value="60"/>
+			<property name="DescriptionKey" value="itemCrudeKeyDesc"/>
+		</item>
+	</append>
+	
+	<!-- Adds the Skillbook item for quest rewards -->
+	<append xpath="/items">
+		<item name="itemMinibikeQuestStarter">
+			<property name="CreativeMode" value="Player"/>
+			<property name="HoldType" value="21"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="EconomicValue" value="25000"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="Delay" value="0"/>
+				<property name="QuestGiven" value="quest_MiniBikeSpecial"/>
+			</property>
+			<property name="FuelValue" value="2"/>
+			<property name="Weight" value="2"/>
+			<property name="Group" value="Special Items"/>
+			<property name="name_key" value="itemMinibikeQuestStarter"/>
+			<property name="desc_key" value="itemMinibikeQuestStarterDesc"/>
+			<property name="CustomIcon" value="skillPointBook"/>
+			<property name="Stacknumber" value="1"/>
+		</item>
+	</append>
 
 </configs>

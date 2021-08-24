@@ -1,6 +1,6 @@
 <configs>
 
-	<insertAfter xpath="/quests/quest[@id='quest_whiteRiverCitizen1']/reward[@type='Exp']" >
+	<insertAfter xpath="/quests/quest[@id='quest_whiteRiverCitizen1']/reward[@type='Exp']">
 		<reward type="Quest" id="questZombieVanguard1">
 			<property name="chainquest" value="false"/>
 		</reward>
@@ -40,36 +40,36 @@
 
 		</quest>
 	</append>
-	
+
 	<!-- Adds reward to tier completion quests -->
 	<!-- Tier 1 -->
 	<append xpath="/quests/quest[@id='quest_tier1complete']">
 		<reward type="Quest" id="quest_tier1completeBonus">
 			<property name="chainquest" value="false"/>
 		</reward>
-		<reward type="SkillPoints" value="1" />
+		<reward type="SkillPoints" value="1"/>
 	</append>
 	<!-- Tier 2 -->
 	<append xpath="/quests/quest[@id='quest_tier2complete']">
-		<reward type="SkillPoints" value="1" />
+		<reward type="SkillPoints" value="1"/>
 	</append>
 	<!-- Tier 3 -->
 	<append xpath="/quests/quest[@id='quest_tier3complete']">
-		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="2"/>
 	</append>
 	<!-- Tier 4 -->
 	<append xpath="/quests/quest[@id='quest_tier4complete']">
-		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="2"/>
 	</append>
 	<!-- Tier 5 -->
 	<append xpath="/quests/quest[@id='quest_tier5complete']">
-		<reward type="SkillPoints" value="3" />
+		<reward type="SkillPoints" value="3"/>
 	</append>
 	<!-- Tier 6 -->
 	<append xpath="/quests/quest[@id='quest_tier6complete']">
-		<reward type="SkillPoints" value="3" />
+		<reward type="SkillPoints" value="3"/>
 	</append>
-	
+
 	<append xpath="/quests">
 		<quest id="quest_tier1completeBonus">
 
@@ -104,7 +104,7 @@
 
 		</quest>
 	</append>
-	
+
 	<append xpath="/quests">
 		<quest id="quest_tier1completeBonusExtra">
 
@@ -128,12 +128,12 @@
 
 			<objective type="ZombieKill" value="5000" phase="1"/>
 			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="1"/>
-			
+
 			<reward type="Exp" value="500000"/>
 			<reward type="Item" id="casinoCoin" value="5000"/>
 			<reward type="Item" id="itemSkillbookPage" value="100"/>
 
 		</quest>
 	</append>
-	
-</configs>	
+
+</configs>

@@ -134,8 +134,7 @@
 			<objective type="Wear" id="apparelPlantFiberShoes"/>
 
 			<reward type="Exp" value="100"/>
-			<reward type="SkillPoints" value="1"/>	
-			<reward type="Item" id="itemCrudeKey" value="1"/>
+			<reward type="SkillPoints" value="1"/>
 			<reward type="Quest" id="quest_BasicSurvival6"/>
 		</quest>
 
@@ -150,6 +149,12 @@
 			<property name="difficulty" value="veryeasy"/>
 			<property name="shareable" value="false"/>
 
+			<objective type="FetchKeep" id="resourceWood" value="15" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="15" phase="1"/>
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceFeather" value="5" phase="1"/>
+
+			<objective type="Craft" id="itemCrudeKey" value="1" phase="2"/>
 			<objective type="Craft" id="itemOpenWeaponCrate" value="1" phase="2"/>
 
 			<reward type="Exp" value="100"/>
@@ -186,7 +191,7 @@
 			<property name="difficulty" value="veryeasy"/>
 			<property name="shareable" value="false"/>
 
-			<objective type="FetchKeep" id="resourceCropCottonPlant" value="20" phase="1"/>
+			<objective type="FetchKeep" id="resourceCropCottonPlant" value="10" phase="1"/>
 			<objective type="Craft" id="resourceCloth" value="10" phase="2"/>
 			<objective type="Craft" id="medicalBandage" value="5" phase="3"/>
 
@@ -227,7 +232,7 @@
 
 			<objective type="AnimalKill" id="animalRabbit" value="1" phase="1"/>
 			<objective type="AnimalKill" id="animalChicken" value="1" phase="1"/>
-			<objective type="FetchKeep" id="rawMeat" value="10" phase="1"/>
+			<objective type="FetchKeep" id="foodRawMeat" value="10" phase="1"/>
 
 			<reward type="Exp" value="100"/>
 			<reward type="SkillPoints" value="1"/>
@@ -245,17 +250,19 @@
 			<property name="difficulty" value="veryeasy"/>
 			<property name="shareable" value="false"/>
 
-			<objective type="FetchKeep" id="rawMeat" value="10" phase="1"/>
+			<objective type="FetchKeep" id="foodRawMeat" value="10" phase="1"/>
 			<objective type="FetchKeep" id="resourceRockSmall" value="5" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="5" phase="1"/>
 			<objective type="Craft" id="campfire" value="1" phase="2"/>
-			<objective type="FetchKeep" id="foodCharredMeat" value="5" phase="3"/>
+			<objective type="BlockPlace" id="bedroll" value="1" phase="3"/>
+			<objective type="FetchKeep" id="foodCharredMeat" value="5" phase="4"/>
 
 			<reward type="Exp" value="100"/>
 			<reward type="SkillPoints" value="1"/>
 			<reward type="Quest" id="quest_BasicSurvival12"/>
 		</quest>
 
-		<!-- Basic Survival 12 - Build a Campfire and cook food -->
+		<!-- Basic Survival 12 - Kill more Zombies -->
 		<quest id="quest_BasicSurvival12">
 			<property name="group_name_key" value="quest_BasicSurvival"/>
 			<property name="name_key" value="quest_BasicSurvival12"/>
@@ -303,9 +310,10 @@
 			</objective>
 
 			<reward type="Exp" value="500"/>
-			<reward type="SkillPoints" value="2"/>
+			<reward type="SkillPoints" value="1"/>
 			<reward type="Item" id="vehicleBicyclePlaceable" value="1"/>
 			<reward type="Item" id="boxMedicalSupplies" value="1"/>
+			<reward type="Quest" id="quest_whiteRiverCitizen2"/>
 		</quest>
 
 		<!-- White River Citizen 2 - Craft a base -->
@@ -325,6 +333,9 @@
 			<reward type="Exp" value="100"/>
 			<reward type="SkillPoints" value="2"/>
 			<reward type="Item" id="itemMinibikeQuestStarter" value="1"/>
+			<reward type="Quest" id="questZombieVanguard1">
+				<property name="chainquest" value="false"/>
+			</reward>
 		</quest>
 
 	</insertBefore>
@@ -380,6 +391,41 @@
 			<reward type="SkillPoints" value="1"/>
 			<reward type="Item" id="vehicleMinibikePlaceable" value="1"/>
 			<reward type="Item" id="ammoGasCan" value="1000"/>
+
+		</quest>
+	</append>
+
+	<append xpath="/quests">
+		<quest id="questZombieVanguard1">
+
+			<property name="group_name_key" value="questZombieVanguard1_group"/>
+			<property name="name_key" value="questZombieVanguard1"/>
+			<property name="subtitle_key" value="questZombieVanguard1_subtitle"/>
+			<property name="description_key" value="questZombieVanguard1_description"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="hard"/>
+			<property name="offer_key" value="questZombieVanguard1_description"/>
+			<property name="shareable" value="false"/>
+
+			<action type="ShowTip" value="questZombieVanguard1Tip">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="TrackQuest">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ZombieKill" value="100" phase="1"/>
+			<requirement type="Buff" id="buffHordeNightQuestTracker" phase="1"/>
+
+			<reward type="Quest" id="questZombieVanguard1">
+				<property name="chainquest" value="false"/>
+			</reward>
+
+			<reward type="Exp" value="5000"/>
+			<reward type="Item" id="casinoCoin" value="200"/>
+			<reward type="Item" id="itemSkillbookPage" value="5"/>
 
 		</quest>
 	</append>

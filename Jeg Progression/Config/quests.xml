@@ -1,46 +1,5 @@
 <configs>
 
-	<insertAfter xpath="/quests/quest[@id='quest_whiteRiverCitizen1']/reward[@type='Exp']">
-		<reward type="Quest" id="questZombieVanguard1">
-			<property name="chainquest" value="false"/>
-		</reward>
-	</insertAfter>
-
-	<append xpath="/quests">
-		<quest id="questZombieVanguard1">
-
-			<property name="group_name_key" value="questZombieVanguard1_group"/>
-			<property name="name_key" value="questZombieVanguard1"/>
-			<property name="subtitle_key" value="questZombieVanguard1_subtitle"/>
-			<property name="description_key" value="questZombieVanguard1_description"/>
-			<property name="icon" value="ui_game_symbol_zombie"/>
-			<property name="category_key" value="quest"/>
-			<property name="repeatable" value="true"/>
-			<property name="difficulty" value="hard"/>
-			<property name="offer_key" value="questZombieVanguard1_description"/>
-			<property name="shareable" value="false"/>
-
-			<action type="ShowTip" value="questZombieVanguard1Tip">
-				<property name="delay" value="3"/>
-			</action>
-			<action type="TrackQuest">
-				<property name="delay" value="3"/>
-			</action>
-
-			<objective type="ZombieKill" value="100" phase="1"/>
-			<requirement type="Buff" id="buffHordeNightQuestTracker" phase="1"/>
-
-			<reward type="Quest" id="questZombieVanguard1">
-				<property name="chainquest" value="false"/>
-			</reward>
-
-			<reward type="Exp" value="5000"/>
-			<reward type="Item" id="casinoCoin" value="200"/>
-			<reward type="Item" id="itemSkillbookPage" value="5"/>
-
-		</quest>
-	</append>
-
 	<!-- Adds reward to tier completion quests -->
 	<!-- Tier 1 -->
 	<append xpath="/quests/quest[@id='quest_tier1complete']">

@@ -1,7 +1,7 @@
 <configs>
 
 	<append xpath="/buffs">
-		<buff name="buffHordeNightQuestTracker" name_key="buffHammerTimeDrunkName" description_key="buffHammerTimeDrunkDesc" showonhud="true" icon="ui_game_symbol_sledge" icon_color="0,255,0">
+		<buff name="buffHordeNightQuestTracker" name_key="buffHordeNightQuestTrackerName" showonhud="false" remove_on_death="false" hidden="true">
 			<stack_type value="ignore"/>
 			<update_rate value=".2"/>
 			<effect_group>
@@ -11,7 +11,7 @@
 	</append>
 	
 	<append xpath="/buffs">
-		<buff name="buffHordeNightQuestTrackerNight" name_key="buffHammerTimeDrunkName" description_key="buffHammerTimeDrunkDesc" showonhud="true" icon="ui_game_symbol_pistol" icon_color="255,255,0">
+		<buff name="buffHordeNightQuestTrackerNight" name_key="buffHordeNightQuestTrackerNightName" description_key="buffHordeNightQuestTrackerNightDesc" tooltip_key="buffHordeNightQuestTrackerNightTooltip" showonhud="false" icon="jeg_BM_quest_track" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value=".2"/>
 			<effect_group>

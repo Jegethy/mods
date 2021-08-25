@@ -13,23 +13,28 @@
 	<append xpath="/blocks/block[@name='cntHardenedChestSecure']" >
 		<property name="MaxDamage" value="30000"/><!-- original: 10000  -->
 	</append>
+	
+	<!-- Lootable Tires -->
+	<append xpath="/blocks/block[contains (@name, 'decoCarTireSmallFlat')]">
+		<property name="CanPickup" value="true"/>
+	</append>
 
 	<!-- Campfire, force and work stations cause more heat -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']/@value">6</set>        <!-- original: 5    -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapTime']/@value">6000</set>         <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapFrequency']/@value">1500</set>    <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']/@value">7</set>           <!-- original: 6    -->
-	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapTime']/@value">6000</set>            <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapFrequency']/@value">1500</set>       <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']/@value">3</set>       <!-- original: 2    -->
-	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapTime']/@value">6000</set>        <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapFrequency']/@value">1500</set>   <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']/@value">3</set>     <!-- original: 2    -->
-	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapTime']/@value">6000</set>      <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapFrequency']/@value">1500</set> <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapStrength']/@value">6</set><!-- original: 5    -->
-	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapTime']/@value">6000</set> <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapFrequency']/@value">1500</set> <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']/@value">7</set>        <!-- original: 5    -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapTime']/@value">7000</set>         <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapFrequency']/@value">2000</set>    <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']/@value">8</set>           <!-- original: 6    -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapTime']/@value">7000</set>            <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapFrequency']/@value">2000</set>       <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']/@value">4</set>       <!-- original: 2    -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapTime']/@value">7000</set>        <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapFrequency']/@value">2500</set>   <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']/@value">4</set>     <!-- original: 2    -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapTime']/@value">7000</set>      <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapFrequency']/@value">2500</set> <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapStrength']/@value">7</set><!-- original: 5    -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapTime']/@value">7000</set> <!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapFrequency']/@value">2500</set> <!-- original: 1000 -->
 
 	<!-- Triples the fuel capacity of generators -->
 	<set xpath="/blocks/block[@name='generatorbank']/property[@name='MaxFuel']/@value">8000</set>
@@ -408,6 +413,25 @@
 			<property name="FilterTags" value="floot"/>
 		</block>
 	</append>
+	
+	<append xpath="/blocks">
+		<block name="treasureChestJeg2"> <!-- do not rename -->
+			<property name="Class" value="Loot"/>
+			<property name="CustomIcon" value="cntChest01"/>
+			<property name="Material" value="ImmortalBox"/>
+			<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+			<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+			<property name="Mesh" value="models"/>
+			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/> <property name="HandleFace" value="Bottom"/>
+			<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="LootList" value="999"/>
+			<property name="CreativeMode" value="None"/>
+			<drop event="Destroy" name="resourceWood" count="1,3"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="FilterTags" value="floot"/>
+		</block>
+	</append>
 
 	<append xpath="/blocks">
 		<block name="blockMysteryBoxOuter">
@@ -585,11 +609,11 @@
 	</insertAfter>
 
 	<insertAfter xpath="/blocks/block[@name='treeGrassMaster']/property[@name='HarvestOverdamage']">
-		<drop event="Harvest" name="foodCropWheat" prob=".33" count="1,4" tag="allHarvest"/>
+		<drop event="Harvest" name="foodCropWheat" prob=".33" count="1,4" tag="allHarvest,wildCropsHarvest"/>
 	</insertAfter>
 
 	<insertAfter xpath="/blocks/block[@name='treeCactus01']/property[@name='CanPlayersSpawnOn']">
-		<drop event="Harvest" name="foodCropWheat" prob=".06" count="1,6" tag="allHarvest"/>
+		<drop event="Harvest" name="foodCropWheat" prob=".33" count="1,6" tag="allHarvest,wildCropsHarvest"/>
 	</insertAfter>
 
 	<set xpath="/blocks/block[@name='stainlessSteelMaster']/property[@name='Material']/@value">MstainlessSteelX</set>

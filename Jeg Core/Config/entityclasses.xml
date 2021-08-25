@@ -23,13 +23,14 @@
 	</insertAfter>
 
 	<!-- Changes starting items -->
-	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater,foodCanChili</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili,itemLockedWeaponCrate</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater,foodCanChili,itemLockedWeaponCrate</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili,itemLockedWeaponCrate</set>
 
 	<append xpath="/entity_classes/entity_class[@name='npcTraderTemplate']">
 		<effect_group name="Trader Protection Aura">
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffTraderProtectionStarter"/>
 		</effect_group>
 	</append>
+	
 </configs>

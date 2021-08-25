@@ -1,0 +1,25 @@
+<configs>
+
+	<!-- Adding the modded customised fittings items -->
+	<append xpath="/item_modifiers">
+		<item_modifier name="modAccessoriseMovementSpeed" installable_tags="accessorise" type="attachment">
+			<property name="DisplayType" value="modArmorMobilityCustom"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="modCustom"/>
+			<property name="name_key" value="modAccessoriseMovementSpeed"/>
+			<property name="description_key" value="modAccessoriseMovementSpeedDesc"/>
+			<property name="CustomIcon" value="modArmorPlatingBasic"/>
+			<property name="CustomIconTint" value="171,171,255"/>
+			<property name="EconomicValue" value="385"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="Mobility" operation="perc_add" value="0.015"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.0281" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.0562" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="0.562"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.02"/><display_value name="dNoiseMultiplier" value="-.02"/>
+			</effect_group>
+		</item_modifier>
+	</append>
+
+</configs>

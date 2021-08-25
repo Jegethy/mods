@@ -4,7 +4,7 @@
 
 	<append xpath="/items">	
 		<item name="accessorySilverRing">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessorySilverRing"/>
@@ -13,7 +13,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -35,7 +35,7 @@
 		<!-- Gold Flower Ring, localised: Gold Flower Ring -->
 
 		<item name="accessoryGoldFlowerRing">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryGoldFlowerRing"/>
@@ -44,7 +44,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -66,7 +66,7 @@
 		<!-- Gold Studded Ring, localised: Diamond Studded Gold Ring -->
 
 		<item name="accessoryGoldStuddedRing">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryGoldStuddedRing"/>
@@ -75,7 +75,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -97,7 +97,7 @@
 		<!-- Ruby Diamond Ring, localised: Ruby Diamond Studded Ring -->
 
 		<item name="accessoryRubyDiamondRing">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryRubyDiamondRing"/>
@@ -106,7 +106,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -128,7 +128,7 @@
 		<!-- Ruby Heart Ring, localised: Ruby Heart Ring -->
 
 		<item name="accessoryRubyHeartRing">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryRubyHeartRing"/>
@@ -137,7 +137,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -161,7 +161,7 @@
 		<!-- Swagger Necklace, localised: Swag Necklace [WIP] -->
 
 		<item name="accessorySwaggerNecklace">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessorySwaggerNecklace"/>
@@ -171,7 +171,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -193,7 +193,7 @@
 		<!-- Crimson Earring, localised: Crimson Earring -->
 
 		<item name="accessoryCrimsonEarring">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryCrimsonEarring"/>
@@ -202,7 +202,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -224,7 +224,7 @@
 		<!-- Diamond Earring, localised: Diamond Earring -->
 
 		<item name="accessoryDiamondEarring">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryDiamondEarring"/>
@@ -233,7 +233,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -255,7 +255,7 @@
 		<!-- Emerald Necklace, localised: Emerald Necklace -->
 
 		<item name="accessoryEmeraldNecklace">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryEmeraldNecklace"/>
@@ -264,7 +264,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -286,7 +286,7 @@
 		<!-- Exquisite Necklace, localised: Exquisite Necklace -->
 
 		<item name="accessoryExquisiteNecklace">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryExquisiteNecklace"/>
@@ -295,7 +295,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -317,7 +317,7 @@
 		<!-- Gold Chain, localised: Gold Chain Necklace -->
 
 		<item name="accessoryGoldChain">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryGoldChain"/>
@@ -326,7 +326,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -348,7 +348,7 @@
 		<!-- Lavender Earring, localised: Lavender Earring -->
 
 		<item name="accessoryLavenderEarring">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryLavenderEarring"/>
@@ -357,7 +357,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -379,7 +379,7 @@
 		<!-- Ruby Necklace, localised: Ruby Necklace -->
 
 		<item name="accessoryRubyNecklace">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryRubyNecklace"/>
@@ -388,7 +388,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -410,7 +410,7 @@
 		<!-- Twinned necklace, localised: Twin-Chain Necklace -->
 
 		<item name="accessoryTwinNecklace">
-			<property name="Tags" value="moddedHead,head,clothing"/>
+			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryTwinNecklace"/>
@@ -419,7 +419,7 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
 			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="50"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>

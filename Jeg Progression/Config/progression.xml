@@ -1,7 +1,37 @@
 <config>
 
 	<!-- Sets the maximum character level to 500 -->
-	<set xpath="/progression/level/@max_level">500</set>
+	<set xpath="/progression/level/@max_level">300</set>
+	
+	<!-- Removed Grease Monkey -->
+	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']" />
+	
+	<!-- Adding Grease Monkey Back In -->
+	<append xpath="/progression/perks" >
+		<perk name="perkGreaseMonkey" parent="skillIntellectCraftsmanship" name_key="perkGreaseMonkeyName" desc_key="perkGreaseMonkeyDesc" icon="ui_game_symbol_service">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="2" desc_key="reqIntellectLevel02"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkGreaseMonkey"/><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars,vehicleBicyclePlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars,resourceAcid,vehicleMinibikePlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceOil,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,vehicleMotorcyclePlaceable,ammoGasCanBundle,vehicle4x4TruckChassis,vehicle4x4TruckAccessories,vehicle4x4TruckPlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="vehicleGyroCopterChassis,vehicleGyroCopterAccessories,vehicleGyrocopterPlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="vehicleHelicopterChassis,vehicleHelicopterRotor,bigEngine,vehicleHelicopterPlaceable,itemPilotHandbook"/>
+
+			<effect_description level="1" desc_key="perkGreaseMonkeyRank1Desc" long_desc_key="perkGreaseMonkeyRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkGreaseMonkeyRank2Desc" long_desc_key="perkGreaseMonkeyRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkGreaseMonkeyRank3Desc" long_desc_key="perkGreaseMonkeyRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkGreaseMonkeyRank4Desc" long_desc_key="perkGreaseMonkeyRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkGreaseMonkeyRank5Desc" long_desc_key="perkGreaseMonkeyRank5LongDesc"/>
+		</effect_group>
+	</perk>
+		</append>
 
 	<!-- Adds a new category for the perks to be listed in. Name: Extra Progression -->
 	<append xpath="/progression/attributes">
@@ -37,35 +67,35 @@
 	<!-- Maximum health buff -->
 	<append xpath="/progression/perks">
 		<perk name="extraMaxHealth" base_skill_point_cost="2" parent="extraCharacterPerks" name_key="extraMaxHealthName" desc_key="extraMaxHealthDesc" icon="jeg_health">
-			<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayerLevel100"/>
+			<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="20" desc_key="reqPlayerLevel100"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="2" desc_key="Fortitude Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="2" desc_key="Strength Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="2" desc_key="Agility Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="Perception Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="2" desc_key="reqIntellectLevel02"/></level_requirements>
 
-			<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="150" desc_key="reqPlayerLevel175"/>
+			<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="40" desc_key="reqPlayerLevel150"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="4" desc_key="Fortitude Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="4" desc_key="Strength Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="4" desc_key="Agility Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="4" desc_key="Perception Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
 
-			<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="200" desc_key="reqPlayerLevel225"/>
+			<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="60" desc_key="reqPlayerLevel200"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="6" desc_key="Fortitude Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="6" desc_key="Strength Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="6" desc_key="Agility Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="6" desc_key="Perception Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
 
-			<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="350" desc_key="reqPlayerLevel350"/>
+			<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="80" desc_key="reqPlayerLevel250"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="8" desc_key="Fortitude Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="8" desc_key="Strength Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="8" desc_key="Agility Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="8" desc_key="Perception Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
 
-			<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="500" desc_key="reqPlayerLevel500"/>
+			<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayerLevel300"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="10" desc_key="reqFortitudeLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
@@ -73,11 +103,11 @@
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
-				<passive_effect name="HealthMax" operation="base_add" value="50" level="1"/>
-				<passive_effect name="HealthMax" operation="base_add" value="100" level="2"/>
-				<passive_effect name="HealthMax" operation="base_add" value="150" level="3"/>
-				<passive_effect name="HealthMax" operation="base_add" value="225" level="4"/>
-				<passive_effect name="HealthMax" operation="base_add" value="300" level="5"/>
+				<passive_effect name="HealthMax" operation="base_add" value="20" level="1"/>
+				<passive_effect name="HealthMax" operation="base_add" value="40" level="2"/>
+				<passive_effect name="HealthMax" operation="base_add" value="60" level="3"/>
+				<passive_effect name="HealthMax" operation="base_add" value="80" level="4"/>
+				<passive_effect name="HealthMax" operation="base_add" value="100" level="5"/>
 
 				<effect_description level="1" desc_key="extraMaxHealth1" long_desc_key="extraMaxHealth1Desc"/>
 				<effect_description level="2" desc_key="extraMaxHealth2" long_desc_key="extraMaxHealth2Desc"/>
@@ -91,35 +121,35 @@
 	<!-- Maximum stamina buff -->
 	<append xpath="/progression/perks">
 		<perk name="extraMaxStamina" base_skill_point_cost="2" parent="extraCharacterPerks" name_key="extraMaxStaminaName" desc_key="extraMaxStaminaDesc" icon="jeg_stamina">
-			<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayerLevel100"/>
+			<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="20" desc_key="reqPlayerLevel100"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="2" desc_key="Fortitude Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="2" desc_key="Strength Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="2" desc_key="Agility Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="Perception Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="2" desc_key="reqIntellectLevel02"/></level_requirements>
 
-			<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="175" desc_key="reqPlayerLevel175"/>
+			<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="40" desc_key="reqPlayerLevel150"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="4" desc_key="Fortitude Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="4" desc_key="Strength Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="4" desc_key="Agility Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="4" desc_key="Perception Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
 
-			<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="225" desc_key="reqPlayerLevel225"/>
+			<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="60" desc_key="reqPlayerLevel200"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="6" desc_key="Fortitude Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="6" desc_key="Strength Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="6" desc_key="Agility Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="6" desc_key="Perception Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
 
-			<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="350" desc_key="reqPlayerLevel350"/>
+			<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="80" desc_key="reqPlayerLevel250"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="8" desc_key="Fortitude Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="8" desc_key="Strength Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="8" desc_key="Agility Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="8" desc_key="Perception Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
 
-			<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="500" desc_key="reqPlayerLevel500"/>
+			<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayerLevel300"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="10" desc_key="reqFortitudeLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
@@ -127,11 +157,11 @@
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
-				<passive_effect name="StaminaMax" operation="base_add" value="50" level="1"/>
-				<passive_effect name="StaminaMax" operation="base_add" value="100" level="2"/>
-				<passive_effect name="StaminaMax" operation="base_add" value="150" level="3"/>
-				<passive_effect name="StaminaMax" operation="base_add" value="225" level="4"/>
-				<passive_effect name="StaminaMax" operation="base_add" value="300" level="5"/>
+				<passive_effect name="StaminaMax" operation="base_add" value="20" level="1"/>
+				<passive_effect name="StaminaMax" operation="base_add" value="40" level="2"/>
+				<passive_effect name="StaminaMax" operation="base_add" value="60" level="3"/>
+				<passive_effect name="StaminaMax" operation="base_add" value="80" level="4"/>
+				<passive_effect name="StaminaMax" operation="base_add" value="100" level="5"/>
 
 				<effect_description level="1" desc_key="extraMaxStamina1" long_desc_key="extraMaxStamina1Desc"/>
 				<effect_description level="2" desc_key="extraMaxStamina2" long_desc_key="extraMaxStamina2Desc"/>
@@ -193,55 +223,37 @@
 
 	<!-- Hot and Cold resistance -->
 	<append xpath="/progression/perks">
-		<perk name="extraThermalProt" parent="extraCharacterPerks" name_key="extraThermalProtName" desc_key="extraThermalProtDesc" icon="jeg_thermal">
+		<perk name="extraThermalProt" parent="extraCharacterPerks" name_key="extraThermalProtName" desc_key="extraThermalProtDesc" icon="jeg_thermal" max_level="3">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="2" desc_key="Fortitude Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="2" desc_key="Strength Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="2" desc_key="Agility Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="Perception Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="2" desc_key="reqIntellectLevel02"/></level_requirements>
 
-			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="4" desc_key="Fortitude Level 4"/>
-				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="4" desc_key="Strength Level 4"/>
-				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="4" desc_key="Agility Level 4"/>
-				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="4" desc_key="Perception Level 4"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="5" desc_key="Fortitude Level 5"/>
+				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="5" desc_key="Strength Level 5"/>
+				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="5" desc_key="Agility Level 5"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="Perception Level 5"/>
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
 
-			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="6" desc_key="Fortitude Level 6"/>
-				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="6" desc_key="Strength Level 6"/>
-				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="6" desc_key="Agility Level 6"/>
-				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="6" desc_key="Perception Level 6"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
-
-			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="8" desc_key="Fortitude Level 8"/>
-				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="8" desc_key="Strength Level 8"/>
-				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="8" desc_key="Agility Level 8"/>
-				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="8" desc_key="Perception Level 8"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
-
-			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="10" desc_key="reqFortitudeLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
-				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="7" desc_key="Fortitude Level 7"/>
+				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="7" desc_key="Strength Level 7"/>
+				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="7" desc_key="Agility Level 7"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="Perception Level 7"/>
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
 
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="4" level="1"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="8" level="2"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="12" level="3"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="16" level="4"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="20" level="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="10" level="1"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="20" level="2"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="30" level="3"/>
 
-				<passive_effect name="HyperthermalResist" operation="base_add" value="4" level="1"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="8" level="2"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="12" level="3"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="16" level="4"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="20" level="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="10" level="1"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="20" level="2"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="30" level="3"/>
 
 				<effect_description level="1" desc_key="extraThermalProt04" long_desc_key="extraThermalProt04Desc"/>
 				<effect_description level="2" desc_key="extraThermalProt08" long_desc_key="extraThermalProt08Desc"/>
 				<effect_description level="3" desc_key="extraThermalProt12" long_desc_key="extraThermalProt12Desc"/>
-				<effect_description level="4" desc_key="extraThermalProt16" long_desc_key="extraThermalProt16Desc"/>
-				<effect_description level="5" desc_key="extraThermalProt20" long_desc_key="extraThermalProt20Desc"/>
 			</effect_group>
 		</perk>
 	</append>
@@ -604,33 +616,6 @@ Craftable candies?
 
 	<!-- Adds Advanced Forge -->
 	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,forgeAdv</append>
-
-	<!-- Adds helicopter parts to perk unlocks -->
-	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='5']/@tags">,bigEngine</append>
-	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='5']/@tags">,vehicleHelicopterRotor,vehicleHelicopterChassis</append>
-
-	<!-- Pilot Training Skill Tree -->
-	<append xpath="/progression/perks" >
-		<perk name="perkPilotTraining" base_skill_point_cost="5" max_level="5" parent="skillIntellectCraftsmanship" name_key="perkPilotTrainingName" desc_key="perkPilotTrainingDesc" icon="pilot-icon">
-
-			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
-			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
-			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
-			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
-			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
-
-			<effect_group>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="itemPilotHandbook"/>
-
-				<effect_description level="1" desc_key="perkPilotTrainingRank1Desc" long_desc_key="perkPilotTrainingRank1LongDesc"/>
-				<effect_description level="2" desc_key="perkPilotTrainingRank2Desc" long_desc_key="perkPilotTrainingRank2LongDesc"/>
-				<effect_description level="3" desc_key="perkPilotTrainingRank3Desc" long_desc_key="perkPilotTrainingRank3LongDesc"/>
-				<effect_description level="4" desc_key="perkPilotTrainingRank4Desc" long_desc_key="perkPilotTrainingRank4LongDesc"/>
-				<effect_description level="5" desc_key="perkPilotTrainingRank5Desc" long_desc_key="perkPilotTrainingRank5LongDesc"/>
-
-			</effect_group>
-		</perk>
-	</append>
 
 	<!-- Adds custom sledgehammer book category -->
 	<append xpath="/progression/skills" >

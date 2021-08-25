@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configs>
 
 	<remove xpath="/items/item[@name='coolLootShadesAdmin']"/>
@@ -18,6 +18,10 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jailDoorPowered" operation="set" value="1"/>
 	</append>
 
+	<append xpath="items/item[@name='drinkJarGrandpasForgettingElixir']">
+		<property name="UnlockedBy" value="perkMasterChef,drinkJarGrandpasForgettingElixirSchematic"/>
+	</append>
+
 	<!-- Removes the grazing hits mechanic -->
 	<set xpath="//property[@name='UseGrazingHits']/@value">false</set>
 
@@ -26,19 +30,7 @@
 	<set xpath="/items/item[@name='drinkJarCoffee']/effect_group/triggered_effect[@cvar='$buffCoffeeDuration' and @operation='add']/@value">903</set>
 	<set xpath="/items/item[@name='drinkJarCoffee']/effect_group/display_value[@name='dDuration']/@value">903</set>
 
-	<!-- Adjusts the amount of mod slots on an item so that it is equal to its quality -->
-	<remove xpath="/items/item/effect_group/passive_effect[@name='ModSlots'][@value='1,1,2,2,3,4']"/>
-	<append xpath="/items/item[not (contains(@name, 'meleeToolPickT3Auger'))]/effect_group">
-		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
-	</append>
-	<append xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group">
-		<passive_effect name="ModSlots" operation="base_set" value="3,4,5,6,7,8" tier="1,2,3,4,5,6"/>
-	</append>
-	<append xpath="/items/item[contains(@name, 'Boots')]/effect_group">
-		<passive_effect name="ModSlots" operation="base_set" value="2,3,4,5,6,7" tier="1,2,3,4,5,6"/>
-	</append>
-
-	<!-- Parts Template -->	
+	<!-- Parts Template -->
 	<append xpath="/items">
 		<item name="itemPartsTemplateMaster">
 			<property name="CreativeMode" value="Player"/>
@@ -47,18 +39,18 @@
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
-			<property name="Stacknumber" value="1000"/>
+			<property name="Stacknumber" value="250"/>
 			<property name="EconomicValue" value="100"/>
 			<property name="Weight" value="1"/>
 			<property name="Group" value="Resources"/>
 			<property name="CustomIcon" value="itemCraftingTemplate"/>
-			<property name="DescriptionKey" value="itemPartsTemplateMasterDesc" />
+			<property name="DescriptionKey" value="itemPartsTemplateMasterDesc"/>
 		</item>
 	</append>
 
 	<!-- Reduces envionrmental damage caused by sledgehammers -->
 	<insertAfter xpath="/items/item[contains(@name, 'meleeWpnSledge')]/effect_group[contains(@name, 'meleeWpnSledge')]/passive_effect[@name='HarvestCount' and @tags='oreWoodHarvest']">
-		<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="earth"/>	
+		<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="earth"/>
 	</insertAfter>
 
 	<!-- Improves the Auger in every way -->
@@ -174,7 +166,7 @@
 	<!-- Increased rifle magazine count -->
 	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">5</set>
 	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">12</set>
-	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">22</set>	
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">22</set>
 	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">100</set>
 
 	<!-- Reverted change to single-shot weapons that prevented them from reloading automatically -->
@@ -200,21 +192,22 @@
 	<set xpath="/items/item[contains(@name, 'drink')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
 	<!-- Food -->
 	<set xpath="/items/item[contains(@name, 'food') and not (contains(@name, 'RawMeat'))]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
-	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">1000</set>
+	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">250</set>
 	<!-- Health -->
 	<set xpath="/items/item[contains(@name, 'drug')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
 	<set xpath="/items/item[contains(@name, 'medical')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
 	<!-- Magazines & Schematics -->
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">250</set>
+	<set xpath="/items/item[starts-with(@name, 'book')]/property[@name='Stacknumber']/@value">250</set>
 	<!-- Ammo & thrown -->
-	<set xpath="/items/item[contains(@name, 'ammo') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">10000</set>
-	<set xpath="/items/item[contains(@name, 'thrown') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">10000</set>
-	<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[contains(@name, 'ammo') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">2000</set>
+	<set xpath="/items/item[contains(@name, 'thrown') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">2000</set>
+	<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">10000</set>
 	<!-- Misc -->
-	<set xpath="/items/item[contains(@name, 'resource')]/property[@name='Stacknumber' and not(@value='1')]/@value">30000</set>
+	<set xpath="/items/item[contains(@name, 'resource')]/property[@name='Stacknumber' and not(@value='1')]/@value">10000</set>
 	<set xpath="/items/item[contains(@name, 'tool')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
-	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">30000</set>
-	<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">10000</set>
 	<set xpath="/items/item[contains(@name, 'parts')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
 	<set xpath="/items/item[@name='partsMaster']/property[@name='Stacknumber']/@value">250</set>
 
@@ -230,12 +223,8 @@
 	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group[@name='military armor']/passive_effect[@name='Mobility']/@value">-.03</set>
 
 	<!-- Speeds up forge smelting -->
-	<append xpath="/items/item[starts-with(@name,'resource') and not (contains(@name,'MeltTimePerUnit'))]">
-		<property name="MeltTimePerUnit" value=".2"/>
-	</append>
-
-	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">.2</set>
-	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.05</set>
+	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">0.2</set>
+	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.25</set>
 
 	<!-- Increases the Nailgun speed and removed the quality display as it only comes in 1 tier -->
 	<set xpath="/items/item[@name='meleeToolRepairT3Nailgun']/property[@class='Action1']/property[@name='Delay']/@value">0.25</set>
@@ -266,7 +255,7 @@
 	<set xpath="/items/item[@name='resourceElectricParts']/property[@name='CraftingIngredientTime']/@value">1</set>
 	<set xpath="/items/item[@name='resourceElectronicParts']/property[@name='CraftingIngredientTime']/@value">1</set>
 	<set xpath="/items/item[@name='resourceMechanicalParts']/property[@name='CraftingIngredientTime']/@value">1</set>
-	<insertAfter  xpath="/items/item[@name='resourceBrokenGlass']/property[@name='EconomicBundleSize']">
+	<insertAfter xpath="/items/item[@name='resourceBrokenGlass']/property[@name='EconomicBundleSize']">
 		<property name="CraftingIngredientTime" value="0.5"/>
 	</insertAfter>
 
@@ -275,16 +264,16 @@
 		<item name="foodMedicalHoney">
 			<property name="HoldType" value="3"/>
 			<property name="DisplayType" value="foodCureInfection"/>
-			<property name="CustomIcon" value="drinkJarGrainAlcohol"/> <property name="CustomIconTint" value="e3d54f"/>
+			<property name="CustomIcon" value="drinkJarGrainAlcohol"/><property name="CustomIconTint" value="e3d54f"/>
 			<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="EconomicValue" value="200"/>
 			<property name="SellableToTrader" value="true"/>
-			<property name="name_key" value="foodMedicalHoney" />
-			<property name="description_key" value="foodMedicalHoneyDesc" />
+			<property name="name_key" value="foodMedicalHoney"/>
+			<property name="description_key" value="foodMedicalHoneyDesc"/>
 			<property name="Group" value="Science,CFChemicals,Medical"/>
-			<property name="Stacknumber" value="50"/> <!-- STK loot -->
+			<property name="Stacknumber" value="250"/><!-- STK loot -->
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -321,10 +310,10 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="name_key" value="itemLearningbook" />
-			<property name="desc_key" value="itemLearningbookDesc" />
+			<property name="name_key" value="itemLearningbook"/>
+			<property name="desc_key" value="itemLearningbookDesc"/>
 			<property name="CustomIcon" value="itemLearningbook"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -346,10 +335,10 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="name_key" value="itemSkillbook" />
-			<property name="desc_key" value="itemSkillbookDesc" />
+			<property name="name_key" value="itemSkillbook"/>
+			<property name="desc_key" value="itemSkillbookDesc"/>
 			<property name="CustomIcon" value="skillPointBook"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
@@ -361,7 +350,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="5"/>
-			<property name="Stacknumber" value="200"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="6"/>
 			<property name="EconomicBundleSize" value="10"/>
 			<property name="SellableToTrader" value="false"/>
@@ -390,21 +379,21 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="name_key" value="itemSkillbook100" />
-			<property name="desc_key" value="itemSkillbook100Desc" />
+			<property name="name_key" value="itemSkillbook100"/>
+			<property name="desc_key" value="itemSkillbook100Desc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="ff9fd4"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
 	<!-- Adds new trader quest item -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="itemTraderbook">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
-			<property name="name_key" value="itemTraderbook" />
-			<property name="desc_key" value="itemTraderbookDesc" />
+			<property name="name_key" value="itemTraderbook"/>
+			<property name="desc_key" value="itemTraderbookDesc"/>
 			<property name="CustomIcon" value="treasureQuestMasterNew"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -419,11 +408,11 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
-	<!-- Adds sledgehammer skill books -->	
+	<!-- Adds sledgehammer skill books -->
 	<append xpath="/items">
 		<item name="bookHammerTimeDamage">
 			<property name="Extends" value="bookFiremansAlmanacHeat"/>
@@ -529,14 +518,14 @@
 	<set xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/property[@name='Tags']/@value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,perkFlurryOfBlows</set>
 	<set xpath="/items/item[@name='meleeToolSalvageT1Wrench']/property[@name='Tags']/@value">blunt,melee,grunting,light,tool,longShaft,attPerception,perkSalvageOperations,canHaveCosmetic,perkFlurryOfBlows</set>
 	<set xpath="/items/item[@name='meleeToolSalvageT2Ratchet']/property[@name='Tags']/@value">blunt,melee,grunting,light,tool,longShaft,attPerception,perkSalvageOperations,canHaveCosmetic,perkFlurryOfBlows</set>
-	<set xpath="/items/item[@name='meleeToolSalvageT3ImpactDriver']/property[@name='Tags']/@value">blunt,melee,grunting,light,tool,longShaft,attPerception,perkSalvageOperations,canHaveCosmetic,perkFlurryOfBlows</set>	
+	<set xpath="/items/item[@name='meleeToolSalvageT3ImpactDriver']/property[@name='Tags']/@value">blunt,melee,grunting,light,tool,longShaft,attPerception,perkSalvageOperations,canHaveCosmetic,perkFlurryOfBlows</set>
 	<set xpath="/items/item[@name='meleeWpnSpearT0StoneSpear']/property[@name='Tags']/@value">melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,canHaveCosmetic,thrownWeapon,perkFlurryOfBlows</set>
 	<set xpath="/items/item[@name='meleeWpnSledgeT0StoneSledgehammer']/property[@name='Tags']/@value">blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic,perkFlurryOfBlows</set>
 	<set xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/property[@name='Tags']/@value">blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic,perkFlurryOfBlows</set>
 	<set xpath="/items/item[@name='meleeWpnSledgeT3SteelSledgehammer']/property[@name='Tags']/@value">blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic,perkFlurryOfBlows</set>
-	<set xpath="/items/item[@name='meleeToolFarmT1IronHoe']/property[@name='Tags']/@value">melee,medium,tool,attFortitude,perkLivingOffTheLand,canHaveCosmetic,perkFlurryOfBlows</set> 
+	<set xpath="/items/item[@name='meleeToolFarmT1IronHoe']/property[@name='Tags']/@value">melee,medium,tool,attFortitude,perkLivingOffTheLand,canHaveCosmetic,perkFlurryOfBlows</set>
 
-	<!-- Adds the damage reduction modifcation from the Hammer Time perk -->	
+	<!-- Adds the damage reduction modifcation from the Hammer Time perk -->
 	<insertAfter xpath="/items/item[@name='meleeWpnSledgeT0StoneSledgehammer']/effect_group[@name='meleeWpnSledgeT0StoneSledgehammer']/passive_effect[@name='DismemberChance']">
 		<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
 			<requirement name="ProgressionLevel" progression_name="perkHammerTimeDefense" operation="Equals" value="1"/>
@@ -557,39 +546,39 @@
 	<remove xpath="/items/item[@name='drinkCanMegaCrush']"/>
 	<append xpath="/items">
 		<item name="drinkCanMegaCrush">
-			<property name="HoldType" value="3" />
-			<property name="DisplayType" value="waterMegaCrush" />
-			<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab" />
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
-			<property name="Material" value="Mglass" />
-			<property name="Weight" value="10" />
-			<property name="Stacknumber" value="250" /><!-- STK drink -->
-			<property name="EconomicValue" value="48" />
-			<property name="UnlockedBy" value="perkHammerTimeProtect" />
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterMegaCrush"/>
+			<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Weight" value="10"/>
+			<property name="Stacknumber" value="250"/><!-- STK drink -->
+			<property name="EconomicValue" value="48"/>
+			<property name="UnlockedBy" value="perkHammerTimeProtect"/>
 			<property class="Action0">
-				<property name="Class" value="Eat" />
-				<property name="Delay" value="1.0" />
-				<property name="Use_time" value="..." />
-				<property name="Sound_start" value="player_drinking" />
-				<property name="Create_item" value="drinkJarEmpty" />
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="Create_item" value="drinkJarEmpty"/>
 			</property>
-			<property name="Group" value="Food/Cooking,CFDrink/Cooking" />
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
 
 			<effect_group tiered="false">
-				<requirement name="NotHasBuff" buff="buffIsOnFire" />
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60" />
-				<display_value name="dStaminaRegen" value=".15" />
-				<display_value name="dRunSpeed" value=".5" />
-				<display_value name="dDuration" value="123" />
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="123" />
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+				<display_value name="dRunSpeed" value=".5"/>
+				<display_value name="dDuration" value="123"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="123"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="363">
-					<requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="363" /></triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffMegaCrush" />
+					<requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="363"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffMegaCrush"/>
 			</effect_group>
 
 			<effect_group tiered="false">
-				<requirement name="HasBuff" buff="buffIsOnFire" />
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire" />
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
 			</effect_group>
 		</item>
 	</append>
@@ -630,9 +619,9 @@
 				<property name="Sound_harvesting" value="wrench_harvest" param1="metal"/>
 				<property name="Particle_harvesting" value="true" param1="metal"/>
 			</property>
-			<property class="Action1"> <!-- UseAction -->
+			<property class="Action1"><!-- UseAction -->
 				<property name="Class" value="Repair"/>
-				<property name="Delay" value="1"/> <!-- Repair actions still need the delay amount -->
+				<property name="Delay" value="1"/><!-- Repair actions still need the delay amount -->
 				<property name="Repair_amount" value="650"/>
 				<property name="Upgrade_hit_offset" value="-2"/>
 				<property name="Sound_start" value="repair_block"/>
@@ -652,8 +641,8 @@
 				<passive_effect name="MaxRange" operation="base_set" value="2.4" tags="perkSalvageOperations"/>
 				<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkSalvageOperations"/>
 
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSalvageOperations"/> <!-- tier bonus -->
-				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSalvageOperations"/> <!-- tier bonus -->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSalvageOperations"/><!-- tier bonus -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSalvageOperations"/><!-- tier bonus -->
 
 				<passive_effect name="ModSlots" operation="base_set" value="1,6" tier="1,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".50" tags="EntityDamage,BlockDamage"/>
@@ -673,7 +662,7 @@
 
 	<!-- Adds Torn Page from scrapping skill books -->
 	<append xpath="/items">
-		<item name="resourceTornPage"> <!-- scrap material -->
+		<item name="resourceTornPage"><!-- scrap material -->
 			<property name="HoldType" value="45"/>
 			<property name="Tags" value="junk"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
@@ -681,23 +670,23 @@
 			<property name="EconomicValue" value="250"/>
 			<property name="SellableToTrader" value="true"/>
 			<property name="Material" value="resourceTornPage"/>
-			<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="FuelValue" value="1"/>
-			<property name="Weight" value="1"/>
+			<property name="Weight" value="1000"/>
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
-			<property name="name_key" value="resourceTornPage" />
-			<property name="desc_key" value="resourceTornPageDesc" />
+			<property name="name_key" value="resourceTornPage"/>
+			<property name="desc_key" value="resourceTornPageDesc"/>
 			<property name="CustomIcon" value="resourceTornPage"/>
 		</item>
 	</append>
 
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='Material']/@value">resourceTornPage</set>
-	<set xpath="/items/item[@name='schematicMaster']/property[@name='Weight']/@value">1</set>
+	<set xpath="/items/item[@name='schematicMaster']/property[@name='Weight']/@value">1337</set>
 
 	<set xpath="/items/item[@name='resourceIronFragment']/property[@name='Weight']/@value">15</set>
 
 	<!-- Adamantium, tradeable and non-tradeable -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="resourceAdamantium">
 			<property name="Extends" value="resourceSilverNugget"/>
 			<property name="Weight" value="1"/>
@@ -705,14 +694,14 @@
 			<property name="CustomIcon" value="Adamantium"/>
 			<property name="DescriptionKey" value="resourceAdamantiumDesc"/>
 			<property name="Material" value="resourceAdamantium"/>
-			<property name="Stacknumber" value="50"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="SellableToTrader" value="true"/>
 			<property name="EconomicValue" value="150000"/>
 			<property name="CraftingIngredientTime" value="15"/>
 		</item>
 	</append>
 
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="resourceAdamantium2">
 			<property name="Extends" value="resourceSilverNugget"/>
 			<property name="Weight" value="1"/>
@@ -722,7 +711,7 @@
 			<property name="name_key" value="resourceAdamantium2"/>
 			<property name="DescriptionKey" value="resourceAdamantium2Desc"/>
 			<property name="Material" value="resourceAdamantium"/>
-			<property name="Stacknumber" value="50"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicValue" value="5000"/>
 			<property name="CraftingIngredientTime" value="15"/>
@@ -730,11 +719,11 @@
 	</append>
 
 	<!-- Adds updated facial items -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="apparelShades">
 			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
 			<property name="CustomIcon" value="apparelShades"/>
-			<property name="DescriptionKey" value="apparelShadesDesc" />
+			<property name="DescriptionKey" value="apparelShadesDesc"/>
 			<property name="DisplayType" value="clothingShades"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Material" value="Mmetal"/>
@@ -766,7 +755,7 @@
 				<display_value name="dRunSpeed" value=".1"/>
 				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
 				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
-				<display_value name="dBartering" value=".1"/>			
+				<display_value name="dBartering" value=".1"/>
 			</effect_group>
 		</item>
 
@@ -798,7 +787,7 @@
 
 		<item name="apparelAviatorGoggles">
 			<property name="Extends" value="apparelShades"/>
-			<property name="DescriptionKey" value="apparelAviatorGogglesDesc" />
+			<property name="DescriptionKey" value="apparelAviatorGogglesDesc"/>
 			<property name="CustomIcon" value="apparelAviatorGoggles"/>
 			<property name="Material" value="Mleather"/>
 			<property name="DisplayType" value="clothingShades"/>
@@ -820,13 +809,13 @@
 				<display_value name="dRunSpeed" value=".1"/>
 				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
 				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
-				<display_value name="dBartering" value=".1"/>	
+				<display_value name="dBartering" value=".1"/>
 			</effect_group>
 		</item>
 
 		<item name="apparelSkiGoggles">
 			<property name="Extends" value="apparelShades"/>
-			<property name="DescriptionKey" value="apparelSkiGogglesDesc" />
+			<property name="DescriptionKey" value="apparelSkiGogglesDesc"/>
 			<property name="CustomIcon" value="apparelSkiGoggles"/>
 			<property name="Material" value="MresourceScrapPolymers"/>
 			<property name="DisplayType" value="clothingShades"/>
@@ -848,13 +837,13 @@
 				<display_value name="dRunSpeed" value=".1"/>
 				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
 				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
-				<display_value name="dBartering" value=".1"/>	
+				<display_value name="dBartering" value=".1"/>
 			</effect_group>
 		</item>
 
 		<item name="apparelNerdGlasses">
 			<property name="Extends" value="apparelShades"/>
-			<property name="DescriptionKey" value="apparelNerdGlassesDesc" />
+			<property name="DescriptionKey" value="apparelNerdGlassesDesc"/>
 			<property name="CustomIcon" value="apparelNerdGlasses"/>
 			<property name="DisplayType" value="clothingShades"/>
 			<property class="UMA">
@@ -875,13 +864,13 @@
 				<display_value name="dRunSpeed" value=".1"/>
 				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
 				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
-				<display_value name="dBartering" value=".1"/>	
+				<display_value name="dBartering" value=".1"/>
 			</effect_group>
 		</item>
 
 		<item name="apparelCigar">
 			<property name="Tags" value="moddedHead,head"/>
-			<property name="DescriptionKey" value="apparelCigarDesc" />
+			<property name="DescriptionKey" value="apparelCigarDesc"/>
 			<property name="CustomIcon" value="apparelCigar"/>
 			<property name="UnlockedBy" value="perkUrbanCombatControlledBreathing"/>
 			<property name="Material" value="Mplants"/>
@@ -901,13 +890,13 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="1"/>		
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 			</effect_group>
 		</item>
 
 		<item name="apparelCigarette">
 			<property name="Extends" value="apparelCigar"/>
-			<property name="DescriptionKey" value="apparelCigaretteDesc" />
+			<property name="DescriptionKey" value="apparelCigaretteDesc"/>
 			<property name="CustomIcon" value="apparelCigarette"/>
 			<property name="Tags" value="head"/>
 			<property class="UMA">
@@ -916,13 +905,13 @@
 			</property>
 			<property name="CreativeMode" value="Dev"/>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="1"/>	
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 			</effect_group>
 		</item>
 
 		<item name="apparelFacialPiercings">
 			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
-			<property name="DescriptionKey" value="apparelFacialPiercingsDesc" />
+			<property name="DescriptionKey" value="apparelFacialPiercingsDesc"/>
 			<property name="CustomIcon" value="apparelFacialPiercings"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Material" value="Mmetal"/>
@@ -942,7 +931,7 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="1"/>		
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 			</effect_group>
 		</item>
 
@@ -974,12 +963,13 @@
 	</append>
 
 	<!-- Golden Egg and Golden Omelette -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="resourceGoldenEgg">
 			<property name="Extends" value="resourceSilverNugget"/>
 			<property name="CustomIcon" value="foodEggGolden"/>
 			<property name="Tags" value="gems"/>
 			<property name="EconomicValue" value="5000"/>
+			<property name="Stacknumber" value="250"/>
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property name="DescriptionKey" value="resourceGoldenEggDesc"/>
@@ -989,11 +979,11 @@
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
 			<property name="DisplayType" value="food"/>
-			<property name="CustomIcon" value="foodOmelette"/> 
+			<property name="CustomIcon" value="foodOmelette"/>
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
-			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property name="EconomicValue" value="16"/>
 			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property class="Action0">
@@ -1027,16 +1017,16 @@
 	<set xpath="/items/item[@name='foodGumboStew']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='$foodAmountAdd']/@value">115</set>
 
 	<!-- Food: Ribs, tier 3 -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="foodCookedRibs">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
 			<property name="DisplayType" value="food"/>
-			<property name="CustomIcon" value="foodCookedRibs"/> 
+			<property name="CustomIcon" value="foodCookedRibs"/>
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
-			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property name="EconomicValue" value="72"/>
 			<property name="UnlockedBy" value="perkMasterChef"/>
 			<property class="Action0">
@@ -1058,16 +1048,16 @@
 	</append>
 
 	<!-- Food: Chicken, tier 2 -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="foodGrilledChickenLeg">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
 			<property name="DisplayType" value="food"/>
-			<property name="CustomIcon" value="foodGrilledChickenLeg"/> 
+			<property name="CustomIcon" value="foodGrilledChickenLeg"/>
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
-			<property name="Stacknumber" value="250"/> <!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property name="EconomicValue" value="72"/>
 			<property name="UnlockedBy" value="perkMasterChef"/>
 			<property class="Action0">
@@ -1089,7 +1079,7 @@
 	</append>
 
 	<!-- Food: Steak Sandwich, tier 5 -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="foodBearEggSandwich">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1097,7 +1087,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mplants"/>
-			<property name="Stacknumber" value="250"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="250"/>
 			<property name="EconomicBundleSize" value="1"/>
 			<property name="CraftingIngredientTime" value="10"/>
@@ -1139,7 +1129,7 @@
 	</append>
 
 	<!-- Food: Bear Steak Stew, tier 5 -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="foodBearStew">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1147,7 +1137,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mplants"/>
-			<property name="Stacknumber" value="250"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="250"/>
 			<property name="EconomicBundleSize" value="1"/>
 			<property name="CraftingIngredientTime" value="10"/>
@@ -1189,7 +1179,7 @@
 	</append>
 
 	<!-- Food: Bear Steak -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="foodBearSteak">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1197,7 +1187,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MfoodRawMeat"/>
-			<property name="Stacknumber" value="1000"/> <!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="CraftingIngredientTime" value="3"/>
@@ -1227,7 +1217,7 @@
 	</append>
 
 	<!-- Food: Chicken Leg -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="foodChickenLeg">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1235,7 +1225,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MfoodRawMeat"/>
-			<property name="Stacknumber" value="1000"/> <!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="CraftingIngredientTime" value="3"/>
@@ -1265,7 +1255,7 @@
 	</append>
 
 	<!-- Food: Wolf Ribs -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="foodRawRibs">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1273,7 +1263,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MfoodRawMeat"/>
-			<property name="Stacknumber" value="1000"/> <!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="CraftingIngredientTime" value="3"/>
@@ -1319,7 +1309,7 @@
 			<property name="EconomicValue" value="5000"/>
 			<property name="Group" value="Resources"/>
 			<property name="DegradationBreaksAfter" value="false"/>
-			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="UnlockedBy" value="perkGreaseMonkey"/>
 		</item>
 	</insertAfter>
 
@@ -1337,7 +1327,7 @@
 		</item>
 	</insertAfter>
 
-	<insertAfter xpath="//item[@name='vehicleHelicopterChassisSchematic']">	
+	<insertAfter xpath="//item[@name='vehicleHelicopterChassisSchematic']">
 		<item name="vehicleHelicopterRotorSchematic">
 			<property name="Extends" value="schematicNoQualityMaster"/>
 			<property name="CreativeMode" value="Player"/>
@@ -1359,9 +1349,9 @@
 			<property name="EconomicValue" value="20000"/>
 			<property name="UnlockedBy" value="perkGreaseMonkey,vehicleHelicopterChassisSchematic"/>
 		</item>
-	</insertAfter>	
+	</insertAfter>
 
-	<insertAfter xpath="//item[@name='vehicleHelicopterChassis']">	
+	<insertAfter xpath="//item[@name='vehicleHelicopterChassis']">
 		<item name="vehicleHelicopterRotor">
 			<property name="Extends" value="vehicleWheels"/>
 			<property name="DescriptionKey" value="vehicleHelicopterRotorDesc"/>
@@ -1369,15 +1359,16 @@
 			<property name="EconomicValue" value="4000"/>
 			<property name="UnlockedBy" value="perkGreaseMonkey,vehicleHelicopterRotorSchematic"/>
 		</item>
-	</insertAfter>	
+	</insertAfter>
 
-	<insertAfter xpath="//item[@name='vehicleHelicopterRotor']">	
+	<insertAfter xpath="//item[@name='vehicleHelicopterRotor']">
 		<item name="vehicleHelicopterPlaceable">
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="CustomIcon" value="vehicleHelicopterPlaceable"/>
 			<property name="DescriptionKey" value="vehicleHelicopterPlaceableDesc"/>
 			<property name="Meshfile" value="#@modfolder:Resources/manux_HelicopterOH58.unity3d?HelicopterOH58Prefab_A17.prefab"/>
 			<property name="EconomicValue" value="220000"/>
+			<property name="UnlockedBy" value="perkGreaseMonkey"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleHelicopter"/>
 				<!-- <property name="VehicleSize" value="4, 4, 13"/> -->
@@ -1391,16 +1382,17 @@
 		</item>
 	</insertAfter>
 
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="itemPilotHandbook">
 			<property name="Extends" value="resourceSilverNugget"/>
+			<property name="UnlockedBy" value="perkGreaseMonkey"/>
 			<property name="Weight" value="1"/>
 			<property name="Tags" value="gems"/>
 			<property name="CustomIcon" value="itemPilotsHandbook"/>
 			<property name="name_key" value="itemPilotHandbook"/>
 			<property name="DescriptionKey" value="itemPilotHandbookDesc"/>
 			<property name="Material" value="Mpaper"/>
-			<property name="Stacknumber" value="50"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="SellableToTrader" value="true"/>
 			<property name="EconomicValue" value="200"/>
 			<property name="CraftingIngredientTime" value="180"/>
@@ -1422,7 +1414,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MresourceClayLump"/>
 			<property name="Weight" value="5"/>
-			<property name="Stacknumber" value="200"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="6"/>
 			<property name="EconomicBundleSize" value="10"/>
 			<property name="Group" value="Resources"/>
@@ -1439,7 +1431,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
-			<property name="Stacknumber" value="10"/> <!-- STK drink -->
+			<property name="Stacknumber" value="250"/><!-- STK drink -->
 			<property name="EconomicValue" value="48"/>
 			<property name="UnlockedBy" value="perkMasterChef"/>
 			<property class="Action0">
@@ -1479,7 +1471,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
-			<property name="Stacknumber" value="10"/> <!-- STK drink -->
+			<property name="Stacknumber" value="250"/><!-- STK drink -->
 			<property name="EconomicValue" value="48"/>
 			<property name="UnlockedBy" value="perkMasterChef"/>
 			<property class="Action0">
@@ -1515,7 +1507,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
-			<property name="Stacknumber" value="10"/> <!-- STK drink -->
+			<property name="Stacknumber" value="250"/><!-- STK drink -->
 			<property name="EconomicValue" value="48"/>
 			<property name="UnlockedBy" value="perkMasterChef"/>
 			<property class="Action0">
@@ -1551,7 +1543,7 @@
 	</append>
 
 	<!-- Wheat, Flour, Oil -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="foodCropWheat">
 			<property name="DescriptionKey" value="foodCropWheatDesc"/>
 			<property name="HoldType" value="45"/>
@@ -1559,7 +1551,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="CustomIcon" value="foodCropWheat"/>
 			<property name="Material" value="MresourceCrop"/>
-			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="12"/>
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="CraftingIngredientTime" value="5"/>
@@ -1567,7 +1559,7 @@
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="foodBakingFlour">
 			<property name="DescriptionKey" value="foodBakingFlourDesc"/>
 			<property name="HoldType" value="45"/>
@@ -1575,7 +1567,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="CustomIcon" value="foodBakingFlour"/>
 			<property name="Material" value="MresourceCrop"/>
-			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="12"/>
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="CraftingIngredientTime" value="5"/>
@@ -1583,7 +1575,7 @@
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="foodRapeseedOil">
 			<property name="DescriptionKey" value="foodRapeseedOilDesc"/>
 			<property name="HoldType" value="45"/>
@@ -1591,7 +1583,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="CustomIcon" value="foodRapeseedOil"/>
 			<property name="Material" value="MresourceCrop"/>
-			<property name="Stacknumber" value="250"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="EconomicValue" value="8"/>
 			<property name="EconomicBundleSize" value="5"/>
 			<property name="CraftingIngredientTime" value="5"/>
@@ -1600,7 +1592,7 @@
 	</append>
 
 	<!-- Quest Reward Chest -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="chestReward1">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -1608,20 +1600,28 @@
 			<property name="CustomIcon" value="questChestReward"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="DescriptionKey" value="chestReward1Desc"/>
+			<property name="Unlocks" value="itemCrudeKey"/>
 			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
 				<property name="Sound_start" value="open_cash_register"/>
 				<property name="Create_item" value="apparelPlantFiberHat,apparelPlantFiberShoes,apparelPlantFiberGloves"/>
 				<property name="Create_item_count" value="1,1,1"/>
 			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemCrudeKey" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
 		</item>
 	</append>
 
 	<!-- Adds zombie spawning books -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="itemSpawnerBookBear">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
-			<property name="DescriptionKey" value="questSummonDesc" />
+			<property name="DescriptionKey" value="questSummonDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -1637,11 +1637,11 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="chestRewardBear">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -1658,11 +1658,11 @@
 	</append>
 
 	<!-- Adds zombie spawning book -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="itemSpawnerBookDirewolf">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
-			<property name="DescriptionKey" value="questSummonDesc" />
+			<property name="DescriptionKey" value="questSummonDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -1678,11 +1678,11 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="chestRewardDirewolf">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -1699,11 +1699,11 @@
 	</append>
 
 	<!-- Adds zombie spawning book -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="itemSpawnerBookPig">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
-			<property name="DescriptionKey" value="questSummonDesc" />
+			<property name="DescriptionKey" value="questSummonDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -1719,11 +1719,11 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="chestRewardPig">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -1740,11 +1740,11 @@
 	</append>
 
 	<!-- Adds zombie spawning book -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="itemSpawnerBookChickens">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
-			<property name="DescriptionKey" value="questSummonDesc" />
+			<property name="DescriptionKey" value="questSummonDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -1760,11 +1760,11 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="chestRewardChickens">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -1781,11 +1781,11 @@
 	</append>
 
 	<!-- Adds zombie spawning book -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="itemSpawnerBookNurse">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
-			<property name="DescriptionKey" value="questSummonDesc" />
+			<property name="DescriptionKey" value="questSummonDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -1801,11 +1801,11 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="chestRewardNurse">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -1822,11 +1822,11 @@
 	</append>
 
 	<!-- Adds zombie spawning book -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="itemSpawnerBookWorkmen">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
-			<property name="DescriptionKey" value="questSummonDesc" />
+			<property name="DescriptionKey" value="questSummonDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -1842,11 +1842,11 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="chestRewardWorkmen">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -1863,11 +1863,11 @@
 	</append>
 
 	<!-- Adds zombie spawning book -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="itemSpawnerBookCop">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
-			<property name="DescriptionKey" value="questSummonDesc" />
+			<property name="DescriptionKey" value="questSummonDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -1883,11 +1883,11 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="chestRewardCop">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -1904,11 +1904,11 @@
 	</append>
 
 	<!-- Adds zombie spawning book -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="itemSpawnerBookDemo">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
-			<property name="DescriptionKey" value="questSummonDesc" />
+			<property name="DescriptionKey" value="questSummonDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -1924,11 +1924,11 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="Stacknumber" value="200"/>
+			<property name="Stacknumber" value="250"/>
 		</item>
 	</append>
 
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="chestRewardDemo">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -1944,7 +1944,7 @@
 		</item>
 	</append>
 
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="resourceAmmoToken">
 			<property name="Extends" value="resourceSilverNugget"/>
 			<property name="Weight" value="1"/>
@@ -1953,7 +1953,7 @@
 			<property name="name_key" value="resourceAmmoToken"/>
 			<property name="DescriptionKey" value="resourceAmmoTokenDesc"/>
 			<property name="Material" value="resourceAdamantium"/>
-			<property name="Stacknumber" value="50"/> <!-- STK resource -->
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicValue" value="5000"/>
 			<property name="CraftingIngredientTime" value="15"/>
@@ -1961,7 +1961,7 @@
 	</append>
 
 	<!-- Adamantium Anvil and Bellows -->
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="toolAdamantiumAnvil">
 			<property name="Tags" value="toolAnvil"/>
 			<property name="HoldType" value="45"/>
@@ -1971,7 +1971,7 @@
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Material" value="Msteel"/>
 			<property name="Weight" value="200"/>
-			<property name="Stacknumber" value="1"/> <!-- STK loot -->
+			<property name="Stacknumber" value="1"/><!-- STK loot -->
 			<property name="EconomicValue" value="240"/>
 			<property name="Group" value="Tools/Traps"/>
 			<property name="DisplayType" value="toolAdamantiumEnriched"/>
@@ -1986,7 +1986,7 @@
 		</item>
 	</append>
 
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="toolAdamantiumBellows">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
@@ -1994,14 +1994,14 @@
 			<property name="CustomIcon" value="toolBellows"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Material" value="MtoolBellows"/>
-			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="Stacknumber" value="1"/><!-- STK resource -->
 			<property name="Weight" value="100"/>
 			<property name="EconomicValue" value="500"/>
 			<property name="Group" value="Tools/Traps"/>
 			<property name="DisplayType" value="toolAdamantiumEnriched"/>
 			<property name="ItemTypeIcon" value="forge"/>
 			<effect_group tiered="false">
-				<passive_effect name="CraftingSmeltTime" operation="perc_add" value="-.333"/>		<!-- this is essentially a multiplier -->
+				<passive_effect name="CraftingSmeltTime" operation="perc_add" value="-.333"/><!-- this is essentially a multiplier -->
 				<display_value name="dCraftingSmeltTime" value=".5"/>
 				<passive_effect name="CraftingTime" operation="perc_add" value="-.333"/>
 				<display_value name="dCraftingTime" value=".5"/>
@@ -2017,7 +2017,7 @@
 	<append xpath="/items/item/property[@name='Tags' and contains(@value, 'armorLegs')]/@value">,armorPocketSlot</append>
 
 	<!-- Bundle of starter items to complete quests for testing -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="adminStarterBundle">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -2034,7 +2034,7 @@
 	</append>
 
 	<!-- Starter Medical Supplies -->
-	<append xpath="/items" >
+	<append xpath="/items">
 		<item name="boxMedicalSupplies">
 			<property name="Extends" value="noteTestersDelightAdmin"/>
 			<property name="ItemTypeIcon" value="treasure"/>
@@ -2053,5 +2053,889 @@
 	<!-- Changes the icon shown on perk books -->
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='ItemTypeIcon']/@value">unreadbook</set>
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='AltItemTypeIcon']/@value">readbook</set>
+
+	<!-- Updates placeable vehicles to require Grease Monkey -->
+	<insertAfter xpath="/items/item[@name='vehicleBicyclePlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
+
+	<insertAfter xpath="/items/item[@name='vehicleMinibikePlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
+
+	<insertAfter xpath="/items/item[@name='vehicleMotorcyclePlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
+
+	<insertAfter xpath="/items/item[@name='vehicle4x4TruckPlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
+
+	<insertAfter xpath="/items/item[@name='vehicleGyrocopterPlaceable']/property[@class='Action1']">
+		<property name="UnlockedBy" value="perkGreaseMonkey"/>
+	</insertAfter>
+
+	<!-- Makes breakers craftable -->
+	<append xpath="/items/item[@name='toolBeaker']">
+		<property name="UnlockedBy" value="perkPhysician"/>
+	</append>
+
+	<!-- Increases the Mod Power bonus of all tools, weapons and armour -->
+	<!-- TOOLS -->
+
+	<!-- Stone Axe -->
+	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/effect_group[@name='meleeToolRepairT0StoneAxe']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/effect_group[@name='meleeToolRepairT0StoneAxe']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/effect_group[@name='meleeToolRepairT0StoneAxe']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Taza's Stone Axe -->
+	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']/@value">-.05,0</set>
+	<setattribute xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']" name="tier">6,1</setattribute>
+	<set xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/effect_group[@name='meleeToolRepairT0TazasStoneAxe']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Claw Hammer -->
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='StaminaLoss' and @operation='perc_add']/@value">-.05,0</set>
+	<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='StaminaLoss' and @operation='perc_add']" name="tier">6,1</setattribute>
+	<set xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Fireaxe -->
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']/@value">-.05,0</set>
+	<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']" name="tier">6,1</setattribute>
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Fireaxe -->
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']/@value">-.05,0</set>
+	<setattribute xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']" name="tier">6,1</setattribute>
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Pickaxe -->
+	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']/@value">-.05,0</set>
+	<setattribute xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']" name="tier">6,1</setattribute>
+	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/effect_group[@name='meleeToolPickT1IronPickaxe']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Pickaxe -->
+	<set xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']/@value">-.05,0</set>
+	<setattribute xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='StaminaLoss' and @operation='perc_add']" name="tier">6,1</setattribute>
+	<set xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/effect_group[@name='meleeToolPickT2SteelPickaxe']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Stone Shovel -->
+	<set xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/effect_group[@name='meleeToolShovelT0StoneShovel']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/effect_group[@name='meleeToolShovelT0StoneShovel']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/effect_group[@name='meleeToolShovelT0StoneShovel']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/effect_group[@name='meleeToolShovelT0StoneShovel']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/effect_group[@name='meleeToolShovelT0StoneShovel']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Shovel -->
+	<set xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='StaminaLoss' and @operation='perc_add']/@value">-.05,0</set>
+	<setattribute xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='StaminaLoss' and @operation='perc_add']" name="tier">6,1</setattribute>
+	<set xpath="/items/item[@name='meleeToolShovelT1IronShovel']/effect_group[@name='meleeToolShovelT1IronShovel']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Shovel -->
+	<set xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='AttacksPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='StaminaLoss' and @operation='perc_add']/@value">-.05,0</set>
+	<setattribute xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='StaminaLoss' and @operation='perc_add']" name="tier">6,1</setattribute>
+	<set xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/effect_group[@name='meleeToolShovelT2SteelShovel']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Chainsaw -->
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Auger -->
+	<set xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group[@name='meleeToolPickT3Auger']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group[@name='meleeToolPickT3Auger']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group[@name='meleeToolPickT3Auger']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group[@name='meleeToolPickT3Auger']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group[@name='meleeToolPickT3Auger']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.15</set>
+	<set xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group[@name='meleeToolPickT3Auger']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Wrench -->
+	<set xpath="/items/item[@name='meleeToolSalvageT1Wrench']/effect_group[@name='meleeToolSalvageT1Wrench']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT1Wrench']/effect_group[@name='meleeToolSalvageT1Wrench']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT1Wrench']/effect_group[@name='meleeToolSalvageT1Wrench']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT1Wrench']/effect_group[@name='meleeToolSalvageT1Wrench']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT1Wrench']/effect_group[@name='meleeToolSalvageT1Wrench']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Ratchet -->
+	<set xpath="/items/item[@name='meleeToolSalvageT2Ratchet']/effect_group[@name='meleeToolSalvageT2Ratchet']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT2Ratchet']/effect_group[@name='meleeToolSalvageT2Ratchet']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT2Ratchet']/effect_group[@name='meleeToolSalvageT2Ratchet']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT2Ratchet']/effect_group[@name='meleeToolSalvageT2Ratchet']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT2Ratchet']/effect_group[@name='meleeToolSalvageT2Ratchet']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Impact Driver -->
+	<set xpath="/items/item[@name='meleeToolSalvageT3ImpactDriver']/effect_group[@name='meleeToolSalvageT3ImpactDriver']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT3ImpactDriver']/effect_group[@name='meleeToolSalvageT3ImpactDriver']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT3ImpactDriver']/effect_group[@name='meleeToolSalvageT3ImpactDriver']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT3ImpactDriver']/effect_group[@name='meleeToolSalvageT3ImpactDriver']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeToolSalvageT3ImpactDriver']/effect_group[@name='meleeToolSalvageT3ImpactDriver']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+
+	<!-- MELEE WEAPONS -->
+
+	<!-- Bone Knife -->
+	<set xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/effect_group[@name='meleeWpnBladeT0BoneKnife']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/effect_group[@name='meleeWpnBladeT0BoneKnife']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/effect_group[@name='meleeWpnBladeT0BoneKnife']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/effect_group[@name='meleeWpnBladeT0BoneKnife']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/effect_group[@name='meleeWpnBladeT0BoneKnife']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Hunting Knife -->
+	<set xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='meleeWpnBladeT1HuntingKnife']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='meleeWpnBladeT1HuntingKnife']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='meleeWpnBladeT1HuntingKnife']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='meleeWpnBladeT1HuntingKnife']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='meleeWpnBladeT1HuntingKnife']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Candy Cane Knife -->
+	<set xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/effect_group[@name='meleeWpnBladeT1CandyKnife']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/effect_group[@name='meleeWpnBladeT1CandyKnife']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/effect_group[@name='meleeWpnBladeT1CandyKnife']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/effect_group[@name='meleeWpnBladeT1CandyKnife']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/effect_group[@name='meleeWpnBladeT1CandyKnife']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Machete -->
+	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/effect_group[@name='meleeWpnBladeT3Machete']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/effect_group[@name='meleeWpnBladeT3Machete']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/effect_group[@name='meleeWpnBladeT3Machete']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/effect_group[@name='meleeWpnBladeT3Machete']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/effect_group[@name='meleeWpnBladeT3Machete']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Wooden Club -->
+	<set xpath="/items/item[@name='meleeWpnClubT0WoodenClub']/effect_group[@name='meleeWpnClubT0WoodenClub']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT0WoodenClub']/effect_group[@name='meleeWpnClubT0WoodenClub']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT0WoodenClub']/effect_group[@name='meleeWpnClubT0WoodenClub']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Baseball Bat -->
+	<set xpath="/items/item[@name='meleeWpnClubT1BaseballBat']/effect_group[@name='meleeWpnClubT1BaseballBat']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT1BaseballBat']/effect_group[@name='meleeWpnClubT1BaseballBat']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT1BaseballBat']/effect_group[@name='meleeWpnClubT1BaseballBat']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT1BaseballBat']/effect_group[@name='meleeWpnClubT1BaseballBat']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT1BaseballBat']/effect_group[@name='meleeWpnClubT1BaseballBat']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Candy Cane Club -->
+	<set xpath="/items/item[@name='meleeWpnClubT1CandyClub']/effect_group[@name='meleeWpnClubT1CandyClub']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT1CandyClub']/effect_group[@name='meleeWpnClubT1CandyClub']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT1CandyClub']/effect_group[@name='meleeWpnClubT1CandyClub']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT1CandyClub']/effect_group[@name='meleeWpnClubT1CandyClub']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT1CandyClub']/effect_group[@name='meleeWpnClubT1CandyClub']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Club -->
+	<set xpath="/items/item[@name='meleeWpnClubT3SteelClub']/effect_group[@name='meleeWpnClubT3SteelClub']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT3SteelClub']/effect_group[@name='meleeWpnClubT3SteelClub']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT3SteelClub']/effect_group[@name='meleeWpnClubT3SteelClub']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT3SteelClub']/effect_group[@name='meleeWpnClubT3SteelClub']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnClubT3SteelClub']/effect_group[@name='meleeWpnClubT3SteelClub']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Junk Baton -->
+	<set xpath="/items/item[@name='meleeWpnBatonT1JunkBaton']/effect_group[@name='meleeWpnBatonT1JunkBaton']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT1JunkBaton']/effect_group[@name='meleeWpnBatonT1JunkBaton']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT1JunkBaton']/effect_group[@name='meleeWpnBatonT1JunkBaton']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT1JunkBaton']/effect_group[@name='meleeWpnBatonT1JunkBaton']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT1JunkBaton']/effect_group[@name='meleeWpnBatonT1JunkBaton']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Stun Baton -->
+	<set xpath="/items/item[@name='meleeWpnBatonT2StunBaton']/effect_group[@name='meleeWpnBatonT2StunBaton']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT2StunBaton']/effect_group[@name='meleeWpnBatonT2StunBaton']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT2StunBaton']/effect_group[@name='meleeWpnBatonT2StunBaton']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT2StunBaton']/effect_group[@name='meleeWpnBatonT2StunBaton']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT2StunBaton']/effect_group[@name='meleeWpnBatonT2StunBaton']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Plasma Baton -->
+	<set xpath="/items/item[@name='meleeWpnBatonT3PlasmaBaton']/effect_group[@name='meleeWpnBatonT3PlasmaBaton']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT3PlasmaBaton']/effect_group[@name='meleeWpnBatonT3PlasmaBaton']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT3PlasmaBaton']/effect_group[@name='meleeWpnBatonT3PlasmaBaton']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT3PlasmaBaton']/effect_group[@name='meleeWpnBatonT3PlasmaBaton']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnBatonT3PlasmaBaton']/effect_group[@name='meleeWpnBatonT3PlasmaBaton']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Stone Spear -->
+	<set xpath="/items/item[@name='meleeWpnSpearT0StoneSpear']/effect_group[@name='meleeWpnSpearT0StoneSpear']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT0StoneSpear']/effect_group[@name='meleeWpnSpearT0StoneSpear']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT0StoneSpear']/effect_group[@name='meleeWpnSpearT0StoneSpear']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT0StoneSpear']/effect_group[@name='meleeWpnSpearT0StoneSpear']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT0StoneSpear']/effect_group[@name='meleeWpnSpearT0StoneSpear']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Spear -->
+	<set xpath="/items/item[@name='meleeWpnSpearT1IronSpear']/effect_group[@name='meleeWpnSpearT1IronSpear']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT1IronSpear']/effect_group[@name='meleeWpnSpearT1IronSpear']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT1IronSpear']/effect_group[@name='meleeWpnSpearT1IronSpear']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT1IronSpear']/effect_group[@name='meleeWpnSpearT1IronSpear']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT1IronSpear']/effect_group[@name='meleeWpnSpearT1IronSpear']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Spear -->
+	<set xpath="/items/item[@name='meleeWpnSpearT3SteelSpear']/effect_group[@name='meleeWpnSpearT3SteelSpear']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT3SteelSpear']/effect_group[@name='meleeWpnSpearT3SteelSpear']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT3SteelSpear']/effect_group[@name='meleeWpnSpearT3SteelSpear']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT3SteelSpear']/effect_group[@name='meleeWpnSpearT3SteelSpear']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSpearT3SteelSpear']/effect_group[@name='meleeWpnSpearT3SteelSpear']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Stone Sledgehammer -->
+	<set xpath="/items/item[@name='meleeWpnSledgeT0StoneSledgehammer']/effect_group[@name='meleeWpnSledgeT0StoneSledgehammer']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT0StoneSledgehammer']/effect_group[@name='meleeWpnSledgeT0StoneSledgehammer']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT0StoneSledgehammer']/effect_group[@name='meleeWpnSledgeT0StoneSledgehammer']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT0StoneSledgehammer']/effect_group[@name='meleeWpnSledgeT0StoneSledgehammer']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT0StoneSledgehammer']/effect_group[@name='meleeWpnSledgeT0StoneSledgehammer']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Sledgehammer -->
+	<set xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/effect_group[@name='meleeWpnSledgeT1IronSledgehammer']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/effect_group[@name='meleeWpnSledgeT1IronSledgehammer']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/effect_group[@name='meleeWpnSledgeT1IronSledgehammer']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/effect_group[@name='meleeWpnSledgeT1IronSledgehammer']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/effect_group[@name='meleeWpnSledgeT1IronSledgehammer']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Sledgehammer -->
+	<set xpath="/items/item[@name='meleeWpnSledgeT3SteelSledgehammer']/effect_group[@name='meleeWpnSledgeT3SteelSledgehammer']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT3SteelSledgehammer']/effect_group[@name='meleeWpnSledgeT3SteelSledgehammer']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT3SteelSledgehammer']/effect_group[@name='meleeWpnSledgeT3SteelSledgehammer']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT3SteelSledgehammer']/effect_group[@name='meleeWpnSledgeT3SteelSledgehammer']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnSledgeT3SteelSledgehammer']/effect_group[@name='meleeWpnSledgeT3SteelSledgehammer']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Leather Knuckles -->
+	<set xpath="/items/item[@name='meleeWpnKnucklesT0LeatherKnuckles']/effect_group[@name='meleeWpnKnucklesT0LeatherKnuckles']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT0LeatherKnuckles']/effect_group[@name='meleeWpnKnucklesT0LeatherKnuckles']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT0LeatherKnuckles']/effect_group[@name='meleeWpnKnucklesT0LeatherKnuckles']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT0LeatherKnuckles']/effect_group[@name='meleeWpnKnucklesT0LeatherKnuckles']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT0LeatherKnuckles']/effect_group[@name='meleeWpnKnucklesT0LeatherKnuckles']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Knuckles -->
+	<set xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/effect_group[@name='meleeWpnKnucklesT1IronKnuckles']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/effect_group[@name='meleeWpnKnucklesT1IronKnuckles']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/effect_group[@name='meleeWpnKnucklesT1IronKnuckles']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/effect_group[@name='meleeWpnKnucklesT1IronKnuckles']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/effect_group[@name='meleeWpnKnucklesT1IronKnuckles']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Knuckles -->
+	<set xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/effect_group[@name='meleeWpnKnucklesT3SteelKnuckles']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/effect_group[@name='meleeWpnKnucklesT3SteelKnuckles']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/effect_group[@name='meleeWpnKnucklesT3SteelKnuckles']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/effect_group[@name='meleeWpnKnucklesT3SteelKnuckles']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/effect_group[@name='meleeWpnKnucklesT3SteelKnuckles']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+
+	<!-- RANGED WEAPONS -->
+
+	<!-- Pistol -->
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- SMG -->
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- 44 Magnum -->
+	<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Desert Vulture -->
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Blunderbuss -->
+	<set xpath="/items/item[@name='gunShotgunT0Blunderbuss']/effect_group[@name='gunShotgunT0Blunderbuss']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunShotgunT0Blunderbuss']/effect_group[@name='gunShotgunT0Blunderbuss']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunShotgunT0Blunderbuss']/effect_group[@name='gunShotgunT0Blunderbuss']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunShotgunT0Blunderbuss']/effect_group[@name='gunShotgunT0Blunderbuss']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunShotgunT0Blunderbuss']/effect_group[@name='gunShotgunT0Blunderbuss']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunShotgunT0Blunderbuss']/effect_group[@name='gunShotgunT0Blunderbuss']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunShotgunT0Blunderbuss']/effect_group[@name='gunShotgunT0Blunderbuss']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Double Barrel Shotgun -->
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Pump Shotgun -->
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Auto Shotgun -->
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Hunting Rifle -->
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Marksman Rifle -->
+	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Sniper Rifle -->
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- AK-47 -->
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Tactical AR -->
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- M60 Machine Gun -->
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Rocket Launcher -->
+	<set xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Primitive Bow -->
+	<set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group[@name='gunBowT0PrimitiveBow']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group[@name='gunBowT0PrimitiveBow']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group[@name='gunBowT0PrimitiveBow']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group[@name='gunBowT0PrimitiveBow']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group[@name='gunBowT0PrimitiveBow']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Wooden Bow -->
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Compound Bow -->
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group[@name='gunBowT3CompoundBow']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Crossbow -->
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Compound Crossbow -->
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='BlockDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='BlockDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!--Junk Sledge -->
+	<set xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!--Junk Turret -->
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!--Junk Turret -->
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0,.1</set>
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='EntityDamage' and @tier='2,6']/@value">.15,1</set>
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0,.2</set>
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0,.05</set>
+	<setattribute xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']/@value">0,.2</set>
+	<setattribute xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='DamageFalloffRange' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0,.122</set>
+	<setattribute xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='MagazineSize' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">0,.08</set>
+	<setattribute xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='WeaponHandling' and @operation='perc_add']" name="tier">2,6</setattribute>
+	<set xpath="/items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+
+	<!-- ARMOR -->
+
+	<!-- Padded Hood -->
+	<set xpath="/items/item[@name='armorClothHat']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Santa Hat -->
+	<setattribute xpath="/items/item[@name='armorSantaHat']/effect_group/passive_effect[@name='HypothermalResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorSantaHat']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorSantaHat']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorSantaHat']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Padded Chest Armor -->
+	<set xpath="/items/item[@name='armorClothJacket']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Padded Gloves -->
+	<set xpath="/items/item[@name='armorClothGloves']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Padded Leg Armor -->
+	<set xpath="/items/item[@name='armorClothPants']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Padded Boots -->
+	<set xpath="/items/item[@name='armorClothBoots']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Leather Hood -->
+	<setattribute xpath="/items/item[@name='armorLeatherHood']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorLeatherHood']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorLeatherHood']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Leather Chest Armor -->
+	<setattribute xpath="/items/item[@name='armorLeatherChest']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorLeatherChest']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorLeatherChest']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Leather Gloves -->
+	<setattribute xpath="/items/item[@name='armorLeatherGloves']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorLeatherGloves']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorLeatherGloves']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Leather Leg Armor -->
+	<setattribute xpath="/items/item[@name='armorLeatherPants']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorLeatherPants']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorLeatherPants']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Leather Boots -->
+	<setattribute xpath="/items/item[@name='armorLeatherBoots']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorLeatherBoots']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorLeatherBoots']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Military Helmet -->
+	<setattribute xpath="/items/item[@name='armorMilitaryHelmet']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorMilitaryHelmet']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorMilitaryHelmet']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Military Vest -->
+	<setattribute xpath="/items/item[@name='armorMilitaryVest']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorMilitaryVest']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorMilitaryVest']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Military Gloves -->
+	<setattribute xpath="/items/item[@name='armorMilitaryGloves']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorMilitaryGloves']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorMilitaryGloves']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Military Leg Armor -->
+	<setattribute xpath="/items/item[@name='armorMilitaryLegs']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorMilitaryLegs']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorMilitaryLegs']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Military Boots -->
+	<setattribute xpath="/items/item[@name='armorMilitaryBoots']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorMilitaryBoots']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorMilitaryBoots']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Military Stealth Boots -->
+	<setattribute xpath="/items/item[@name='armorMilitaryStealthBoots']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorMilitaryStealthBoots']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorMilitaryStealthBoots']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Scrap Helmet -->
+	<set xpath="/items/item[@name='armorScrapHelmet']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Scrap Chest Armor -->
+	<set xpath="/items/item[@name='armorScrapChest']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Scrap Gloves -->
+	<set xpath="/items/item[@name='armorScrapGloves']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Scrap Leg Armor -->
+	<set xpath="/items/item[@name='armorScrapLegs']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Scrap Boots -->
+	<set xpath="/items/item[@name='armorScrapBoots']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Helmet -->
+	<setattribute xpath="/items/item[@name='armorIronHelmet']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorIronHelmet']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorIronHelmet']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Chest Armor -->
+	<setattribute xpath="/items/item[@name='armorIronChest']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorIronChest']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorIronChest']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Gloves -->
+	<setattribute xpath="/items/item[@name='armorIronGloves']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorIronGloves']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorIronGloves']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Leg Armor -->
+	<setattribute xpath="/items/item[@name='armorIronLegs']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorIronLegs']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorIronLegs']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Iron Boots -->
+	<setattribute xpath="/items/item[@name='armorIronBoots']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorIronBoots']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorIronBoots']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Helmet -->
+	<setattribute xpath="/items/item[@name='armorSteelHelmet']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorSteelHelmet']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorSteelHelmet']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Chest Armor -->
+	<setattribute xpath="/items/item[@name='armorSteelChest']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorSteelChest']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorSteelChest']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Gloves -->
+	<setattribute xpath="/items/item[@name='armorSteelGloves']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorSteelGloves']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorSteelGloves']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Leg Armor -->
+	<setattribute xpath="/items/item[@name='armorSteelLegs']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorSteelLegs']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorSteelLegs']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Steel Boots -->
+	<setattribute xpath="/items/item[@name='armorSteelBoots']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorSteelBoots']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorSteelBoots']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Mining Helmet -->
+	<setattribute xpath="/items/item[@name='armorMiningHelmet']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorMiningHelmet']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorMiningHelmet']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Firefighter Helmet -->
+	<setattribute xpath="/items/item[@name='armorFirefightersHelmet']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorFirefightersHelmet']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorFirefightersHelmet']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- SWAT Helmet -->
+	<setattribute xpath="/items/item[@name='armorSwatHelmet']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorSwatHelmet']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorSwatHelmet']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- Football Helmet -->
+	<setattribute xpath="/items/item[@name='armorFootballHelmet']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorFootballHelmet']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorFootballHelmet']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<!-- ZU Football Helmet -->
+	<setattribute xpath="/items/item[@name='armorFootballHelmetZU']/effect_group/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</setattribute>
+	<setattribute xpath="/items/item[@name='armorFootballHelmetZU']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
+	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+	<append xpath="/items">
+		<item name="resourceBioFuel">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MFuelBarrelMetal"/>
+			<property name="Weight" value="10"/>
+			<property name="FuelValue" value="1000"/>
+			<property name="CustomIcon" value="resourceBioFuel"/>
+			<property name="UnlockedBy" value="perkPhysician"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="Group" value="Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceBioFuelDesc"/>
+		</item>
+	</append>
+
+	<append xpath="/items">
+		<item name="itemCrudeKey">
+			<property name="Extends" value="resourceSilverNugget"/>
+			<property name="Tags" value="junk"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Group" value="None"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="itemCrudeKey"/>
+			<property name="UnlockedBy" value="itemCrudeKey"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="CraftingIngredientTime" value="60"/>
+			<property name="DescriptionKey" value="itemCrudeKeyDesc"/>
+		</item>
+	</append>
+
+	<!-- Quest Weapon Package -->
+	<append xpath="/items">
+		<item name="itemLockedWeaponCrate">
+			<property name="Extends" value="resourceSilverNugget"/>
+			<property name="Tags" value="junk"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="itemLockedWeaponCrate"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="CraftingIngredientTime" value="60"/>
+			<property name="DescriptionKey" value="itemLockedWeaponCrateDesc"/>
+		</item>
+	</append>
+
+	<!-- Quest Weapon Package -->
+	<append xpath="/items">
+		<item name="itemOpenWeaponCrate">
+			<property name="Extends" value="resourceRockSmallBundle"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="itemOpenWeaponCrate"/>
+			<property name="DescriptionKey" value="itemOpenWeaponCrateDesc"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Create_item" value="gunBowT0PrimitiveBow,meleeWpnClubT0WoodenClub,meleeWpnSledgeT0StoneSledgehammer,ammoArrowStone"/>
+				<property name="Create_item_count" value="1,1,1,25"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemCrudeKey" operation="set" value="0"/>
+			</effect_group>
+		</item>
+	</append>
+
+	<!-- Minibike quest starter -->
+	<append xpath="/items">
+		<item name="itemMinibikeQuestStarter">
+			<property name="CreativeMode" value="Player"/>
+			<property name="HoldType" value="21"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="EconomicValue" value="25000"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="Delay" value="0"/>
+				<property name="QuestGiven" value="quest_MiniBikeSpecial"/>
+			</property>
+			<property name="FuelValue" value="2"/>
+			<property name="Weight" value="2"/>
+			<property name="Group" value="Special Items"/>
+			<property name="name_key" value="itemMinibikeQuestStarter"/>
+			<property name="desc_key" value="itemMinibikeQuestStarterDesc"/>
+			<property name="CustomIcon" value="skillPointBook"/>
+			<property name="Stacknumber" value="1"/>
+		</item>
+	</append>
 
 </configs>

@@ -7,10 +7,10 @@
 	<set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">2</set>
 	<set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">2</set>
 	<set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']/@count">2</set>
-	
+
 	<!-- BioFuel -->
 	<append xpath="/recipes">
-		<recipe name="resourceBioFuel" count="1" craft_area="chemistryStation" tags="perkMasterChef,learnable">
+		<recipe name="resourceBioFuel" count="10" craft_area="chemistryStation" tags="perkMasterChef,learnable">
 			<ingredient name="foodRawMeat" count="3"/>
 			<ingredient name="foodEgg" count="2"/>
 			<ingredient name="foodRapeseedOil" count="2"/>
@@ -22,8 +22,8 @@
 	<!-- Skill reset drink is now craftable -->
 	<append xpath="/recipes">
 		<recipe name="drinkJarGrandpasForgettingElixir" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
-			<ingredient name="foodCanCatfood" count="3"/>
-			<ingredient name="drinkJarGrandpasMoonshine" count="2"/>
+			<ingredient name="foodCanCatfood" count="5"/>
+			<ingredient name="drinkJarGrandpasMoonshine" count="3"/>
 			<ingredient name="drinkJarGrainAlcohol" count="5"/>
 			<ingredient name="resourceTestosteroneExtract" count="2"/>
 			<ingredient name="drinkJarBeer" count="5"/>
@@ -2166,11 +2166,21 @@
 		</recipe>
 	</append>
 
-	<!-- Crude Key - Minibike reward -->
+	<!-- Crude Key to unlock weapon crate -->
 	<append xpath="/recipes">
-		<recipe name="itemCrudeKey" always_unlocked="true" count="1" craft_time="10" tags="perkMasterChef,learnable">
-			<ingredient name="resourceMetalPipe" count="10"/>
-			<ingredient name="resourceElectricParts" count="5"/>
+		<recipe name="itemCrudeKey" always_unlocked="false" count="1" craft_time="5" tags="learnable,itemCrudeKey">
+			<ingredient name="resourceWood" count="15"/>
+			<ingredient name="resourceRockSmall" count="15"/>
+			<ingredient name="resourceYuccaFibers" count="10"/>
+			<ingredient name="resourceFeather" count="5"/>
+		</recipe>
+	</append>
+
+	<!-- Weapon Crate Intro Quest Reward -->
+	<append xpath="/recipes">
+		<recipe name="itemOpenWeaponCrate" craft_time="10" always_unlocked="true" count="1">
+			<ingredient name="itemLockedWeaponCrate" count="1"/>
+			<ingredient name="itemCrudeKey" count="1"/>
 		</recipe>
 	</append>
 

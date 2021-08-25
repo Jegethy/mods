@@ -1,35 +1,429 @@
 <configs>
 
-	<!-- Adds skill point rewards to the starter quests -->
-	<append xpath="/quests/quest[@id='quest_BasicSurvival1']">
-		<reward type="SkillPoints" value="1"/>
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival1']"/>
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival2']"/>
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival3']"/>
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival4']"/>
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival5']"/>
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival6']"/>
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival7']"/>
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival8']"/>
+	<remove xpath="/quests/quest[@id='quest_whiteRiverCitizen1']"/>
+
+	<insertBefore xpath="/quests/quest[@id='challenge_silenceofthelambs']">
+
+		<!-- Basic Survival 1 - Craft a Bedroll -->
+		<quest id="quest_BasicSurvival1">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival1"/>
+			<property name="subtitle_key" value="quest_BasicSurvival1_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival1_description"/>
+			<property name="icon" value="ui_game_symbol_map_bed"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="offer_key" value="quest_BasicSurvival_offer"/>
+			<property name="shareable" value="false"/>
+
+			<action type="ShowTip" value="tutorialTipQuest02"/>
+			<action type="TrackQuest"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="2"/>
+				<property name="item" value="bedroll"/>
+				<property name="count" value="1"/>
+			</objective>
+
+			<objective type="BlockPlace" id="bedroll" value="1" phase="2"/>
+
+			<reward type="Exp" value="50"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival2"/>
+		</quest>
+
+		<!-- Basic Survival 2 - Craft a Stone Axe -->
+		<quest id="quest_BasicSurvival2">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival2"/>
+			<property name="subtitle" value="Craft a Stone Axe"/>
+			<property name="subtitle_key" value="quest_BasicSurvival2_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival2_description"/>
+			<property name="icon" value="ui_game_symbol_hammer"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_BasicSurvival_offer"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="2" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="2" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="2" phase="1"/>
+
+			<objective type="Craft">
+				<property name="phase" value="2"/>
+				<property name="item" value="meleeToolRepairT0StoneAxe"/>
+				<property name="count" value="1"/>
+			</objective>
+
+			<reward type="Exp" value="50"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival3"/>
+		</quest>
+
+		<!-- Basic Survival 3 - Craft a Stone Shovel -->
+		<quest id="quest_BasicSurvival3">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival3"/>
+			<property name="subtitle" value="Craft a Stone Axe"/>
+			<property name="subtitle_key" value="quest_BasicSurvival3_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival3_description"/>
+			<property name="icon" value="ui_game_symbol_hammer"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_BasicSurvival_offer"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="3" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="5" phase="1"/>
+
+			<objective type="Craft">
+				<property name="phase" value="2"/>
+				<property name="item" value="meleeToolShovelT0StoneShovel"/>
+				<property name="count" value="1"/>
+			</objective>
+
+			<reward type="Exp" value="50"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival4"/>
+		</quest>
+
+		<!-- Basic Survival 4 - Craft Plant Fiber Clothing -->
+		<quest id="quest_BasicSurvival4">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival4"/>
+			<property name="subtitle_key" value="quest_BasicSurvival4_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival4_description"/>
+			<property name="icon" value="ui_game_symbol_tailoring"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+			<objective type="Craft" id="apparelPlantFiberPants" value="1" phase="2"/>
+			<objective type="Craft" id="apparelPlantFiberShirt" value="1" phase="2"/>
+
+			<reward type="Exp" value="100"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Item" id="chestReward1" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival5"/>
+		</quest>
+
+		<!-- Basic Survival 5 - Wear Plant Fiber Clothing -->
+		<quest id="quest_BasicSurvival5">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival5"/>
+			<property name="subtitle_key" value="quest_BasicSurvival5_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival5_description"/>
+			<property name="icon" value="ui_game_symbol_shirt"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="Wear" id="apparelPlantFiberPants"/>
+			<objective type="Wear" id="apparelPlantFiberShirt"/>
+			<objective type="Wear" id="apparelPlantFiberHat"/>
+			<objective type="Wear" id="apparelPlantFiberGloves"/>
+			<objective type="Wear" id="apparelPlantFiberShoes"/>
+
+			<reward type="Exp" value="100"/>
+			<reward type="SkillPoints" value="1"/>	
+			<reward type="Item" id="itemCrudeKey" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival6"/>
+		</quest>
+
+		<!-- Basic Survival 6 - Craft Weapons -->
+		<quest id="quest_BasicSurvival6">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival6"/>
+			<property name="subtitle_key" value="quest_BasicSurvival6_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival6_description"/>
+			<property name="icon" value="ui_game_symbol_club"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="Craft" id="itemOpenWeaponCrate" value="1" phase="2"/>
+
+			<reward type="Exp" value="100"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival7"/>
+		</quest>
+
+		<!-- Basic Survival 7 - Kill a Zombie -->
+		<quest id="quest_BasicSurvival7">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival7"/>
+			<property name="subtitle_key" value="quest_BasicSurvival7_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival7_description"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="ZombieKill" value="2" phase="1"/>
+
+			<reward type="Exp" value="100"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival8"/>
+		</quest>
+
+		<!-- Basic Survival 8 - Craft Bandages -->
+		<quest id="quest_BasicSurvival8">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival8"/>
+			<property name="subtitle_key" value="quest_BasicSurvival8_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival8_description"/>
+			<property name="icon" value="ui_game_symbol_medical"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="FetchKeep" id="resourceCropCottonPlant" value="20" phase="1"/>
+			<objective type="Craft" id="resourceCloth" value="10" phase="2"/>
+			<objective type="Craft" id="medicalBandage" value="5" phase="3"/>
+
+			<reward type="Exp" value="100"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival9"/>
+		</quest>
+
+		<!-- Basic Survival 9 - Make a bone knife -->
+		<quest id="quest_BasicSurvival9">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival9"/>
+			<property name="subtitle_key" value="quest_BasicSurvival9_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival9_description"/>
+			<property name="icon" value="ui_game_symbol_deep_cuts"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="FetchKeep" id="resourceBone" value="5" phase="1"/>
+			<objective type="Craft" id="meleeWpnBladeT0BoneKnife" value="1" phase="2"/>
+
+			<reward type="Exp" value="100"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival10"/>
+		</quest>
+
+		<!-- Basic Survival 10 - Kill Rabbits and Chickens -->
+		<quest id="quest_BasicSurvival10">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival10"/>
+			<property name="subtitle_key" value="quest_BasicSurvival10_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival10_description"/>
+			<property name="icon" value="ui_game_symbol_campfire"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="AnimalKill" id="animalRabbit" value="1" phase="1"/>
+			<objective type="AnimalKill" id="animalChicken" value="1" phase="1"/>
+			<objective type="FetchKeep" id="rawMeat" value="10" phase="1"/>
+
+			<reward type="Exp" value="100"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival11"/>
+		</quest>
+
+		<!-- Basic Survival 11 - Build a Campfire and cook food -->
+		<quest id="quest_BasicSurvival11">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival11"/>
+			<property name="subtitle_key" value="quest_BasicSurvival11_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival11_description"/>
+			<property name="icon" value="ui_game_symbol_campfire"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="FetchKeep" id="rawMeat" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="5" phase="1"/>
+			<objective type="Craft" id="campfire" value="1" phase="2"/>
+			<objective type="FetchKeep" id="foodCharredMeat" value="5" phase="3"/>
+
+			<reward type="Exp" value="100"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Quest" id="quest_BasicSurvival12"/>
+		</quest>
+
+		<!-- Basic Survival 12 - Build a Campfire and cook food -->
+		<quest id="quest_BasicSurvival12">
+			<property name="group_name_key" value="quest_BasicSurvival"/>
+			<property name="name_key" value="quest_BasicSurvival12"/>
+			<property name="subtitle_key" value="quest_BasicSurvival12_subtitle"/>
+			<property name="description_key" value="quest_BasicSurvival12_description"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="ZombieKill" value="10" phase="1"/>
+
+			<reward type="Exp" value="250"/>
+			<reward type="Quest" id="quest_whiteRiverCitizen1">
+				<property name="chainquest" value="false"/>
+			</reward>
+			<reward type="SkillPoints" value="1" chainreward="true"/>
+		</quest>
+
+		<!-- White River Citizen 1 - Journey to Settlement -->
+		<quest id="quest_whiteRiverCitizen1">
+			<property name="group_name_key" value="quest_WhiteRiverCitizen"/>
+			<property name="name_key" value="quest_WhiteRiverCitizen1"/>
+			<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitle"/>
+			<property name="description_key" value="quest_WhiteRiverCitizen1_description"/>
+			<property name="icon" value="ui_game_symbol_map_trader"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="medium"/>
+			<property name="shareable" value="false"/>
+
+
+			<action type="ShowTip" value="quest_WhiteRiverCitizen1_description">
+				<property name="delay" value="3"/>
+			</action>
+			<objective type="Goto" id="trader" value="5" phase="1">
+				<property name="biome_filter_type" value="OnlyBiome"/>
+				<property name="biome_filter" value="pine_forest"/>
+				<property name="nav_object" value="go_to_trader"/>
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="return_to_trader"/>
+				<property name="use_closest" value="true"/>
+			</objective>
+
+			<reward type="Exp" value="500"/>
+			<reward type="SkillPoints" value="2"/>
+			<reward type="Item" id="vehicleBicyclePlaceable" value="1"/>
+			<reward type="Item" id="boxMedicalSupplies" value="1"/>
+		</quest>
+
+		<!-- White River Citizen 2 - Craft a base -->
+		<quest id="quest_whiteRiverCitizen2">
+			<property name="group_name_key" value="quest_WhiteRiverCitizen"/>
+			<property name="name_key" value="quest_WhiteRiverCitizen2"/>
+			<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitle"/>
+			<property name="description_key" value="quest_WhiteRiverCitizen1_description"/>
+			<property name="icon" value="ui_game_symbol_map_house"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="medium"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="FetchKeep" id="resourceWood" value="100" phase="1"/>
+			<objective type="Craft" id="woodFrameBlockVariantHelper" value="50" phase="1"/>
+
+			<reward type="Exp" value="100"/>
+			<reward type="SkillPoints" value="2"/>
+			<reward type="Item" id="itemMinibikeQuestStarter" value="1"/>
+		</quest>
+
+	</insertBefore>
+
+	<append xpath="/quests">
+		<quest id="quest_MiniBikeSpecial">
+			<property name="group_name" value="Minibike Special"/>
+			<property name="name_key" value="quest_MiniBikeSpecial"/>
+			<property name="subtitle_key" value="quest_MiniBikeSpecial_subtitle"/>
+			<property name="description_key" value="quest_MiniBikeSpecial_description"/>
+			<property name="icon" value="ui_game_symbol_map_trader"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="hard"/>
+			<property name="shareable" value="false"/>
+			<property name="repeatable" value="false"/>
+			<property name="statement_key" value="quest_MiniBikeSpecial_statement"/>
+			<property name="response_key" value="quest_MiniBikeSpecial_response"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_MiniBikeSpecial_completion"/>
+			<property name="offer_key" value="quest_MiniBikeSpecial_offer"/>
+
+			<objective type="TreasureChest" phase="1">
+				<property name="block" value="treasureChestJeg2"/>
+				<property name="distance" value="100-500"/>
+				<property name="default_radius" value="12"/>
+				<property name="container_type" value="Supplies"/>
+				<property name="nav_object" value="treasure"/>
+				<property name="direct_nav_object" value="treasure_direct"/>
+				<property name="blocks_per_reduction" value="10"/>
+				<property name="radius_reduction_sound" value="ui_radius_shrink"/>
+			</objective>
+
+			<objective type="FetchFromTreasure" phase="1">
+				<property name="block" value="treasureChestJeg2"/>
+				<property name="quest_item_ID" value="4"/>
+				<property name="item_count" value="1"/>
+			</objective>
+
+			<action type="SpawnEnemy" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo" value="5-7" phase="2"/>
+			<objective type="ZombieKill" value="5" phase="2"/>
+
+			<objective type="Goto" id="trader" value="5" phase="3">
+				<property name="nav_object" value="go_to_trader"/>
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader"/>
+				<property name="use_closest" value="true"/>
+			</objective>
+
+			<reward type="Exp" value="2500"/>
+			<reward type="SkillPoints" value="1"/>
+			<reward type="Item" id="vehicleMinibikePlaceable" value="1"/>
+			<reward type="Item" id="ammoGasCan" value="1000"/>
+
+		</quest>
 	</append>
-	<append xpath="/quests/quest[@id='quest_BasicSurvival2']">
-		<reward type="SkillPoints" value="1"/>
-	</append>
-	<append xpath="/quests/quest[@id='quest_BasicSurvival3']">
-		<reward type="SkillPoints" value="1"/>
-	</append>
-	<append xpath="/quests/quest[@id='quest_BasicSurvival3']">
-		<reward type="Item" id="chestReward1" value="1"/>
-	</append>
-	<append xpath="/quests/quest[@id='quest_BasicSurvival4']">
-		<reward type="SkillPoints" value="1"/>
-	</append>
-	<append xpath="/quests/quest[@id='quest_BasicSurvival5']">
-		<reward type="SkillPoints" value="1"/>
-	</append>
-	<append xpath="/quests/quest[@id='quest_BasicSurvival6']">
-		<reward type="SkillPoints" value="1"/>
-	</append>
-	<append xpath="/quests/quest[@id='quest_BasicSurvival7']">
-		<reward type="SkillPoints" value="2"/>
-	</append>
-	<append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
-		<reward type="SkillPoints" value="3"/>
-		<reward type="Item" id="vehicleBicyclePlaceable" value="1"/>
-		<reward type="Item" id="boxMedicalSupplies" value="1"/>
-	</append>
+
+	<!-- Increases the experience granted by completing quests -->
+	<set xpath="/quests/quest[@id='tier1_clear']/reward[@type='Exp']/@value">1000</set>
+	<set xpath="/quests/quest[@id='tier1_fetch']/reward[@type='Exp']/@value">1000</set>
+	<set xpath="/quests/quest[@id='tier1_buried_supplies']/reward[@type='Exp']/@value">1000</set>
+	<set xpath="/quests/quest[@id='tier2_clear']/reward[@type='Exp']/@value">2000</set>
+	<set xpath="/quests/quest[@id='tier2_fetch']/reward[@type='Exp']/@value">2000</set>
+	<set xpath="/quests/quest[@id='tier2_buried_supplies']/reward[@type='Exp']/@value">2000</set>
+	<set xpath="/quests/quest[@id='tier2_fetch_clear']/reward[@type='Exp']/@value">2000</set>
+	<set xpath="/quests/quest[@id='tier3_clear']/reward[@type='Exp']/@value">3000</set>
+	<set xpath="/quests/quest[@id='tier3_fetch']/reward[@type='Exp']/@value">3000</set>
+	<set xpath="/quests/quest[@id='tier3_fetch_clear']/reward[@type='Exp']/@value">3000</set>
+	<set xpath="/quests/quest[@id='tier4_clear']/reward[@type='Exp']/@value">4000</set>
+	<set xpath="/quests/quest[@id='tier4_fetch']/reward[@type='Exp']/@value">4000</set>
+	<set xpath="/quests/quest[@id='tier4_fetch_clear']/reward[@type='Exp']/@value">4000</set>
+	<set xpath="/quests/quest[@id='tier5_clear']/reward[@type='Exp']/@value">5000</set>
+	<set xpath="/quests/quest[@id='tier5_fetch']/reward[@type='Exp']/@value">5000</set>
+	<set xpath="/quests/quest[@id='tier5_fetch_clear']/reward[@type='Exp']/@value">5000</set>
+	<set xpath="/quests/quest[@id='tier6_clear']/reward[@type='Exp']/@value">6000</set>
+	<set xpath="/quests/quest[@id='tier6_fetch']/reward[@type='Exp']/@value">6000</set>
+	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@type='Exp']/@value">6000</set>
+
+	<set xpath="/quests/quest[@id='tier1_clear']/reward[@id='casinoCoin']/@value">100</set>
+	<set xpath="/quests/quest[@id='tier1_fetch']/reward[@id='casinoCoin']/@value">100</set>
+	<set xpath="/quests/quest[@id='tier1_buried_supplies']/reward[@id='casinoCoin']/@value">100</set>
+	<set xpath="/quests/quest[@id='tier2_clear']/reward[@id='casinoCoin']/@value">200</set>
+	<set xpath="/quests/quest[@id='tier2_fetch']/reward[@id='casinoCoin']/@value">200</set>
+	<set xpath="/quests/quest[@id='tier2_buried_supplies']/reward[@id='casinoCoin']/@value">200</set>
+	<set xpath="/quests/quest[@id='tier2_fetch_clear']/reward[@id='casinoCoin']/@value">200</set>
+	<set xpath="/quests/quest[@id='tier3_clear']/reward[@id='casinoCoin']/@value">300</set>
+	<set xpath="/quests/quest[@id='tier3_fetch']/reward[@id='casinoCoin']/@value">300</set>
+	<set xpath="/quests/quest[@id='tier3_fetch_clear']/reward[@id='casinoCoin']/@value">300</set>
+	<set xpath="/quests/quest[@id='tier4_clear']/reward[@id='casinoCoin']/@value">400</set>
+	<set xpath="/quests/quest[@id='tier4_fetch']/reward[@id='casinoCoin']/@value">400</set>
+	<set xpath="/quests/quest[@id='tier4_fetch_clear']/reward[@id='casinoCoin']/@value">400</set>
+	<set xpath="/quests/quest[@id='tier5_clear']/reward[@id='casinoCoin']/@value">500</set>
+	<set xpath="/quests/quest[@id='tier5_fetch']/reward[@id='casinoCoin']/@value">500</set>
+	<set xpath="/quests/quest[@id='tier5_fetch_clear']/reward[@id='casinoCoin']/@value">500</set>
+	<set xpath="/quests/quest[@id='tier6_clear']/reward[@id='casinoCoin']/@value">600</set>
+	<set xpath="/quests/quest[@id='tier6_fetch']/reward[@id='casinoCoin']/@value">600</set>
+	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@id='casinoCoin']/@value">600</set>
 
 	<!-- Adds skill page rewards to quests -->
 	<insertAfter xpath="/quests/quest[contains(@id, 'tier1_')]/reward[@id='casinoCoin']">
@@ -95,53 +489,12 @@
 			<property name="icon" value="ui_game_symbol_map_bed"/>
 			<property name="category_key" value="quest"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="offer_key" value="You've read a mysterious tome which has granted you 500,000 experience!"/>
+			<property name="offer_key" value="You've read a mysterious tome which has granted you 50,000 experience!"/>
 			<property name="shareable" value="true"/>
 			<reward type="Exp" value="50000"/>
 			<reward type="Item" id="itemSkillbookPage" value="5"/>
 		</quest>
 	</append>
-
-	<!-- Increases the experience granted by completing quests -->
-	<set xpath="/quests/quest[@id='tier1_clear']/reward[@type='Exp']/@value">1000</set>
-	<set xpath="/quests/quest[@id='tier1_fetch']/reward[@type='Exp']/@value">1000</set>
-	<set xpath="/quests/quest[@id='tier1_buried_supplies']/reward[@type='Exp']/@value">1000</set>
-	<set xpath="/quests/quest[@id='tier2_clear']/reward[@type='Exp']/@value">2000</set>
-	<set xpath="/quests/quest[@id='tier2_fetch']/reward[@type='Exp']/@value">2000</set>
-	<set xpath="/quests/quest[@id='tier2_buried_supplies']/reward[@type='Exp']/@value">2000</set>
-	<set xpath="/quests/quest[@id='tier2_fetch_clear']/reward[@type='Exp']/@value">2000</set>
-	<set xpath="/quests/quest[@id='tier3_clear']/reward[@type='Exp']/@value">3000</set>
-	<set xpath="/quests/quest[@id='tier3_fetch']/reward[@type='Exp']/@value">3000</set>
-	<set xpath="/quests/quest[@id='tier3_fetch_clear']/reward[@type='Exp']/@value">3000</set>
-	<set xpath="/quests/quest[@id='tier4_clear']/reward[@type='Exp']/@value">4000</set>
-	<set xpath="/quests/quest[@id='tier4_fetch']/reward[@type='Exp']/@value">4000</set>
-	<set xpath="/quests/quest[@id='tier4_fetch_clear']/reward[@type='Exp']/@value">4000</set>
-	<set xpath="/quests/quest[@id='tier5_clear']/reward[@type='Exp']/@value">5000</set>
-	<set xpath="/quests/quest[@id='tier5_fetch']/reward[@type='Exp']/@value">5000</set>
-	<set xpath="/quests/quest[@id='tier5_fetch_clear']/reward[@type='Exp']/@value">5000</set>
-	<set xpath="/quests/quest[@id='tier6_clear']/reward[@type='Exp']/@value">6000</set>
-	<set xpath="/quests/quest[@id='tier6_fetch']/reward[@type='Exp']/@value">6000</set>
-	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@type='Exp']/@value">6000</set>
-
-	<set xpath="/quests/quest[@id='tier1_clear']/reward[@id='casinoCoin']/@value">200</set>
-	<set xpath="/quests/quest[@id='tier1_fetch']/reward[@id='casinoCoin']/@value">200</set>
-	<set xpath="/quests/quest[@id='tier1_buried_supplies']/reward[@id='casinoCoin']/@value">200</set>
-	<set xpath="/quests/quest[@id='tier2_clear']/reward[@id='casinoCoin']/@value">400</set>
-	<set xpath="/quests/quest[@id='tier2_fetch']/reward[@id='casinoCoin']/@value">400</set>
-	<set xpath="/quests/quest[@id='tier2_buried_supplies']/reward[@id='casinoCoin']/@value">400</set>
-	<set xpath="/quests/quest[@id='tier2_fetch_clear']/reward[@id='casinoCoin']/@value">400</set>
-	<set xpath="/quests/quest[@id='tier3_clear']/reward[@id='casinoCoin']/@value">600</set>
-	<set xpath="/quests/quest[@id='tier3_fetch']/reward[@id='casinoCoin']/@value">600</set>
-	<set xpath="/quests/quest[@id='tier3_fetch_clear']/reward[@id='casinoCoin']/@value">600</set>
-	<set xpath="/quests/quest[@id='tier4_clear']/reward[@id='casinoCoin']/@value">800</set>
-	<set xpath="/quests/quest[@id='tier4_fetch']/reward[@id='casinoCoin']/@value">800</set>
-	<set xpath="/quests/quest[@id='tier4_fetch_clear']/reward[@id='casinoCoin']/@value">800</set>
-	<set xpath="/quests/quest[@id='tier5_clear']/reward[@id='casinoCoin']/@value">1000</set>
-	<set xpath="/quests/quest[@id='tier5_fetch']/reward[@id='casinoCoin']/@value">1000</set>
-	<set xpath="/quests/quest[@id='tier5_fetch_clear']/reward[@id='casinoCoin']/@value">1000</set>
-	<set xpath="/quests/quest[@id='tier6_clear']/reward[@id='casinoCoin']/@value">1500</set>
-	<set xpath="/quests/quest[@id='tier6_fetch']/reward[@id='casinoCoin']/@value">1500</set>
-	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@id='casinoCoin']/@value">1500</set>
 
 	<!-- Adds trader advert quest item -->
 	<append xpath="/quests">
@@ -171,6 +524,9 @@
 
 	<append xpath="/quests/quest_items">
 		<quest_item id="3" name="Long-Forgotten Supplies" icon="questJegSupplies" icon_color="255,255,255"/>
+	</append>
+	<append xpath="/quests/quest_items">
+		<quest_item id="4" name="Well-used Starter Motor" icon="questJegSupplies" icon_color="255,255,255"/>
 	</append>
 
 	<append xpath="/quests">
@@ -222,7 +578,7 @@
 			<reward type="Exp" value="50000"/>
 			<reward type="SkillPoints" value="5"/>
 			<reward type="Item" id="itemSkillbookPage" value="30"/>
-			<reward type="Item" id="casinoCoin" value="15000"/>
+			<reward type="Item" id="casinoCoin" value="5000"/>
 			<reward type="LootItem" id="perkBooks" ischosen="true" value="7"/>
 			<reward type="LootItem" id="groupHeroChestLootSub" ischosen="true" value="7"/>
 			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="7"/>
@@ -280,7 +636,7 @@
 			</objective>
 
 			<reward type="Exp" value="3000"/>
-			<reward type="Item" id="casinoCoin" value="600"/>
+			<reward type="Item" id="casinoCoin" value="300"/>
 			<reward type="Item" id="itemSkillbookPage" value="3"/>
 
 			<reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
@@ -337,7 +693,7 @@
 			</objective>
 
 			<reward type="Exp" value="4000"/>
-			<reward type="Item" id="casinoCoin" value="800"/>
+			<reward type="Item" id="casinoCoin" value="400"/>
 			<reward type="Item" id="itemSkillbookPage" value="4"/>
 
 			<reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="4"/>
@@ -394,7 +750,7 @@
 			</objective>
 
 			<reward type="Exp" value="5000"/>
-			<reward type="Item" id="casinoCoin" value="1000"/>
+			<reward type="Item" id="casinoCoin" value="500"/>
 			<reward type="Item" id="itemSkillbookPage" value="5"/>
 
 			<reward type="LootItem" id="groupQuestMedical" ischosen="true" isfixed="true" value="5"/>
@@ -565,60 +921,6 @@
 			<action type="TrackQuest"/>
 
 			<reward type="Item" id="chestRewardDemo" value="1"/>
-		</quest>
-	</append>
-
-	<append xpath="/quests">
-		<quest id="quest_MiniBikeSpecial">
-			<property name="group_name" value="Minibike Special"/>
-			<property name="name_key" value="quest_MiniBikeSpecial"/>
-			<property name="subtitle_key" value="quest_MiniBikeSpecial_subtitle"/>
-			<property name="description_key" value="quest_MiniBikeSpecial_description"/>
-			<property name="icon" value="ui_game_symbol_map_trader"/>
-			<property name="category_key" value="quest"/>
-			<property name="difficulty" value="hard"/>
-			<property name="shareable" value="false"/>
-			<property name="repeatable" value="false"/>
-			<property name="statement_key" value="quest_MiniBikeSpecial_statement"/>
-			<property name="response_key" value="quest_MiniBikeSpecial_response"/>
-			<property name="completiontype" value="TurnIn"/>
-			<property name="completion_key" value="quest_MiniBikeSpecial_completion"/>
-			<property name="offer_key" value="quest_MiniBikeSpecial_offer"/>
-
-			<objective type="TreasureChest" phase="1">
-				<property name="block" value="treasureChestJeg"/>
-				<property name="distance" value="100-500"/>
-				<property name="default_radius" value="12"/>
-				<property name="container_type" value="Supplies"/>
-				<property name="nav_object" value="treasure"/>
-				<property name="direct_nav_object" value="treasure_direct"/>
-				<property name="blocks_per_reduction" value="10"/>
-				<property name="radius_reduction_sound" value="ui_radius_shrink"/>
-			</objective>
-
-			<objective type="FetchFromTreasure" phase="1">
-				<property name="block" value="treasureChestJeg"/>
-				<property name="quest_item_ID" value="3"/>
-				<property name="item_count" value="1"/>
-			</objective>
-
-			<action type="SpawnEnemy" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo" value="5-7" phase="2"/>
-			
-			<objective type="Goto" id="trader" value="5" phase="2">
-				<property name="nav_object" value="go_to_trader"/>
-			</objective>
-
-			<objective type="InteractWithNPC">
-				<property name="phase" value="3"/>
-				<property name="nav_object" value="return_to_trader"/>
-				<property name="use_closest" value="true"/>
-			</objective>
-
-			<reward type="Exp" value="2500"/>
-			<reward type="SkillPoints" value="1"/>
-			<reward type="Item" id="vehicleMinibikePlaceable" value="1"/>
-			<reward type="Item" id="ammoGasCan" value="1000"/>
-
 		</quest>
 	</append>
 

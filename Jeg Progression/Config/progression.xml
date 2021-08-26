@@ -243,6 +243,53 @@
 			</effect_group>
 		</perk>
 	</append>
+	
+	<!-- Exceptional Metabolism -->
+	<append xpath="/progression/perks">
+		<perk name="extraExcpMeta" parent="extraCharacterPerks" name_key="extraExcpMetaName" desc_key="extraExcpMetaDesc" icon="jeg_excpmeta" max_level="5">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="2" desc_key="Fortitude Level 2"/>
+				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="2" desc_key="Strength Level 2"/>
+				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="2" desc_key="Agility Level 2"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="Perception Level 2"/>
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="2" desc_key="reqIntellectLevel02"/></level_requirements>
+
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="4" desc_key="Fortitude Level 4"/>
+				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="4" desc_key="Strength Level 4"/>
+				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="4" desc_key="Agility Level 4"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="4" desc_key="Perception Level 4"/>
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
+
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="6" desc_key="Fortitude Level 6"/>
+				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="6" desc_key="Strength Level 6"/>
+				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="6" desc_key="Agility Level 6"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="6" desc_key="Perception Level 6"/>
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="8" desc_key="Fortitude Level 8"/>
+				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="8" desc_key="Strength Level 8"/>
+				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="8" desc_key="Agility Level 8"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="8" desc_key="Perception Level 8"/>
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attFortitude"  operation="GTE" value="10" desc_key="reqFortitudeLevel10"/>
+				<requirement name="ProgressionLevel" progression_name="attStrength"   operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
+				<requirement name="ProgressionLevel" progression_name="attAgility"    operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
+				<requirement name="ProgressionLevel" progression_name="attIntellect"  operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+
+			<effect_group>
+				<passive_effect name="WaterLossPerHealthPointGained" operation="perc_subtract" level="1,5" value="0.05,0.25"/>
+				<passive_effect name="WaterLossPerStaminaPointGained" operation="perc_subtract" level="1,5" value="0.05,0.25"/>
+				<passive_effect name="FoodLossPerStaminaPointGained" operation="perc_subtract" level="1,5" value="0.05,0.25"/>
+			
+				<effect_description level="1" desc_key="extraExcpMeta01" long_desc_key="extraExcpMeta01Desc"/>
+				<effect_description level="2" desc_key="extraExcpMeta02" long_desc_key="extraExcpMeta02Desc"/>
+				<effect_description level="3" desc_key="extraExcpMeta03" long_desc_key="extraExcpMeta03Desc"/>
+				<effect_description level="4" desc_key="extraExcpMeta04" long_desc_key="extraExcpMeta04Desc"/>
+				<effect_description level="5" desc_key="extraExcpMeta05" long_desc_key="extraExcpMeta05Desc"/>
+			</effect_group>
+		</perk>
+	</append>
 
 	<!-- Increased Healing over time -->
 	<append xpath="/progression/perks">

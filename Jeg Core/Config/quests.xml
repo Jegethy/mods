@@ -254,7 +254,7 @@
 			<objective type="FetchKeep" id="resourceRockSmall" value="5" phase="1"/>
 			<objective type="FetchKeep" id="resourceWood" value="5" phase="1"/>
 			<objective type="Craft" id="campfire" value="1" phase="2"/>
-			<objective type="BlockPlace" id="bedroll" value="1" phase="3"/>
+			<objective type="BlockPlace" id="campfire" value="1" phase="3"/>
 			<objective type="FetchKeep" id="foodCharredMeat" value="5" phase="4"/>
 
 			<reward type="Exp" value="100"/>
@@ -320,8 +320,8 @@
 		<quest id="quest_whiteRiverCitizen2">
 			<property name="group_name_key" value="quest_WhiteRiverCitizen"/>
 			<property name="name_key" value="quest_WhiteRiverCitizen2"/>
-			<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitle"/>
-			<property name="description_key" value="quest_WhiteRiverCitizen1_description"/>
+			<property name="subtitle_key" value="quest_WhiteRiverCitizen2_subtitle"/>
+			<property name="description_key" value="quest_WhiteRiverCitizen2_description"/>
 			<property name="icon" value="ui_game_symbol_map_house"/>
 			<property name="category_key" value="quest"/>
 			<property name="difficulty" value="medium"/>
@@ -374,15 +374,26 @@
 				<property name="item_count" value="1"/>
 			</objective>
 
-			<action type="SpawnEnemy" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo" value="5-7" phase="2"/>
-			<objective type="ZombieKill" value="5" phase="2"/>
+			<action type="TrackQuest"/>
 
-			<objective type="Goto" id="trader" value="5" phase="3">
+			<action type="SpawnEnemy" id="zombieArlene" value="2" phase="2"/>
+			<objective type="ZombieKill" id="zombieArlene" value="2" phase="2"/>
+
+			<action type="SpawnEnemy" id="zombieDarlene" value="3" phase="3"/>
+			<objective type="ZombieKill" id="zombieDarlene" value="3" phase="3"/>
+
+			<action type="SpawnEnemy" id="zombieMoe" value="4" phase="4"/>
+			<objective type="ZombieKill" id="zombieMoe" value="4" phase="4"/>
+
+			<action type="SpawnEnemy" id="zombieEnragedDemo" value="1" phase="5"/>
+			<objective type="ZombieKill" id="zombieEnragedDemo" value="1" phase="5"/>
+
+			<objective type="Goto" id="trader" value="5" phase="6">
 				<property name="nav_object" value="go_to_trader"/>
 			</objective>
 
 			<objective type="InteractWithNPC">
-				<property name="phase" value="3"/>
+				<property name="phase" value="6"/>
 				<property name="nav_object" value="return_to_trader"/>
 				<property name="use_closest" value="true"/>
 			</objective>
@@ -391,6 +402,8 @@
 			<reward type="SkillPoints" value="1"/>
 			<reward type="Item" id="vehicleMinibikePlaceable" value="1"/>
 			<reward type="Item" id="ammoGasCan" value="1000"/>
+			<reward type="Item" id="resourceRockSmall" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="resourceRockSmall" ischosen="true" isfixed="true" value="1"/>
 
 		</quest>
 	</append>
@@ -569,10 +582,10 @@
 	</append>
 
 	<append xpath="/quests/quest_items">
-		<quest_item id="3" name="Long-Forgotten Supplies" icon="questJegSupplies" icon_color="255,255,255"/>
+		<quest_item id="3" name="[60CCFF]Long-Forgotten Supplies" icon="questJegSupplies" icon_color="255,255,255"/>
 	</append>
 	<append xpath="/quests/quest_items">
-		<quest_item id="4" name="Well-used Starter Motor" icon="questJegSupplies" icon_color="255,255,255"/>
+		<quest_item id="4" name="[60CCFF]Well-used Starter Motor" icon="questJegMotor" icon_color="255,255,255"/>
 	</append>
 
 	<append xpath="/quests">

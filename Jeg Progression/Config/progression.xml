@@ -1,7 +1,8 @@
 <config>
 
-	<!-- Sets the maximum character level to 500 -->
-	<set xpath="/progression/level/@max_level">300</set>
+	<!-- Extended the levelling curve, so less experience is needed at lower levels -->
+	<set xpath="/progression/level/@experience_multiplier">1.02</set>
+	<set xpath="/progression/level/@clamp_exp_cost_at_level">100</set>
 
 	<!-- Removed Grease Monkey -->
 	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']"/>
@@ -229,13 +230,13 @@
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
 
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="10" level="1"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="20" level="2"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="30" level="3"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="6" level="1"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="12" level="2"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="18" level="3"/>
 
-				<passive_effect name="HyperthermalResist" operation="base_add" value="10" level="1"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="20" level="2"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="30" level="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="6" level="1"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="12" level="2"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="18" level="3"/>
 
 				<effect_description level="1" desc_key="extraThermalProt04" long_desc_key="extraThermalProt04Desc"/>
 				<effect_description level="2" desc_key="extraThermalProt08" long_desc_key="extraThermalProt08Desc"/>
@@ -325,11 +326,11 @@
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
-				<passive_effect name="HealthChangeOT" operation="base_add" level="1" value=".05"/>
-				<passive_effect name="HealthChangeOT" operation="base_add" level="2" value=".10"/>
-				<passive_effect name="HealthChangeOT" operation="base_add" level="3" value=".15"/>
-				<passive_effect name="HealthChangeOT" operation="base_add" level="4" value=".20"/>
-				<passive_effect name="HealthChangeOT" operation="base_add" level="5" value=".25"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" level="1" value=".10"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" level="2" value=".20"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" level="3" value=".30"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" level="4" value=".40"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" level="5" value=".50"/>
 
 				<effect_description level="1" desc_key="extraRejuvenation01" long_desc_key="extraRejuvenation01Desc"/>
 				<effect_description level="2" desc_key="extraRejuvenation02" long_desc_key="extraRejuvenation02Desc"/>

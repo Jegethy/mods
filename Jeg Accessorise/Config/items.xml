@@ -216,8 +216,8 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCrimsonEarring"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCrimsonEarring"/>
 			</effect_group>
 		</item>			
 
@@ -247,8 +247,8 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryDiamondEarring"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryDiamondEarring"/>
 			</effect_group>
 		</item>			
 
@@ -278,8 +278,8 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryEmeraldNecklace"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryEmeraldNecklace"/>
 			</effect_group>
 		</item>			
 
@@ -309,8 +309,8 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryExquisiteNecklace"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryExquisiteNecklace"/>
 			</effect_group>
 		</item>			
 
@@ -340,8 +340,8 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryGoldChain"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryGoldChain"/>
 			</effect_group>
 		</item>			
 
@@ -371,8 +371,8 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryLavenderEarring"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryLavenderEarring"/>
 			</effect_group>
 		</item>			
 
@@ -402,8 +402,8 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryRubyNecklace"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryRubyNecklace"/>
 			</effect_group>
 		</item>			
 
@@ -433,8 +433,8 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryTwinNecklace"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryTwinNecklace"/>
 			</effect_group>
 		</item>			
 	</append>

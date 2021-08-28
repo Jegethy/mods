@@ -201,3 +201,11 @@ quest_WhiteRiverCitizen1,Quest,Quest Info,,,White River Citizen 1/2
 quest_WhiteRiverCitizen2,Quest,Quest Info,,,White River Citizen 2/2
 quest_WhiteRiverCitizen2_subtitle,Quest,Quest Info,,,Construct Your Base
 quest_WhiteRiverCitizen2_description,Quest,Quest Info,,,"Now that you've got some basic equipment and you've met the locals, it's time to get settled. Gather wood and Craft Wooden Frames from the Basics category of the Crafting window.\n\nThese blocks can be used to create a rudimentary base, but you'll want to upgrade to concrete or steel later on."
+itemMinibikeQuestStarter,Items,Resources,,,"[60CCFF]Dusty Tome"
+itemMinibikeQuestStarterDesc,Items,Resources,,,"[60CCFF]An old, dusty tome.\n\nThis item starts a quest."
+quest_MiniBikeSpecial,Quest,Quest Info,,,"[60CCFF]The Dusty Tome"
+quest_MiniBikeSpecial_subtitle,Quest,Quest Info,,,"[60CCFF]Find the Old Crate"
+quest_MiniBikeSpecial_description,Quest,Quest Info,,,"[60CCFF]Upon reading the tome you get an overwhelming sense that there is treasure buried nearby.\n\nPerhaps you should seek it out...?"
+quest_MiniBikeSpecial_offer,Quest,Quest Info,,,"[60CCFF]Upon reading the tome you get an overwhelming sense that there is treasure buried nearby.\n\nPerhaps you should seek it out...?"
+quest_MiniBikeSpecial_completion,Quest,Quest Info,,,"[60CCFF]Well, shit. It's been so long since I misplaced my starter motor, and here you are, returning it without me even having to ask... I've already bought a new starter motor so this one is pretty useless to me now, but I can fashion it into a new minibike for you as a finder's fee. And you know what? You can take one of these amulets with you, too."
+zombieEnragedDemo,entityclasses,Entity,,,"[60CCFF]Enraged Demolisher"

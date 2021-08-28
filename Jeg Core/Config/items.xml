@@ -416,7 +416,7 @@
 	<append xpath="/items">
 		<item name="bookHammerTimeDamage">
 			<property name="Extends" value="bookFiremansAlmanacHeat"/>
-			<property name="CustomIcon" value="schematicMaster"/>
+			<property name="CustomIcon" value="perkHammerTimeBook"/>
 			<property name="DescriptionKey" value="perkHammerTimeDamageLongDesc"/>
 			<property name="Unlocks" value="perkHammerTimeDamage"/>
 			<effect_group tiered="false">
@@ -2847,6 +2847,7 @@
 	<setattribute xpath="/items/item[@name='armorFootballHelmetZU']/effect_group/passive_effect[@name='BuffResistance']" name="tier">1,6</setattribute>
 	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
 
+	<!-- Biofuel -->
 	<append xpath="/items">
 		<item name="resourceBioFuel">
 			<property name="HoldType" value="45"/>
@@ -2864,6 +2865,7 @@
 		</item>
 	</append>
 
+	<!-- Key to open tutorial weapon chest -->
 	<append xpath="/items">
 		<item name="itemCrudeKey">
 			<property name="Extends" value="resourceSilverNugget"/>
@@ -2879,7 +2881,7 @@
 		</item>
 	</append>
 
-	<!-- Quest Weapon Package -->
+	<!-- Locked Quest Weapon Package -->
 	<append xpath="/items">
 		<item name="itemLockedWeaponCrate">
 			<property name="Extends" value="resourceSilverNugget"/>
@@ -2893,7 +2895,7 @@
 		</item>
 	</append>
 
-	<!-- Quest Weapon Package -->
+	<!-- Unlocked Quest Weapon Package -->
 	<append xpath="/items">
 		<item name="itemOpenWeaponCrate">
 			<property name="Extends" value="resourceRockSmallBundle"/>
@@ -2922,6 +2924,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="EconomicValue" value="25000"/>
+			<property name="CustomIcon" value="itemMinibikeQuestStarter"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="Class" value="Quest"/>
@@ -2933,7 +2936,6 @@
 			<property name="Group" value="Special Items"/>
 			<property name="name_key" value="itemMinibikeQuestStarter"/>
 			<property name="desc_key" value="itemMinibikeQuestStarterDesc"/>
-			<property name="CustomIcon" value="skillPointBook"/>
 			<property name="Stacknumber" value="1"/>
 		</item>
 	</append>

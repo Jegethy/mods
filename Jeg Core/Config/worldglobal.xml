@@ -1,3 +1,14 @@
 <configs>
-  <set xpath="/worldglobal/environment/property[@name='fogPower']/@value">1,0.40</set>
+
+	<set xpath="/worldglobal/environment/property[@name='fogPower']/@value">1,0.50</set>
+
+<!-- 
+	<append xpath="worldglobal/environment">
+		<property name="DaysPerMeteorologicalYear" value="28"/>
+		<property name="TemperatureVariation" value="31"/>
+		<property name="StartingSeason" value="spring"/>
+		<property name="SeasonStartAlerts" value="true"/>
+	</append>
+-->
+	
 </configs>

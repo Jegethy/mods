@@ -1,0 +1,61 @@
+<config>
+
+	<!-- Movement Speed -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="modAccessoriseSpeed" display_group="modAccessorise">
+			<display_entry name="dWalkSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dRunSpeed" title_key="statWalkSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+
+	<!-- Damage -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="modAccessoriseDamage" display_group="modAccessorise">
+			<display_entry name="dEntityDamage" title_key="statEntityDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dBlockDamage" title_key="statBlockDamage" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+
+	<!-- Health -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="modAccessoriseHealth" display_group="modAccessorise">
+			<display_entry name="dMaxHealthBonus" title_key="statMaxHealthBonus" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+
+	<!-- Stamina -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="modAccessoriseStamina" display_group="modAccessorise">
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+
+	<!-- Armour -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="modAccessoriseArmour" display_group="modAccessorise">
+			<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResist" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+
+	<!-- Harvest -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="modAccessoriseHarvest" display_group="modAccessorise">
+			<display_entry name="dCropHarvest" title_key="statCropHarvest" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+
+	<!-- Mining -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="modAccessoriseMining" display_group="modAccessorise">
+			<display_entry name="dHarvestMining" title_key="statHarvestMining" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+
+	<!-- Experience -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="modAccessoriseXP" display_group="modAccessorise">
+			<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+
+</config>

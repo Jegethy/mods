@@ -9,7 +9,7 @@
 			</effect_group>
 		</buff>
 	</append>
-	
+
 	<append xpath="/buffs">
 		<buff name="buffHordeNightQuestTrackerNight" name_key="buffHordeNightQuestTrackerNightName" description_key="buffHordeNightQuestTrackerNightDesc" tooltip_key="buffHordeNightQuestTrackerNightTooltip" showonhud="false" icon="jeg_BM_quest_track" remove_on_death="false">
 			<stack_type value="ignore"/>
@@ -23,12 +23,12 @@
 	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHordeNightQuestTracker">
 			<requirement name="NotHasBuff" buff="buffHordeNightQuestTracker"/>
-			<requirement name="IsDay" />
+			<requirement name="IsDay"/>
 		</triggered_effect>
 		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHordeNightQuestTracker">
 			<requirement name="HasBuff" buff="buffHordeNightQuestTracker"/>
-			<requirement name="IsNight" />
-			<requirement name="RequirementIsBloodMoonDMT, Mods" />
+			<requirement name="IsNight"/>
+			<requirement name="RequirementIsBloodMoonDMT, Mods"/>
 		</triggered_effect>
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHordeNightQuestTrackerNight">
 			<requirement name="NotHasBuff" buff="buffHordeNightQuestTracker"/>

@@ -4,7 +4,7 @@
 	<set xpath="/entity_classes/entity_class[contains(@name, 'Backpack')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">43200</set>
 
 	<!-- Animal corpses take longer to despawn -->
-	<set xpath="/entity_classes/entity_class[starts-with(@name,'animal')]/property[@name='TimeStayAfterDeath']/@value">1800</set> <!--20 minutes instead of 5-->
+	<set xpath="/entity_classes/entity_class[starts-with(@name,'animal')]/property[@name='TimeStayAfterDeath']/@value">1800</set><!--20 minutes instead of 5-->
 
 	<!-- Increases the despawn timer of the zombie dropped loot bags from 5 minutes to 12 hours (real time) -->
 	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">300</set>
@@ -15,28 +15,28 @@
 	<set xpath="/entity_classes/entity_class/property[@name='KnockdownKneelStunDuration']/@value">1.0,10.0</set>
 
 	<!-- Remove Radiated Zombie Vultures -->
-	<remove xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/property[@name='Radiated']" />
-	
+	<remove xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/property[@name='Radiated']"/>
+
 	<!-- Slower Chickens and Rabbits -->
 	<set xpath="/entity_classes/entity_class[@name='animalChicken']/property[@name='MoveSpeedPanic'][@value='1.3']/@value">.8</set>
 	<set xpath="/entity_classes/entity_class[@name='animalRabbit']/property[@name='MoveSpeedPanic'][@value='1.55']/@value">1.1</set>
 
 	<!-- Removes dismember chance on animals -->
-	<insertAfter xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='Mesh']" >
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='Mesh']">
 		<property name="DismemberMultiplierHead" value="0"/>
 	</insertAfter>
-	<insertAfter xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='RagdollOnDeathChance']" >
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='RagdollOnDeathChance']">
 		<property name="DismemberMultiplierHead" value="0"/>
 	</insertAfter>
-	<insertAfter xpath="/entity_classes/entity_class[@name='animalBoar']/property[@name='RagdollOnDeathChance']" >
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalBoar']/property[@name='RagdollOnDeathChance']">
 		<property name="DismemberMultiplierHead" value="0"/>
 	</insertAfter>
-	<insertAfter xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='SightRange']" >
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='SightRange']">
 		<property name="DismemberMultiplierHead" value="0"/>
 	</insertAfter>
 
 	<!-- Increased debuff probability -->
-	<remove xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='-.1']"></remove>
+	<remove xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='-.1']"/>
 	<!-- Fatigued: default = 0 -->
 	<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BuffResistance'][@value='1']">
 		<passive_effect name="BuffResistance" operation="base_add" value="-.5" tags="buffFatiguedTrigger"/>
@@ -76,140 +76,140 @@
 
 	<!-- Modifies the experience granted by all animals and zombies based on their health values -->
 	<!--Rabbit-->
-	<set xpath="/entity_classes/entity_class[@name='animalRabbit']/property[@name='ExperienceGain']/@value">180</set>							<!--	From 173 XP, set high cause these bastards are hard to kill	-->
+	<set xpath="/entity_classes/entity_class[@name='animalRabbit']/property[@name='ExperienceGain']/@value">180</set><!--	From 173 XP, set high cause these bastards are hard to kill	-->
 	<!--Chicken-->
-	<set xpath="/entity_classes/entity_class[@name='animalChicken']/property[@name='ExperienceGain']/@value">180</set>							<!--	From 173 XP, set high cause these bastards are hard to kill	-->
+	<set xpath="/entity_classes/entity_class[@name='animalChicken']/property[@name='ExperienceGain']/@value">180</set><!--	From 173 XP, set high cause these bastards are hard to kill	-->
 	<!--Stag/Doe-->
-	<set xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='ExperienceGain']/@value">330</set>								<!-- 	From 327 XP -->
+	<set xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='ExperienceGain']/@value">330</set><!-- 	From 327 XP -->
 	<!--Snake-->
-	<set xpath="/entity_classes/entity_class[@name='animalSnake']/property[@name='ExperienceGain']/@value">220</set>							<!--	From 170 XP, set higher cause these assholes are vile	-->
+	<set xpath="/entity_classes/entity_class[@name='animalSnake']/property[@name='ExperienceGain']/@value">220</set><!--	From 170 XP, set higher cause these assholes are vile	-->
 	<!--Wolf, Boar, Zombie Vulture, Zombie Dog-->
-	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='ExperienceGain']/@value">575</set>					<!--	From 550 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='ExperienceGain']/@value">575</set><!--	From 550 XP	-->
 	<!--Radiated Zombie Vulture-->
-	<set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/property[@name='ExperienceGain']/@value">1000</set>			<!--	From 900 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/property[@name='ExperienceGain']/@value">1000</set><!--	From 900 XP	-->
 	<!--Bear-->
-	<set xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='ExperienceGain']/@value">1750</set>							<!--	From 800 XP, 800HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='ExperienceGain']/@value">1750</set><!--	From 800 XP, 800HP * 4XP	-->
 	<!--Dire Wolf-->
-	<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='ExperienceGain']/@value">1500</set>						<!--	From 800 XP, 800HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='ExperienceGain']/@value">1500</set><!--	From 800 XP, 800HP * 4XP	-->
 	<!--Zombie Bear-->
-	<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/property[@name='ExperienceGain']/@value">2250</set>						<!--	From 800 XP, 1000HP * 4XP	-->
-	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='ExperienceGain']/@value">600</set>						<!--	From 550 XP		-->
+	<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/property[@name='ExperienceGain']/@value">2250</set><!--	From 800 XP, 1000HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='ExperienceGain']/@value">600</set><!--	From 550 XP		-->
 	<!--Utility Worker Zombert-->
-	<append xpath="/entity_classes/entity_class[@name='zombieUtilityWorker']"><property name="ExperienceGain" value="680"/></append>			<!--	From 550 XP, Base + (20PDR * 4XP)	-->
+	<append xpath="/entity_classes/entity_class[@name='zombieUtilityWorker']"><property name="ExperienceGain" value="680"/></append><!--	From 550 XP, Base + (20PDR * 4XP)	-->
 	<!-- Skateboarder-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSkateboarder']/property[@name='ExperienceGain']/@value">600</set>						<!--	From 550 XP		-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSkateboarder']/property[@name='ExperienceGain']/@value">600</set><!--	From 550 XP		-->
 	<!-- Fat Mama Zombalina-->
-	<append xpath="/entity_classes/entity_class[@name='zombieFemaleFat']"><property name="ExperienceGain" value="800"/></append>				<!--	From 550 XP, 200HP * 4XP	-->
+	<append xpath="/entity_classes/entity_class[@name='zombieFemaleFat']"><property name="ExperienceGain" value="800"/></append><!--	From 550 XP, 200HP * 4XP	-->
 	<!--Football Player-->
-	<set xpath="/entity_classes/entity_class[@name='zombieFootballPlayer']/property[@name='ExperienceGain']/@value">850</set>					<!--	From 700 XP, 250HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieFootballPlayer']/property[@name='ExperienceGain']/@value">850</set><!--	From 700 XP, 250HP * 4XP	-->
 	<!--Moe-->
-	<set xpath="/entity_classes/entity_class[@name='zombieMoe']/property[@name='ExperienceGain']/@value">850</set>								<!--	From 800 XP, 250HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieMoe']/property[@name='ExperienceGain']/@value">850</set><!--	From 800 XP, 250HP * 4XP	-->
 	<!--Fat Cop-->
-	<set xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='ExperienceGain']/@value">850</set>							<!--	From 800 XP, 250HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='ExperienceGain']/@value">850</set><!--	From 800 XP, 250HP * 4XP	-->
 	<!--Biker-->
-	<set xpath="/entity_classes/entity_class[@name='zombieBiker']/property[@name='ExperienceGain']/@value">1000</set>							<!--	From 800 XP, (280HP * 4XP) + (20PDR * 4XP)	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieBiker']/property[@name='ExperienceGain']/@value">1000</set><!--	From 800 XP, (280HP * 4XP) + (20PDR * 4XP)	-->
 	<!--Lumber Jack-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSnow']/property[@name='ExperienceGain']/@value">1000</set>							<!--	From 800 XP, 300HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSnow']/property[@name='ExperienceGain']/@value">1000</set><!--	From 800 XP, 300HP * 4XP	-->
 	<!--Fat Hawaiian-->
-	<set xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']/property[@name='ExperienceGain']/@value">1000</set>						<!--	From 800 XP, 300HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']/property[@name='ExperienceGain']/@value">1000</set><!--	From 800 XP, 300HP * 4XP	-->
 	<!--Feral Screamer-->
-	<set xpath="/entity_classes/entity_class[@name='zombieScreamerFeral']/property[@name='ExperienceGain']/@value">900</set>					<!--	From 700 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieScreamerFeral']/property[@name='ExperienceGain']/@value">900</set><!--	From 700 XP	-->
 	<!--Feral Crawling Steve-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSteveCrawlerFeral']/property[@name='ExperienceGain']/@value">900</set>				<!--	From 700 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSteveCrawlerFeral']/property[@name='ExperienceGain']/@value">900</set><!--	From 700 XP	-->
 	<!--Feral Arlene-->
-	<set xpath="/entity_classes/entity_class[@name='zombieArleneFeral']/property[@name='ExperienceGain']/@value">900</set>						<!--	From 700 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieArleneFeral']/property[@name='ExperienceGain']/@value">900</set><!--	From 700 XP	-->
 	<!--Feral Lab Zombalina-->
-	<set xpath="/entity_classes/entity_class[@name='zombieLabFeral']/property[@name='ExperienceGain']/@value">900</set>							<!--	From 700 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieLabFeral']/property[@name='ExperienceGain']/@value">900</set><!--	From 700 XP	-->
 	<!--Feral Darlene-->
-	<set xpath="/entity_classes/entity_class[@name='zombieDarleneFeral']/property[@name='ExperienceGain']/@value">900</set>						<!--	From 700 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieDarleneFeral']/property[@name='ExperienceGain']/@value">900</set><!--	From 700 XP	-->
 	<!--Feral Marlene-->
-	<set xpath="/entity_classes/entity_class[@name='zombieMarleneFeral']/property[@name='ExperienceGain']/@value">900</set>						<!--	From 700 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieMarleneFeral']/property[@name='ExperienceGain']/@value">900</set><!--	From 700 XP	-->
 	<!--Feral Nurse-->
-	<set xpath="/entity_classes/entity_class[@name='zombieNurseFeral']/property[@name='ExperienceGain']/@value">900</set>						<!--	From 700 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieNurseFeral']/property[@name='ExperienceGain']/@value">900</set><!--	From 700 XP	-->
 	<!--Feral Cheerleader-->
-	<set xpath="/entity_classes/entity_class[@name='zombieCheerleaderFeral']/property[@name='ExperienceGain']/@value">900</set>					<!--	From 700 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieCheerleaderFeral']/property[@name='ExperienceGain']/@value">900</set><!--	From 700 XP	-->
 	<!--Feral Stripper-->
-	<set xpath="/entity_classes/entity_class[@name='zombieStripperFeral']/property[@name='ExperienceGain']/@value">900</set>					<!--	From 700 XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieStripperFeral']/property[@name='ExperienceGain']/@value">900</set><!--	From 700 XP	-->
 	<!--Feral Boe-->
-	<set xpath="/entity_classes/entity_class[@name='zombieBoeFeral']/property[@name='ExperienceGain']/@value">1000</set>						<!--	From 700 XP, 285HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieBoeFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 285HP * 4XP	-->
 	<!--Feral Joe-->
-	<set xpath="/entity_classes/entity_class[@name='zombieJoeFeral']/property[@name='ExperienceGain']/@value">1000</set>						<!--	From 700 XP, 285HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieJoeFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 285HP * 4XP	-->
 	<!--Feral Yo-->
-	<set xpath="/entity_classes/entity_class[@name='zombieYoFeral']/property[@name='ExperienceGain']/@value">1000</set>							<!--	From 700 XP, 285HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieYoFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 285HP * 4XP	-->
 	<!--Feral Steve-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSteveFeral']/property[@name='ExperienceGain']/@value">1000</set>						<!--	From 700 XP, 285HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSteveFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 285HP * 4XP	-->
 	<!--Feral Business Man-->
-	<set xpath="/entity_classes/entity_class[@name='zombieBusinessManFeral']/property[@name='ExperienceGain']/@value">1000</set>				<!--	From 700 XP, 285HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieBusinessManFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 285HP * 4XP	-->
 	<!--Feral Spider-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSpiderFeral']/property[@name='ExperienceGain']/@value">1000</set>						<!--	From 700 XP, 285HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSpiderFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 285HP * 4XP	-->
 	<!--Feral Utility Worker-->
-	<set xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']/property[@name='ExperienceGain']/@value">1000</set>				<!--	From 700 XP, (285HP * 4XP) + (20PDR * 4XP)	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, (285HP * 4XP) + (20PDR * 4XP)	-->
 	<!--Feral Soldier-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']/property[@name='ExperienceGain']/@value">1000</set>					<!--	From 1000 XP, (285HP * 4XP) + (50PDR * 4XP)	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 1000 XP, (285HP * 4XP) + (50PDR * 4XP)	-->
 	<!--Feral Skateboarder-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSkateboarderFeral']/property[@name='ExperienceGain']/@value">1000</set>				<!--	From 700 XP, 285HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSkateboarderFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 285HP * 4XP	-->
 	<!--Feral Old Timer-->
-	<set xpath="/entity_classes/entity_class[@name='zombieOldTimerFeral']/property[@name='ExperienceGain']/@value">1000</set>					<!--	From 700 XP, 285HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieOldTimerFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 285HP * 4XP	-->
 	<!--Feral Farmer-->
-	<set xpath="/entity_classes/entity_class[@name='zombieFarmerFeral']/property[@name='ExperienceGain']/@value">1000</set>						<!--	From 700 XP, 285HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieFarmerFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 285HP * 4XP	-->
 	<!--Feral Fat Mama Zombalina-->
-	<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']/property[@name='ExperienceGain']/@value">1000</set>					<!--	From 700 XP, 380HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']/property[@name='ExperienceGain']/@value">1000</set><!--	From 700 XP, 380HP * 4XP	-->
 	<!--Feral Moe-->
-	<set xpath="/entity_classes/entity_class[@name='zombieMoeFeral']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 1000 XP, 475HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieMoeFeral']/property[@name='ExperienceGain']/@value">1200</set><!--	From 1000 XP, 475HP * 4XP	-->
 	<!--Feral Fat Cop-->
-	<set xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 1000 XP, 475HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']/property[@name='ExperienceGain']/@value">1200</set><!--	From 1000 XP, 475HP * 4XP	-->
 	<!--Feral Wight-->
-	<set xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 1000 XP, 530HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='ExperienceGain']/@value">1200</set><!--	From 1000 XP, 530HP * 4XP	-->
 	<!--Feral Biker-->
-	<set xpath="/entity_classes/entity_class[@name='zombieBikerFeral']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 1000 XP, 530HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieBikerFeral']/property[@name='ExperienceGain']/@value">1200</set><!--	From 1000 XP, 530HP * 4XP	-->
 	<!--Feral Lumber Jack-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSnowFeral']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 1000 XP, 570HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSnowFeral']/property[@name='ExperienceGain']/@value">1200</set><!--	From 1000 XP, 570HP * 4XP	-->
 	<!--Feral Fat Hawaiian-->
-	<set xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']/property[@name='ExperienceGain']/@value">1200</set>				<!--	From 1000 XP, 570HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']/property[@name='ExperienceGain']/@value">1200</set><!--	From 1000 XP, 570HP * 4XP	-->
 	<!--Feral Wight-->
-	<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']/property[@name='ExperienceGain']/@value">1200</set>					<!--	From 1000 XP, 530HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']/property[@name='ExperienceGain']/@value">1200</set><!--	From 1000 XP, 530HP * 4XP	-->
 	<!--Radiated Screamer-->
-	<set xpath="/entity_classes/entity_class[@name='zombieScreamerRadiated']/property[@name='ExperienceGain']/@value">1200</set>				<!--	From 900 XP		-->
+	<set xpath="/entity_classes/entity_class[@name='zombieScreamerRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP		-->
 	<!--Radiated Arlene-->
-	<set xpath="/entity_classes/entity_class[@name='zombieArleneRadiated']/property[@name='ExperienceGain']/@value">1200</set>					<!--	From 900 XP		-->
+	<set xpath="/entity_classes/entity_class[@name='zombieArleneRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP		-->
 	<!--Radiated Lab Zombalina-->
-	<set xpath="/entity_classes/entity_class[@name='zombieLabRadiated']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 900 XP		-->
+	<set xpath="/entity_classes/entity_class[@name='zombieLabRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP		-->
 	<!--Radiated Marlene-->
-	<set xpath="/entity_classes/entity_class[@name='zombieMarleneRadiated']/property[@name='ExperienceGain']/@value">1200</set>					<!--	From 900 XP		-->
+	<set xpath="/entity_classes/entity_class[@name='zombieMarleneRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP		-->
 	<!--Radiated Cheerleader-->
-	<set xpath="/entity_classes/entity_class[@name='zombieCheerleaderRadiated']/property[@name='ExperienceGain']/@value">1200</set>				<!--	From 900 XP		-->
+	<set xpath="/entity_classes/entity_class[@name='zombieCheerleaderRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP		-->
 	<!--Radiated Boe-->
-	<set xpath="/entity_classes/entity_class[@name='zombieBoeRadiated']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 900 XP, 540HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieBoeRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP, 540HP * 4XP	-->
 	<!--Radiated Joe-->
-	<set xpath="/entity_classes/entity_class[@name='zombieJoeRadiated']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 900 XP, 540HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieJoeRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP, 540HP * 4XP	-->
 	<!--Radiated Yo-->
-	<set xpath="/entity_classes/entity_class[@name='zombieYoRadiated']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 900 XP, 540HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieYoRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP, 540HP * 4XP	-->
 	<!--Radiated Steve-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSteveRadiated']/property[@name='ExperienceGain']/@value">1200</set>					<!--	From 900 XP, 540HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSteveRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP, 540HP * 4XP	-->
 	<!--Radiated Spider-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSpiderRadiated']/property[@name='ExperienceGain']/@value">1200</set>					<!--	From 900 XP, 540HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSpiderRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP, 540HP * 4XP	-->
 	<!--Radiated Soldier-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']/property[@name='ExperienceGain']/@value">1200</set>					<!--	From 1250 XP, 540HP * 4XP + (50PDR * 4XP)	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 1250 XP, 540HP * 4XP + (50PDR * 4XP)	-->
 	<!--Radiated Skateboarder-->
-	<set xpath="/entity_classes/entity_class[@name='zombieSkateboarderRadiated']/property[@name='ExperienceGain']/@value">1200</set>			<!--	From 900 XP, 540HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieSkateboarderRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP, 540HP * 4XP	-->
 	<!--Radiated Old Timer-->
-	<set xpath="/entity_classes/entity_class[@name='zombieOldTimerRadiated']/property[@name='ExperienceGain']/@value">1200</set>				<!--	From 900 XP, 540HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieOldTimerRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP, 540HP * 4XP	-->
 	<!--Radiated Fat Mama-->
-	<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatRadiated']/property[@name='ExperienceGain']/@value">1200</set>				<!--	From 900 XP, 720HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP, 720HP * 4XP	-->
 	<!--Radiated Moe-->
-	<set xpath="/entity_classes/entity_class[@name='zombieMoeRadiated']/property[@name='ExperienceGain']/@value">1200</set>						<!--	From 900 XP, 900HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieMoeRadiated']/property[@name='ExperienceGain']/@value">1200</set><!--	From 900 XP, 900HP * 4XP	-->
 	<!--Radiated Wight-->
-	<set xpath="/entity_classes/entity_class[@name='zombieWightRadiated']/property[@name='ExperienceGain']/@value">1600</set>					<!--	From 900 XP, 1010HP * 4XP	-->
+	<set xpath="/entity_classes/entity_class[@name='zombieWightRadiated']/property[@name='ExperienceGain']/@value">1600</set><!--	From 900 XP, 1010HP * 4XP	-->
 	<!--Radiated Biker-->
-	<set xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/property[@name='ExperienceGain']/@value">1400</set>					<!--	From 900 XP, (1010HP * 4XP)	+ (20PDR * 4XP) -->
+	<set xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/property[@name='ExperienceGain']/@value">1400</set><!--	From 900 XP, (1010HP * 4XP)	+ (20PDR * 4XP) -->
 	<!--Legendary Lab Zombalina-->
-	<append xpath="/entity_classes/entity_class[@name='legendaryZombieLab']"><property name="ExperienceGain" value="2500"/></append>			<!--	From 550 XP, (900HP * 4XP)	-->
+	<append xpath="/entity_classes/entity_class[@name='legendaryZombieLab']"><property name="ExperienceGain" value="2500"/></append><!--	From 550 XP, (900HP * 4XP)	-->
 	<!--Legendary Business Man-->
-	<append xpath="/entity_classes/entity_class[@name='legendaryZombieBusinessMan']"><property name="ExperienceGain" value="2500"/></append>	<!--	From 550 XP, (900HP * 4XP)	-->
+	<append xpath="/entity_classes/entity_class[@name='legendaryZombieBusinessMan']"><property name="ExperienceGain" value="2500"/></append><!--	From 550 XP, (900HP * 4XP)	-->
 	<!--Legendary Utility Worker-->
-	<append xpath="/entity_classes/entity_class[@name='legendaryZombieUtilityWorker']"><property name="ExperienceGain" value="2500"/></append>	<!--	From 550 XP, (900HP * 4XP) + (20PDR * 4XP)	-->
+	<append xpath="/entity_classes/entity_class[@name='legendaryZombieUtilityWorker']"><property name="ExperienceGain" value="2500"/></append><!--	From 550 XP, (900HP * 4XP) + (20PDR * 4XP)	-->
 	<!--Grace the boar-->
-	<set xpath="/entity_classes/entity_class[@name='animalBossGrace']/property[@name='ExperienceGain']/@value">2500</set>						<!--	From 1000 XP, (900HP * 4XP)	-->
+	<set xpath="/entity_classes/entity_class[@name='animalBossGrace']/property[@name='ExperienceGain']/@value">2500</set><!--	From 1000 XP, (900HP * 4XP)	-->
 
 	<!-- Modifies the meat drop rate of animals -->
 	<set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">18</set>
@@ -276,7 +276,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -285,14 +285,14 @@
 			<property name="HandItem" value="meleeHandZombieCop"/>
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 
-			<property name="ExperienceGain" value="1800"/> <!-- XP strong -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1800"/><!-- XP strong -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="532"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -319,17 +319,17 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
-			<property name="ExperienceGain" value="2400"/> <!-- XP strong radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="2400"/><!-- XP strong radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="1010"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8.1"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
@@ -354,7 +354,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -364,7 +364,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -374,7 +374,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -385,12 +385,12 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="2000"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="2000"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -400,20 +400,20 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="541"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4.5"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -437,7 +437,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -445,11 +445,11 @@
 			<property name="MoveSpeed" value="0.75"/>
 			<property name="MoveSpeedAggro" value=".6, 1.3"/>
 
-			<property name="ExperienceGain" value="2000"/> <!-- XP grunt feral -->
+			<property name="ExperienceGain" value="2000"/><!-- XP grunt feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="250"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/> <!-- base_set does not work here. Because reasons -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/><!-- base_set does not work here. Because reasons -->
 			</effect_group>
 		</entity_class>
 
@@ -474,11 +474,11 @@
 
 			<!-- Stealth -->
 			<property name="SleeperSmellWakeThreshold" value="20,50"/>
-			<property name="SmellAlertThreshold" value="20"/> <!-- for awake zombies -->
+			<property name="SmellAlertThreshold" value="20"/><!-- for awake zombies -->
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -486,11 +486,11 @@
 			<property name="CanClimbLadders" value="true"/>
 			<property name="HandItem" value="meleeHandZombieStrong"/>
 			<property name="JumpMaxDistance" value=".5, .6"/>
-			<property name="ExperienceGain" value="2000"/> <!-- XP strong -->
+			<property name="ExperienceGain" value="2000"/><!-- XP strong -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -500,7 +500,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -511,12 +511,12 @@
 
 			<property name="HandItem" value="meleeHandZombieCopFeral"/>
 
-			<property name="ExperienceGain" value="1800"/> <!-- XP strong -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1800"/><!-- XP strong -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="570"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -526,7 +526,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -534,13 +534,13 @@
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 			<property name="HandItem" value="meleeHandZombieCopRadiated"/>
-			<property name="ExperienceGain" value="2400"/> <!-- XP strong radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="2400"/><!-- XP strong radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="902"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="6.5"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -558,14 +558,14 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -575,7 +575,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -586,11 +586,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="2000"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="2000"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -600,7 +600,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -609,11 +609,11 @@
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="541"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4.5"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -640,18 +640,18 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="HandItem" value="meleeHandZombieStrong"/>
 			<property name="JumpMaxDistance" value="1.4, 1.5"/>
-			<property name="ExperienceGain" value="2000"/> <!-- XP strong -->
+			<property name="ExperienceGain" value="2000"/><!-- XP strong -->
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="250"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -661,7 +661,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -672,12 +672,12 @@
 
 			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
 
-			<property name="ExperienceGain" value="1800"/> <!-- XP strong -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1800"/><!-- XP strong -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="475"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -687,18 +687,18 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="2400"/> <!-- XP strong radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="2400"/><!-- XP strong radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="902"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -722,7 +722,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -730,7 +730,7 @@
 			<property name="HandItem" value="meleeHandZombie01"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="125"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -741,7 +741,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -750,11 +750,11 @@
 			<property name="PainResistPerHit" value=".7"/><!-- Feral -->
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="237"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -768,16 +768,16 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="451"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -791,13 +791,13 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="125"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -812,16 +812,16 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="237"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -837,17 +837,17 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="451"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -860,7 +860,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -869,9 +869,9 @@
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="800"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<passive_effect name="EntityDamage" operation="perc_add" value="1"/> <!-- Boss damage -->
-				<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="1"/><!-- Boss damage -->
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/><!-- Boss regen, 1% -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 			</effect_group>
 		</entity_class>
@@ -895,7 +895,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -904,7 +904,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -914,7 +914,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -925,11 +925,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="142"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -939,7 +939,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -950,11 +950,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="270"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="2.5"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -977,7 +977,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -987,7 +987,7 @@
 			<property name="TintMaterial2" value="32,24,20"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="125"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -997,7 +997,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1008,11 +1008,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="237"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1022,18 +1022,18 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="451"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -1057,7 +1057,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1065,7 +1065,7 @@
 			<property name="HandItem" value="meleeHandZombie01"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="125"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1075,7 +1075,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1086,11 +1086,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="237"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1100,18 +1100,18 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="451"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -1129,14 +1129,14 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1146,7 +1146,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1157,11 +1157,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1171,19 +1171,19 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="541"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -1201,14 +1201,14 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1218,7 +1218,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1229,12 +1229,12 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1244,20 +1244,20 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="541"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -1275,14 +1275,14 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1292,7 +1292,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1302,13 +1302,13 @@
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--><!-- Feral damage -->
 			</effect_group>
 		</entity_class>
 
@@ -1318,7 +1318,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1328,9 +1328,9 @@
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="900"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<passive_effect name="EntityDamage" operation="perc_add" value="1"/> <!-- Boss damage -->
-				<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="1"/><!-- Boss damage -->
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/><!-- Boss regen, 1% -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 			</effect_group>
 		</entity_class>
@@ -1354,16 +1354,16 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="HandItem" value="meleeHandZombieStrong"/>
-			<property name="ExperienceGain" value="1500"/> <!-- XP strong -->
+			<property name="ExperienceGain" value="1500"/><!-- XP strong -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1373,7 +1373,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1384,13 +1384,13 @@
 
 			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
 
-			<property name="ExperienceGain" value="1800"/> <!-- XP strong -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1800"/><!-- XP strong -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="570"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1424,7 +1424,7 @@
 			<property name="AITask-1" value="Leap"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="DestroyArea"/>
-			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1439,7 +1439,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1449,7 +1449,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1461,11 +1461,11 @@
 
 			<property name="HandItem" value="meleeHandZombie02Feral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1476,7 +1476,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1484,11 +1484,11 @@
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 			<property name="HandItem" value="meleeHandZombie02Feral"/>
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="541"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect event="onSelfFirstSpawn" action="AddBuff" buff="zombieRadiatedBuff40"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
@@ -1512,7 +1512,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1521,7 +1521,7 @@
 			<property name="HandItemCrawler" value="meleeHandZombieBurningCrawler"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1544,7 +1544,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1552,7 +1552,7 @@
 			<property name="HandItem" value="meleeHandZombie01"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="125"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1562,7 +1562,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1573,11 +1573,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="237"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1602,7 +1602,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1610,11 +1610,11 @@
 			<property name="HandItem" value="meleeHandZombieCop"/>
 			<property name="JumpMaxDistance" value=".9, 1"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP strong -->
+			<property name="ExperienceGain" value="1500"/><!-- XP strong -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1624,7 +1624,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1635,12 +1635,12 @@
 
 			<property name="HandItem" value="meleeHandZombieCopFeral"/>
 
-			<property name="ExperienceGain" value="1800"/> <!-- XP strong -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1800"/><!-- XP strong -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="570"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1661,7 +1661,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1679,7 +1679,7 @@
 			<property name="LegCrippleThreshold" value="0"/>
 			<property name="KnockdownProneDamageThreshold" value="0"/>
 			<property name="KnockdownKneelDamageThreshold" value="0"/>
-			<property name="LegsExplosionDamageMultiplier" value="2"/> <!-- volatile so vulnerable to land mines/explosives -->
+			<property name="LegsExplosionDamageMultiplier" value="2"/><!-- volatile so vulnerable to land mines/explosives -->
 			<property name="ArmsExplosionDamageMultiplier" value="2"/>
 			<property name="HeadExplosionDamageMultiplier" value="2"/>
 			<property name="ChestExplosionDamageMultiplier" value="2"/>
@@ -1695,11 +1695,11 @@
 			<property name="Explosion.DamageBonus.earth" value="0"/>
 			<property name="JumpMaxDistance" value="0, 0"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP strong -->
+			<property name="ExperienceGain" value="1500"/><!-- XP strong -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="250"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 			</effect_group>
 		</entity_class>
@@ -1710,7 +1710,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1723,11 +1723,11 @@
 			<property name="Explosion.BlockDamage" value="650"/>
 			<property name="Explosion.EntityDamage" value="200"/>
 
-			<property name="ExperienceGain" value="1800"/> <!-- XP strong -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1800"/><!-- XP strong -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="475"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 			</effect_group>
 		</entity_class>
@@ -1739,7 +1739,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1750,11 +1750,11 @@
 			<property name="Explosion.BlockDamage" value="750"/>
 			<property name="Explosion.EntityDamage" value="250"/>
 
-			<property name="ExperienceGain" value="2400"/> <!-- XP strong radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="2400"/><!-- XP strong radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="902"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="8"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
@@ -1770,7 +1770,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1778,7 +1778,7 @@
 			<property name="HandItem" value="meleeHandZombieHazMat"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -1802,7 +1802,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1810,7 +1810,7 @@
 			<property name="HandItem" value="meleeHandZombieWorker"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
 			</effect_group>
 		</entity_class>
@@ -1821,7 +1821,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1832,11 +1832,11 @@
 
 			<property name="HandItem" value="meleeHandZombieWorkerFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
 			</effect_group>
 		</entity_class>
@@ -1847,7 +1847,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1857,9 +1857,9 @@
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="900"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<passive_effect name="EntityDamage" operation="perc_add" value="1"/> <!-- Boss damage -->
-				<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="1"/><!-- Boss damage -->
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/><!-- Boss regen, 1% -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 			</effect_group>
 		</entity_class>
@@ -1883,17 +1883,17 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="HandItem" value="meleeHandZombieWorker"/>
-			<property name="ExperienceGain" value="1500"/> <!-- XP strong -->
+			<property name="ExperienceGain" value="1500"/><!-- XP strong -->
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 			</effect_group>
 		</entity_class>
@@ -1904,7 +1904,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1915,11 +1915,11 @@
 
 			<property name="HandItem" value="meleeHandZombieWorkerFeral"/>
 
-			<property name="ExperienceGain" value="1800"/> <!-- XP strong -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1800"/><!-- XP strong -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 			</effect_group>
 		</entity_class>
@@ -1931,7 +1931,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1942,11 +1942,11 @@
 
 			<property name="HandItem" value="meleeHandZombieWorkerFeral"/>
 
-			<property name="ExperienceGain" value="2400"/> <!-- XP strong radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="2400"/><!-- XP strong radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="541"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
@@ -1962,7 +1962,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -1986,7 +1986,7 @@
 			<property name="Explosion.DamageBonus.earth" value=".1"/>
 			<property name="StompsSpikes" value="true"/>
 			<property name="ExplodeDelay" value="2"/>
-			<property name="ExplodeHealthThreshold" value="0"/> <!-- Disable Health explosion -->
+			<property name="ExplodeHealthThreshold" value="0"/><!-- Disable Health explosion -->
 			<property name="SoundExplodeWarn" value="demolitionzexplodewarning"/>
 			<property name="SoundTick" value="demolitionz_beep,.5,.9"/>
 
@@ -2015,15 +2015,15 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
-			<property name="ExperienceGain" value="413"/> <!-- XP grunt -->
+			<property name="ExperienceGain" value="413"/><!-- XP grunt -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -2033,7 +2033,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -2044,11 +2044,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -2058,18 +2058,18 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="541"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -2094,7 +2094,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -2102,7 +2102,7 @@
 			<property name="HandItem" value="meleeHandZombie01"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="125"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -2112,7 +2112,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -2123,11 +2123,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="237"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -2137,18 +2137,18 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="451"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -2162,14 +2162,14 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -2179,7 +2179,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -2190,11 +2190,11 @@
 
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -2204,19 +2204,19 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="1800"/> <!-- XP grunt radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="1800"/><!-- XP grunt radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="541"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
@@ -2231,17 +2231,17 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="HandItem" value="meleeHandZombieStrong"/>
-			<property name="ExperienceGain" value="1500"/> <!-- XP strong -->
+			<property name="ExperienceGain" value="1500"/><!-- XP strong -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="280"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
 			</effect_group>
 		</entity_class>
@@ -2252,7 +2252,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -2262,12 +2262,12 @@
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
 			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
-			<property name="ExperienceGain" value="1800"/> <!-- XP strong -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1800"/><!-- XP strong -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="532"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
 			</effect_group>
 		</entity_class>
@@ -2278,19 +2278,19 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
 			<!-- Gameplay -->
 			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
 			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
-			<property name="ExperienceGain" value="2400"/> <!-- XP strong radiated -->
-			<property name="LootDropProb" value=".03"/> <!-- Radiated -->
+			<property name="ExperienceGain" value="2400"/><!-- XP strong radiated -->
+			<property name="LootDropProb" value=".03"/><!-- Radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="1010"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="9"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
@@ -2306,7 +2306,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -2315,7 +2315,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -2328,7 +2328,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -2339,11 +2339,11 @@
 
 			<property name="HandItem" value="meleeHandZombieStrongFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="285"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -2353,7 +2353,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -2362,7 +2362,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="125"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 
@@ -2373,7 +2373,7 @@
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> <!-- class,maxChaseTime (return home) -->
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/><!-- class,maxChaseTime (return home) -->
 			<property name="AITarget-1" value="BlockingTargetTask"/>
 			<property name="AITarget-2" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 
@@ -2384,11 +2384,11 @@
 
 			<property name="HandItem" value="meleeHandZombieStripperFeral"/>
 
-			<property name="ExperienceGain" value="1500"/> <!-- XP grunt feral -->
-			<property name="LootDropProb" value=".03"/> <!-- Feral -->
+			<property name="ExperienceGain" value="1500"/><!-- XP grunt feral -->
+			<property name="LootDropProb" value=".03"/><!-- Feral -->
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="237"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
 			</effect_group>
 		</entity_class>
 	</append>
@@ -2426,15 +2426,15 @@
 			<!-- Gameplay -->
 			<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
 			<property name="SizeScale" value="1.18"/>
-			<property name="ExperienceGain" value="3500"/> <!-- XP strong radiated -->
+			<property name="ExperienceGain" value="3500"/><!-- XP strong radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-			<property name="LootDropProb" value=".25"/> <!-- Radiated -->
+			<property name="LootDropProb" value=".25"/><!-- Radiated -->
 			<property name="MoveSpeedAggro" value="1, 1.5"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="2200"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--><!-- Feral damage -->
 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
@@ -2470,15 +2470,15 @@
 			<!-- Gameplay -->
 			<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
 			<property name="SizeScale" value="1.18"/>
-			<property name="ExperienceGain" value="3500"/> <!-- XP strong radiated -->
+			<property name="ExperienceGain" value="3500"/><!-- XP strong radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-			<property name="LootDropProb" value=".25"/> <!-- Radiated -->
+			<property name="LootDropProb" value=".25"/><!-- Radiated -->
 			<propertyname name="MoveSpeedAggro" value="1, 1.5"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="2200"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--><!-- Feral damage -->
 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
@@ -2513,15 +2513,15 @@
 			<!-- Gameplay -->
 			<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
 			<property name="SizeScale" value="1.18"/>
-			<property name="ExperienceGain" value="3500"/> <!-- XP strong radiated -->
+			<property name="ExperienceGain" value="3500"/><!-- XP strong radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-			<property name="LootDropProb" value=".25"/> <!-- Radiated -->
+			<property name="LootDropProb" value=".25"/><!-- Radiated -->
 			<property name="MoveSpeedAggro" value="1, 1.5"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="2200"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--><!-- Feral damage -->
 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
@@ -2556,15 +2556,15 @@
 			<!-- Gameplay -->
 			<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
 			<property name="SizeScale" value="1.18"/>
-			<property name="ExperienceGain" value="3500"/> <!-- XP strong radiated -->
+			<property name="ExperienceGain" value="3500"/><!-- XP strong radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-			<property name="LootDropProb" value=".25"/> <!-- Radiated -->
+			<property name="LootDropProb" value=".25"/><!-- Radiated -->
 			<property name="MoveSpeedAggro" value="1, 1.4"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="2200"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--><!-- Feral damage -->
 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
@@ -2600,15 +2600,15 @@
 			<!-- Gameplay -->
 			<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
 			<property name="SizeScale" value="1.18"/>
-			<property name="ExperienceGain" value="3500"/> <!-- XP strong radiated -->
+			<property name="ExperienceGain" value="3500"/><!-- XP strong radiated -->
 			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-			<property name="LootDropProb" value=".25"/> <!-- Radiated -->
+			<property name="LootDropProb" value=".25"/><!-- Radiated -->
 			<property name="MoveSpeedAggro" value="1, 1.2"/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="2200"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/><!-- Zombie HP scale -->
+				<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--><!-- Feral damage -->
 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff=""/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
@@ -2656,7 +2656,7 @@
 			<property name="Explosion.DamageBonus.earth" value=".1"/>
 			<property name="StompsSpikes" value="true"/>
 			<property name="ExplodeDelay" value="2"/>
-			<property name="ExplodeHealthThreshold" value="0"/> <!-- Disable Health explosion -->
+			<property name="ExplodeHealthThreshold" value="0"/><!-- Disable Health explosion -->
 			<property name="SoundExplodeWarn" value="demolitionzexplodewarning"/>
 			<property name="SoundTick" value="demolitionz_beep,.5,.9"/>
 
@@ -2674,6 +2674,64 @@
 				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>
+		</entity_class>
+	</append>
+
+	<append xpath="/entity_classes">
+		<entity_class name="zombieEnragedDemo" extends="zombieSoldier">
+			<property name="Tags" value="entity,zombie,walker,boss"/>
+			<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardDemolitionRagdoll.prefab"/>
+			<property name="Class" value="EntityZombieCop"/>
+			<property name="Mass" value="300"/>
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->
+
+			<property name="SoundRandom" value="demolitionzroam"/>
+			<property name="SoundAlert" value="demolitionzalert"/>
+			<property name="SoundAttack" value="demolitionzattack"/>
+			<property name="SoundHurt" value="demolitionzpain"/>
+			<property name="SoundDeath" value="demolitionzdeath"/>
+			<property name="SoundSense" value="demolitionzsense"/>
+			<property name="SoundFootstepModifier" value="bear_footstep"/>
+
+			<!-- Gameplay -->
+			<property name="SizeScale" value="1.28"/>
+			<property name="HandItem" value="meleeHandZombieDemolition"/>
+			<property name="JumpMaxDistance" value="1, 2"/>
+			<property name="PainResistPerHit" value=".5"/>
+			<property name="Explosion.ParticleIndex" value="2"/>
+			<property name="Explosion.RadiusEntities" value="6"/>
+			<property name="Explosion.EntityDamage" value="100"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="ExplodeDelay" value="99999"/>
+			<property name="ExplodeHealthThreshold" value="0"/><!-- Disable Health explosion -->
+			<property name="SoundExplodeWarn" value="demolitionzexplodewarning"/>
+			<property name="SoundTick" value="demolitionz_beep,.7,.9"/>
+
+			<property name="ExperienceGain" value="750"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+			<property name="LootDropProb" value="0.0001"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="250"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="p_smokestorm" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="p_hotembersZombie" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="p_hotembers" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="p_big_smoke" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="p_smoke" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
 			</effect_group>
 		</entity_class>
 	</append>

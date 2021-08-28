@@ -2,13 +2,13 @@
 
 	<!-- Silver Ring, localised: Platinum Diamond Ring -->
 
-	<append xpath="/items">	
+	<append xpath="/items">
 		<item name="accessorySilverRing">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessorySilverRing"/>
-			<property name="DescriptionKey" value="accessorySilverRingDesc" />
+			<property name="DescriptionKey" value="accessorySilverRingDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -26,7 +26,7 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessorySilverRing"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessorySilverRing"/>
 			</effect_group>
@@ -35,11 +35,11 @@
 		<!-- Gold Flower Ring, localised: Gold Flower Ring -->
 
 		<item name="accessoryGoldFlowerRing">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryGoldFlowerRing"/>
-			<property name="DescriptionKey" value="accessoryGoldFlowerRingDesc" />
+			<property name="DescriptionKey" value="accessoryGoldFlowerRingDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -57,7 +57,7 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryGoldFlowerRing"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryGoldFlowerRing"/>
 			</effect_group>
@@ -66,11 +66,11 @@
 		<!-- Gold Studded Ring, localised: Diamond Studded Gold Ring -->
 
 		<item name="accessoryGoldStuddedRing">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryGoldStuddedRing"/>
-			<property name="DescriptionKey" value="accessoryGoldStuddedRingDesc" />
+			<property name="DescriptionKey" value="accessoryGoldStuddedRingDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -88,7 +88,7 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryGoldStuddedRing"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryGoldStuddedRing"/>
 			</effect_group>
@@ -97,11 +97,11 @@
 		<!-- Ruby Diamond Ring, localised: Ruby Diamond Studded Ring -->
 
 		<item name="accessoryRubyDiamondRing">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryRubyDiamondRing"/>
-			<property name="DescriptionKey" value="accessoryRubyDiamondRingDesc" />
+			<property name="DescriptionKey" value="accessoryRubyDiamondRingDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -119,7 +119,7 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryRubyDiamondRing"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryRubyDiamondRing"/>
 			</effect_group>
@@ -128,11 +128,11 @@
 		<!-- Ruby Heart Ring, localised: Ruby Heart Ring -->
 
 		<item name="accessoryRubyHeartRing">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryRubyHeartRing"/>
-			<property name="DescriptionKey" value="accessoryRubyHeartRingDesc" />
+			<property name="DescriptionKey" value="accessoryRubyHeartRingDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -150,7 +150,7 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryRubyHeartRing"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryRubyHeartRing"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryRubyHeartRingDay"/>
@@ -161,12 +161,12 @@
 		<!-- Swagger Necklace, localised: Swag Necklace [WIP] -->
 
 		<item name="accessorySwaggerNecklace">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessorySwaggerNecklace"/>
 			<property name="NameKey" value="accessorySwaggerNecklace"/>
-			<property name="DescriptionKey" value="accessorySwaggerNecklaceDesc" />
+			<property name="DescriptionKey" value="accessorySwaggerNecklaceDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -184,20 +184,20 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCombinedRings"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCombinedRings"/>
 			</effect_group>
-		</item>			
+		</item>
 
 		<!-- Crimson Earring, localised: Crimson Earring -->
 
 		<item name="accessoryCrimsonEarring">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryCrimsonEarring"/>
-			<property name="DescriptionKey" value="accessoryCrimsonEarringDesc" />
+			<property name="DescriptionKey" value="accessoryCrimsonEarringDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -215,20 +215,20 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryCrimsonEarring"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryCrimsonEarring"/>
 			</effect_group>
-		</item>			
+		</item>
 
 		<!-- Diamond Earring, localised: Diamond Earring -->
 
 		<item name="accessoryDiamondEarring">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryDiamondEarring"/>
-			<property name="DescriptionKey" value="accessoryDiamondEarringDesc" />
+			<property name="DescriptionKey" value="accessoryDiamondEarringDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -246,20 +246,20 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryDiamondEarring"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryDiamondEarring"/>
 			</effect_group>
-		</item>			
+		</item>
 
 		<!-- Emerald Necklace, localised: Emerald Necklace -->
 
 		<item name="accessoryEmeraldNecklace">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryEmeraldNecklace"/>
-			<property name="DescriptionKey" value="accessoryEmeraldNecklaceDesc" />
+			<property name="DescriptionKey" value="accessoryEmeraldNecklaceDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -277,51 +277,20 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryEmeraldNecklace"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryEmeraldNecklace"/>
 			</effect_group>
-		</item>			
-
-		<!-- Exquisite Necklace, localised: Exquisite Necklace -->
-
-		<item name="accessoryExquisiteNecklace">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
-			<!-- <property name="DisplayType" value="clothing"/> -->
-			<property name="Stacknumber" value="1"/>
-			<property name="CustomIcon" value="accessoryExquisiteNecklace"/>
-			<property name="DescriptionKey" value="accessoryExquisiteNecklaceDesc" />
-			<property name="Material" value="MRing"/>
-			<property name="DegradationBreaksAfter" value="false"/>
-			<property name="Encumbrance" value=".1"/>
-			<property name="Weight" value="1"/>
-			<property name="EconomicValue" value="2500"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Group" value="Clothing"/>
-			<property name="EquipSlot" value="Face"/>
-			<property class="UMA">
-				<property name="Mesh" value="piercings"/>
-				<property name="Overlay0" value="piercings"/>
-				<property name="Layer" value="1"/>
-				<property name="UISlot" value="Face"/>
-			</property>
-			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryExquisiteNecklace"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryExquisiteNecklace"/>
-			</effect_group>
-		</item>			
+		</item>
 
 		<!-- Gold Chain, localised: Gold Chain Necklace -->
 
 		<item name="accessoryGoldChain">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryGoldChain"/>
-			<property name="DescriptionKey" value="accessoryGoldChainDesc" />
+			<property name="DescriptionKey" value="accessoryGoldChainDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -339,20 +308,51 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryGoldChain"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryGoldChain"/>
 			</effect_group>
-		</item>			
+		</item>
+
+		<!-- Exquisite Necklace, localised: Exquisite Necklace -->
+
+		<item name="accessoryExquisiteNecklace">
+			<property name="Tags" value="accessorise"/>
+			<!-- <property name="DisplayType" value="clothing"/> -->
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="accessoryExquisiteNecklace"/>
+			<property name="DescriptionKey" value="accessoryExquisiteNecklaceDesc"/>
+			<property name="Material" value="MRing"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="Encumbrance" value=".1"/>
+			<property name="Weight" value="1"/>
+			<property name="EconomicValue" value="2500"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Group" value="Clothing"/>
+			<property name="EquipSlot" value="Face"/>
+			<property class="UMA">
+				<property name="Mesh" value="piercings"/>
+				<property name="Overlay0" value="piercings"/>
+				<property name="Layer" value="1"/>
+				<property name="UISlot" value="Face"/>
+			</property>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryExquisiteNecklace"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryExquisiteNecklace"/>
+			</effect_group>
+		</item>
 
 		<!-- Lavender Earring, localised: Lavender Earring -->
 
 		<item name="accessoryLavenderEarring">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryLavenderEarring"/>
-			<property name="DescriptionKey" value="accessoryLavenderEarringDesc" />
+			<property name="DescriptionKey" value="accessoryLavenderEarringDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -370,20 +370,20 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryLavenderEarring"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryLavenderEarring"/>
 			</effect_group>
-		</item>			
+		</item>
 
 		<!-- Ruby Necklace, localised: Ruby Necklace -->
 
 		<item name="accessoryRubyNecklace">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryRubyNecklace"/>
-			<property name="DescriptionKey" value="accessoryRubyNecklaceDesc" />
+			<property name="DescriptionKey" value="accessoryRubyNecklaceDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -401,20 +401,20 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryRubyNecklace"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryRubyNecklace"/>
 			</effect_group>
-		</item>			
+		</item>
 
 		<!-- Twinned necklace, localised: Twin-Chain Necklace -->
 
 		<item name="accessoryTwinNecklace">
-			<property name="Tags" value="moddedHead,head,clothing,accessorise"/>
+			<property name="Tags" value="accessorise"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryTwinNecklace"/>
-			<property name="DescriptionKey" value="accessoryTwinNecklaceDesc" />
+			<property name="DescriptionKey" value="accessoryTwinNecklaceDesc"/>
 			<property name="Material" value="MRing"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="Encumbrance" value=".1"/>
@@ -432,23 +432,23 @@
 				<property name="UISlot" value="Face"/>
 			</property>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffaccessoryTwinNecklace"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffaccessoryTwinNecklace"/>
 			</effect_group>
-		</item>			
+		</item>
 	</append>
 
 	<!-- Jewelry Boxes -->
 	<!-- Each box contains a specific ring, but the box items are indistinguishable which gives the illusion of randomness -->
 
-	<append xpath="/items">	
+	<append xpath="/items">
 		<!-- Ruby Heart Ring Box -->
 		<item name="accessoryJewerlyBox1">
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryRubyHeartRing"/>
 				<property name="Create_item_count" value="1"/>
@@ -460,7 +460,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryRubyDiamondRing"/>
 				<property name="Create_item_count" value="1"/>
@@ -472,7 +472,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryGoldStuddedRing"/>
 				<property name="Create_item_count" value="1"/>
@@ -484,7 +484,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryGoldFlowerRing"/>
 				<property name="Create_item_count" value="1"/>
@@ -496,7 +496,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessorySilverRing"/>
 				<property name="Create_item_count" value="1"/>
@@ -508,7 +508,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessorySwaggerNecklace"/>
 				<property name="Create_item_count" value="1"/>
@@ -520,7 +520,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryCrimsonEarring"/>
 				<property name="Create_item_count" value="1"/>
@@ -532,7 +532,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryDiamondEarring"/>
 				<property name="Create_item_count" value="1"/>
@@ -544,7 +544,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryEmeraldNecklace"/>
 				<property name="Create_item_count" value="1"/>
@@ -556,7 +556,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryExquisiteNecklace"/>
 				<property name="Create_item_count" value="1"/>
@@ -568,7 +568,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryGoldChain"/>
 				<property name="Create_item_count" value="1"/>
@@ -580,7 +580,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryLavenderEarring"/>
 				<property name="Create_item_count" value="1"/>
@@ -592,7 +592,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryRubyNecklace"/>
 				<property name="Create_item_count" value="1"/>
@@ -604,7 +604,7 @@
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryBox"/>
-			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc" />
+			<property name="DescriptionKey" value="accessoryJewerlyBoxDesc"/>
 			<property class="Action0">
 				<property name="Create_item" value="accessoryTwinNecklace"/>
 				<property name="Create_item_count" value="1"/>

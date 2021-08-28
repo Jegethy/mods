@@ -402,8 +402,8 @@
 			<reward type="SkillPoints" value="1"/>
 			<reward type="Item" id="vehicleMinibikePlaceable" value="1"/>
 			<reward type="Item" id="ammoGasCan" value="1000"/>
-			<reward type="Item" id="resourceRockSmall" ischosen="true" isfixed="true" value="1"/>
-			<reward type="Item" id="resourceRockSmall" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="accessoryGoldChain" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="accessoryEmeraldNecklace" ischosen="true" isfixed="true" value="1"/>
 
 		</quest>
 	</append>

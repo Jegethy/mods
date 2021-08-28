@@ -71,7 +71,7 @@
 	<!-- Ruby Diamond Ring - Maximum Health is 100, 10 life/sec, 25% Damage Mitigation, Immune to Stuns -->
 
 	<append xpath="/buffs">
-		<buff name="buffaccessoryRubyDiamondRing" name_key="buffaccessoryRubyDiamondRingName" description_key="buffaccessoryRubyDiamondRingDesc" tooltip_key="buffaccessoryRubyDiamondRingTooltip" icon="100maxhealth" remove_on_death="false">
+		<buff name="buffaccessoryRubyDiamondRing" name_key="buffaccessoryRubyDiamondRingName" description_key="buffaccessoryRubyDiamondRingDesc" showonhud="false" tooltip_key="buffaccessoryRubyDiamondRingTooltip" icon="100maxhealth" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
@@ -152,7 +152,7 @@
 	<!-- Combined Rings (Swagger Necklace) - 500% Resources, encumbered-->
 
 	<append xpath="/buffs">
-		<buff name="buffaccessoryCombinedRings" name_key="buffaccessorySwaggerNecklaceName" description_key="buffaccessorySwaggerNecklaceDesc" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryCombinedRings" name_key="buffaccessorySwaggerNecklaceName" description_key="buffaccessorySwaggerNecklaceDesc" showonhud="false" icon="swaggerneck" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
@@ -172,7 +172,7 @@
 	<!-- Crimson Earring - 300% Headshot damage, 0 body damage-->
 
 	<append xpath="/buffs">
-		<buff name="buffaccessoryCrimsonEarring" name_key="buffaccessoryCrimsonEarringName" description_key="buffaccessoryCrimsonEarringDesc" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryCrimsonEarring" name_key="buffaccessoryCrimsonEarringName" description_key="buffaccessoryCrimsonEarringDesc" showonhud="false" icon="headshotsonlybuff" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
@@ -197,7 +197,7 @@
 	<!-- Diamond Earring - Scaling damage -->
 
 	<append xpath="/buffs">
-		<buff name="buffaccessoryDiamondEarring" name_key="buffaccessoryDiamondEarringName" description_key="buffaccessoryDiamondEarringDesc" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryDiamondEarring" name_key="buffaccessoryDiamondEarringName" description_key="buffaccessoryDiamondEarringDesc" showonhud="false" icon="diamondneckbuff" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
@@ -211,21 +211,21 @@
 				<passive_effect name="EntityDamage" operation="perc_add" value=".25"/>
 				<passive_effect name="HealthLoss" operation="perc_add" value=".50"/>
 			</effect_group>
-			
+
 			<effect_group>
 				<requirement name="PlayerLevel" operation="GTE" value="101"/>
 				<requirement name="PlayerLevel" operation="LT" value="200"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".50"/>
 				<passive_effect name="HealthLoss" operation="perc_add" value="1"/>
 			</effect_group>
-			
+
 			<effect_group>
 				<requirement name="PlayerLevel" operation="GTE" value="201"/>
 				<requirement name="PlayerLevel" operation="LT" value="299"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".75"/>
 				<passive_effect name="HealthLoss" operation="perc_add" value="1.50"/>
 			</effect_group>
-			
+
 			<effect_group>
 				<requirement name="PlayerLevel" operation="GTE" value="300"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
@@ -233,11 +233,11 @@
 			</effect_group>
 		</buff>
 	</append>
-	
+
 	<!-- Emerald Necklace -->
 
 	<append xpath="/buffs">
-		<buff name="buffaccessoryEmeraldNecklace" name_key="buffaccessoryEmeraldNecklaceName" description_key="buffaccessoryEmeraldNecklaceDesc" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryEmeraldNecklace" name_key="buffaccessoryEmeraldNecklaceName" description_key="buffaccessoryEmeraldNecklaceDesc" showonhud="false" icon="emeraldencase" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
@@ -247,33 +247,18 @@
 			</effect_group>
 
 			<effect_group>
-
+				<passive_effect name="HealthLoss" operation="perc_add" value="-0.1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.1"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".1"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
 			</effect_group>
 		</buff>
 	</append>
-	
-	<!-- Exquisite Necklace -->
 
-	<append xpath="/buffs">
-		<buff name="buffaccessoryExquisiteNecklace" name_key="buffaccessoryExquisiteNecklaceName" description_key="buffaccessoryExquisiteNecklaceDesc" icon="noarmour" remove_on_death="false">
-			<stack_type value="ignore"/>
-			<update_rate value="0.5"/>
-			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryExquisiteNecklace"/>
-			</effect_group>
-
-			<effect_group>
-
-			</effect_group>
-		</buff>
-	</append>
-	
 	<!-- Gold Chain -->
 
 	<append xpath="/buffs">
-		<buff name="buffaccessoryGoldChain" name_key="buffaccessoryGoldChainName" description_key="buffaccessoryGoldChainDesc" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryGoldChain" name_key="buffaccessoryGoldChainName" description_key="buffaccessoryGoldChainDesc" showonhud="false" icon="simpstrength" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
@@ -283,15 +268,18 @@
 			</effect_group>
 
 			<effect_group>
-
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.1"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".1"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
 			</effect_group>
 		</buff>
 	</append>
-	
+
 	<!-- Lavender Earring -->
 
 	<append xpath="/buffs">
-		<buff name="buffaccessoryLavenderEarring" name_key="buffaccessoryLavenderEarringName" description_key="buffaccessoryLavenderEarringDesc" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryLavenderEarring" name_key="buffaccessoryLavenderEarringName" description_key="buffaccessoryLavenderEarringDesc" showonhud="false" icon="noarmour" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
@@ -301,15 +289,33 @@
 			</effect_group>
 
 			<effect_group>
-
+				<passive_effect name="RunSpeed" operation="perc_add" value="0"/>
 			</effect_group>
 		</buff>
 	</append>
-	
+
+	<!-- Exquisite Necklace -->
+
+	<append xpath="/buffs">
+		<buff name="buffaccessoryExquisiteNecklace" name_key="buffaccessoryExquisiteNecklaceName" description_key="buffaccessoryExquisiteNecklaceDesc" showonhud="false" icon="noarmour" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<update_rate value="0.5"/>
+			<effect_group>
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryExquisiteNecklace"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_add" value="0"/>
+			</effect_group>
+		</buff>
+	</append>
+
 	<!-- Ruby Necklace -->
 
 	<append xpath="/buffs">
-		<buff name="buffaccessoryRubyNecklace" name_key="buffaccessoryRubyNecklaceName" description_key="buffaccessoryRubyNecklaceDesc" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryRubyNecklace" name_key="buffaccessoryRubyNecklaceName" description_key="buffaccessoryRubyNecklaceDesc" icon="noarmour" showonhud="false" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
@@ -319,15 +325,15 @@
 			</effect_group>
 
 			<effect_group>
-
+				<passive_effect name="RunSpeed" operation="perc_add" value="0"/>
 			</effect_group>
 		</buff>
 	</append>
-	
+
 	<!-- Twinned Necklace -->
 
 	<append xpath="/buffs">
-		<buff name="buffaccessoryTwinNecklace" name_key="buffaccessoryTwinNecklaceName" description_key="buffaccessoryTwinNecklaceDesc" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryTwinNecklace" name_key="buffaccessoryTwinNecklaceName" description_key="buffaccessoryTwinNecklaceDesc" icon="noarmour" showonhud="false" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
@@ -337,9 +343,9 @@
 			</effect_group>
 
 			<effect_group>
-
+				<passive_effect name="RunSpeed" operation="perc_add" value="0"/>
 			</effect_group>
 		</buff>
 	</append>
-	
+
 </configs>

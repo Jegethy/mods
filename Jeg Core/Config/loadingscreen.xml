@@ -1,5 +1,0 @@
-<configs>
-    <append xpath="/doc/tips">
-        <tip key="loadingTipSeasonalWeather" />
-    </append>
-</configs>

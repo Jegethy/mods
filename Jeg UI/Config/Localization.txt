@@ -209,3 +209,6 @@ quest_MiniBikeSpecial_description,Quest,Quest Info,,,"[60CCFF]Upon reading the t
 quest_MiniBikeSpecial_offer,Quest,Quest Info,,,"[60CCFF]Upon reading the tome you get an overwhelming sense that there is treasure buried nearby.\n\nPerhaps you should seek it out...?"
 quest_MiniBikeSpecial_completion,Quest,Quest Info,,,"[60CCFF]Well, shit. It's been so long since I misplaced my starter motor, and here you are, returning it without me even having to ask... I've already bought a new starter motor so this one is pretty useless to me now, but I can fashion it into a new minibike for you as a finder's fee. And you know what? You can take one of these amulets with you, too."
 zombieEnragedDemo,entityclasses,Entity,,,"[60CCFF]Enraged Demolisher"
+modMeleeClubBarbedWireDesc,item_modifiers,mod,,,"20% chance to cause bleeding damage, 40% with power attacks.\nCan be installed in clubs and sledgehammers."
+modMeleeClubMetalChainDesc,item_modifiers,Mod,,,"10% chance to knock down opponents.\nCan be installed in clubs and sledgehammers."
+modMeleeClubMetalSpikesDesc,item_modifiers,mod,,,"Each successive hit lowers enemies armor rating 20%.\nCan be installed in clubs and sledgehammers."

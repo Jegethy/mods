@@ -51,6 +51,14 @@
 		<item name="resourceAcid" count="1,2" prob="0.02" />
 		<item name="foodMedicalHoney" count="1,2" prob="0.02" />
 	</append>
+	
+	<!-- Adds blessed metal mod and schematic to loot -->
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
+		<item name="modGunMeleeBlessedMetalSchematic"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='modGunMeleeT3']">
+		<item name="modGunMeleeBlessedMetal" prob=".25"/>
+	</append>
 
 	<!-- Adds new airdrop loot table -->
 	<append xpath="/lootcontainers">

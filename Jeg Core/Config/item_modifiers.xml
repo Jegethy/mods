@@ -20,6 +20,11 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@installable_tags">head,armor,armorHead</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@blocked_tags">armorChest,armorHands,armorLegs,armorFeet</set>
 
+	<!-- Allows club mods to install on sledgehammers -->
+	<set xpath="/item_modifiers/item_modifier[@name='modMeleeClubBarbedWire']/@installable_tags">club,sledge</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modMeleeClubMetalSpikes']/@installable_tags">club,sledge</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modMeleeClubMetalChain']/@installable_tags">club,sledge</set>
+
 	<!-- Adding the modded customised fittings items -->
 	<append xpath="/item_modifiers">
 		<item_modifier name="modLightweightMasterFitting" installable_tags="lightarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">

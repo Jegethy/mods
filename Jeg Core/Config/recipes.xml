@@ -8,6 +8,16 @@
 	<set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">2</set>
 	<set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']/@count">2</set>
 
+	<!-- Blessed Metal recipe -->
+	<append xpath="/recipes">
+		<recipe name="modGunMeleeBlessedMetal" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceGlue" count="5"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceSpring" count="10"/>
+		</recipe>
+	</append>
+
 	<!-- BioFuel -->
 	<append xpath="/recipes">
 		<recipe name="resourceBioFuel" count="10" craft_area="chemistryStation" tags="perkMasterChef,learnable">

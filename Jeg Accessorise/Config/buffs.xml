@@ -6,8 +6,8 @@
 		<buff name="buffaccessorySilverRing" name_key="buffaccessorySilverRingName" description_key="buffaccessorySilverRingDesc" tooltip_key="buffaccessorySilverRingTooltip" icon="rangedonly" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessorySilverRing"/>
 			</effect_group>
 
@@ -24,8 +24,8 @@
 		<buff name="buffaccessoryGoldFlowerRing" name_key="buffaccessoryGoldFlowerRingName" description_key="buffaccessoryGoldFlowerRingDesc" tooltip_key="buffaccessoryGoldFlowerRingTooltip" icon="meleeonly" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldFlowerRing"/>
 			</effect_group>
 
@@ -43,8 +43,8 @@
 			<stack_type value="ignore"/>
 			<update_rate value="0.3"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldStuddedRing"/>
 				<passive_effect name="WalkSpeed" operation="perc_add" value=".60"/>
 			</effect_group>
@@ -76,8 +76,8 @@
 			<update_rate value="0.5"/>
 			<effect_group>
 				<!-- <requirement name="PlayerLevel" operation="LT" value="1000"/> -->
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryRubyDiamondRing"/>
 			</effect_group>
 
@@ -119,8 +119,8 @@
 
 			<effect_group>
 				<requirement name="IsDay"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="-5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="-5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="-15"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="-15"/>
 				<passive_effect name="LootGamestage" operation="base_subtract" value="100"/>
 				<passive_effect name="EntityDamage" operation="perc_subtract" value=".8"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffaccessoryRubyHeartRingNight"/>
@@ -140,8 +140,8 @@
 
 			<effect_group>
 				<requirement name="IsNight"/>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="LootGamestage" operation="base_add" value="100"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffaccessoryRubyHeartRingDay"/>
@@ -156,8 +156,8 @@
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryCombinedRings"/>
 			</effect_group>
 
@@ -176,8 +176,8 @@
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryCrimsonEarring"/>
 			</effect_group>
 
@@ -201,8 +201,8 @@
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryDiamondEarring"/>
 			</effect_group>
 
@@ -234,15 +234,15 @@
 		</buff>
 	</append>
 
-	<!-- Emerald Necklace -->
+	<!-- Emerald Necklace - Defensive Starter -->
 
 	<append xpath="/buffs">
 		<buff name="buffaccessoryEmeraldNecklace" name_key="buffaccessoryEmeraldNecklaceName" description_key="buffaccessoryEmeraldNecklaceDesc" showonhud="false" icon="emeraldencase" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryEmeraldNecklace"/>
 			</effect_group>
 
@@ -255,15 +255,15 @@
 		</buff>
 	</append>
 
-	<!-- Gold Chain -->
+	<!-- Gold Chain - Offensive Starter -->
 
 	<append xpath="/buffs">
 		<buff name="buffaccessoryGoldChain" name_key="buffaccessoryGoldChainName" description_key="buffaccessoryGoldChainDesc" showonhud="false" icon="simpstrength" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryGoldChain"/>
 			</effect_group>
 
@@ -276,6 +276,26 @@
 		</buff>
 	</append>
 
+	<!-- Exquisite Necklace - 200% increased damage, set on fire on kill -->
+
+	<append xpath="/buffs">
+		<buff name="buffaccessoryExquisiteNecklace" name_key="buffaccessoryExquisiteNecklaceName" description_key="buffaccessoryExquisiteNecklaceDesc" showonhud="false" icon="noarmour" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<update_rate value="0.5"/>
+			<effect_group>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryExquisiteNecklace"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value="2"/>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffBurningMolotov"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffBurningMolotov"/>
+			</effect_group>
+		</buff>
+	</append>
+
 	<!-- Lavender Earring -->
 
 	<append xpath="/buffs">
@@ -283,49 +303,57 @@
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryLavenderEarring"/>
 			</effect_group>
 
 			<effect_group>
-				<passive_effect name="RunSpeed" operation="perc_add" value="0"/>
+				<passive_effect name="HealthLoss" operation="perc_add" value="0.25"/>
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffaccessoryLavenderEarring_Leech"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffaccessoryLavenderEarring_Sound"/>
 			</effect_group>
 		</buff>
-	</append>
 
-	<!-- Exquisite Necklace -->
+		<buff name="buffaccessoryLavenderEarring_Leech" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="10"/>
+			</effect_group>
+		</buff>
 
-	<append xpath="/buffs">
-		<buff name="buffaccessoryExquisiteNecklace" name_key="buffaccessoryExquisiteNecklaceName" description_key="buffaccessoryExquisiteNecklaceDesc" showonhud="false" icon="noarmour" remove_on_death="false">
+		<buff name="buffaccessoryLavenderEarring_Sound" hidden="true">
 			<stack_type value="ignore"/>
-			<update_rate value="0.5"/>
+			<duration value="2"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryExquisiteNecklace"/>
-			</effect_group>
-
-			<effect_group>
-				<passive_effect name="RunSpeed" operation="perc_add" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="player_blooddraw"/>
 			</effect_group>
 		</buff>
 	</append>
 
-	<!-- Ruby Necklace -->
+	<!-- Ruby Necklace - Better weapon handling and magazin size, weapon degrades faster-->
 
 	<append xpath="/buffs">
 		<buff name="buffaccessoryRubyNecklace" name_key="buffaccessoryRubyNecklaceName" description_key="buffaccessoryRubyNecklaceDesc" icon="noarmour" showonhud="false" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryRubyNecklace"/>
 			</effect_group>
 
 			<effect_group>
-				<passive_effect name="RunSpeed" operation="perc_add" value="0"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value=".25" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+				<passive_effect name="MagazineSize" operation="perc_add" value=".25"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value="-.75" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
 			</effect_group>
 		</buff>
 	</append>
@@ -337,13 +365,18 @@
 			<stack_type value="ignore"/>
 			<update_rate value="0.5"/>
 			<effect_group>
-				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
-				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
 				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffaccessoryTwinNecklace"/>
 			</effect_group>
 
 			<effect_group>
-				<passive_effect name="RunSpeed" operation="perc_add" value="0"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler,admin"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".5" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler,admin"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value="-1.5" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler,admin"/>
 			</effect_group>
 		</buff>
 	</append>

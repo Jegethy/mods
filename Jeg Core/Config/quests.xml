@@ -273,7 +273,7 @@
 			<property name="difficulty" value="veryeasy"/>
 			<property name="shareable" value="false"/>
 
-			<objective type="ZombieKill" value="10" phase="1"/>
+			<objective type="ZombieKill" value="5" phase="1"/>
 
 			<reward type="Exp" value="250"/>
 			<reward type="Quest" id="quest_whiteRiverCitizen1">

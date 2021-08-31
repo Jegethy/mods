@@ -11,7 +11,7 @@
 	</append>
 
 	<append xpath="/buffs">
-		<buff name="buffHordeNightQuestTrackerNight" name_key="buffHordeNightQuestTrackerNightName" description_key="buffHordeNightQuestTrackerNightDesc" tooltip_key="buffHordeNightQuestTrackerNightTooltip" showonhud="false" icon="jeg_BM_quest_track" remove_on_death="false">
+		<buff name="buffHordeNightQuestTrackerNight" name_key="buffHordeNightQuestTrackerNightName" description_key="buffHordeNightQuestTrackerNightDesc" tooltip_key="buffHordeNightQuestTrackerNightTooltip" showonhud="true" icon="jeg_BM_quest_track" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value=".2"/>
 			<effect_group>

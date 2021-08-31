@@ -7,7 +7,7 @@
 
 	<!-- Zombie Loot Bags -->
 	<!-- Regular Loot -->
-	<append xpath="/lootcontainers/lootcontainer[@id='70']" >
+	<append xpath="/lootcontainers/lootcontainer[@id='70']">
 		<item name="accessoryJewerlyBox1" count="1" prob="0.04"/>
 		<item name="accessoryJewerlyBox2" count="1" prob="0.04"/>
 		<item name="accessoryJewerlyBox3" count="1" prob="0.04"/>
@@ -20,9 +20,17 @@
 		<item name="accessoryJewerlyBox12" count="1" prob="0.04"/>
 		<item name="accessoryJewerlyBox13" count="1" prob="0.04"/>
 		<item name="accessoryJewerlyBox14" count="1" prob="0.04"/>
+		<item name="modAccessoriseMovementSpeed" count="1" prob="0.08"/>
+		<item name="modAccessoriseDamage" count="1" prob="0.08"/>
+		<item name="modAccessoriseHealth" count="1" prob="0.08"/>
+		<item name="modAccessoriseStamina" count="1" prob="0.08"/>
+		<item name="modAccessoriseArmour" count="1" prob="0.08"/>
+		<item name="modAccessoriseHarvest" count="1" prob="0.08"/>
+		<item name="modAccessoriseMining" count="1" prob="0.08"/>
+		<item name="modAccessoriseXP" count="1" prob="0.08"/>
 	</append>
 	<!-- Strong Loot -->
-	<append xpath="/lootcontainers/lootcontainer[@id='71']" >
+	<append xpath="/lootcontainers/lootcontainer[@id='71']">
 		<item name="accessoryJewerlyBox1" count="1" prob="0.08"/>
 		<item name="accessoryJewerlyBox2" count="1" prob="0.08"/>
 		<item name="accessoryJewerlyBox3" count="1" prob="0.08"/>
@@ -37,7 +45,7 @@
 		<item name="accessoryJewerlyBox14" count="1" prob="0.08"/>
 	</append>
 	<!-- Boss Loot -->
-	<append xpath="/lootcontainers/lootcontainer[@id='73']" >
+	<append xpath="/lootcontainers/lootcontainer[@id='73']">
 		<item name="accessoryJewerlyBox1" count="1" prob="0.16"/>
 		<item name="accessoryJewerlyBox2" count="1" prob="0.16"/>
 		<item name="accessoryJewerlyBox3" count="1" prob="0.16"/>

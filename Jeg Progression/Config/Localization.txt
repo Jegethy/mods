@@ -250,7 +250,7 @@ extraSneakBonus03Desc,progression,perk Int,,,"[60CCFF]...and the zombie thought 
 extraSneakBonus04Desc,progression,perk Int,,,"[60CCFF]...and the zombie thought it was the wind...\n\nSneak Damage increased by 200%."
 extraSneakBonus05Desc,progression,perk Int,,,"[60CCFF]...and the zombie thought it was the wind...\n\nSneak Damage increased by 250%."
 extraExcpMetaName,progression,perk Int,,,"[60CCFF]Exceptional Metabolism"
-extraExcpMetaDesc,progression,perk Int,,,"[60CCFF]Your treat your body like a temple and it rewards you in kind. You lose food and water from physical activity more slowly."
+extraExcpMetaDesc,progression,perk Int,,,"[60CCFF]You treat your body like a temple and it rewards you in kind. You lose food and water from physical activity more slowly."
 extraExcpMeta01,progression,perk Int,,,"[60CCFF]-5% Food and Water loss"
 extraExcpMeta02,progression,perk Int,,,"[60CCFF]-10% Food and Water loss"
 extraExcpMeta03,progression,perk Int,,,"[60CCFF]-15% Food and Water loss"

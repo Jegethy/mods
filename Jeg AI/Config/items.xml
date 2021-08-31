@@ -7,6 +7,8 @@
 			<property class="Action0">
 				<property name="DamageEntity" value="5"/>
 				<property name="DamageBlock" value="500"/>
+				<property name="Range" value="1.85"/>
+				<property name="Delay" value=".6"/>
 			</property>
 			<effect_group name="meleeHandZombieStrong" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>

@@ -161,7 +161,7 @@ perkAdvancedWrenchDesc,progression,PerkBook,New,"[60CCFF]Allows you to craft spe
 perkAdvancedWrench1Desc,progression,PerkBook,New,"[60CCFF]F Word",,,,,
 perkAdvancedWrench1LongDesc,progression,PerkBook,New,"[60CCFF]Allows crafting of Golden Eggs, Golden Omelettes, Bear Steak Stew and Bear Steak Sandwiches.",,,,,
 perkAdvancedWrench2Desc,progression,PerkBook,New,"[60CCFF]More Mods = Betterer",,,,,
-perkAdvancedWrench2LongDesc,progression,PerkBook,New,"[60CCFF]Allows crafting of combination mods that provide the effects of two or more mods in one. Also allows crafting of reinforced armour mods.",,,,,
+perkAdvancedWrench2LongDesc,progression,PerkBook,New,"[60CCFF]Allows crafting of combination mods that provide the effects of two or more mods in one. Also allows crafting of reinforced armour mods and elemental damage conversion mods.",,,,,
 perkAdvancedWrench3Desc,progression,PerkBook,New,"[60CCFF]Speed and Scrap",,,,,
 perkAdvancedWrench3LongDesc,progression,PerkBook,New,"[60CCFF]Allows you to craft vehicle mods and Advanced Wrenches.",,,,,
 buffTraderProtectionEffectTooltip,buffs,Buff,New,"[60CCFF]A nearby trader is protecting you from harm",,,,,

@@ -10,11 +10,34 @@
 
 	<!-- Blessed Metal recipe -->
 	<append xpath="/recipes">
-		<recipe name="modGunMeleeBlessedMetal" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
-			<ingredient name="resourceForgedSteel" count="5"/>
+		<recipe name="modGunMeleeBlessedMetal" count="1" craft_time="90" craft_area="workbench" tags="perkAdvancedWrench,workbenchCrafting,learnable">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceForgedSteel" count="15"/>
+			<ingredient name="resourceForgedIron" count="15"/>
 			<ingredient name="resourceGlue" count="5"/>
-			<ingredient name="resourceMechanicalParts" count="5"/>
-			<ingredient name="resourceSpring" count="10"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+		</recipe>
+	</append>
+
+	<!-- Lithium Battery -->
+	<append xpath="/recipes">
+		<recipe name="modGunMeleeNiCdBattery" count="1" craft_time="90" craft_area="workbench" tags="perkAdvancedWrench,workbenchCrafting,learnable">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceForgedSteel" count="15"/>
+			<ingredient name="resourceForgedIron" count="15"/>
+			<ingredient name="resourceGlue" count="5"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+		</recipe>
+	</append>
+
+	<!-- Liquid Nitrogen -->
+	<append xpath="/recipes">
+		<recipe name="modGunMeleeLiquidNitrogen" count="1" craft_time="90" craft_area="workbench" tags="perkAdvancedWrench,workbenchCrafting,learnable">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceForgedSteel" count="15"/>
+			<ingredient name="resourceForgedIron" count="15"/>
+			<ingredient name="resourceGlue" count="5"/>
+			<ingredient name="resourceDuctTape" count="5"/>
 		</recipe>
 	</append>
 

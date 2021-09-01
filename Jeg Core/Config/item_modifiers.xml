@@ -1,6 +1,9 @@
 <configs>
 
 	<remove xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtender']"/>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunMeleeNiCdBattery']"/>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunMeleeLiquidNitrogen']"/>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunMeleeBlessedMetal']"/>
 
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@installable_tags">clothing,armorFeet</set>
 
@@ -232,6 +235,7 @@
 	<append xpath="/item_modifiers">
 		<item_modifier name="modAdvTurretTactics" installable_tags="AdvTurretMod" modifier_tags="shafttip" type="attachment" rarity="0.5">
 			<property name="CustomIcon" value="modGunMeleeBlessedMetal"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
 			<property name="Stacknumber" value="1"/>
 			<effect_group tiered="false">
 				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".2"/>
@@ -2722,5 +2726,61 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']/item_property_overrides[@name='*']/property[@name='Zoom_overlay']/@value">#@modfolder:Resources/Optics.unity3d?2x.png</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']/item_property_overrides[@name='*']/property[@name='Zoom_overlay']/@value">#@modfolder:Resources/Optics.unity3d?4x.png</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunScopeLarge']/item_property_overrides[@name='*']/property[@name='Zoom_overlay']/@value">#@modfolder:Resources/Optics.unity3d?8x.png</set>
+
+
+	<append xpath="/item_modifiers">
+		<item_modifier name="modGunMeleeNiCdBattery" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+			<property name="CreativeMode" value="Player"/>
+			<!-- <property name="UnlockedBy" value="modGunMeleeNiCdBatterySchematic"/> -->
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
+
+			<!-- Changes damage type to electric -->
+			<item_property_overrides name="*">
+				<property name="DamageType" value="Electrical"/>
+			</item_property_overrides>
+
+			<effect_group tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffGunMeleeNiCdBattery"/>
+			</effect_group>
+
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="modGunMeleeLiquidNitrogen" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+			<property name="CreativeMode" value="Player"/>
+			<!-- <property name="UnlockedBy" value="modGunMeleeLiquidNitrogenSchematic"/> -->
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
+
+			<!-- Changes damage type to cold -->
+			<item_property_overrides name="*">
+				<property name="DamageType" value="Cold"/>
+			</item_property_overrides>
+
+			<effect_group tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffNitrogenStun"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+	</append>
+
+	<append xpath="/item_modifiers">
+		<item_modifier name="modGunMeleeBlessedMetal" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+			<property name="UnlockedBy" value="perkAdvancedWrench"/>
+			<property name="Stacknumber" value="1"/><property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<!--Do double damage to evil / undead-->
+			<effect_group tiered="false">
+				<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+	</append>
 
 </configs>

@@ -30,9 +30,6 @@ modDyePlum,item_modifiers,mod,,,[60CCFF]Dye: Plum
 modDyeIndigo,item_modifiers,mod,,,[60CCFF]Dye: Indigo
 modDyeMaroon,item_modifiers,mod,,,[60CCFF]Dye: Maroon
 modDyeCrimson,item_modifiers,mod,,,[60CCFF]Dye: Crimson
-Jeg_Coop,Blocks,block,,,[60CCFF]Chicken Coop
-Jeg_Coop_Desc,Blocks,block,,,"[60CCFF]Generate your own Eggs and Feathers!\n\nUnlocked with the 'Living off the Land' perk."
-Jeg_Coop_Full,Blocks,block,,,[60CCFF]Full Chicken Coop
 resourceGoldenEgg,items,Item,,,[60CCFF]Golden Egg
 resourceGoldenEggDesc,items,Item,,,"[60CCFF]It's no Golden Ticket, but it can be crafted into a Golden Omelette or sold to a trader for a hefty sum."
 foodOmelette,,item,Food,newKey,[60CCFF]Golden Omelette
@@ -178,8 +175,6 @@ jailDoor,blocks,Block,,,"[60CCFF]Jail Door"
 jailDoorDesc,blocks,Block,,,"[60CCFF]You're not going anywhere!"
 jailDoorPowered,blocks,Block,,,"[60CCFF]Powered Jail Door"
 jailDoorPoweredDesc,blocks,Block,,,"[60CCFF]No way out!"
-perkGreaseMonkeyDesc,progression,perk Int,,,"[60CCFF]Learn to build vehicles from junk in the wasteland!\n\nVehicles require the associated perk to craft from parts."
-perkGreaseMonkeyName,progression,perk Int,,,"[60CCFF]Grease Monkey"
 perkGreaseMonkeyRank1Desc,progression,perk Int,,,"[60CCFF]Bicycle Mechanic"
 perkGreaseMonkeyRank1LongDesc,progression,perk Int,,,"[60CCFF]You can craft bicycles. Craft wheels and bicycle parts 33% cheaper."
 perkGreaseMonkeyRank2Desc,progression,perk Int,,,"[60CCFF]Minibike Master"
@@ -310,6 +305,6 @@ modGunMeleeNiCdBattery,item_modifiers,Mod,,,"[60CCFF]Lithium Battery Mod"
 modGunMeleeNiCdBatteryDesc,item_modifiers,Mod,,,"[60CCFF]Converts your damage to Electric damage, giving attacks a 50% chance to shock enemies for 4 seconds.\n\nEnemies shocked with Electric damage become immune to further shocks for 5 seconds."
 modGunMeleeBlessedMetal,item_modifiers,Mod,,,"[60CCFF]Blessed Metal Mod"
 modGunMeleeBlessedMetalDesc,item_modifiers,Mod,,,"[60CCFF]Converts your damage to Holy damage, causing attacks to deal significantly more damage to undead enemies."
-perkMasterChefRank2LongDesc,progression,perk Str,,,"[60CCFF]Just like grandma used to make, tasty hearty meals that fill you up for days. Craft steak and potatoes, meat stew, vegetable stew, blueberry pie and several pumpkin dishes. Rustle up some classic Fried Chicken. Cook 20% faster."
-perkMasterChefRank3LongDesc,progression,perk Str,,,"[60CCFF]Learn how to make nutritious pot luck meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs and Fish Tacos. Or grill some Crispy Wolf Ribs and wash them down with Yucca Juice Smoothies and Beer. Cook 30% faster."
-perkMasterChefRank5LongDesc,progression,perk Str,,,"[60CCFF]Grandpa's ass kicking recipes.\nLearn grandpa's secret recipes that boost stats and attributes! Brew up Grandpa's Fergit'n Elixir to reset your skill points.Cook 50% faster."
+perkMasterChefRank2LongDesc,progression,perk Str,,,"[60CCFF]Just like grandma used to make, tasty hearty meals that fill you up for days. Craft steak and potatoes, meat stew, vegetable stew, blueberry pie and several pumpkin dishes. Rustle up some classic Fried Chicken.\n\nCook 20% faster."
+perkMasterChefRank3LongDesc,progression,perk Str,,,"[60CCFF]Learn how to make nutritious pot luck meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs and Fish Tacos. Or grill some Crispy Wolf Ribs and wash them down with Yucca Juice Smoothies and Beer.\n\nCook 30% faster."
+perkMasterChefRank5LongDesc,progression,perk Str,,,"[60CCFF]Grandpa's ass kicking recipes.\nLearn grandpa's secret recipes that boost stats and attributes!\n\nBrew up Grandpa's Fergit'n Elixir to reset your skill points.\n\nCook 50% faster."

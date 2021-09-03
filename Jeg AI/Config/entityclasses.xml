@@ -4,11 +4,11 @@
 	<set xpath="/entity_classes/entity_class[contains(@name, 'Backpack')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">43200</set>
 
 	<!-- Animal corpses take longer to despawn -->
-	<set xpath="/entity_classes/entity_class[starts-with(@name,'animal')]/property[@name='TimeStayAfterDeath']/@value">1800</set><!--20 minutes instead of 5-->
+	<set xpath="/entity_classes/entity_class[starts-with(@name,'animal')]/property[@name='TimeStayAfterDeath']/@value">1800</set> <!--30 minutes instead of 5-->
 
-	<!-- Increases the despawn timer of the zombie dropped loot bags from 5 minutes to 12 hours (real time) -->
-	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">300</set>
-	<set xpath="/entity_classes/entity_class[contains(@name, 'EntityLoot')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">43200</set>
+	<!-- Increases the despawn timer of the zombie dropped loot bags from 5 minutes to 1 hour (real time) -->
+	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">3600</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'EntityLoot')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">3600</set>
 
 	<!-- Randomises the speed at which zombies recovery from knock downs -->
 	<set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">1.0,10.0</set>
@@ -24,15 +24,23 @@
 	<!-- Removes dismember chance on animals -->
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='Mesh']">
 		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
 	</insertAfter>
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='RagdollOnDeathChance']">
 		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
 	</insertAfter>
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalBoar']/property[@name='RagdollOnDeathChance']">
 		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
 	</insertAfter>
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='SightRange']">
 		<property name="DismemberMultiplierHead" value="0"/>
+		<property name="DismemberMultiplierArms" value="0"/>
+		<property name="DismemberMultiplierLegs" value="0"/>
 	</insertAfter>
 
 	<!-- Increased debuff probability -->
@@ -246,6 +254,9 @@
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='foodRawMeat' and @tag='butcherHarvest']">
 		<drop event="Harvest" name="foodRawRibs" tag="butcherHarvest" count="8"/>
 	</insertAfter>
+	
+	<!-- Gives chickens more bones -->
+	<set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceBone'][@tag='butcherHarvest']/@count">5</set>
 
 	<!-- Increases the health of certain animals -->
 	<set xpath="/entity_classes/entity_class[@name='animalBear']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='base_set']/@value">3500</set>
@@ -1690,7 +1701,7 @@
 			<property name="Explosion.ParticleIndex" value="8"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="6"/>
-			<property name="Explosion.BlockDamage" value="500"/>
+			<property name="Explosion.BlockDamage" value="350"/>
 			<property name="Explosion.EntityDamage" value="150"/>
 			<property name="Explosion.DamageBonus.earth" value="0"/>
 			<property name="JumpMaxDistance" value="0, 0"/>
@@ -2705,7 +2716,7 @@
 			<property name="SizeScale" value="1.28"/>
 			<property name="HandItem" value="meleeHandZombieDemolitionWeak"/>
 			<property name="JumpMaxDistance" value="1, 2"/>
-			<property name="PainResistPerHit" value=".5"/>
+			<property name="PainResistPerHit" value=".3"/>
 			<property name="Explosion.ParticleIndex" value="2"/>
 			<property name="Explosion.RadiusEntities" value="6"/>
 			<property name="Explosion.EntityDamage" value="100"/>
@@ -2720,7 +2731,7 @@
 			<property name="LootDropProb" value="0.0001"/>
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="250"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>

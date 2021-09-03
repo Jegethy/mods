@@ -1,14 +1,28 @@
 <configs>
-	<!-- empty, storage containers the player crafts-->
+	<!-- empty, storage containers the player crafts -->
 	<set xpath="/lootcontainers/lootcontainer[@id='1']/@size">13,11</set>
-    <!-- Player dropped backpack-->
+	
+    <!-- Player dropped backpack -->
 	<set xpath="/lootcontainers/lootcontainer[@id='2']/@size">11,13</set>
+	
+    <!-- Dropped loot container -->
+	<set xpath="/lootcontainers/lootcontainer[@id='4']/@size">11,13</set>
+	
 	<!-- paintable cube storage containers the player crafts -->
 	<set xpath="/lootcontainers/lootcontainer[@id='5']/@size">13,11</set>
+	
 	<!-- wallSafe / deskSafe -->
 	<set xpath="/lootcontainers/lootcontainer[@id='6']/@size">13,11</set>
+	
 	<!-- gun safe -->
 	<set xpath="/lootcontainers/lootcontainer[@id='7']/@size">13,11</set>
+	
+	<!-- kitchen sink, cupboards (lower), cleaning chemicals, plates, silverware, pots and pans -->
+	<set xpath="/lootcontainers/lootcontainer[@id='8']/@size">13,11</set>
+	
+	<!-- backpack, place where people stash things, -->
+	<set xpath="/lootcontainers/lootcontainer[@id='9']/@size">13,11</set>
+	
 	<!-- cntHardenedChestSecure, hero, big, fancy chest -->
 	<set xpath="/lootcontainers/lootcontainer[@id='121']/@size">13,11</set>
 	

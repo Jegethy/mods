@@ -373,11 +373,11 @@
 			<objective type="TreasureChest" phase="1">
 				<property name="block" value="treasureChestJeg2"/>
 				<property name="distance" value="100-500"/>
-				<property name="default_radius" value="12"/>
+				<property name="default_radius" value="8"/>
 				<property name="container_type" value="Supplies"/>
 				<property name="nav_object" value="treasure"/>
 				<property name="direct_nav_object" value="treasure_direct"/>
-				<property name="blocks_per_reduction" value="10"/>
+				<property name="blocks_per_reduction" value="7"/>
 				<property name="radius_reduction_sound" value="ui_radius_shrink"/>
 			</objective>
 
@@ -502,7 +502,7 @@
 				<property name="delay" value="3"/>
 			</action>
 
-			<objective type="ZombieKill" value="500" phase="1"/>
+			<objective type="ZombieKill" value="250" phase="1"/>
 			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="1"/>
 
 			<reward type="Quest" id="quest_tier1completeBonusExtra">
@@ -537,7 +537,7 @@
 				<property name="delay" value="3"/>
 			</action>
 
-			<objective type="ZombieKill" value="5000" phase="1"/>
+			<objective type="ZombieKill" id="zombieDemolitionBM" value="50" phase="1"/>
 			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="1"/>
 
 			<reward type="Exp" value="500000"/>

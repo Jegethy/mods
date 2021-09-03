@@ -1,7 +1,6 @@
 <config>
 
 	<!-- Extended the levelling curve, so less experience is needed at lower levels -->
-	<set xpath="/progression/level/@experience_multiplier">1.02</set>
 	<set xpath="/progression/level/@clamp_exp_cost_at_level">100</set>
 
 	<!-- Removed Grease Monkey -->
@@ -54,35 +53,35 @@
 	<!-- Maximum health buff -->
 	<append xpath="/progression/perks">
 		<perk name="extraMaxHealth" base_skill_point_cost="2" parent="extraCharacterPerks" name_key="extraMaxHealthName" desc_key="extraMaxHealthDesc" icon="jeg_health">
-			<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="20" desc_key="reqPlayerLevel100"/>
+			<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayerLevel100"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="2" desc_key="Fortitude Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="2" desc_key="Strength Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="2" desc_key="Agility Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="Perception Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="2" desc_key="reqIntellectLevel02"/></level_requirements>
 
-			<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="40" desc_key="reqPlayerLevel150"/>
+			<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="150" desc_key="reqPlayerLevel150"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="4" desc_key="Fortitude Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="4" desc_key="Strength Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="4" desc_key="Agility Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="4" desc_key="Perception Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
 
-			<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="60" desc_key="reqPlayerLevel200"/>
+			<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="200" desc_key="reqPlayerLevel200"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="6" desc_key="Fortitude Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="6" desc_key="Strength Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="6" desc_key="Agility Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="6" desc_key="Perception Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
 
-			<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="80" desc_key="reqPlayerLevel250"/>
+			<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="250" desc_key="reqPlayerLevel250"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="8" desc_key="Fortitude Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="8" desc_key="Strength Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="8" desc_key="Agility Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="8" desc_key="Perception Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
 
-			<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayerLevel300"/>
+			<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="300" desc_key="reqPlayerLevel300"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
@@ -108,35 +107,35 @@
 	<!-- Maximum stamina buff -->
 	<append xpath="/progression/perks">
 		<perk name="extraMaxStamina" base_skill_point_cost="2" parent="extraCharacterPerks" name_key="extraMaxStaminaName" desc_key="extraMaxStaminaDesc" icon="jeg_stamina">
-			<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="20" desc_key="reqPlayerLevel100"/>
+			<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayerLevel100"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="2" desc_key="Fortitude Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="2" desc_key="Strength Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="2" desc_key="Agility Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="Perception Level 2"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="2" desc_key="reqIntellectLevel02"/></level_requirements>
 
-			<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="40" desc_key="reqPlayerLevel150"/>
+			<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="150" desc_key="reqPlayerLevel150"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="4" desc_key="Fortitude Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="4" desc_key="Strength Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="4" desc_key="Agility Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="4" desc_key="Perception Level 4"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
 
-			<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="60" desc_key="reqPlayerLevel200"/>
+			<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="200" desc_key="reqPlayerLevel200"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="6" desc_key="Fortitude Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="6" desc_key="Strength Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="6" desc_key="Agility Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="6" desc_key="Perception Level 6"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
 
-			<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="80" desc_key="reqPlayerLevel250"/>
+			<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="250" desc_key="reqPlayerLevel250"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="8" desc_key="Fortitude Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="8" desc_key="Strength Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="8" desc_key="Agility Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="8" desc_key="Perception Level 8"/>
 				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
 
-			<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="100" desc_key="reqPlayerLevel300"/>
+			<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="300" desc_key="reqPlayerLevel300"/>
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
 				<requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="10" desc_key="reqAgilityLevel10"/>
@@ -972,13 +971,12 @@ Craftable candies?
 	<removeattribute xpath="/progression/perks[@min_level='0']/perk[@name='perkRuleOneCardio']/effect_group/passive_effect[@name='StaminaChangeOT']/@tags"/>
 
 	<!-- Increased loot quantity on Treasure Hunter perk -->
-	<set xpath="/progression/perks/perk[@name='perkTreasureHunter']/effect_group/passive_effect[@name='LootQuantity'][@level='1,2,3']/@value">.33,.66,1</set>
+	<set xpath="/progression/perks/perk[@name='perkTreasureHunter']/effect_group/passive_effect[@name='LootQuantity'][@level='1,2,3']/@value">.30,.60,1</set>
 
 	<!-- Increased healing effect from Healing Factor -->
 	<set xpath="/progression/perks/perk[@name='perkHealingFactor']/effect_group/passive_effect[@name='HealthChangeOT']/@value">.022,.044,.1,.2,.32</set>
 
-	<!-- Increases loot gamestage and loot speed from Lucky Looter -->
-	<set xpath="/progression/perks/perk[@name='perkLuckyLooter']/effect_group/passive_effect[@name='LootGamestage'][@level='1,5']/@value">.08,.40</set>
+	<!-- Increases loot speed from Lucky Looter -->
 	<set xpath="/progression/perks/perk[@name='perkLuckyLooter']/effect_group/passive_effect[@name='ScavengingTime'][@level='1,2,3,4,5']/@value">.2,.4,.6,.8,1</set>
 
 	<!-- Updates the lock picking breakage chance and lock picking speed -->
@@ -1001,9 +999,8 @@ Craftable candies?
 	</insertAfter>
 
 	<!-- Adds new food items -->
-	<append xpath="/progression/perks/perk[@name='perkLivingOffTheLand']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='1,3']/@tags">,Jeg_Coop</append>
-	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='2,5']/@tags">,foodCookedRibs,foodGrilledChickenLeg</append>
-	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='4,5']/@tags">,foodBearStew</append>
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='2,5']/@tags">,foodGrilledChickenLeg</append>
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='3,5']/@tags">,foodCookedRibs</append>
 
 	<!-- Adds parts to advanced engineering tier 5 -->
 	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,meleeWpnClubT3SteelClubParts,gunShotgunT1DoubleBarrelParts,meleeToolAxeT3ChainsawParts,armorMilitarySetParts,gunHandgunT1PistolParts,gunBowT1WoodenBowParts,meleeToolAllSteelParts,armorSteelSetParts,gunRifleT1HuntingRifleParts,gunMGT1AK47Parts,gunExplosivesT3RocketLauncherParts,gunBotRoboticsParts,meleeWpnBatonT2StunBatonParts,meleeWpnKnucklesT3SteelKnucklesParts,meleeWpnBladeT3MacheteParts,meleeWpnSpearT3SteelSpearParts,meleeWpnSledgeT3SteelSledgehammerParts</append>

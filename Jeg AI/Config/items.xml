@@ -5,7 +5,7 @@
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action0">
-				<property name="DamageEntity" value="5"/>
+				<property name="DamageEntity" value="3"/>
 				<property name="DamageBlock" value="500"/>
 				<property name="Range" value="1.85"/>
 				<property name="Delay" value=".6"/>

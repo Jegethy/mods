@@ -5,23 +5,23 @@
 	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='6']/@quality">5</set>
 
 	<!-- Removes the standard airdrop loot table to be added back later -->
-	<remove xpath="/lootcontainers/lootcontainer[@id='34']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='34']"/>
 
 	<!-- Slightly increases the amount of feathers and eggs found in nests -->
-	<remove xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='foodEgg']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='foodEgg']"/>
 	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='resourceFeather']/@prob">1</set>
 	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='resourceFeather']/@count">2,5</set>
 	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest']">
-		<item name="foodEgg" count="1,3" prob="1"/>
+		<item name="foodEgg" count="1,4" prob="1"/>
 		<item name="resourceGoldenEgg" count="1" prob="0.01"/>
 	</append>
 	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/@count">all</set>
-	<remove xpath="/lootcontainers/lootgroup[@name='groupBirdNestMain']" />
-	<remove xpath="/lootcontainers/lootcontainer[@id='25']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='groupBirdNestMain']"/>
+	<remove xpath="/lootcontainers/lootcontainer[@id='25']"/>
 	<append xpath="/lootcontainers">
 		<lootcontainer id="25" count="2" size="6,1" destroy_on_close="true" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
 			<item name="resourceFeather" count="2,5" prob="1"/>
-			<item name="foodEgg" count="1,3" prob="1"/>
+			<item name="foodEgg" count="1,4" prob="1"/>
 			<item name="resourceGoldenEgg" count="1,2" prob="0.01"/>
 		</lootcontainer>
 	</append>
@@ -40,7 +40,7 @@
 	</append>
 
 	<!-- Reduces the amount of clean bottled water found in loot -->
-	<remove xpath="/lootcontainers/lootgroup[@name='cupboard']/item[@name='drinkJarBoiledWater']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='cupboard']/item[@name='drinkJarBoiledWater']"/>
 	<set xpath="/lootcontainers/lootcontainer[@id='36']/item[@name='drinkJarBoiledWater']/@count">1</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='36']/item[@name='drinkJarBoiledWater']/@prob">0.03</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='47']/item[@name='drinkJarBoiledWater']/@count">1</set>
@@ -48,16 +48,16 @@
 
 	<!-- Adds a small chance for bottles of acid and medicinal honey to be looted from cupboards -->
 	<append xpath="/lootcontainers/lootgroup[@name='cupboard']">
-		<item name="resourceAcid" count="1,2" prob="0.02" />
-		<item name="foodMedicalHoney" count="1,2" prob="0.02" />
+		<item name="resourceAcid" count="1,2" prob="0.02"/>
+		<item name="foodMedicalHoney" count="1,2" prob="0.02"/>
 	</append>
 
 	<!-- Adds new airdrop loot table -->
 	<append xpath="/lootcontainers">
-		<lootcontainer id="34" count="14" size="8,6" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+		<lootcontainer id="34" count="15" size="8,6" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
 			<item name="itemTraderbook" count="2"/>
 			<item name="itemLearningbook" count="1"/>
-			<item name="resourceAdamantium" count="2"/>	
+			<item name="resourceAdamantium" count="2"/>
 			<item name="accessoryJewerlyBox1" count="1" prob="0.2"/>
 			<item name="accessoryJewerlyBox2" count="1" prob="0.2"/>
 			<item name="accessoryJewerlyBox3" count="1" prob="0.2"/>
@@ -69,50 +69,89 @@
 			<item name="accessoryJewerlyBox10" count="1" prob="0.2"/>
 			<item name="accessoryJewerlyBox12" count="1" prob="0.2"/>
 			<item name="accessoryJewerlyBox13" count="1" prob="0.2"/>
-			<item name="accessoryJewerlyBox14" count="1" prob="0.2"/>			
+			<item name="accessoryJewerlyBox14" count="1" prob="0.2"/>
+			<item name="modAccessoriseMovementSpeed" count="1" prob="0.2"/>
+			<item name="modAccessoriseDamage" count="1" prob="0.2"/>
+			<item name="modAccessoriseHealth" count="1" prob="0.2"/>
+			<item name="modAccessoriseStamina" count="1" prob="0.2"/>
+			<item name="modAccessoriseArmour" count="1" prob="0.2"/>
+			<item name="modAccessoriseHarvest" count="1" prob="0.2"/>
+			<item name="modAccessoriseMining" count="1" prob="0.2"/>
+			<item name="modAccessoriseXP" count="1" prob="0.2"/>
+			<item name="meleeWpnSledgeT3SteelSledgehammerParts" count="2,6" prob="0.4"/>
+			<item name="meleeWpnBladeT3MacheteParts" count="2,6" prob="0.4"/>
+			<item name="armorSteelSetParts" count="2,6" prob="0.4"/>
+			<item name="meleeToolAllSteelParts" count="2,6" prob="0.4"/>
+			<item name="meleeWpnClubT3SteelClubParts" count="2,6" prob="0.4"/>
+			<item name="gunHandgunT1PistolParts" count="2,6" prob="0.4"/>
+			<item name="medicalAloeCream" count="2,6" prob="0.7"/>
+			<item name="medicalBandage" count="2,6" prob="0.7"/>
+			<item name="medicalFirstAidBandage" count="2,6" prob="0.7"/>
+			<item name="medicalFirstAidKit" count="2,6" prob="0.7"/>
+			<item name="medicalSplint" count="2,6" prob="0.7"/>
+			<item name="medicalPlasterCast" count="2,6" prob="0.7"/>
+			<item name="medicalBloodBag" count="2,6" prob="0.7"/>
+			<item name="drugPainkillers" count="2,6" prob="0.7"/>
+			<item name="drugHerbalAntibiotics" count="2,6" prob="0.7"/>
+			<item name="drugAntibiotics" count="2,6" prob="0.7"/>
+			<item name="drugSteroids" count="2,6" prob="0.7"/>
+			<item name="drugRecog" count="2,6" prob="0.7"/>
+			<item name="drugFortBites" count="2,6" prob="0.7"/>
+			<item name="drugAtomJunkies" count="2,6" prob="0.7"/>
+			<item name="drugCovertCats" count="2,6" prob="0.7"/>
+			<item name="drugEyeKandy" count="2,6" prob="0.7"/>
+			<item name="drugHackers" count="2,6" prob="0.7"/>
+			<item name="drugHealthBar" count="2,6" prob="0.7"/>
+			<item name="drugJailBreakers" count="2,6" prob="0.7"/>
+			<item name="drugNerdTats" count="2,6" prob="0.7"/>
+			<item name="drugOhShitzDrops" count="2,6" prob="0.7"/>
+			<item name="drugRockBusters" count="2,6" prob="0.7"/>
+			<item name="drugSkullCrushers" count="2,6" prob="0.7"/>
+			<item name="drugSugarButts" count="2,6" prob="0.7"/>
+			<item name="itemPartsTemplateMaster" count="2,8"/>
 			<item name="resourceSilverNugget" count="10,20"/>
 			<item name="resourceGoldNugget" count="8,16"/>
-			<item name="resourceRawDiamond" count="6,12"/>	
+			<item name="resourceRawDiamond" count="6,12"/>
 			<item name="ammo762mmBulletBall" count="50,150"/>
 			<item name="ammo9mmBulletBall" count="50,150"/>
 			<item name="ammoArrowSteelAP" count="50,150"/>
 			<item name="ammoCrossbowBoltSteelAP" count="50,150"/>
-			<item name="armorSteelBoots" count="1"/>
-			<item name="armorSteelLegs" count="1"/>
-			<item name="armorSteelChest" count="1"/>
-			<item name="armorSteelGloves" count="1"/>
-			<item name="armorSteelHelmet" count="1"/>
-			<item name="armorMilitaryBoots" count="1"/>
-			<item name="armorMilitaryGloves" count="1"/>
-			<item name="armorMilitaryHelmet" count="1"/>
-			<item name="armorMilitaryLegs" count="1"/>
-			<item name="armorMilitaryVest" count="1"/>
-			<item name="gunRifleT3SniperRifle" count="1"/>
-			<item name="gunMGT3M60" count="1"/>
+			<item name="armorSteelBoots" count="1" prob="0.04"/>
+			<item name="armorSteelLegs" count="1" prob="0.04"/>
+			<item name="armorSteelChest" count="1" prob="0.04"/>
+			<item name="armorSteelGloves" count="1" prob="0.04"/>
+			<item name="armorSteelHelmet" count="1" prob="0.04"/>
+			<item name="armorMilitaryBoots" count="1" prob="0.04"/>
+			<item name="armorMilitaryGloves" count="1" prob="0.04"/>
+			<item name="armorMilitaryHelmet" count="1" prob="0.04"/>
+			<item name="armorMilitaryLegs" count="1" prob="0.04"/>
+			<item name="armorMilitaryVest" count="1" prob="0.04"/>
+			<item name="gunRifleT3SniperRifle" count="1" prob="0.04"/>
+			<item name="gunMGT3M60" count="1" prob="0.04"/>
 			<item name="gunMGT2TacticalAR" count="1"/>
-			<item name="gunExplosivesT3RocketLauncher" count="1"/>
-			<item name="gunHandgunT3SMG5" count="1"/>
+			<item name="gunExplosivesT3RocketLauncher" count="1" prob="0.04"/>
+			<item name="gunHandgunT3SMG5" count="1" prob="0.04"/>
 			<item name="gunHandgunT1Pistol" count="1"/>
-			<item name="gunHandgunT3DesertVulture" count="1"/>
-			<item name="gunShotgunT3AutoShotgun" count="1"/>
+			<item name="gunHandgunT3DesertVulture" count="1" prob="0.04"/>
+			<item name="gunShotgunT3AutoShotgun" count="1" prob="0.04"/>
 			<item name="gunShotgunT2PumpShotgun" count="1"/>
 			<item name="gunShotgunT1DoubleBarrel" count="1"/>
 			<item name="gunMGT1AK47" count="1"/>
-			<item name="gunBowT3CompoundBow" count="1"/>
-			<item name="gunBowT3CompoundCrossbow" count="1"/>
-			<item name="meleeWpnSledgeT3SteelSledgehammer" count="1"/>
-			<item name="meleeWpnClubT3SteelClub" count="1"/>
-			<item name="meleeWpnBladeT3Machete" count="1"/>
+			<item name="gunBowT3CompoundBow" count="1" prob="0.04"/>
+			<item name="gunBowT3CompoundCrossbow" count="1" prob="0.04"/>
+			<item name="meleeWpnSledgeT3SteelSledgehammer" count="1" prob="0.04"/>
+			<item name="meleeWpnClubT3SteelClub" count="1" prob="0.04"/>
+			<item name="meleeWpnBladeT3Machete" count="1" prob="0.04"/>
 			<item name="meleeToolPickT2SteelPickaxe" count="1"/>
 			<item name="meleeToolAxeT2SteelAxe" count="1"/>
 			<item name="meleeToolShovelT2SteelShovel" count="1"/>
-			<item name="meleeToolAxeT3Chainsaw" count="1"/>
-			<item name="meleeToolPickT3Auger" count="1"/>
-			<item name="meleeToolRepairT3Nailgun" count="1"/>
+			<item name="meleeToolAxeT3Chainsaw" count="1" prob="0.04"/>
+			<item name="meleeToolPickT3Auger" count="1" prob="0.04"/>
+			<item name="meleeToolRepairT3Nailgun" count="1" prob="0.04"/>
 			<item name="medicalFirstAidKit" count="5,15"/>
 			<item name="drugAntibiotics" count="5,15"/>
 			<item name="medicalSplint" count="5,15"/>
-			<item name="medicalFirstAidBandage" count="5,15"/>	
+			<item name="medicalFirstAidBandage" count="5,15"/>
 			<item name="bookRangersArrowRecovery" count="1"/>
 			<item name="bookRangersCripplingShot" count="1"/>
 			<item name="bookRangersKnockdown" count="1"/>
@@ -303,12 +342,30 @@
 			<item name="modMeleeWeightedHead" count="1"/>
 			<item name="modMeleeWoodSplitter" count="1"/>
 			<item name="modFuelTankSmall" count="1"/>
-			<item name="modAugerDiamondTip" count="1"/>
-			<item name="modAugerTurbo" count="1"/>
-			<item name="modAugerDiamondTipSchematic" count="1"/>
-			<item name="modAugerTurboSchematic" count="1"/>
+			<item name="bookHammerTimeDamage" count="1"/>
+			<item name="bookHammerTimeHarvest" count="1"/>
+			<item name="bookHammerTimeDefense" count="1"/>
+			<item name="bookHammerTimeDoorKey" count="1"/>
+			<item name="bookHammerTimeProtect" count="1"/>
+			<item name="bookHammerTimeUnstoppable" count="1"/>
+			<item name="bookHammerTimeDrunk" count="1"/>
+			<item name="resourceConcreteMix" count="250,1000" prob="2.5"/>
+			<item name="resourceRepairKit" count="5,25" prob="2.5"/>
+			<item name="resourceDuctTape" count="5,25" prob="2.5"/>
+			<item name="itemSpawnerBookBear" count="1" prob="0.08"/>
+			<item name="itemSpawnerBookPig" count="1" prob="0.08"/>
+			<item name="itemSpawnerBookChickens" count="1" prob="0.08"/>
+			<item name="itemSpawnerBookDirewolf" count="1" prob="0.08"/>
+			<item name="itemSpawnerBookWorkmen" count="1" prob="0.08"/>
+			<item name="itemSpawnerBookNurse" count="1" prob="0.08"/>
+			<item name="itemSpawnerBookCop" count="1" prob="0.08"/>
+			<item name="itemSpawnerBookDemo" count="1" prob="0.08"/>
+			<item name="modAugerDiamondTip" count="1" prob="0.03"/>
+			<item name="modAugerTurbo" count="1" prob="0.03"/>
+			<item name="foodMedicalHoney" count="2,5" prob="0.2"/>
+			<item name="casinoCoin" count="3000,8000" prob="3.8"/>
 		</lootcontainer>
-	</append> 
+	</append>
 
 	<!-- Adds mystery box loot -->
 	<append xpath="/lootcontainers">
@@ -472,13 +529,6 @@
 			<item name="thrownDynamite" count="1" prob="8"/>
 			<item name="thrownAmmoMolotovCocktail" count="1" prob="8"/>
 			<item name="thrownAmmoFlare" count="1" prob="8"/>
-
-			<!-- Vehicle -->
-			<item name="vehicleMinibikePlaceable" count="1" prob="5"/>
-			<item name="vehicleBicyclePlaceable" count="1" prob="6"/>
-			<item name="vehicleMotorcyclePlaceable" count="1" prob="4.5"/>
-			<item name="vehicle4x4TruckPlaceable" count="1" prob="4"/>
-			<item name="vehicleGyrocopterPlaceable" count="1" prob="4"/>
 
 			<!-- Clothes -->
 			<item name="armorClothHat" count="1" prob="7.5"/>
@@ -765,7 +815,7 @@
 		<item name="itemSpawnerBookCop"/>
 	</insertAfter>
 
-	<append xpath="/lootcontainers/lootgroup[@name='junk']" >
+	<append xpath="/lootcontainers/lootgroup[@name='junk']">
 		<item name="itemTraderbook" count="1" prob="0.01"/>
 		<item name="itemSpawnerBookBear" count="1" prob="0.08"/>
 		<item name="itemSpawnerBookPig" count="1" prob="0.08"/>
@@ -777,7 +827,7 @@
 		<item name="itemSpawnerBookDemo" count="1" prob="0.08"/>
 	</append>
 
-	<append xpath="/lootcontainers/lootcontainer[@id='14']" >
+	<append xpath="/lootcontainers/lootcontainer[@id='14']">
 		<item name="itemTraderbook" count="1" prob="0.01"/>
 		<item name="itemSpawnerBookBear" count="1" prob="0.08"/>
 		<item name="itemSpawnerBookPig" count="1" prob="0.08"/>
@@ -790,15 +840,15 @@
 	</append>
 
 	<!-- Adds torn pages to loot -->
-	<append xpath="/lootcontainers/lootgroup[@name='junk']" >
+	<append xpath="/lootcontainers/lootgroup[@name='junk']">
 		<item name="itemLearningbook" count="1" prob="0.01"/>
 	</append>
-	<append xpath="/lootcontainers/lootcontainer[@id='14']" >
+	<append xpath="/lootcontainers/lootcontainer[@id='14']">
 		<item name="itemLearningbook" count="1" prob="0.01"/>
 	</append>
 
 	<!-- Adds custom fittings mod to loot drop table -->
-	<append xpath="/lootcontainers/lootgroup[@name='groupModAllT3']" >
+	<append xpath="/lootcontainers/lootgroup[@name='groupModAllT3']">
 		<item name="modLightweightMasterFitting" count="1" prob="0.3"/>
 		<item name="modReinforcedMasterFitting" count="1" prob="0.3"/>
 	</append>
@@ -815,92 +865,92 @@
 
 	<!-- Adds parts template and Adamantium to loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='weaponParts']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".03" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".03"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='workingStiffsSub']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".05" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupToolsTiered']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".05" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupRareToolsTiered']">
-		<item name="itemPartsTemplateMaster" count="2,4" prob=".05" />
+		<item name="itemPartsTemplateMaster" count="2,4" prob=".05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupModAllScaled']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".05" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupHeroChestLoot']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".04" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupSafeLoot']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".04" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='shamwaySafe']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".04" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='brewerySafe']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".04" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupBuriedWeaponChest']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".04" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='workbenchLoot']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".04" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralCommon']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".05" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralRare']">
-		<item name="itemPartsTemplateMaster" count="2,4" prob=".04" />
+		<item name="itemPartsTemplateMaster" count="2,4" prob=".04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT2']">
-		<item name="itemPartsTemplateMaster" count="2,4" prob=".04" />
+		<item name="itemPartsTemplateMaster" count="2,4" prob=".04"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT1']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".05" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".05"/>
 	</append>
 
-	<!-- Adds paint back to loot -->	
+	<!-- Adds paint back to loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='workingStiffsSub']">
-		<item name="resourcePaint" count="5,20" prob="0.1" />
+		<item name="resourcePaint" count="5,20" prob="0.1"/>
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='12']">
-		<item name="resourcePaint" count="5,20" prob="0.1" />
+		<item name="resourcePaint" count="5,20" prob="0.1"/>
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='15']">
-		<item name="resourcePaint" count="5,20" prob="0.1" />
-	</append>	
+		<item name="resourcePaint" count="5,20" prob="0.1"/>
+	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='22']">
-		<item name="resourcePaint" count="5,20" prob="0.1" />
-	</append>	
+		<item name="resourcePaint" count="5,20" prob="0.1"/>
+	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='88']">
-		<item name="resourcePaint" count="5,20" prob="0.1" />
+		<item name="resourcePaint" count="5,20" prob="0.1"/>
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='124']">
-		<item name="resourcePaint" count="5,20" prob="0.1" />
+		<item name="resourcePaint" count="5,20" prob="0.1"/>
 	</append>
 
 	<!-- Adds Advanced Wrench to loot -->
 	<insertAfter xpath="/lootcontainers/lootgroup[@name='groupToolsT3']/item[@name='meleeToolSalvageT3ImpactDriver']">
-		<item name="itemAdvWrench" />
+		<item name="itemAdvWrench"/>
 	</insertAfter>
 	<insertAfter xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT3']/item[@name='meleeToolSalvageT3ImpactDriver']">
-		<item name="itemAdvWrench" />
+		<item name="itemAdvWrench"/>
 	</insertAfter>
 
 	<!-- Adds Auger mods to loot -->
 	<insertAfter xpath="/lootcontainers/lootgroup[@name='schematicsToolsT2']/item[@name='meleeToolRepairT3NailgunSchematic']">
-		<item name="modAugerDiamondTipSchematic" />
-		<item name="modAugerTurboSchematic" />
+		<item name="modAugerDiamondTipSchematic"/>
+		<item name="modAugerTurboSchematic"/>
 	</insertAfter>
 	<insertAfter xpath="/lootcontainers/lootgroup[@name='modMeleeT2']/item[@name='modFuelTankLarge']">
-		<item name="modAugerDiamondTip" prob=".03" />
-		<item name="modAugerTurbo" prob=".03" />
+		<item name="modAugerDiamondTip" prob=".03"/>
+		<item name="modAugerTurbo" prob=".03"/>
 	</insertAfter>
 
 	<!-- Adds Medicinal Honey to the beverage dispenser -->
 	<append xpath="/lootcontainers/lootgroup[@name='beverages']">
-		<item name="foodMedicalHoney" count="1,2" prob="0.2" />
+		<item name="foodMedicalHoney" count="1,2" prob="0.2"/>
 	</append>
 
 	<!-- Adds quest loot for Mysterious Tome quest -->
@@ -914,7 +964,7 @@
 			<item name="casinoCoin" count="3000,8000"/>
 		</lootcontainer>
 	</append>
-	
+
 	<!-- Adds quest loot for Mysterious Tome quest -->
 	<append xpath="/lootcontainers">
 		<lootcontainer id="911" count="2,3" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualPlus1Template">
@@ -922,7 +972,7 @@
 		</lootcontainer>
 	</append>
 
-	<!-- Increases the loot gain from zombie bag drops -->	
+	<!-- Increases the loot gain from zombie bag drops -->
 	<set xpath="/lootcontainers/lootcontainer[@id='70']/@count">4,6</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='71']/@count">5,7</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='73']/@count">6,8</set>
@@ -962,7 +1012,7 @@
 		<item name="modDyeCrimson"/>
 	</append>
 
-	<append xpath="/lootcontainers" >
+	<append xpath="/lootcontainers">
 		<lootcontainer id="194" size="4,2" count="1,3" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" destroy_on_close="true" loot_quality_template="qualPlus1Template">
 			<item name="foodEgg" count="2,10"/>
 			<item name="resourceFeather" count="2,10"/>
@@ -971,25 +1021,8 @@
 		</lootcontainer>
 	</append>
 
-	<remove xpath="/lootcontainers/lootgroup[@name='storeLootFood']/item[@name='resourcePaper']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='storeLootDrink']/item[@name='resourcePaper']" />
-
-	<!-- Combine mod drops, low rate -->
-	<append xpath="/lootcontainers/lootgroup[@name='modArmorT3']">
-		<item name="modGunBarrelExtender_2" prob=".005"/>
-	</append>
-
-	<append xpath="/lootcontainers/lootgroup[@name='modArmorT3']">
-		<item name="modMeleeStructuralBrace_2" prob=".005"/>
-	</append>
-
-	<append xpath="/lootcontainers/lootgroup[@name='modArmorT3']">
-		<item name="modArmorInsulatedLiner_2" prob=".005"/>
-	</append>
-
-	<append xpath="/lootcontainers/lootgroup[@name='modArmorT3']">
-		<item name="modGunMeleeRadRemover_2" prob=".005"/>
-	</append>
+	<remove xpath="/lootcontainers/lootgroup[@name='storeLootFood']/item[@name='resourcePaper']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='storeLootDrink']/item[@name='resourcePaper']"/>
 
 	<!-- Adds wheat to plant loot -->
 	<insertAfter xpath="/lootcontainers/lootgroup[@name='farmCrops']/item[@name='resourceCropGoldenrodPlant']">
@@ -1000,95 +1033,110 @@
 	<setattribute xpath="/lootcontainers/lootcontainer[@id='8']" name="size">10,6</setattribute>
 
 	<!-- Tools removed from loot -->
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolPickT1IronPickaxe']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolShovelT1IronShovel']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolAxeT1IronFireaxe']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolPickT1IronPickaxe']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolShovelT1IronShovel']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolAxeT1IronFireaxe']"/>
 
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolPickT2SteelPickaxe']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolShovelT2SteelShovel']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolAxeT2SteelAxe']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolPickT2SteelPickaxe']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolShovelT2SteelShovel']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolAxeT2SteelAxe']"/>
+
+	<!-- Iron Armour removed from loot -->
+	<remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item[@name='armorIronGloves']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item[@name='armorIronHelmet']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item[@name='armorIronBoots']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item[@name='armorIronLegs']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item[@name='armorIronChest']"/>
+
+	<!-- Steel and Military armour replaced with parts -->
+	<remove xpath="/lootcontainers/lootgroup[@name='groupArmorT2']"/>
+
+	<insertAfter xpath="/lootcontainers/lootgroup[@name='groupArmorT1']">
+		<lootgroup name="groupArmorT2" loot_quality_template="QLTemplateT2">
+			<item name="armorSteelSetParts" count="1,3" prob="20"/>
+			<item name="armorMilitarySetParts" count="1,3" prob="20"/>
+			<item name="resourceMilitaryFiber" count="1,2" prob="30"/>
+			<item name="resourceForgedSteel" count="1,2" prob="30"/>
+		</lootgroup>
+	</insertAfter>
 
 	<!-- Steel club and sledgehammer removed from loot -->
-	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item[@name='meleeWpnSpearT3SteelSpear']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item[@name='meleeWpnClubT3SteelClub']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item[@name='meleeWpnSledgeT3SteelSledgehammer']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item[@name='meleeWpnSpearT3SteelSpear']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item[@name='meleeWpnClubT3SteelClub']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']"/>
 
 	<!-- Removed Auger from loot -->
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT3']/item[@name='meleeToolPickT3Auger']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT3']/item[@name='meleeToolPickT3Auger']"/>
 
 	<!-- Lower tool chance from quest reward -->
 	<set xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']/@prob">0.1</set>
 	<append xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT1']">
-		<item name="meleeToolPickT1IronPickaxe" prob="0.15">
-		</item>
+		<item name="meleeToolPickT1IronPickaxe" prob="0.15"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT2']">
-		<item name="meleeToolPickT2SteelPickaxe" prob="0.12">
-		</item>
+		<item name="meleeToolPickT2SteelPickaxe" prob="0.12"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT3']">
-		<item name="meleeToolPickT3Auger" prob="0.07">
-		</item>
+		<item name="meleeToolPickT3Auger" prob="0.07"/>
 	</append>
 
 	<!-- Weapon bag loot nerf -->
-	<set xpath="/lootcontainers/lootcontainer[@id='100']/@count">1,3</set> <!-- 2,3 -->
-	<set xpath="/lootcontainers/lootcontainer[@id='101']/@count">2,3</set> <!-- 3,4 -->
-	<set xpath="/lootcontainers/lootcontainer[@id='121']/@count">2,6</set> <!-- 6,8 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='100']/@count">1,3</set><!-- 2,3 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='101']/@count">2,3</set><!-- 3,4 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='121']/@count">2,6</set><!-- 6,8 -->
 
 	<!-- Trasure maps are now rarer -->
-	<set xpath="/lootcontainers/lootgroup[@name='junk']/item[@group='groupTreasureMaps']/@prob">0.02</set> <!-- 0.092 -->
-	<set xpath="/lootcontainers/lootcontainer[@id='70']/item[@group='groupTreasureMaps']/@prob">0.04</set> <!-- 0.6 -->
-	<set xpath="/lootcontainers/lootcontainer[@id='71']/item[@group='groupTreasureMaps']/@prob">0.03</set> <!-- 0.25 -->
-	<set xpath="/lootcontainers/lootcontainer[@id='73']/item[@group='groupTreasureMaps']/@prob">0.03</set> <!-- 0.25 -->
+	<set xpath="/lootcontainers/lootgroup[@name='junk']/item[@group='groupTreasureMaps']/@prob">0.02</set><!-- 0.092 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='70']/item[@group='groupTreasureMaps']/@prob">0.04</set><!-- 0.6 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='71']/item[@group='groupTreasureMaps']/@prob">0.03</set><!-- 0.25 -->
+	<set xpath="/lootcontainers/lootcontainer[@id='73']/item[@group='groupTreasureMaps']/@prob">0.03</set><!-- 0.25 -->
 
 	<!-- No more wrench drops -->
-	<remove xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT1']/item[@name='meleeToolSalvageT1Wrench']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1Wrench']/item[@name='meleeToolSalvageT1Wrench']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolSalvageT1Wrench']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolSalvageT2Ratchet']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT0']/item[@name='meleeToolSalvageT1WrenchSchematic']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT1']/item[@name='meleeToolSalvageT2RatchetSchematic']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT1']/item[@name='meleeToolSalvageT1Wrench']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1Wrench']/item[@name='meleeToolSalvageT1Wrench']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolSalvageT1Wrench']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolSalvageT2Ratchet']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT0']/item[@name='meleeToolSalvageT1WrenchSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT1']/item[@name='meleeToolSalvageT2RatchetSchematic']"/>
 
 	<!-- Removed crucible drops -->
-	<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT2']/item[@name='toolForgeCrucibleSchematic']" />
-	<remove xpath="/lootcontainers/lootgroup[@name='workstationToolsScaled']/item[@name='toolForgeCrucible']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT2']/item[@name='toolForgeCrucibleSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='workstationToolsScaled']/item[@name='toolForgeCrucible']"/>
 
 	<!-- Treasure chest dukes nerf -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupBuriedLootStashTreasure']/item[@name='casinoCoin']/@count">1200,4000</set> <!-- 3000, 8000 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupBuriedLootStashTreasure']/item[@name='casinoCoin']/@count">1200,4000</set><!-- 3000, 8000 -->
 
 	<!-- Nailgun loot nerf -->
 	<append xpath="/lootcontainers/lootgroup[@name='groupToolsT3']">
-		<item name="meleeToolRepairT3Nailgun" prob="0.2">
-		</item>
+		<item name="meleeToolRepairT3Nailgun" prob="0.2"/>
 	</append>
 
 	<!-- Quest reward ammo nerf -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletBall']/@count">50</set>         <!-- 200 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletHP']/@count">30</set>           <!-- 100 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletAP']/@count">30</set>           <!-- 100 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletBall']/@count">40</set>    <!-- 150 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletHP']/@count">30</set>      <!-- 100 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletAP']/@count">30</set>      <!-- 100 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletBall']/@count">35</set>       <!-- 120 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletHP']/@count">25</set>         <!-- 90 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletAP']/@count">25</set>         <!-- 90 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoArrowExploding']/@count">15</set>        <!-- 30 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoArrowFlaming']/@count">20</set>          <!-- 50 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoCrossbowBoltExploding']/@count">15</set> <!-- 30 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoCrossbowBoltFlaming']/@count">20</set>   <!-- 50 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoRocketFrag']/@count">3</set> 			   <!-- 7 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoShotgunShell']/@count">40</set>          <!-- 120 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoShotgunSlug']/@count">25</set>           <!-- 75 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletBall']/@count">50</set><!-- 200 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletHP']/@count">30</set><!-- 100 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletAP']/@count">30</set><!-- 100 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletBall']/@count">40</set><!-- 150 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletHP']/@count">30</set><!-- 100 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletAP']/@count">30</set><!-- 100 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletBall']/@count">35</set><!-- 120 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletHP']/@count">25</set><!-- 90 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletAP']/@count">25</set><!-- 90 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoArrowExploding']/@count">15</set><!-- 30 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoArrowFlaming']/@count">20</set><!-- 50 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoCrossbowBoltExploding']/@count">15</set><!-- 30 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoCrossbowBoltFlaming']/@count">20</set><!-- 50 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoRocketFrag']/@count">3</set><!-- 7 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoShotgunShell']/@count">40</set><!-- 120 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoShotgunSlug']/@count">25</set><!-- 75 -->
 
 	<!-- Quest reward thrown explosive ammo nerf -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownAmmoMolotovCocktail']/@count">5</set>  <!-- 20 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownAmmoPipeBomb']/@count">5</set> 		   <!-- 20 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownDynamite']/@count">5</set> 		       <!-- 10 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenade']/@count">5</set> 		       <!-- 25 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenadeContact']/@count">5</set> 	   <!-- 25 -->
-	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownTimedCharge']/@count">5</set> 		   <!-- 10 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownAmmoMolotovCocktail']/@count">5</set><!-- 20 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownAmmoPipeBomb']/@count">5</set><!-- 20 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownDynamite']/@count">5</set><!-- 10 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenade']/@count">5</set><!-- 25 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenadeContact']/@count">5</set><!-- 25 -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownTimedCharge']/@count">5</set><!-- 10 -->
 
 
 </config>

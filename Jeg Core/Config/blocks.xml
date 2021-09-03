@@ -77,6 +77,16 @@
 	<append xpath="/blocks/block[contains(@name, 'bed')]">
 		<property name="CanPickup" value="true"/>
 	</append>
+	
+	<!-- Increases bulletproof glass stack size -->
+	<append xpath="/blocks/block[@name='glassBulletproofMaster']">
+		<property name="Stacknumber" value="500" />
+	</append>
+	<set xpath="/blocks/block[@name='glassBulletproofBlockVariantHelper']/property[@name='Stacknumber']/@value">500</set>
+	
+	<!-- Increases land mine stack size -->
+	<set xpath="/blocks/block[starts-with(@name, 'mine')]/property[@name='Stacknumber']/@value">2000</set>
+	<set xpath="/blocks/block[@name='rScrapIronPlateMine']/property[@name='Stacknumber']/@value">2000</set>
 
 	<remove xpath="/blocks/block[@name='cntVendingMachine']/property[@name='Buff']" />
 	<remove xpath="/blocks/block[@name='cntVendingMachine']/drop[@event='Destroy']" />
@@ -761,6 +771,7 @@
 			<property name="Extends" value="glassBulletproofMaster"/>
 			<property name="CustomIcon" value="glassBulletproofCTRPlate" />
 			<property name="CustomIconTint" value="B0E7FF"/>
+			<property name="Stacknumber" value="500" />
 			<property name="Model" value="plate_centered"/> <property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
 			<property class="RepairItems"> <property name="resourceScrapLead" value="10"/> </property>
@@ -773,6 +784,7 @@
 			<property name="Extends" value="glassBulletproofMaster"/>
 			<property name="CustomIcon" value="glassBulletproofPlate" />
 			<property name="CustomIconTint" value="B0E7FF"/>
+			<property name="Stacknumber" value="500" />
 			<property name="Model" value="plate_glass"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
 			<property class="RepairItems"> <property name="resourceScrapLead" value="10"/> </property>
@@ -785,6 +797,7 @@
 			<property name="Extends" value="glassBulletproofMaster"/>
 			<property name="CustomIcon" value="glassBulletproofMaster" />
 			<property name="CustomIconTint" value="B0E7FF"/>
+			<property name="Stacknumber" value="500" />
 			<property name="Material" value="MglassBulletproofPlayer"/>
 			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
 			<property name="ImposterExchange" value="imposterBlock" param1="170"/> <!-- ShadowColour -->
@@ -797,6 +810,7 @@
 			<property name="Model" value="ramp_glass"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
 			<property name="ImposterExchange" value="imposterRamp" param1="170"/> <!-- ShadowColour -->
+			<property name="Stacknumber" value="500" />
 		</block>
 
 		<block name="glassBulletproofPlateCurvedPlayer">
@@ -806,6 +820,7 @@
 			<property name="Model" value="plate_corner_round_1m"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
 			<property name="ImposterExchange" value="imposterBlock" param1="170"/> <!-- ShadowColour -->
+			<property name="Stacknumber" value="500" />
 		</block>
 
 		<block name="windowStoreFourSidedBulletproofPlayer">
@@ -813,6 +828,7 @@
 			<property name="CustomIcon" value="windowStoreFourSidedBulletproof" />
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Model" value="Entities/Buildings/window_store_four_sided_bulletproofPrefab"/>
+			<property name="Stacknumber" value="500" />
 			<property name="Material" value="MglassBulletproofPlayer"/>
 			<property name="DowngradeBlock" value="windowStoreFourSided"/>
 		</block>
@@ -820,6 +836,7 @@
 		<block name="glassBulletproofRampSheetPlayer">
 			<property name="Extends" value="glassBulletproofMaster"/>
 			<property name="CustomIcon" value="glassBulletproofRampSheet" />
+			<property name="Stacknumber" value="500" />
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Model" value="ramp_glass_sheet"/>
 		</block>

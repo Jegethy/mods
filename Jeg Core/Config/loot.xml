@@ -914,6 +914,13 @@
 			<item name="casinoCoin" count="3000,8000"/>
 		</lootcontainer>
 	</append>
+	
+	<!-- Adds quest loot for Mysterious Tome quest -->
+	<append xpath="/lootcontainers">
+		<lootcontainer id="911" count="2,3" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualPlus1Template">
+			<item name="casinoCoin" count="250,500"/>
+		</lootcontainer>
+	</append>
 
 	<!-- Increases the loot gain from zombie bag drops -->	
 	<set xpath="/lootcontainers/lootcontainer[@id='70']/@count">4,6</set>

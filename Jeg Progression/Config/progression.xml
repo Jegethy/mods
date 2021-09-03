@@ -1,7 +1,6 @@
 <config>
 
 	<!-- Extended the levelling curve, so less experience is needed at lower levels -->
-	<set xpath="/progression/level/@experience_multiplier">1.02</set>
 	<set xpath="/progression/level/@clamp_exp_cost_at_level">100</set>
 
 	<!-- Removed Grease Monkey -->
@@ -972,7 +971,7 @@ Craftable candies?
 	<removeattribute xpath="/progression/perks[@min_level='0']/perk[@name='perkRuleOneCardio']/effect_group/passive_effect[@name='StaminaChangeOT']/@tags"/>
 
 	<!-- Increased loot quantity on Treasure Hunter perk -->
-	<set xpath="/progression/perks/perk[@name='perkTreasureHunter']/effect_group/passive_effect[@name='LootQuantity'][@level='1,2,3']/@value">.33,.66,1</set>
+	<set xpath="/progression/perks/perk[@name='perkTreasureHunter']/effect_group/passive_effect[@name='LootQuantity'][@level='1,2,3']/@value">.30,.60,1</set>
 
 	<!-- Increased healing effect from Healing Factor -->
 	<set xpath="/progression/perks/perk[@name='perkHealingFactor']/effect_group/passive_effect[@name='HealthChangeOT']/@value">.022,.044,.1,.2,.32</set>

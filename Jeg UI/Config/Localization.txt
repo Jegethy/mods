@@ -252,6 +252,9 @@ perkSkullCrusherRank2LongDesc,progression,perk Str,,,You are now a mauler but do
 perkSkullCrusherRank3LongDesc,progression,perk Str,,,You are a certified smasher of things that get in your way. Deal 30% more damage. Power attacks have a 45% chance to knock down enemies and a 20% chance to knock down nearby foes.
 perkSkullCrusherRank4LongDesc,progression,perk Str,,,You have nearly perfected the craft of smashing stuff and breaking bones. Deal 40% more damage. Power attacks have a 60% chance to knock down enemies and a 35% chance to knock down nearby foes.
 loadingTipCraftingBetterQL,UI,Loading Screen,x,,At the start of the game you can only craft quality 1 tools and items such as a stone axe. The quality of an item is displayed at the bottom of its icon. To craft a higher quality items invest in the Crafting Tier perk.
+perkTreasureHunterRank1LongDesc,progression,perk Per,,,"[60CCFF]For every 7 blocks dug up the treasure search radius is reduced by 1m. Without the perk you have to dig up 10 blocks each.\nFind 30% more items in buried treasure."
+perkTreasureHunterRank2LongDesc,progression,perk Per,,,"[60CCFF]For every 5 blocks dug up the treasure search radius is reduced by 1m.\nFind 60% more items in buried treasure."
+perkTreasureHunterRank3LongDesc,progression,perk Per,,,"[60CCFF]For every 3 blocks dug up the treasure search radius is reduced by 1m.\nFind 100% more items in buried treasure."
 quest_BasicSurvival1,Quest,Quest Info,,,Basic Survival 1/12
 quest_BasicSurvival2,Quest,Quest Info,,,Basic Survival 2/12
 quest_BasicSurvival3,Quest,Quest Info,,,Basic Survival 3/12

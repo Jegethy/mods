@@ -78,7 +78,7 @@
 
 	<!-- Armour Accessory Mod -->
 	<append xpath="/item_modifiers">
-		<item_modifier name="modAccessoriseArmour" installable_tags="accessorise" type="attachment">
+		<item_modifier name="modAccessoriseArmour" installable_tags="accessorise" blocked_tags="armouredNeck" type="attachment">
 			<property name="DisplayType" value="modAccessoriseArmour"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="modAccessorise"/>
@@ -88,7 +88,7 @@
 			<property name="EconomicValue" value="385"/>
 
 			<effect_group tiered="false">
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
 			</effect_group>
 		</item_modifier>
 	</append>

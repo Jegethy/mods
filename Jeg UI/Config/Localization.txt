@@ -233,7 +233,7 @@ perkBoomstickRank4LongDesc,progression,perk Str,,,"You are now very deadly with 
 perkHeavyArmorRank1LongDesc,progression,perk Str,,,"You might move a little awkward in heavy armor but you're alive to talk about it. Reduce heavy armor movement and stamina penalty by 5%. Improve durability by 50%.\nUnlocks iron armor crafting."
 perkHeavyArmorRank2LongDesc,progression,perk Str,,,"You can take a hit! Reduce heavy armor movement and stamina penalty by 10%. Improve durability by 100%."
 perkHeavyArmorRank3LongDesc,progression,perk Str,,,"Now we're talking about some serious protection. Reduce heavy armor movement and stamina penalty by 17%. Improve durability by 150%."
-perkHeavyArmorRank4LongDesc,progression,perk Str,,,"You are now a walking tank. Reduce heavy armor movement and stamina penalty by 25%. Improve durability by 200%.
+perkHeavyArmorRank4LongDesc,progression,perk Str,,,"You are now a walking tank. Reduce heavy armor movement and stamina penalty by 25%. Improve durability by 200%."
 perkMiner69rRank1LongDesc,progression,perk Str,,,"Everyone has to start somewhere. Increase tool damage by 10% and block damage by 30% with any axe, pick, chainsaw or auger.\nUnlocks all iron tools like pickaxes."
 perkMiner69rRank2LongDesc,progression,perk Str,,,"You are still a little green but you aren't fetching the muckmen blackstrap any more. Increase tool damage by 20% and block damage by 60% with any axe, pick, chainsaw or auger."
 perkMiner69rRank3LongDesc,progression,perk Str,,,"You are now a professional miner or what they called muckmen back in the day. Increase tool damage by 30% and block damage by 90% with any axe, pick, chainsaw or auger."

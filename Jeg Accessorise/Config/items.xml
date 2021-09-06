@@ -255,7 +255,7 @@
 		<!-- Emerald Necklace, localised: Emerald Necklace -->
 
 		<item name="accessoryEmeraldNecklace">
-			<property name="Tags" value="accessorise,canHaveCosmetic"/>
+			<property name="Tags" value="accessorise,armouredNeck,canHaveCosmetic"/>
 			<!-- <property name="DisplayType" value="clothing"/> -->
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="accessoryEmeraldNecklace"/>

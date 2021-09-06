@@ -88,7 +88,7 @@
 			<property name="EconomicValue" value="385"/>
 
 			<effect_group tiered="false">
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5"/>
 			</effect_group>
 		</item_modifier>
 	</append>

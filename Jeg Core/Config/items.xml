@@ -2945,10 +2945,10 @@
 
 	<!-- Increases infection cured by honey and antibiotics -->
 	<set xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc' and @operation='add']/@value">12</set>
-	<set xpath="/items/item[@name='foodHoney']/effect_group/display_value[@name='$dCureInfection']/@value">.12</set>
+	<set xpath="/items/item[@name='foodHoney']/effect_group/display_value[@name='dCureInfection']/@value">.12</set>
 
 	<set xpath="/items/item[@name='drugHerbalAntibiotics']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc' and @operation='add']/@value">25</set>
-	<set xpath="/items/item[@name='drugHerbalAntibiotics']/effect_group/display_value[@name='$dCureInfection']/@value">.25</set>
+	<set xpath="/items/item[@name='drugHerbalAntibiotics']/effect_group/display_value[@name='dCureInfection']/@value">.25</set>
 
 	<remove xpath="/items/item[@name='drugAntibiotics']"/>
 
@@ -2960,7 +2960,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="EconomicValue" value="240"/>
-			<property name="Stacknumber" value="10"/><!-- STK loot -->
+			<property name="Stacknumber" value="250"/><!-- STK loot -->
 			<property name="UnlockedBy" value="perkPhysician,drugAntibioticsSchematic"/>
 			<property name="DisplayType" value="cureInfection"/>
 			<property name="Group" value="Science,CFChemicals,Medical"/>

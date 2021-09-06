@@ -287,8 +287,8 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="16"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="6"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
-				<display_value name="dCureInfection" value=".10"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="10"/>
+				<display_value name="dCureInfection" value=".25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="25"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
 			</effect_group>
 		</item>
@@ -2942,5 +2942,40 @@
 			<property name="Stacknumber" value="1"/>
 		</item>
 	</append>
+
+	<!-- Increases infection cured by honey and antibiotics -->
+	<set xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc' and @operation='add']/@value">12</set>
+	<set xpath="/items/item[@name='foodHoney']/effect_group/display_value[@name='dCureInfection']/@value">.12</set>
+
+	<set xpath="/items/item[@name='drugHerbalAntibiotics']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc' and @operation='add']/@value">25</set>
+	<set xpath="/items/item[@name='drugHerbalAntibiotics']/effect_group/display_value[@name='dCureInfection']/@value">.25</set>
+
+	<remove xpath="/items/item[@name='drugAntibiotics']"/>
+
+	<insertAfter xpath="/items/item[@name='drugHerbalAntibiotics']">
+		<item name="drugAntibiotics">
+			<property name="Tags" value="medical"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="EconomicValue" value="240"/>
+			<property name="Stacknumber" value="250"/><!-- STK loot -->
+			<property name="UnlockedBy" value="perkPhysician,drugAntibioticsSchematic"/>
+			<property name="DisplayType" value="cureInfection"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_painkillers"/>
+			</property>
+			<effect_group tiered="false">
+				<display_value name="dCureInfection" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+			</effect_group>
+		</item>
+	</insertAfter>
 
 </configs>

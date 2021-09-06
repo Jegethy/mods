@@ -78,7 +78,7 @@
 
 	<!-- Armour Accessory Mod -->
 	<append xpath="/item_modifiers">
-		<item_modifier name="modAccessoriseArmour" installable_tags="accessorise" type="attachment">
+		<item_modifier name="modAccessoriseArmour" installable_tags="accessorise" blocked_tags="armouredNeck" type="attachment">
 			<property name="DisplayType" value="modAccessoriseArmour"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="modAccessorise"/>

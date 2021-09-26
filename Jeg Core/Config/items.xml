@@ -225,8 +225,8 @@
 	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group[@name='military armor']/passive_effect[@name='Mobility']/@value">-.03</set>
 
 	<!-- Speeds up forge smelting -->
-	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">0.2</set>
-	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.25</set>
+	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">0.15</set>
+	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.2</set>
 
 	<!-- Increases the Nailgun speed and removed the quality display as it only comes in 1 tier -->
 	<set xpath="/items/item[@name='meleeToolRepairT3Nailgun']/property[@class='Action1']/property[@name='Delay']/@value">0.25</set>
@@ -237,7 +237,7 @@
 		<property name="CraftingIngredientTime" value="0.5"/>
 	</append>
 	<append xpath="/items/item[@name='resourceScrapBrass']">
-		<property name="CraftingIngredientTime" value="0.3"/>
+		<property name="CraftingIngredientTime" value="0.2"/>
 	</append>
 	<append xpath="/items/item[@name='resourceScrapLead']">
 		<property name="CraftingIngredientTime" value="0.3"/>
@@ -1976,14 +1976,12 @@
 			<property name="Stacknumber" value="1"/><!-- STK loot -->
 			<property name="EconomicValue" value="240"/>
 			<property name="Group" value="Tools/Traps"/>
-			<property name="DisplayType" value="toolAdamantiumEnriched"/>
+			<property name="DisplayType" value="toolAdamantiumAnvil"/>
 			<property name="ItemTypeIcon" value="forge"/>
 			<effect_group tiered="false">
 				<requirement name="!HoldingItemHasTags" tags="toolAnvil"/>
-				<passive_effect name="CraftingTime" operation="perc_add" value="-.333"/>
-				<display_value name="dCraftingTime" value=".5"/>
-				<passive_effect name="CraftingSmeltTime" operation="perc_add" value="-.333"/>
-				<display_value name="dCraftingSmeltTime" value=".5"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-.666"/>
+				<display_value name="dCraftingTime" value="1"/>
 			</effect_group>
 		</item>
 	</append>
@@ -2000,13 +1998,11 @@
 			<property name="Weight" value="100"/>
 			<property name="EconomicValue" value="500"/>
 			<property name="Group" value="Tools/Traps"/>
-			<property name="DisplayType" value="toolAdamantiumEnriched"/>
+			<property name="DisplayType" value="toolAdamantiumBellows"/>
 			<property name="ItemTypeIcon" value="forge"/>
 			<effect_group tiered="false">
-				<passive_effect name="CraftingSmeltTime" operation="perc_add" value="-.333"/><!-- this is essentially a multiplier -->
-				<display_value name="dCraftingSmeltTime" value=".5"/>
-				<passive_effect name="CraftingTime" operation="perc_add" value="-.333"/>
-				<display_value name="dCraftingTime" value=".5"/>
+				<passive_effect name="CraftingSmeltTime" operation="perc_add" value="-.666"/><!-- this is essentially a multiplier -->
+				<display_value name="dCraftingSmeltTime" value="1"/>
 			</effect_group>
 		</item>
 	</append>

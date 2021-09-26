@@ -78,9 +78,14 @@
 	</append>
 
 	<append xpath="/ui_display_info/item_display">	
-		<item_display_info display_type="toolAdamantiumEnriched" display_group="workstationTools">
-			<display_entry name="dCraftingSmeltTime" title_key="statCraftingSmeltTime" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		<item_display_info display_type="toolAdamantiumAnvil" display_group="workstationTools">
 			<display_entry name="dCraftingTime" title_key="statCraftingTimeForge" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+	</append>
+	
+	<append xpath="/ui_display_info/item_display">	
+		<item_display_info display_type="toolAdamantiumBellows" display_group="workstationTools">
+			<display_entry name="dCraftingSmeltTime" title_key="statCraftingSmeltTime" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
 		</item_display_info>
 	</append>
 

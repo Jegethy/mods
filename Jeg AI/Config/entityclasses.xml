@@ -4,11 +4,19 @@
 	<set xpath="/entity_classes/entity_class[contains(@name, 'Backpack')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">43200</set>
 
 	<!-- Animal corpses take longer to despawn -->
-	<set xpath="/entity_classes/entity_class[starts-with(@name,'animal')]/property[@name='TimeStayAfterDeath']/@value">1800</set> <!--30 minutes instead of 5-->
+	<set xpath="/entity_classes/entity_class[starts-with(@name,'animal')]/property[@name='TimeStayAfterDeath']/@value">5400</set>
+	
+	<!-- Increases the despawn time of zombie dog and vulture corpses -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='Class']">
+		<property name="TimeStayAfterDeath" value="5400" />
+	</insertAfter>
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalZombieVulture']/property[@name='SizeScale']">
+		<property name="TimeStayAfterDeath" value="5400" />
+	</insertAfter>
 
 	<!-- Increases the despawn timer of the zombie dropped loot bags from 5 minutes to 1 hour (real time) -->
-	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">3600</set>
-	<set xpath="/entity_classes/entity_class[contains(@name, 'EntityLoot')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">3600</set>
+	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">5400</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'EntityLoot')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">5400</set>
 
 	<!-- Randomises the speed at which zombies recovery from knock downs -->
 	<set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">1.0,10.0</set>

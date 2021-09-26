@@ -1654,7 +1654,7 @@
 			<property class="Action0">
 				<property name="Sound_start" value="open_cash_register"/>
 				<property name="Create_item" value="foodRawMeat,foodBearSteak,"/>
-				<property name="Create_item_count" value="25,10"/>
+				<property name="Create_item_count" value="40,20"/>
 			</property>
 		</item>
 	</append>
@@ -1695,7 +1695,7 @@
 			<property class="Action0">
 				<property name="Sound_start" value="open_cash_register"/>
 				<property name="Create_item" value="foodRawMeat,foodRawRibs"/>
-				<property name="Create_item_count" value="25,15"/>
+				<property name="Create_item_count" value="40,20"/>
 			</property>
 		</item>
 	</append>
@@ -1736,7 +1736,7 @@
 			<property class="Action0">
 				<property name="Sound_start" value="open_cash_register"/>
 				<property name="Create_item" value="foodRawMeat,resourceLeather"/>
-				<property name="Create_item_count" value="20,20"/>
+				<property name="Create_item_count" value="25,25"/>
 			</property>
 		</item>
 	</append>
@@ -1817,8 +1817,8 @@
 			<property name="DescriptionKey" value="chestRewardNurseDesc"/>
 			<property class="Action0">
 				<property name="Sound_start" value="open_cash_register"/>
-				<property name="Create_item" value="medicalFirstAidBandage,medicalFirstAidKit"/>
-				<property name="Create_item_count" value="15,10"/>
+				<property name="Create_item" value="medicalFirstAidBandage,medicalFirstAidKit,medicalPlasterCast"/>
+				<property name="Create_item_count" value="2,2,1"/>
 			</property>
 		</item>
 	</append>
@@ -1859,7 +1859,7 @@
 			<property class="Action0">
 				<property name="Sound_start" value="open_cash_register"/>
 				<property name="Create_item" value="resourceConcreteMix,rebarFrameBlockVariantHelper"/>
-				<property name="Create_item_count" value="150,50"/>
+				<property name="Create_item_count" value="500,150"/>
 			</property>
 		</item>
 	</append>
@@ -1899,8 +1899,8 @@
 			<property name="DescriptionKey" value="chestRewardCopDesc"/>
 			<property class="Action0">
 				<property name="Sound_start" value="open_cash_register"/>
-				<property name="Create_item" value="resourceAcid"/>
-				<property name="Create_item_count" value="10"/>
+				<property name="Create_item" value="resourceAcid,resourceGunPowder"/>
+				<property name="Create_item_count" value="10,250"/>
 			</property>
 		</item>
 	</append>

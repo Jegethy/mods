@@ -16,11 +16,11 @@
 	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='fuelTank']/property[@name='capacity']/@value">160</set>
 	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='fuelTank']/property[@name='capacity']/@value">40</set>
 	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='fuelTank']/property[@name='capacity']/@value">150</set>
-	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='fuelTank']/property[@name='capacity']/@value">300</set>
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='fuelTank']/property[@name='capacity']/@value">500</set>
 	<!-- Increases the fuel efficiency of vehicles -->
 	<!-- A18 NOTE: Perhaps now TOO efficient? -->
 	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.7</set>
-	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.4</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.5</set>
 	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.3</set>
 	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.2</set>
 
@@ -157,5 +157,13 @@
 
 		</vehicle>
 	</insertBefore>
+
+	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='engine']/property[@name='gear1']/@value">
+		500,2500, -1400,800,0, 1500,9999,9999,
+		Vehicles/Minibike/minibike_accel_OFF,
+		,
+		0, .5,  .2, .1,  -9, .1, .1, Vehicles/Minibike/minibike_idle_lp_,
+		-.1, .1,  .2, .2,  0, 9, .1, Vehicles/Minibike/minibike_run_lp_
+	</set>
 
 </configs>

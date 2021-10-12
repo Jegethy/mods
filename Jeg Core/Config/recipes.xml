@@ -93,6 +93,7 @@
 			<ingredient name="resourceLeather" count="300"/>
 		</recipe>
 	</append>
+
 	<append xpath="/recipes">
 		<recipe name="foodOmelette" count="2" craft_area="campfire" craft_tool="toolCookingPot" tags="perkAdvancedWrench,learnable" craft_time="15">
 			<ingredient name="resourceGoldenEgg" count="1"/>
@@ -100,6 +101,7 @@
 			<ingredient name="foodRapeseedOil" count="2"/>
 		</recipe>
 	</append>
+
 	<append xpath="/recipes">
 		<recipe name="foodCookedRibs" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
 			<ingredient name="foodRawRibs" count="1"/>
@@ -108,6 +110,7 @@
 			<ingredient name="foodRapeseedOil" count="2"/>
 		</recipe>
 	</append>
+
 	<append xpath="/recipes">
 		<recipe name="foodGrilledChickenLeg" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
 			<ingredient name="foodChickenLeg" count="1"/>
@@ -116,11 +119,13 @@
 			<ingredient name="foodRapeseedOil" count="2"/>
 		</recipe>
 	</append>
+
 	<append xpath="/recipes">
 		<recipe name="foodBakingFlour" count="1" craft_time="1">
 			<ingredient name="foodCropWheat" count="1"/>
 		</recipe>
 	</append>
+
 	<!-- Adds recipe for modded customised fittings -->
 	<append xpath="/recipes">
 		<recipe name="modLightweightMasterFitting" count="1" craft_time="90" craft_area="workbench" tags="perkAdvancedWrench,learnable">
@@ -138,6 +143,7 @@
 			<ingredient name="resourceForgedSteel" count="30"/>
 		</recipe>
 	</append>
+
 	<append xpath="/recipes">
 		<recipe name="modReinforcedMasterFitting" count="1" craft_time="30" craft_area="workbench" tags="perkAdvancedWrench,learnable">
 			<ingredient name="itemPartsTemplateMaster" count="3"/>
@@ -148,6 +154,7 @@
 			<ingredient name="modReinforcedMasterFitting" count="1"/>
 		</recipe>
 	</append>
+
 	<!-- Adding crafting recipe for medicinal honey -->
 	<append xpath="/recipes">
 		<recipe name="foodMedicalHoney" count="1" craft_time="5">
@@ -155,6 +162,7 @@
 			<ingredient name="foodCropYuccaFruit" count="1"/>
 		</recipe>
 	</append>
+
 	<!-- Adds crafting recipes for new lights -->
 	<append xpath="/recipes">
 		<recipe name="Jeg's Porch Light 01" count="1" craft_area="workbench">
@@ -2214,6 +2222,26 @@
 		<recipe name="itemOpenWeaponCrate" craft_time="10" always_unlocked="true" count="1">
 			<ingredient name="itemLockedWeaponCrate" count="1"/>
 			<ingredient name="itemCrudeKey" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodSimpleBread" count="1" craft_time="5" always_unlocked="true" craft_area="campfire">
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="foodBakingFlour" count="2"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="foodSimpleToast" count="1" craft_time="5" craft_tool="toolCookingPot" always_unlocked="true" craft_area="campfire">
+			<ingredient name="foodSimpleBread" count="1"/>
+		</recipe>
+	</append>
+	
+	<append xpath="/recipes">
+		<recipe name="foodEggSandwich" count="1" craft_time="5" craft_tool="toolCookingPot" always_unlocked="true" craft_area="campfire">
+			<ingredient name="foodSimpleBread" count="1"/>
+			<ingredient name="foodEgg" count="2"/>
 		</recipe>
 	</append>
 

@@ -2974,4 +2974,122 @@
 		</item>
 	</insertAfter>
 
+	<!-- Gold and Silver Coins, smelt for brass/lead -->
+	<append xpath="/items">
+		<item name="resourcedOldGoldCoin">
+			<property name="DescriptionKey" value="resourcedOldGoldCoinDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="resourcedOldGoldCoin"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapBrassLarge"/>
+			<property name="MeltTimePerUnit" value=".4"/>
+			<property name="Stacknumber" value="250"/><!-- STK loot -->
+			<property name="Weight" value="500"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+		<item name="resourcedOldSilverCoin">
+			<property name="DescriptionKey" value="resourcedOldSilverCoinDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="resourcedOldSilverCoin"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapLeadLarge"/>
+			<property name="MeltTimePerUnit" value=".4"/>
+			<property name="Stacknumber" value="250"/><!-- STK loot -->
+			<property name="Weight" value="500"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Group" value="Resources"/>
+		</item>
+	</append>
+
+	<!-- Bread -->
+	<append xpath="/items">
+		<item name="foodSimpleBread">
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="CustomIcon" value="foodSimpleBread"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="250"/><!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+	</append>
+	
+	<append xpath="/items">
+		<item name="foodSimpleToast">
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="CustomIcon" value="foodSimpleToast"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="250"/><!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+	</append>
+	
+	<append xpath="/items">
+		<item name="foodEggSandwich">
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="CustomIcon" value="foodEggSandwich"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="250"/><!-- STK food -->
+			<property name="EconomicValue" value="25"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+			<effect_group tiered="false" name="Food Tier 0/1">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+	</append>
+
 </configs>

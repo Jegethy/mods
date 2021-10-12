@@ -4,37 +4,37 @@
 	<set xpath="/blocks/block[@name='campfire']/property[@name='BuffsWhenWalkedOn']/@value">buffBurningFlamingArrow</set>
 
 	<!-- Safes are harder to smash open -->
-	<append xpath="/blocks/block[@name='cntWallSafe']" >
-		<property name="MaxDamage" value="9000"/> <!-- original: 2500  -->
+	<append xpath="/blocks/block[@name='cntWallSafe']">
+		<property name="MaxDamage" value="9000"/><!-- original: 2500  -->
 	</append>
-	<append xpath="/blocks/block[@name='cntGunSafe']" >
+	<append xpath="/blocks/block[@name='cntGunSafe']">
 		<property name="MaxDamage" value="18000"/><!-- original: 5000  -->
 	</append>
-	<append xpath="/blocks/block[@name='cntHardenedChestSecure']" >
+	<append xpath="/blocks/block[@name='cntHardenedChestSecure']">
 		<property name="MaxDamage" value="30000"/><!-- original: 10000  -->
 	</append>
-	
+
 	<!-- Lootable Tires -->
 	<append xpath="/blocks/block[contains (@name, 'decoCarTireSmallFlat')]">
 		<property name="CanPickup" value="true"/>
 	</append>
 
 	<!-- Campfire, force and work stations cause more heat -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']/@value">7</set>        <!-- original: 5    -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapTime']/@value">7000</set>         <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapFrequency']/@value">2000</set>    <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']/@value">8</set>           <!-- original: 6    -->
-	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapTime']/@value">7000</set>            <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapFrequency']/@value">2000</set>       <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']/@value">4</set>       <!-- original: 2    -->
-	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapTime']/@value">7000</set>        <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapFrequency']/@value">2500</set>   <!-- original: 1000 -->
-	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']/@value">4</set>     <!-- original: 2    -->
-	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapTime']/@value">7000</set>      <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapFrequency']/@value">2500</set> <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']/@value">7</set><!-- original: 5    -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapTime']/@value">7000</set><!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='campfire']/property[@name='HeatMapFrequency']/@value">2000</set><!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']/@value">8</set><!-- original: 6    -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapTime']/@value">7000</set><!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='forge']/property[@name='HeatMapFrequency']/@value">2000</set><!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']/@value">4</set><!-- original: 2    -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapTime']/@value">7000</set><!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='workbench']/property[@name='HeatMapFrequency']/@value">2500</set><!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']/@value">4</set><!-- original: 2    -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapTime']/@value">7000</set><!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapFrequency']/@value">2500</set><!-- original: 1000 -->
 	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapStrength']/@value">7</set><!-- original: 5    -->
-	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapTime']/@value">7000</set> <!-- original: 5000 -->
-	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapFrequency']/@value">2500</set> <!-- original: 1000 -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapTime']/@value">7000</set><!-- original: 5000 -->
+	<set xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapFrequency']/@value">2500</set><!-- original: 1000 -->
 
 	<!-- Triples the fuel capacity of generators -->
 	<set xpath="/blocks/block[@name='generatorbank']/property[@name='MaxFuel']/@value">8000</set>
@@ -77,19 +77,19 @@
 	<append xpath="/blocks/block[contains(@name, 'bed')]">
 		<property name="CanPickup" value="true"/>
 	</append>
-	
+
 	<!-- Increases bulletproof glass stack size -->
 	<append xpath="/blocks/block[@name='glassBulletproofMaster']">
-		<property name="Stacknumber" value="500" />
+		<property name="Stacknumber" value="500"/>
 	</append>
 	<set xpath="/blocks/block[@name='glassBulletproofBlockVariantHelper']/property[@name='Stacknumber']/@value">500</set>
-	
+
 	<!-- Increases land mine stack size -->
 	<set xpath="/blocks/block[starts-with(@name, 'mine')]/property[@name='Stacknumber']/@value">2000</set>
 	<set xpath="/blocks/block[@name='rScrapIronPlateMine']/property[@name='Stacknumber']/@value">2000</set>
 
-	<remove xpath="/blocks/block[@name='cntVendingMachine']/property[@name='Buff']" />
-	<remove xpath="/blocks/block[@name='cntVendingMachine']/drop[@event='Destroy']" />
+	<remove xpath="/blocks/block[@name='cntVendingMachine']/property[@name='Buff']"/>
+	<remove xpath="/blocks/block[@name='cntVendingMachine']/drop[@event='Destroy']"/>
 	<set xpath="/blocks/block[@name='cntVendingMachine']/property[@name='EconomicValue']/@value">30000</set>
 	<set xpath="/blocks/block[@name='cntVendingMachine']/property[@name='Stacknumber']/@value">1</set>
 
@@ -97,9 +97,9 @@
 		<drop event="Destroy" name="cntVendingMachine" count="1"/>
 	</insertAfter>
 
-	<!-- Concrete dries faster -->	
+	<!-- Concrete dries faster -->
 	<set xpath="/blocks/block[@name='pouredConcreteMaster']/property[@name='UpgradeRated.Rate']/@value">2</set>
-	<set xpath="/blocks/block[@name='pouredRConcreteMaster']/property[@name='UpgradeRated.Rate']/@value">3</set>	
+	<set xpath="/blocks/block[@name='pouredRConcreteMaster']/property[@name='UpgradeRated.Rate']/@value">3</set>
 
 	<!-- Adds new lighting items -->
 	<append xpath="/blocks">
@@ -112,19 +112,19 @@
 			<property name="MaxDamage" value="1000"/>
 			<property name="RuntimeSwitch" value="true"/>
 			<property name="CustomIcon" value="porchLight01"/>
-			<property name="StabilitySupport" value="false"/> 
+			<property name="StabilitySupport" value="false"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="Light" value="0.75"/>
 			<property name="Collide" value="melee,bullet,arrow,rocket"/>
-			<property name="Model" value="Entities/Lighting/porchLight01Prefab"/> 
+			<property name="Model" value="Entities/Lighting/porchLight01Prefab"/>
 			<property name="HandleFace" value="West"/>
-			<property class="RepairItems"> 
-				<property name="resourceForgedIron" value="1"/> 
-				<property name="resourceElectricParts" value="3"/> 
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="1"/>
+				<property name="resourceElectricParts" value="3"/>
 			</property>
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/> <!-- HV: mounted lamp -->
+			<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/><!-- HV: mounted lamp -->
 			<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<property name="TakeDelay" value="5"/>
@@ -178,7 +178,7 @@
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="Light" value="25"/>
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-			<property name="Model" value="Entities/Lighting/street_light01Prefab"/> 
+			<property name="Model" value="Entities/Lighting/street_light01Prefab"/>
 			<!-- <property name="HandleFace" value="Bottom"/> -->
 			<property name="OnlySimpleRotations" value="true"/>
 			<property class="RepairItems">
@@ -217,10 +217,10 @@
 		</block>
 
 		<block name="Jeg's Street Light Classic">
-			<property name="Extends" value="Jeg's Porch Light 01" />
+			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="Model" value="Entities/Lighting/streetLamp_ClassicPrefab"/>
-			<property name="DisplayType" value="blockMulti" />
+			<property name="DisplayType" value="blockMulti"/>
 			<property name="MultiBlockDim" value="1,5,1"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="CustomIcon" value="streetLightClassic"/>
@@ -236,7 +236,7 @@
 		<block name="Jeg's Shielded Light White">
 			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CustomIcon" value="industrialLight02"/>
-			<property name="Model" value="Entities/Lighting/industrial_light_02Prefab"/> 
+			<property name="Model" value="Entities/Lighting/industrial_light_02Prefab"/>
 			<property name="HandleFace" value="Top"/>
 		</block>
 
@@ -250,7 +250,7 @@
 
 		<block name="Jeg's Porch Light 02">
 			<property name="Extends" value="Jeg's Porch Light 01"/>
-			<property name="CreativeMode" value="Player"/> <!-- does NOT extend -->
+			<property name="CreativeMode" value="Player"/><!-- does NOT extend -->
 			<property name="Model" value="Entities/Lighting/porchLight04Prefab"/>
 			<property name="CustomIcon" value="porchLight04"/>
 		</block>
@@ -267,7 +267,7 @@
 			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="Material" value="Mglass"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight01Prefab"/> 
+			<property name="Model" value="Entities/Lighting/ceilingLight01Prefab"/>
 			<property name="HandleFace" value="Top"/>
 			<property name="CustomIcon" value="ceilingLight01"/>
 			<drop event="Destroy" count="0"/>
@@ -276,7 +276,7 @@
 		<block name="Jeg's Ceiling Light 02">
 			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight02Prefab"/> 
+			<property name="Model" value="Entities/Lighting/ceilingLight02Prefab"/>
 			<property name="HandleFace" value="Top"/>
 			<property name="CustomIcon" value="ceilingLight02"/>
 		</block>
@@ -284,7 +284,7 @@
 		<block name="Jeg's Ceiling Light 02 Brass">
 			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight02BrassPrefab"/> 
+			<property name="Model" value="Entities/Lighting/ceilingLight02BrassPrefab"/>
 			<property name="HandleFace" value="Top"/>
 			<property name="CustomIcon" value="ceilingLight02Brass"/>
 		</block>
@@ -292,7 +292,7 @@
 		<block name="Jeg's Ceiling Light 03">
 			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight04Prefab"/> 
+			<property name="Model" value="Entities/Lighting/ceilingLight04Prefab"/>
 			<property name="HandleFace" value="Top"/>
 			<property name="CustomIcon" value="ceilingLight04"/>
 		</block>
@@ -300,7 +300,7 @@
 		<block name="Jeg's Ceiling Light 04">
 			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight05Prefab"/> 
+			<property name="Model" value="Entities/Lighting/ceilingLight05Prefab"/>
 			<property name="HandleFace" value="Top"/>
 			<property name="CustomIcon" value="ceilingLight05"/>
 		</block>
@@ -308,7 +308,7 @@
 		<block name="Jeg's Ceiling Light 04 Brass">
 			<property name="Extends" value="Jeg's Porch Light 02 Brass"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight05BrassPrefab"/> 
+			<property name="Model" value="Entities/Lighting/ceilingLight05BrassPrefab"/>
 			<property name="HandleFace" value="Top"/>
 			<property name="CustomIcon" value="ceilingLight05Brass"/>
 		</block>
@@ -316,7 +316,7 @@
 		<block name="Jeg's Wall Light">
 			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="Model" value="Entities/Lighting/wall_light01Prefab"/> 
+			<property name="Model" value="Entities/Lighting/wall_light01Prefab"/>
 			<property name="HandleFace" value="South"/>
 			<property name="CustomIcon" value="wallLight01"/>
 		</block>
@@ -339,7 +339,7 @@
 			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="Entities/Lighting/ceiling_fanPrefab"/> 
+			<property name="Model" value="Entities/Lighting/ceiling_fanPrefab"/>
 			<property name="CustomIcon" value="ceilingFanLight"/>
 			<property name="HandleFace" value="Top"/>
 			<property class="RepairItems">
@@ -352,19 +352,19 @@
 		</block>
 
 		<block name="Jeg's Exit Sign">
-			<property name="Extends" value="Jeg's Porch Light 01" />
+			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="CustomIcon" value="signExitLight"/>
-			<property name="Model" value="Entities/Lighting/exit_signPrefab"/> 
+			<property name="Model" value="Entities/Lighting/exit_signPrefab"/>
 			<property name="HandleFace" value="South"/>
 		</block>
 
 		<block name="Jeg's Road Barricade">
-			<property name="Extends" value="Jeg's Porch Light 01" />
+			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="CustomIcon" value="roadBarricadeLight"/>
 			<property name="Material" value="Mmetal"/>
-			<property name="DisplayType" value="blockMulti" />
+			<property name="DisplayType" value="blockMulti"/>
 			<property name="MultiBlockDim" value="3,2,1"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Place" value="TowardsPlacerInverted"/>
@@ -374,25 +374,25 @@
 		</block>
 
 		<block name="Jeg's Desk Lamp 01">
-			<property name="Extends" value="Jeg's Porch Light 01" />
+			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="CustomIcon" value="deskLampLight"/>
 			<property name="Model" value="Entities/Lighting/desk_lampPrefab"/>
 		</block>
 
 		<block name="Jeg's Desk Lamp 02">
-			<property name="Extends" value="Jeg's Porch Light 01" />
+			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="CustomIcon" value="tableLampLight"/>
 			<property name="Model" value="Entities/Lighting/table_lampPrefab"/>
 		</block>
 
 		<block name="Jeg's Work Light">
-			<property name="Extends" value="Jeg's Porch Light 01" />
+			<property name="Extends" value="Jeg's Porch Light 01"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="CustomIcon" value="workLightPOI"/>
 			<property name="Model" value="Entities/Lighting/work_lightPrefab"/>
-			<property name="DisplayType" value="blockMulti" />
+			<property name="DisplayType" value="blockMulti"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
 		</block>
@@ -406,14 +406,14 @@
 	<set xpath="/blocks/block[@name='oreIronBoulder']/drop[@event='Harvest' and @name='resourceScrapIron']/@name">resourceIronFragment</set>
 
 	<append xpath="/blocks">
-		<block name="treasureChestJeg"> <!-- do not rename -->
+		<block name="treasureChestJeg"><!-- do not rename -->
 			<property name="Class" value="Loot"/>
 			<property name="CustomIcon" value="cntChest01"/>
 			<property name="Material" value="ImmortalBox"/>
-			<property name="StabilitySupport" value="false"/> <!-- build restriction -->
-			<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+			<property name="StabilitySupport" value="false"/><!-- build restriction -->
+			<property name="Shape" value="Ext3dModel"/><property name="Texture" value="293"/>
 			<property name="Mesh" value="models"/>
-			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/> <property name="HandleFace" value="Bottom"/>
+			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/><property name="HandleFace" value="Bottom"/>
 			<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
 			<property name="IsTerrainDecoration" value="true"/>
 			<property name="LootList" value="999"/>
@@ -423,16 +423,16 @@
 			<property name="FilterTags" value="floot"/>
 		</block>
 	</append>
-	
+
 	<append xpath="/blocks">
-		<block name="treasureChestJeg2"> <!-- do not rename -->
+		<block name="treasureChestJeg2"><!-- do not rename -->
 			<property name="Class" value="Loot"/>
 			<property name="CustomIcon" value="cntChest01"/>
 			<property name="Material" value="ImmortalBox"/>
-			<property name="StabilitySupport" value="false"/> <!-- build restriction -->
-			<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+			<property name="StabilitySupport" value="false"/><!-- build restriction -->
+			<property name="Shape" value="Ext3dModel"/><property name="Texture" value="293"/>
 			<property name="Mesh" value="models"/>
-			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/> <property name="HandleFace" value="Bottom"/>
+			<property name="Model" value="LootContainers/chest01" param1="main_mesh"/><property name="HandleFace" value="Bottom"/>
 			<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
 			<property name="IsTerrainDecoration" value="true"/>
 			<property name="LootList" value="911"/>
@@ -466,7 +466,7 @@
 			<property name="Material" value="ImmortalBox"/>
 			<property name="Path" value="solid"/>
 			<property name="Shape" value="New"/>
-			<property name="Model" value="cube_no_cull"/> <!-- will not hide adjacent faces (if rotated) -->
+			<property name="Model" value="cube_no_cull"/><!-- will not hide adjacent faces (if rotated) -->
 			<property name="AllowAllRotations" value="true"/>
 			<property name="Texture" value="276,276,270,270,270,270"/>
 			<property name="LootList" value="246"/>
@@ -488,18 +488,18 @@
 			<property name="ImposterExcludeAndStop" value="true"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="AllowAllRotations" value="true"/>
-			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
-			<property class="RepairItems"> <property name="resourceForgedSteel" value="10"/> </property>
+			<property name="Collide" value="movement,melee,rocket"/><!-- -rocket -->
+			<property class="RepairItems"><property name="resourceForgedSteel" value="10"/></property>
 			<drop event="Harvest" name="resourceScrapIron" count="32" tag="allHarvest"/>
 			<drop event="Destroy" count="0"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<property name="Group" value="Building,advBuilding"/>
 			<property name="EconomicValue" value="25"/>
-			<property name="name_key" value="stealBarsCenteredJeg" />
-			<property name="description_key" value="stealBarsCenteredJegDesc" />
+			<property name="name_key" value="stealBarsCenteredJeg"/>
+			<property name="description_key" value="stealBarsCenteredJegDesc"/>
 			<property name="FilterTags" value="fdecor,fother,fwindows,fdoors"/>
 			<property name="SortOrder1" value="7060"/>
-			<property name="SortOrder2" value="0061"/> <!-- SortDoors -->
+			<property name="SortOrder2" value="0061"/><!-- SortDoors -->
 		</block>
 	</append>
 
@@ -507,11 +507,11 @@
 		<block name="stealBarsJeg">
 			<property name="Extends" value="stealBarsCenteredJeg"/>
 			<property name="CustomIcon" value="steelBars"/>
-			<property name="name_key" value="stealBarsJeg" />
-			<property name="description_key" value="stealBarsJegDesc" />
+			<property name="name_key" value="stealBarsJeg"/>
+			<property name="description_key" value="stealBarsJegDesc"/>
 			<property name="Model" value="iron_bars"/>
 			<property name="Place" value="TowardsPlacerInverted"/>
-			<property name="SortOrder2" value="0060"/> <!-- SortDoors -->
+			<property name="SortOrder2" value="0060"/><!-- SortDoors -->
 		</block>
 	</append>
 
@@ -525,16 +525,16 @@
 	</insertAfter>
 
 	<insertAfter xpath="/blocks/block[@name='ironBars']/property[@name='SortOrder2']">
-		<property class="UpgradeBlock"> <property name="ToBlock" value="stealBarsJeg"/> </property>
+		<property class="UpgradeBlock"><property name="ToBlock" value="stealBarsJeg"/></property>
 	</insertAfter>
 
-	<append xpath="/blocks">	
+	<append xpath="/blocks">
 		<block name="reinforcedBladeTrap">
 			<property name="CreativeMode" value="Player"/>
 			<property name="CustomIcon" value="bladeTrap"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
-			<property name="name_key" value="reinforcedBladeTrap" />
-			<property name="description_key" value="reinforcedBladeTrapDesc" />
+			<property name="name_key" value="reinforcedBladeTrap"/>
+			<property name="description_key" value="reinforcedBladeTrapDesc"/>
 			<property name="Class" value="BladeTrap"/>
 			<property name="UnlockedBy" value="perkAdvancedEngineering,bladeTrapSchematic"/>
 			<property name="Material" value="Mmetal_hardest"/>
@@ -549,10 +549,10 @@
 			<property name="RunningSoundBreaking" value="bladetrap_dm1_lp"/>
 			<property name="RunningSoundBroken" value="bladetrap_dm2_lp"/>
 			<property name="MaxDamage" value="75000"/>
-			<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+			<property name="StabilitySupport" value="false"/><!-- build restriction -->
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-			<property name="Model" value="Entities/Electrical/trap_spinning_bladePrefab"/> <property name="HandleFace" value="Bottom"/>
+			<property name="Model" value="Entities/Electrical/trap_spinning_bladePrefab"/><property name="HandleFace" value="Bottom"/>
 			<property name="MultiBlockDim" value="3,1,3"/><property name="DisplayType" value="blockElectricalHardenedMulti"/>
 			<property name="ImposterExchange" value="imposterPlate" param1="111"/>
 			<property name="IsTerrainDecoration" value="true"/>
@@ -580,9 +580,9 @@
 			<property name="Material" value="Mmetal_hardest"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Texture" value="8"/>
-			<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+			<property name="Shape" value="Ext3dModel"/><property name="Texture" value="293"/>
 			<property name="Mesh" value="models"/>
-			<property name="Model" value="Industrial/fusebox" param1="main_mesh"/> <property name="HandleFace" value="South"/>
+			<property name="Model" value="Industrial/fusebox" param1="main_mesh"/><property name="HandleFace" value="South"/>
 			<property name="MaxDamage" value="25000"/>
 			<property name="DamageReceived" value="0"/>
 			<property name="CustomIcon" value="fusebox"/>
@@ -591,7 +591,7 @@
 			<property name="PoweredType" value="Constant"/>
 			<property name="RequiredPower" value="0"/>
 			<property name="Group" value="Science"/>
-			<property class="RepairItems"> <property name="resourceForgedIron" value="10"/> </property>
+			<property class="RepairItems"><property name="resourceForgedIron" value="10"/></property>
 			<drop event="Harvest" name="electricParts" count="0,1" tool_category="Disassemble"/>
 			<drop event="Harvest" name="scrapIron" count="5,40"/>
 			<drop event="Destroy" count="0"/>
@@ -613,9 +613,9 @@
 		<drop event="Harvest" name="resourceScrapLead" prob=".3" count="6,8" tag="oreWoodHarvest"/>
 		<drop event="Harvest" name="resourceScrapIron" prob=".3" count="6,8" tag="oreWoodHarvest"/>
 		<drop event="Harvest" name="resourceScrapBrass" prob=".3" count="6,8" tag="oreWoodHarvest"/>
-		<drop event="Harvest" name="resourceRawDiamond" prob=".003" count="1,2" tag="artOfMiningLuckyStrikeHarvest" />
-		<drop event="Harvest" name="resourceSilverNugget" prob=".007" count="1,2" tag="artOfMiningLuckyStrikeHarvest" />
-		<drop event="Harvest" name="resourceGoldNugget" prob=".005" count="1,2" tag="artOfMiningLuckyStrikeHarvest" />
+		<drop event="Harvest" name="resourceRawDiamond" prob=".003" count="1,2" tag="artOfMiningLuckyStrikeHarvest"/>
+		<drop event="Harvest" name="resourceSilverNugget" prob=".007" count="1,2" tag="artOfMiningLuckyStrikeHarvest"/>
+		<drop event="Harvest" name="resourceGoldNugget" prob=".005" count="1,2" tag="artOfMiningLuckyStrikeHarvest"/>
 	</insertAfter>
 
 	<insertAfter xpath="/blocks/block[@name='treeGrassMaster']/property[@name='HarvestOverdamage']">
@@ -636,58 +636,58 @@
 			<property name="ItemCount" value="20"/>
 			<property name="UpgradeHitCount" value="4"/>
 		</property>
-	</append>	
+	</append>
 
 	<!-- Steel shaped blocks -->
-	<append xpath="/blocks/block[@name='steelArch']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelArch"/> </property></append>
-	<append xpath="/blocks/block[@name='steelArrowSlitHalf']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelArrowSlitHalf"/> </property></append>
-	<append xpath="/blocks/block[@name='steelBlock']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelBlock"/> </property></append>
-	<append xpath="/blocks/block[@name='steelCNRFull']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelCNRFull"/> </property></append>
-	<append xpath="/blocks/block[@name='steelCNRInside']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelCNRInside"/> </property></append>
-	<append xpath="/blocks/block[@name='steelCNRRamp']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelCNRRamp"/> </property></append>
-	<append xpath="/blocks/block[@name='steelCNRRampFiller']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelCNRRampFiller"/> </property></append>
-	<append xpath="/blocks/block[@name='steelCNRRound']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelCNRRound"/> </property></append>
-	<append xpath="/blocks/block[@name='steelCNRRoundTop']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelCNRRoundTop"/> </property></append>
-	<append xpath="/blocks/block[@name='steelCTRPlate']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelCTRPlate"/> </property></append>
-	<append xpath="/blocks/block[@name='steelCTRpole']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelCTRpole"/> </property></append>
-	<append xpath="/blocks/block[@name='steelEighth']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelEighth"/> </property></append>
-	<append xpath="/blocks/block[@name='steelGableInvertedHalf']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelGableInvertedHalf"/> </property></append>
-	<append xpath="/blocks/block[@name='steelGableInvertedQuarter']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelGableInvertedQuarter"/> </property></append>
-	<append xpath="/blocks/block[@name='steelGableInvertedSteep']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelGableInvertedSteep"/> </property></append>
-	<append xpath="/blocks/block[@name='steelGableQuarter']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelGableQuarter"/> </property></append>
-	<append xpath="/blocks/block[@name='steelHalf']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelHalf"/> </property></append>
-	<append xpath="/blocks/block[@name='steelPillar100']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelPillar100"/> </property></append>
-	<append xpath="/blocks/block[@name='steelPillar100Cap']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelPillar100Cap"/> </property></append>
-	<append xpath="/blocks/block[@name='steelPillar50']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelPillar50"/> </property></append>
-	<append xpath="/blocks/block[@name='steelPlate']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelPlate"/> </property></append>
-	<append xpath="/blocks/block[@name='steelPlateOffset']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelPlateOffset"/> </property></append>
-	<append xpath="/blocks/block[@name='steelPole']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelPole"/> </property></append>
-	<append xpath="/blocks/block[@name='steelPyramid']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelPyramid"/> </property></append>
-	<append xpath="/blocks/block[@name='steelQuarter']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelQuarter"/> </property></append>
-	<append xpath="/blocks/block[@name='steelQuarterCNR']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelQuarterCNR"/> </property></append>
-	<append xpath="/blocks/block[@name='steelQuarterCNR3Way']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelQuarterCNR3Way"/> </property></append>
-	<append xpath="/blocks/block[@name='steelQuarterSCtr']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelQuarterSCtr"/> </property></append>
-	<append xpath="/blocks/block[@name='steelQuarterTeeSCtr']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelQuarterTeeSCtr"/> </property></append>
-	<append xpath="/blocks/block[@name='steelRamp']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelRamp"/> </property></append>
-	<append xpath="/blocks/block[@name='steelStairs25']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelStairs25"/> </property></append>
-	<append xpath="/blocks/block[@name='steelStairs50']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelStairs50"/> </property></append>
-	<append xpath="/blocks/block[@name='steelStairs25CornerCNR']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelStairs25CornerCNR"/> </property></append>
-	<append xpath="/blocks/block[@name='steelStairsFilledRailingLeft']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelStairsFilledRailingLeft"/> </property></append>
-	<append xpath="/blocks/block[@name='steelStairsFilledRailingRight']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelStairsFilledRailingRight"/> </property></append>
-	<append xpath="/blocks/block[@name='steelSupport']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelSupport"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedge']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedge"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeCNRInsideBottom']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeCNRInsideBottom"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeCNRInsideSteepBase']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeCNRInsideSteepBase"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeCNRInsideSteepTop']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeCNRInsideSteepTop"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeCNRInsideTop']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeCNRInsideTop"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeCNRSteepBase']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeCNRSteepBase"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeCNRSteepTop']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeCNRSteepTop"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeIncline']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeIncline"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeStairs']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeStairs"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeTip']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeTip"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeTipCNRFullBottom']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeTipCNRFullBottom"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeTipCNRFullTop']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeTipCNRFullTop"/> </property></append>
-	<append xpath="/blocks/block[@name='steelWedgeTipStairs']"><property class="UpgradeBlock"> <property name="ToBlock" value="stainlessSteelWedgeTipStairs"/> </property></append>	
+	<append xpath="/blocks/block[@name='steelArch']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelArch"/></property></append>
+	<append xpath="/blocks/block[@name='steelArrowSlitHalf']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelArrowSlitHalf"/></property></append>
+	<append xpath="/blocks/block[@name='steelBlock']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelBlock"/></property></append>
+	<append xpath="/blocks/block[@name='steelCNRFull']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelCNRFull"/></property></append>
+	<append xpath="/blocks/block[@name='steelCNRInside']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelCNRInside"/></property></append>
+	<append xpath="/blocks/block[@name='steelCNRRamp']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelCNRRamp"/></property></append>
+	<append xpath="/blocks/block[@name='steelCNRRampFiller']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelCNRRampFiller"/></property></append>
+	<append xpath="/blocks/block[@name='steelCNRRound']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelCNRRound"/></property></append>
+	<append xpath="/blocks/block[@name='steelCNRRoundTop']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelCNRRoundTop"/></property></append>
+	<append xpath="/blocks/block[@name='steelCTRPlate']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelCTRPlate"/></property></append>
+	<append xpath="/blocks/block[@name='steelCTRpole']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelCTRpole"/></property></append>
+	<append xpath="/blocks/block[@name='steelEighth']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelEighth"/></property></append>
+	<append xpath="/blocks/block[@name='steelGableInvertedHalf']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelGableInvertedHalf"/></property></append>
+	<append xpath="/blocks/block[@name='steelGableInvertedQuarter']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelGableInvertedQuarter"/></property></append>
+	<append xpath="/blocks/block[@name='steelGableInvertedSteep']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelGableInvertedSteep"/></property></append>
+	<append xpath="/blocks/block[@name='steelGableQuarter']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelGableQuarter"/></property></append>
+	<append xpath="/blocks/block[@name='steelHalf']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelHalf"/></property></append>
+	<append xpath="/blocks/block[@name='steelPillar100']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelPillar100"/></property></append>
+	<append xpath="/blocks/block[@name='steelPillar100Cap']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelPillar100Cap"/></property></append>
+	<append xpath="/blocks/block[@name='steelPillar50']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelPillar50"/></property></append>
+	<append xpath="/blocks/block[@name='steelPlate']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelPlate"/></property></append>
+	<append xpath="/blocks/block[@name='steelPlateOffset']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelPlateOffset"/></property></append>
+	<append xpath="/blocks/block[@name='steelPole']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelPole"/></property></append>
+	<append xpath="/blocks/block[@name='steelPyramid']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelPyramid"/></property></append>
+	<append xpath="/blocks/block[@name='steelQuarter']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelQuarter"/></property></append>
+	<append xpath="/blocks/block[@name='steelQuarterCNR']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelQuarterCNR"/></property></append>
+	<append xpath="/blocks/block[@name='steelQuarterCNR3Way']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelQuarterCNR3Way"/></property></append>
+	<append xpath="/blocks/block[@name='steelQuarterSCtr']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelQuarterSCtr"/></property></append>
+	<append xpath="/blocks/block[@name='steelQuarterTeeSCtr']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelQuarterTeeSCtr"/></property></append>
+	<append xpath="/blocks/block[@name='steelRamp']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelRamp"/></property></append>
+	<append xpath="/blocks/block[@name='steelStairs25']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelStairs25"/></property></append>
+	<append xpath="/blocks/block[@name='steelStairs50']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelStairs50"/></property></append>
+	<append xpath="/blocks/block[@name='steelStairs25CornerCNR']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelStairs25CornerCNR"/></property></append>
+	<append xpath="/blocks/block[@name='steelStairsFilledRailingLeft']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelStairsFilledRailingLeft"/></property></append>
+	<append xpath="/blocks/block[@name='steelStairsFilledRailingRight']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelStairsFilledRailingRight"/></property></append>
+	<append xpath="/blocks/block[@name='steelSupport']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelSupport"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedge']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedge"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeCNRInsideBottom']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeCNRInsideBottom"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeCNRInsideSteepBase']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeCNRInsideSteepBase"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeCNRInsideSteepTop']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeCNRInsideSteepTop"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeCNRInsideTop']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeCNRInsideTop"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeCNRSteepBase']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeCNRSteepBase"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeCNRSteepTop']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeCNRSteepTop"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeIncline']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeIncline"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeStairs']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeStairs"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeTip']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeTip"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeTipCNRFullBottom']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeTipCNRFullBottom"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeTipCNRFullTop']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeTipCNRFullTop"/></property></append>
+	<append xpath="/blocks/block[@name='steelWedgeTipStairs']"><property class="UpgradeBlock"><property name="ToBlock" value="stainlessSteelWedgeTipStairs"/></property></append>
 
 	<set xpath="/blocks/block[@name='glassBulletproofBlockVariantHelper']/property[@name='PlaceAltBlockValue']/@value">glassBulletproofCTRPlatePlayer,glassBulletproofPlatePlayer,glassBulletproofBlockPlayer,glassBulletproofRampPlayer,glassBulletproofRampSheetPlayer,glassBulletproofPlateCurvedPlayer,windowStoreFourSidedBulletproofPlayer</set>
 
@@ -705,7 +705,7 @@
 		<block name="forgeAdv">
 			<property name="Class" value="Forge"/>
 			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
-			<property name="CustomIcon" value="forgeAdv" />
+			<property name="CustomIcon" value="forgeAdv"/>
 			<property name="DescriptionKey" value="forgeAdvDesc"/>
 			<property name="Material" value="Mstone_scrap"/>
 			<property name="MaxDamage" value="2400"/>
@@ -769,74 +769,74 @@
 	<append xpath="/blocks">
 		<block name="glassBulletproofCTRPlatePlayer">
 			<property name="Extends" value="glassBulletproofMaster"/>
-			<property name="CustomIcon" value="glassBulletproofCTRPlate" />
+			<property name="CustomIcon" value="glassBulletproofCTRPlate"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
-			<property name="Stacknumber" value="500" />
-			<property name="Model" value="plate_centered"/> <property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="Model" value="plate_centered"/><property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
-			<property class="RepairItems"> <property name="resourceScrapLead" value="10"/> </property>
-			<property name="SortOrder2" value="0160"/> <!-- SortShape -->
-			<property name="ImposterExchange" value="imposterBlock" param1="170"/> <!-- ShadowColour -->
+			<property class="RepairItems"><property name="resourceScrapLead" value="10"/></property>
+			<property name="SortOrder2" value="0160"/><!-- SortShape -->
+			<property name="ImposterExchange" value="imposterBlock" param1="170"/><!-- ShadowColour -->
 			<property name="Group" value="Building,advBuilding"/>
 		</block>
 
 		<block name="glassBulletproofPlatePlayer">
 			<property name="Extends" value="glassBulletproofMaster"/>
-			<property name="CustomIcon" value="glassBulletproofPlate" />
+			<property name="CustomIcon" value="glassBulletproofPlate"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
-			<property name="Stacknumber" value="500" />
+			<property name="Stacknumber" value="500"/>
 			<property name="Model" value="plate_glass"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
-			<property class="RepairItems"> <property name="resourceScrapLead" value="10"/> </property>
+			<property class="RepairItems"><property name="resourceScrapLead" value="10"/></property>
 			<property name="Place" value="TowardsPlacerInverted"/>
-			<property name="ImposterExchange" value="imposterPlate" param1="170"/> <!-- ShadowColour -->
+			<property name="ImposterExchange" value="imposterPlate" param1="170"/><!-- ShadowColour -->
 			<property name="Group" value="Building,advBuilding"/>
 		</block>
 
 		<block name="glassBulletproofBlockPlayer">
 			<property name="Extends" value="glassBulletproofMaster"/>
-			<property name="CustomIcon" value="glassBulletproofMaster" />
+			<property name="CustomIcon" value="glassBulletproofMaster"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
-			<property name="Stacknumber" value="500" />
+			<property name="Stacknumber" value="500"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
-			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
-			<property name="ImposterExchange" value="imposterBlock" param1="170"/> <!-- ShadowColour -->
+			<property name="SortOrder2" value="0050"/><!-- SortShape -->
+			<property name="ImposterExchange" value="imposterBlock" param1="170"/><!-- ShadowColour -->
 		</block>
 
 		<block name="glassBulletproofRampPlayer">
 			<property name="Extends" value="glassBulletproofMaster"/>
-			<property name="CustomIcon" value="glassBulletproofRamp" />
+			<property name="CustomIcon" value="glassBulletproofRamp"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Model" value="ramp_glass"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
-			<property name="ImposterExchange" value="imposterRamp" param1="170"/> <!-- ShadowColour -->
-			<property name="Stacknumber" value="500" />
+			<property name="ImposterExchange" value="imposterRamp" param1="170"/><!-- ShadowColour -->
+			<property name="Stacknumber" value="500"/>
 		</block>
 
 		<block name="glassBulletproofPlateCurvedPlayer">
 			<property name="Extends" value="glassBulletproofMaster"/>
-			<property name="CustomIcon" value="glassBulletproofPlateCurved" />
+			<property name="CustomIcon" value="glassBulletproofPlateCurved"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Model" value="plate_corner_round_1m"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
-			<property name="ImposterExchange" value="imposterBlock" param1="170"/> <!-- ShadowColour -->
-			<property name="Stacknumber" value="500" />
+			<property name="ImposterExchange" value="imposterBlock" param1="170"/><!-- ShadowColour -->
+			<property name="Stacknumber" value="500"/>
 		</block>
 
 		<block name="windowStoreFourSidedBulletproofPlayer">
 			<property name="Extends" value="windowStoreCornerBulletproof"/>
-			<property name="CustomIcon" value="windowStoreFourSidedBulletproof" />
+			<property name="CustomIcon" value="windowStoreFourSidedBulletproof"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Model" value="Entities/Buildings/window_store_four_sided_bulletproofPrefab"/>
-			<property name="Stacknumber" value="500" />
+			<property name="Stacknumber" value="500"/>
 			<property name="Material" value="MglassBulletproofPlayer"/>
 			<property name="DowngradeBlock" value="windowStoreFourSided"/>
 		</block>
 
 		<block name="glassBulletproofRampSheetPlayer">
 			<property name="Extends" value="glassBulletproofMaster"/>
-			<property name="CustomIcon" value="glassBulletproofRampSheet" />
-			<property name="Stacknumber" value="500" />
+			<property name="CustomIcon" value="glassBulletproofRampSheet"/>
+			<property name="Stacknumber" value="500"/>
 			<property name="CustomIconTint" value="B0E7FF"/>
 			<property name="Model" value="ramp_glass_sheet"/>
 		</block>
@@ -847,11 +847,11 @@
 	<set xpath="/blocks/block[@name='flagPoleAmerican']/property[@name='Material']/@value">Mmetal_harder</set>
 
 	<append xpath="/blocks/block[@name='flagPoleWhiteRiver']">
-		<property class="RepairItems"> <property name="resourceForgedSteel" value="5"/> </property>
+		<property class="RepairItems"><property name="resourceForgedSteel" value="5"/></property>
 	</append>
 
 	<append xpath="/blocks/block[@name='flagPoleAmerican']">
-		<property class="RepairItems"> <property name="resourceForgedSteel" value="5"/> </property>
+		<property class="RepairItems"><property name="resourceForgedSteel" value="5"/></property>
 	</append>
 
 	<!-- Jail doors returned -->
@@ -859,19 +859,19 @@
 		<block name="jailDoor">
 			<property name="Class" value="DoorSecure"/>
 			<property name="Material" value="Msteel"/>
-			<property name="CustomIcon" value="jailDoorStatic" />
+			<property name="CustomIcon" value="jailDoorStatic"/>
 			<property name="PassThroughDamage" value="true"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property name="Collide" value="movement,melee,rocket"/><!-- -rocket -->
 			<property name="DescriptionKey" value="jailDoorDesc"/>
 			<property name="Tag" value="Door"/>
 			<property name="Place" value="Door"/>
 			<property name="PlaceEverywhere" value="true"/>
-			<property name="Model" value="Entities/Doors/jail_doorPrefab"/> <property name="ModelOffset" value="0,.5,0"/>
+			<property name="Model" value="Entities/Doors/jail_doorPrefab"/><property name="ModelOffset" value="0,.5,0"/>
 			<property name="ImposterExclude" value="true"/>
 			<property name="OpenSound" value="open_door_jail"/>
 			<property name="CloseSound" value="close_door_jail"/>
-			<property class="RepairItems"> <property name="resourceForgedSteel" value="12"/> </property>
+			<property class="RepairItems"><property name="resourceForgedSteel" value="12"/></property>
 			<drop event="Harvest" name="" count="0" tool_category="Disassemble"/>
 			<drop event="Destroy" count="0"/>
 			<drop event="Destroy" name="resourceSpring" count="0,2" prob="1" tool_category="Disassemble"/>
@@ -881,25 +881,25 @@
 			<property name="Group" value="Building,advBuilding"/>
 			<property name="FilterTags" value="fdecor,fdoors"/>
 		</block>
-		
+
 		<block name="jailDoorPowered">
 			<property name="Class" value="PoweredDoor"/>
 			<property name="Material" value="Msteel"/>
-			<property name="CustomIcon" value="jailDoorStatic" />
-			<property name="name_key" value="jailDoorPowered" />
+			<property name="CustomIcon" value="jailDoorStatic"/>
+			<property name="name_key" value="jailDoorPowered"/>
 			<property name="DescriptionKey" value="jailDoorPoweredDesc"/>
 			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
 			<property name="PassThroughDamage" value="true"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property name="Collide" value="movement,melee,rocket"/><!-- -rocket -->
 			<property name="Tag" value="Door"/>
 			<property name="Place" value="Door"/>
 			<property name="PlaceEverywhere" value="true"/>
-			<property name="Model" value="Entities/Doors/jail_doorPrefab"/> <property name="ModelOffset" value="0,.5,0"/>
+			<property name="Model" value="Entities/Doors/jail_doorPrefab"/><property name="ModelOffset" value="0,.5,0"/>
 			<property name="ImposterExclude" value="true"/>
 			<property name="OpenSound" value="open_door_jail"/>
 			<property name="CloseSound" value="close_door_jail"/>
-			<property class="RepairItems"> <property name="resourceForgedSteel" value="12"/> </property>
+			<property class="RepairItems"><property name="resourceForgedSteel" value="12"/></property>
 			<drop event="Harvest" name="" count="0" tool_category="Disassemble"/>
 			<drop event="Destroy" count="0"/>
 			<drop event="Destroy" name="resourceSpring" count="0,2" prob="1" tool_category="Disassemble"/>
@@ -911,4 +911,63 @@
 			<property name="FilterTags" value="fdecor,fdoors"/>
 		</block>
 	</append>
+	
+	<!-- Adds silver and gold coins to loot -->
+
+	<insertAfter xpath="/blocks/block[@name='terrDirt']/property[@class='RepairItems']">
+		<drop event="Harvest" name="resourcedOldGoldCoin" count="1" prob="0.015" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrForestGround']/property[@class='RepairItems']">
+		<drop event="Harvest" name="resourcedOldGoldCoin" count="1" prob="0.015" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrBurntForestGround']/property[@class='RepairItems']">
+		<drop event="Harvest" name="resourcedOldGoldCoin" count="1" prob="0.015" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrDesertGround']/property[@name='Map.Color']">
+		<drop event="Harvest" name="resourcedOldGoldCoin" count="1" prob="0.015" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrSand']/property[@name='Map.Color']">
+		<drop event="Harvest" name="resourcedOldGoldCoin" count="1" prob="0.015" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrSnow']/property[@class='RepairItems']">
+		<drop event="Harvest" name="resourcedOldGoldCoin" count="1" prob="0.015" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrGravel']/property[@name='Map.Color']">
+		<drop event="Harvest" name="resourcedOldGoldCoin" count="1" prob="0.015" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrDirt']/property[@class='RepairItems']">
+		<drop event="Harvest" name="resourcedOldSilverCoin" count="1" prob="0.020" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrForestGround']/property[@class='RepairItems']">
+		<drop event="Harvest" name="resourcedOldSilverCoin" count="1" prob="0.020" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrBurntForestGround']/property[@class='RepairItems']">
+		<drop event="Harvest" name="resourcedOldSilverCoin" count="1" prob="0.020" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrDesertGround']/property[@name='Map.Color']">
+		<drop event="Harvest" name="resourcedOldSilverCoin" count="1" prob="0.020" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrSand']/property[@name='Map.Color']">
+		<drop event="Harvest" name="resourcedOldSilverCoin" count="1" prob="0.020" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrSnow']/property[@class='RepairItems']">
+		<drop event="Harvest" name="resourcedOldSilverCoin" count="1" prob="0.020" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrGravel']/property[@name='Map.Color']">
+		<drop event="Harvest" name="resourcedOldSilverCoin" count="1" prob="0.020" tag="allHarvest"/>
+	</insertAfter>
+
 </config>

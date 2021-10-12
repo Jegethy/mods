@@ -7,6 +7,6 @@
 	<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">120</set>
 	
 	<!-- Increased encumberance penalty -->
-	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@operation='multiply']/@value">0.03</set>
+	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@operation='multiply']/@value">0.012</set>
 	
 </configs>

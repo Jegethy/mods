@@ -294,6 +294,7 @@ quest_MiniBikeSpecial_description,Quest,Quest Info,,,"[60CCFF]Upon reading the t
 quest_MiniBikeSpecial_offer,Quest,Quest Info,,,"[60CCFF]Upon reading the tome you get an overwhelming sense that there is treasure buried nearby.\n\nPerhaps you should seek it out...?"
 quest_MiniBikeSpecial_completion,Quest,Quest Info,,,"[60CCFF]Well, shit. It's been so long since I misplaced my starter motor, and here you are, returning it without me even having to ask... I've already bought a new starter motor so this one is pretty useless to me now, but I can fashion it into a new minibike for you as a finder's fee. And you know what? You can take one of these amulets with you, too."
 zombieEnragedDemo,entityclasses,Entity,,,"[60CCFF]Enraged Demolisher"
+zombieDemolitionBM,entityclasses,Entity,,,"Demolisher (Blood Moon)"
 modMeleeClubBarbedWireDesc,item_modifiers,mod,,,"20% chance to cause bleeding damage, 40% with power attacks.\nCan be installed in clubs and sledgehammers."
 modMeleeClubMetalChainDesc,item_modifiers,Mod,,,"10% chance to knock down opponents.\nCan be installed in clubs and sledgehammers."
 modMeleeClubMetalSpikesDesc,item_modifiers,mod,,,"Each successive hit lowers enemies armor rating 20%.\nCan be installed in clubs and sledgehammers."
@@ -308,3 +309,13 @@ modGunMeleeBlessedMetalDesc,item_modifiers,Mod,,,"[60CCFF]Converts your damage t
 perkMasterChefRank2LongDesc,progression,perk Str,,,"[60CCFF]Just like grandma used to make, tasty hearty meals that fill you up for days. Craft steak and potatoes, meat stew, vegetable stew, blueberry pie and several pumpkin dishes. Rustle up some classic Fried Chicken.\n\nCook 20% faster."
 perkMasterChefRank3LongDesc,progression,perk Str,,,"[60CCFF]Learn how to make nutritious pot luck meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs and Fish Tacos. Or grill some Crispy Wolf Ribs and wash them down with Yucca Juice Smoothies and Beer.\n\nCook 30% faster."
 perkMasterChefRank5LongDesc,progression,perk Str,,,"[60CCFF]Grandpa's ass kicking recipes.\nLearn grandpa's secret recipes that boost stats and attributes!\n\nBrew up Grandpa's Fergit'n Elixir to reset your skill points.\n\nCook 50% faster."
+resourcedOldGoldCoin,items,Item,,,[60CCFF]Ancient Gold Coin
+resourcedOldSilverCoin,items,Item,,,[60CCFF]Ancient Silver Coin
+resourcedOldGoldCoinDesc,items,Item,,,"[60CCFF]An ancient Roman Empire era gold coin.\n\nThis can be scrapped or smelted into a large quantity of brass."
+resourcedOldSilverCoinDesc,items,Item,,,"[60CCFF]An ancient Roman Empire era silver coin.\n\nThis can be scrapped or smelted into a large quantity of lead."
+foodSimpleBread,,item,Food,newKey,[60CCFF]Loaf of Bread
+foodSimpleBreadDesc,,item,Food,newKey,"[60CCFF]A simple loaf of bread that can satiate even the most unprepared survivor."
+foodSimpleToast,,item,Food,newKey,[60CCFF]Slice of Toast
+foodSimpleToastDesc,,item,Food,newKey,"[60CCFF]A simple slice of toast that can satiate slightly better than plain bread."
+foodEggSandwich,,item,Food,newKey,[60CCFF]Egg Sandwich
+foodEggSandwichDesc,,item,Food,newKey,"[60CCFF]A simple egg sandwich that can satiate much better than bread or eggs on their own."

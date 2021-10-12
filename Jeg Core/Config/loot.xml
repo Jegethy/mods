@@ -817,26 +817,26 @@
 
 	<append xpath="/lootcontainers/lootgroup[@name='junk']">
 		<item name="itemTraderbook" count="1" prob="0.01"/>
-		<item name="itemSpawnerBookBear" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookPig" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookChickens" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookDirewolf" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookWorkmen" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookNurse" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookCop" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookDemo" count="1" prob="0.08"/>
+		<item name="itemSpawnerBookBear" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookPig" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookChickens" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookDirewolf" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookWorkmen" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookNurse" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookCop" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookDemo" count="1" prob="0.06"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootcontainer[@id='14']">
 		<item name="itemTraderbook" count="1" prob="0.01"/>
-		<item name="itemSpawnerBookBear" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookPig" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookChickens" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookDirewolf" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookWorkmen" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookNurse" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookCop" count="1" prob="0.08"/>
-		<item name="itemSpawnerBookDemo" count="1" prob="0.08"/>
+		<item name="itemSpawnerBookBear" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookPig" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookChickens" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookDirewolf" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookWorkmen" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookNurse" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookCop" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookDemo" count="1" prob="0.06"/>
 	</append>
 
 	<!-- Adds torn pages to loot -->
@@ -1060,11 +1060,19 @@
 		</lootgroup>
 	</insertAfter>
 
-	<!-- Steel club and sledgehammer removed from loot -->
+	<!-- T3 Weapons removed from loot -->
 	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item[@name='meleeWpnSledgeT3SteelSledgehammer']"/>
 	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item[@name='meleeWpnSpearT3SteelSpear']"/>
 	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item[@name='meleeWpnClubT3SteelClub']"/>
 	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Archery01']/item[@name='gunBowT3CompoundBow']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Archery02']/item[@name='gunBowT3CompoundCrossbow']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Gunslinger01']/item[@name='gunHandgunT3SMG5']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Gunslinger02']/item[@name='gunHandgunT3DesertVulture']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_DeadEye']/item[@name='gunRifleT3SniperRifle']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Demolitionist01']/item[@name='gunExplosivesT3RocketLauncher']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Boomstick']/item[@name='gunShotgunT3AutoShotgun']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Machinegunner']/item[@name='gunMGT3M60']"/>
 
 	<!-- Removed Auger from loot -->
 	<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT3']/item[@name='meleeToolPickT3Auger']"/>
@@ -1137,6 +1145,5 @@
 	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenade']/@count">5</set><!-- 25 -->
 	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenadeContact']/@count">5</set><!-- 25 -->
 	<set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownTimedCharge']/@count">5</set><!-- 10 -->
-
 
 </config>

@@ -161,7 +161,7 @@
 			<reward type="SkillPoints" value="1"/>
 			<reward type="Quest" id="quest_BasicSurvival7"/>
 		</quest>
-		
+
 		<!-- Basic Survival 7 - Craft Bandages -->
 		<quest id="quest_BasicSurvival7">
 			<property name="group_name_key" value="quest_BasicSurvival"/>
@@ -414,7 +414,7 @@
 			<reward type="Exp" value="2500"/>
 			<reward type="SkillPoints" value="1"/>
 			<reward type="Item" id="vehicleMinibikePlaceable" value="1"/>
-			<reward type="Item" id="ammoGasCan" value="1000"/>
+			<reward type="Item" id="ammoGasCan" value="1500"/>
 
 		</quest>
 	</append>
@@ -537,12 +537,39 @@
 				<property name="delay" value="3"/>
 			</action>
 
-			<objective type="ZombieKill" id="zombieDemolitionBM" value="50" phase="1"/>
+			<objective type="ZombieKill" id="zombieMarleneFeralBM" value="50" phase="1"/>
 			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="1"/>
 
+			<objective type="ZombieKill" id="zombieDarleneFeralBM" value="50" phase="1"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="1"/>
+
+			<objective type="ZombieKill" id="zombieJoeFeralBM" value="50" phase="2"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="2"/>
+
+			<objective type="ZombieKill" id="zombieMoeFeralBM" value="50" phase="2"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="2"/>
+
+			<objective type="ZombieKill" id="zombieFatCopBM" value="25" phase="3"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="3"/>
+
+			<objective type="ZombieKill" id="animalZombieDog" value="25" phase="4"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="4"/>
+
+			<objective type="ZombieKill" id="animalZombieVulture" value="25" phase="4"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="4"/>
+
+			<objective type="ZombieKill" id="EliteCop" value="5" phase="5"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="5"/>
+
+			<objective type="ZombieKill" id="EliteBoomer" value="5" phase="5"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="5"/>
+
+			<objective type="ZombieKill" id="zombieDemolitionBM" value="10" phase="6"/>
+			<requirement type="Buff" id="buffHordeNightQuestTrackerNight" phase="6"/>
+
 			<reward type="Exp" value="500000"/>
-			<reward type="Item" id="casinoCoin" value="5000"/>
-			<reward type="Item" id="itemSkillbookPage" value="100"/>
+			<reward type="Item" id="casinoCoin" value="10000"/>
+			<reward type="Item" id="itemSkillbookPage" value="150"/>
 
 		</quest>
 	</append>

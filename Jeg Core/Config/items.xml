@@ -1777,7 +1777,7 @@
 			<property class="Action0">
 				<property name="Sound_start" value="open_cash_register"/>
 				<property name="Create_item" value="foodRawMeat,foodEgg,foodChickenLeg"/>
-				<property name="Create_item_count" value="20,20,10"/>
+				<property name="Create_item_count" value="10,10,5"/>
 			</property>
 		</item>
 	</append>

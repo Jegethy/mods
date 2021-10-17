@@ -9,7 +9,7 @@
 			<display_entry name="dBartering" title_key="statBarteringSellBuy" display_type="Percent" display_leading_plus="true"/>
 			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
 			<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dCraftingTime" title_key="statCraftingTime" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>			
+			<display_entry name="dCraftingTime" title_key="statCraftingTime" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
 		</item_display_info>
 	</append>
 
@@ -49,7 +49,7 @@
 			<display_entry name="dEntityDamage" title_key="statEntityDamageMelee" display_type="Percent" display_leading_plus="true"/>
 			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
 			<display_entry name="dHealthLoss" title_key="statHealthLoss" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dStunResist" title_key="statStunResist" display_type="Percent" />
+			<display_entry name="dStunResist" title_key="statStunResist" display_type="Percent"/>
 		</item_display_info>
 	</append>
 
@@ -70,20 +70,20 @@
 
 		<item_display_info display_type="waterGrassSmoothie" display_group="groupConsumables">
 			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
-			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>		
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
 			<display_entry name="dDiseaseResist" title_key="statDiseaseResist" display_type="Percent"/>
 			<display_entry name="dStopsWeakness" title_key="statStopsWeakness" display_type="Percent"/>
 			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 		</item_display_info>
 	</append>
 
-	<append xpath="/ui_display_info/item_display">	
+	<append xpath="/ui_display_info/item_display">
 		<item_display_info display_type="toolAdamantiumAnvil" display_group="workstationTools">
 			<display_entry name="dCraftingTime" title_key="statCraftingTimeForge" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
 		</item_display_info>
 	</append>
 	
-	<append xpath="/ui_display_info/item_display">	
+	<append xpath="/ui_display_info/item_display">
 		<item_display_info display_type="toolAdamantiumBellows" display_group="workstationTools">
 			<display_entry name="dCraftingSmeltTime" title_key="statCraftingSmeltTime" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
 		</item_display_info>
@@ -91,14 +91,21 @@
 
 	<append xpath="/ui_display_info/crafting_category_display">
 		<crafting_category_list display_type="forgeAdv">
-			<crafting_category name="" icon="ui_game_symbol_workbench" display_name="lblAll" />
-			<crafting_category name="Building" icon="ui_game_symbol_map_house" display_name="lblCategoryBuilding" />
-			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
-			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
-			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tool" display_name="lblCategoryToolsTraps" />
-			<crafting_category name="Food/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFoodCooking" />
-			<crafting_category name="Decor/Miscellaneous" icon="ui_game_symbol_chair" display_name="lblCategoryDecorMisc" />
+			<crafting_category name="" icon="ui_game_symbol_workbench" display_name="lblAll"/>
+			<crafting_category name="Building" icon="ui_game_symbol_map_house" display_name="lblCategoryBuilding"/>
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources"/>
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons"/>
+			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tool" display_name="lblCategoryToolsTraps"/>
+			<crafting_category name="Food/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFoodCooking"/>
+			<crafting_category name="Decor/Miscellaneous" icon="ui_game_symbol_chair" display_name="lblCategoryDecorMisc"/>
 		</crafting_category_list>
+	</append>
+
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="food2" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+		</item_display_info>
 	</append>
 
 </config>

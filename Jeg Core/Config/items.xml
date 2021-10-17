@@ -1591,6 +1591,22 @@
 			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 		</item>
 	</append>
+	
+	<append xpath="/items">
+		<item name="foodGoldenrodOil">
+			<property name="DescriptionKey" value="foodGoldenrodOilDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="foodGoldenrodOil"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
+			<property name="EconomicValue" value="8"/>
+			<property name="EconomicBundleSize" value="5"/>
+			<property name="CraftingIngredientTime" value="5"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+		</item>
+	</append>
 
 	<!-- Quest Reward Chest -->
 	<append xpath="/items">

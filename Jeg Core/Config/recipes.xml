@@ -121,7 +121,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="foodBakingFlour" count="1" craft_time="1">
+		<recipe name="foodBakingFlour" count="2" craft_time="1">
 			<ingredient name="foodCropWheat" count="1"/>
 		</recipe>
 	</append>
@@ -927,21 +927,9 @@
 		<ingredient name="itemFertileSoil" count="10"/>
 	</append>
 	<append xpath="/recipes">
-		<recipe name="drinkJarPineTea" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable" craft_time="12">
-			<ingredient name="treePlantedMountainPine1m" count="2"/>
+		<recipe name="drinkAppleJuice" count="1" craft_area="campfire" always_unlocked="true" craft_time="5">
+			<ingredient name="foodFreshApple" count="2"/>
 			<ingredient name="drinkJarBoiledWater" count="1"/>
-			<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
-		</recipe>
-		<recipe name="drinkJarAcornCoffee" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable" craft_time="12">
-			<ingredient name="treePlantedOak1m" count="2"/>
-			<ingredient name="drinkJarBoiledWater" count="1"/>
-			<ingredient name="resourceCoal" count="1"/>
-		</recipe>
-		<recipe name="drinkJarGrassSmoothie" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable" craft_time="12">
-			<ingredient name="resourceYuccaFibers" count="20"/>
-			<ingredient name="drinkJarBoiledWater" count="1"/>
-			<ingredient name="resourceCoal" count="1"/>
-			<ingredient name="resourceSnowBall" count="1"/>
 		</recipe>
 	</append>
 	<append xpath="/recipes">
@@ -2233,7 +2221,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="foodSimpleToast" count="1" craft_time="5" craft_tool="toolCookingPot" always_unlocked="true" craft_area="campfire">
+		<recipe name="foodSimpleToast" count="1" craft_time="5" craft_tool="toolCookingGrill" always_unlocked="true" craft_area="campfire">
 			<ingredient name="foodSimpleBread" count="1"/>
 		</recipe>
 	</append>

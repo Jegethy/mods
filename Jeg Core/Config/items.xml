@@ -993,7 +993,6 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
-				<!-- <property name="Create_item" value="foodCrumbs"/> -->
 			</property>
 			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
@@ -1426,16 +1425,16 @@
 
 	<!-- New drinks -->
 	<append xpath="/items">
-		<item name="drinkJarPineTea">
+		<item name="drinkAppleJuice">
 			<property name="HoldType" value="3"/>
 			<property name="DisplayType" value="waterPineTea"/>
+			<property name="CustomIcon" value="drinkAppleJuice"/>
 			<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
 			<property name="Stacknumber" value="250"/><!-- STK drink -->
 			<property name="EconomicValue" value="48"/>
-			<property name="UnlockedBy" value="perkMasterChef"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1447,7 +1446,7 @@
 
 			<effect_group tiered="false" name="Drink Tier 1">
 				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
 				<display_value name="dStaminaRegen" value=".15"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 
@@ -1455,8 +1454,8 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDysenteryAddCurePerc" operation="add" value="20"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryAddCure"/>
 
-				<display_value name="dCureInfection" value=".02"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="2"/>
+				<display_value name="dCureInfection" value=".05"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
 			</effect_group>
 
@@ -3012,7 +3011,7 @@
 		<item name="foodSimpleBread">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
-			<property name="DisplayType" value="food"/>
+			<property name="DisplayType" value="food2"/>
 			<property name="CustomIcon" value="foodSimpleBread"/>
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -3029,8 +3028,7 @@
 
 			<effect_group tiered="false" name="Food Tier 0/1">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
@@ -3087,6 +3085,39 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+	</append>
+
+	<!-- Quest Reward Chest -->
+	<append xpath="/items">
+		<item name="starterFoodChest">
+			<property name="Extends" value="noteTestersDelightAdmin"/>
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="starterFoodChest"/>
+			<property name="DescriptionKey" value="starterFoodChestDesc"/>
+			<property name="CustomIconTint" value="FFFFFF"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="zombiefemalescoutattack"/>
+				<property name="Create_item" value="drinkJarBoiledWater,foodCanChili"/>
+				<property name="Create_item_count" value="2,2"/>
+			</property>
+		</item>
+	</append>
+	
+	<append xpath="/items">
+		<item name="foodFreshApple">
+			<property name="Extends" value="foodCanMiso"/>
+			<property name="CustomIcon" value="foodFreshApple"/>
+			<effect_group tiered="false" name="Food Tier 0">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>

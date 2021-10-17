@@ -913,7 +913,6 @@
 	</append>
 	
 	<!-- Adds silver and gold coins to loot -->
-
 	<insertAfter xpath="/blocks/block[@name='terrDirt']/property[@class='RepairItems']">
 		<drop event="Harvest" name="resourcedOldGoldCoin" count="1" prob="0.015" tag="allHarvest"/>
 	</insertAfter>
@@ -968,6 +967,16 @@
 
 	<insertAfter xpath="/blocks/block[@name='terrGravel']/property[@name='Map.Color']">
 		<drop event="Harvest" name="resourcedOldSilverCoin" count="1" prob="0.020" tag="allHarvest"/>
+	</insertAfter>
+	
+	<!-- Add apples to trees -->
+	<!-- Oak -->
+	<insertAfter xpath="/blocks/block[contains (@name, 'treeOak')]/property[@name='ParticleOnDeath']">
+		<drop event="Destroy" name="foodFreshApple" count="1,2" prob="0.3"/>
+	</insertAfter>
+	<!-- Pine -->
+	<insertAfter xpath="/blocks/block[contains (@name, 'treeMountainPine')]/property[@name='ParticleOnDeath']">
+		<drop event="Destroy" name="foodFreshApple" count="1,2" prob="0.3"/>
 	</insertAfter>
 
 </config>

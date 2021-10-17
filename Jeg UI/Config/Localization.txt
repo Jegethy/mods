@@ -326,3 +326,9 @@ foodSimpleToast,,item,Food,newKey,[60CCFF]Slice of Toast
 foodSimpleToastDesc,,item,Food,newKey,"[60CCFF]A simple slice of toast that can satiate slightly better than plain bread."
 foodEggSandwich,,item,Food,newKey,[60CCFF]Egg Sandwich
 foodEggSandwichDesc,,item,Food,newKey,"[60CCFF]A simple egg sandwich that can satiate much better than bread or eggs on their own."
+starterFoodChest,,item,Food,newKey,"[60CCFF]Food & Drink Hamper"
+starterFoodChestDesc,,item,Food,newKey,"[60CCFF]A hamper containing food and drink\n\nWhere did it come from?\n\nWho cares?! The only thing better than food is free food!"
+foodFreshApple,,item,Food,newKey,"[60CCFF]Apple"
+foodFreshAppleDesc,,item,Food,newKey,"[60CCFF]A crisp, fresh apple."
+drinkAppleJuice,,item,Food,newKey,"[60CCFF]Apple Juice"
+drinkAppleJuiceDesc,,item,Food,newKey,"[60CCFF]A refreshing glass of apple juice."

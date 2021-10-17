@@ -3012,7 +3012,7 @@
 		<item name="foodSimpleBread">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
-			<property name="DisplayType" value="food"/>
+			<property name="DisplayType" value="food2"/>
 			<property name="CustomIcon" value="foodSimpleBread"/>
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>

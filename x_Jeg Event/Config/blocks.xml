@@ -1,0 +1,37 @@
+<config>
+
+	<append xpath="/blocks">
+		<block name="blockHalloweenEventOuter">
+			<property name="DescriptionKey" value="blockHalloweenEventOuterDesc"/>
+			<property name="CustomIcon" value="eventJackOLantern"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="Entities/Plants/pumpkinJackoLanternPrefab"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Material" value="1HitWonder"/>
+			<drop event="Destroy" name="decoPumpkinJackOLantern" count="1" prob="0.20"/>
+			<property name="DowngradeBlock" value="blockHalloweenEventInner"/>
+			<property name="FilterTags" value="floot"/>
+		</block>
+	</append>
+
+	<append xpath="/blocks">
+		<block name="blockHalloweenEventInner">
+			<property name="Class" value="Loot"/>
+			<property name="CustomIcon" value="eventJackOLantern"/>
+			<property name="Material" value="ImmortalBox"/>
+			<property name="StabilitySupport" value="false"/><!-- build restriction -->
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Plants/pumpkinJackoLanternPrefab"/>
+			<property name="AllowAllRotations" value="true"/><!-- enables the 45 degree rotations -->
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Light" value="0.8"/>
+			<property name="RuntimeSwitch" value="true"/>
+			<drop event="Destroy" count="0"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="LootList" value="420"/>
+		</block>
+	</append>
+
+</config>

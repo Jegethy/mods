@@ -2214,8 +2214,14 @@
 	</append>
 
 	<append xpath="/recipes">
+		<recipe name="foodGoldenrodOil" count="1" craft_time="3" always_unlocked="true">
+			<ingredient name="resourceCropGoldenrodPlant" count="1"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
 		<recipe name="foodSimpleBread" count="1" craft_time="5" always_unlocked="true" craft_area="campfire">
-			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="foodGoldenrodOil" count="1"/>
 			<ingredient name="foodBakingFlour" count="2"/>
 		</recipe>
 	</append>
@@ -2232,5 +2238,9 @@
 			<ingredient name="foodEgg" count="2"/>
 		</recipe>
 	</append>
-
+	
+	<!-- Updated ammo recipe to craft 5 per -->
+	<set xpath="/recipes/recipe[contains(@name, 'ammo') and not (contains(@name, 'Bundle'))]/@count">5</set>
+	<set xpath="/recipes/recipe[@name='ammoGasCan']/@count">10</set>
+	
 </configs>

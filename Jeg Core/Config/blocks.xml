@@ -974,9 +974,15 @@
 	<insertAfter xpath="/blocks/block[contains (@name, 'treeOak')]/property[@name='ParticleOnDeath']">
 		<drop event="Destroy" name="foodFreshApple" count="1,2" prob="0.3"/>
 	</insertAfter>
+	<insertAfter xpath="/blocks/block[contains (@name, 'treePlantedOak')]/property[@name='ParticleOnDeath']">
+		<drop event="Destroy" name="foodFreshApple" count="2,4" prob="0.3"/>
+	</insertAfter>
 	<!-- Pine -->
 	<insertAfter xpath="/blocks/block[contains (@name, 'treeMountainPine')]/property[@name='ParticleOnDeath']">
 		<drop event="Destroy" name="foodFreshApple" count="1,2" prob="0.3"/>
+	</insertAfter>
+	<insertAfter xpath="/blocks/block[contains (@name, 'treePlantedMountainPine')]/property[@name='ParticleOnDeath']">
+		<drop event="Destroy" name="foodFreshApple" count="2,4" prob="0.3"/>
 	</insertAfter>
 
 </config>

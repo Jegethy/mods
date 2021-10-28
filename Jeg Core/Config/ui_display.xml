@@ -87,5 +87,13 @@
 			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
 		</item_display_info>
 	</append>
+	
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="apples" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+		</item_display_info>
+	</append>
 
 </config>

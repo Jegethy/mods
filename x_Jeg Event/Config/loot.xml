@@ -54,45 +54,64 @@
 	</append>
 	
 	<append xpath="/lootcontainers/lootgroup[@name='junk']">
-		<item name="killscarecrow_start" count="1" prob="0.03"/>
+		<item name="killscarecrow_start" count="1" prob="0.02"/>
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='14']">
-		<item name="killscarecrow_start" count="1" prob="0.03"/>
+		<item name="killscarecrow_start" count="1" prob="0.02"/>
 	</append>
 	
 	<!-- Adds Halloween loot boxes to loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='junk']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='14']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='cupboard']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupHeroChestLoot']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupSafeLoot']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='shamwaySafe']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='brewerySafe']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupBuriedWeaponChest']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='workbenchLoot']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralCommon']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralRare']">
-		<item name="blockHalloweenEventOuter" count="1" prob="0.03"/>
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='workingStiffsSub']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='electricalDevices']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsAllScaled']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupArmorScaled']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='labEquipment']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupAmmoPileLoot']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
+	</append>
+
 	
 </config>

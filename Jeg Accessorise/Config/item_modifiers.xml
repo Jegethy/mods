@@ -9,7 +9,7 @@
 			<property name="name_key" value="modAccessoriseMovementSpeed"/>
 			<property name="description_key" value="modAccessoriseMovementSpeedDesc"/>
 			<property name="CustomIcon" value="modAccessoriseSpeed"/>
-			<property name="EconomicValue" value="385"/>
+			<property name="EconomicValue" value="3850"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="WalkSpeed" operation="perc_add" value=".10"/>
@@ -29,7 +29,7 @@
 			<property name="name_key" value="modAccessoriseDamage"/>
 			<property name="description_key" value="modAccessoriseDamageDesc"/>
 			<property name="CustomIcon" value="modAccessoriseDamage"/>
-			<property name="EconomicValue" value="385"/>
+			<property name="EconomicValue" value="3850"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="EntityDamage" operation="perc_add" value=".10"/>
@@ -49,7 +49,7 @@
 			<property name="name_key" value="modAccessoriseHealth"/>
 			<property name="description_key" value="modAccessoriseHealthDesc"/>
 			<property name="CustomIcon" value="modAccessoriseHealth"/>
-			<property name="EconomicValue" value="385"/>
+			<property name="EconomicValue" value="3850"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="HealthMax" operation="base_add" value="20"/>
@@ -67,7 +67,7 @@
 			<property name="name_key" value="modAccessoriseStamina"/>
 			<property name="description_key" value="modAccessoriseStaminaDesc"/>
 			<property name="CustomIcon" value="modAccessoriseStamina"/>
-			<property name="EconomicValue" value="385"/>
+			<property name="EconomicValue" value="3850"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="StaminaMax" operation="base_add" value="20"/>
@@ -85,7 +85,7 @@
 			<property name="name_key" value="modAccessoriseArmour"/>
 			<property name="description_key" value="modAccessoriseArmourDesc"/>
 			<property name="CustomIcon" value="modAccessoriseArmour"/>
-			<property name="EconomicValue" value="385"/>
+			<property name="EconomicValue" value="3850"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5"/>
@@ -102,7 +102,7 @@
 			<property name="name_key" value="modAccessoriseHarvest"/>
 			<property name="description_key" value="modAccessoriseHarvestDesc"/>
 			<property name="CustomIcon" value="modAccessoriseHarvest"/>
-			<property name="EconomicValue" value="385"/>
+			<property name="EconomicValue" value="3850"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="HarvestCount" operation="perc_add" value="1" tags="cropHarvest,wildCropsHarvest"/>
@@ -120,7 +120,7 @@
 			<property name="name_key" value="modAccessoriseMining"/>
 			<property name="description_key" value="modAccessoriseMiningDesc"/>
 			<property name="CustomIcon" value="modAccessoriseMining"/>
-			<property name="EconomicValue" value="385"/>
+			<property name="EconomicValue" value="3850"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="HarvestCount" operation="perc_add" value=".2" tags="oreWoodHarvest"/>
@@ -138,7 +138,7 @@
 			<property name="name_key" value="modAccessoriseXP"/>
 			<property name="description_key" value="modAccessoriseXPDesc"/>
 			<property name="CustomIcon" value="modAccessoriseXP"/>
-			<property name="EconomicValue" value="385"/>
+			<property name="EconomicValue" value="3850"/>
 
 			<effect_group tiered="false">
 				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.1"/>

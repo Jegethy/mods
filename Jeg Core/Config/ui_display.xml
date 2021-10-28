@@ -34,26 +34,6 @@
 	</append>
 
 	<append xpath="/ui_display_info/item_display">
-		<item_display_info display_type="foodHalloweenCandy1" display_group="groupConsumables">
-			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
-			<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dLootGamestagePerc" title_key="statLootGamestage" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dBarteringSellBuy" title_key="statBarteringSellBuy" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dHarvestMining" title_key="statHarvestMining" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
-		</item_display_info>
-
-		<item_display_info display_type="foodHalloweenCandy2" display_group="groupConsumables">
-			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
-			<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dEntityDamage" title_key="statEntityDamageMelee" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dHealthLoss" title_key="statHealthLoss" display_type="Percent" display_leading_plus="true"/>
-			<display_entry name="dStunResist" title_key="statStunResist" display_type="Percent"/>
-		</item_display_info>
-	</append>
-
-	<append xpath="/ui_display_info/item_display">
 		<item_display_info display_type="waterPineTea" display_group="groupConsumables">
 			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
 			<display_entry name="dCureDysentery" title_key="statCureDysentery" display_type="Percent"/>

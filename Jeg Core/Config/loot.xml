@@ -817,26 +817,26 @@
 
 	<append xpath="/lootcontainers/lootgroup[@name='junk']">
 		<item name="itemTraderbook" count="1" prob="0.01"/>
-		<item name="itemSpawnerBookBear" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookPig" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookChickens" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookDirewolf" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookWorkmen" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookNurse" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookCop" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookDemo" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookBear" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookPig" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookChickens" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookDirewolf" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookWorkmen" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookNurse" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookCop" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookDemo" count="1" prob="0.03"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootcontainer[@id='14']">
 		<item name="itemTraderbook" count="1" prob="0.01"/>
-		<item name="itemSpawnerBookBear" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookPig" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookChickens" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookDirewolf" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookWorkmen" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookNurse" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookCop" count="1" prob="0.06"/>
-		<item name="itemSpawnerBookDemo" count="1" prob="0.06"/>
+		<item name="itemSpawnerBookBear" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookPig" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookChickens" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookDirewolf" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookWorkmen" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookNurse" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookCop" count="1" prob="0.03"/>
+		<item name="itemSpawnerBookDemo" count="1" prob="0.03"/>
 	</append>
 
 	<!-- Adds torn pages to loot -->

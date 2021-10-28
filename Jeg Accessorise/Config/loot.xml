@@ -59,5 +59,35 @@
 		<item name="accessoryJewerlyBox13" count="1" prob="0.16"/>
 		<item name="accessoryJewerlyBox14" count="1" prob="0.16"/>
 	</append>
+	
+	<append xpath="/lootcontainers">
+		<lootgroup name="accessoryJewerlyBoxes">
+			<item name="accessoryJewerlyBox1" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox2" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox3" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox4" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox5" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox6" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox7" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox8" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox10" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox12" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox13" count="1" prob="0.16"/>
+			<item name="accessoryJewerlyBox14" count="1" prob="0.16"/>
+		</lootgroup>
+	</append>
+	
+	<append xpath="/lootcontainers">
+		<lootgroup name="accessoryJewerlyGems">
+			<item name="modAccessoriseMovementSpeed" count="1" prob="0.08"/>
+			<item name="modAccessoriseDamage" count="1" prob="0.08"/>
+			<item name="modAccessoriseHealth" count="1" prob="0.08"/>
+			<item name="modAccessoriseStamina" count="1" prob="0.08"/>
+			<item name="modAccessoriseArmour" count="1" prob="0.08"/>
+			<item name="modAccessoriseHarvest" count="1" prob="0.08"/>
+			<item name="modAccessoriseMining" count="1" prob="0.08"/>
+			<item name="modAccessoriseXP" count="1" prob="0.08"/>
+		</lootgroup>
+	</append>
 
 </config>

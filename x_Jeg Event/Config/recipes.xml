@@ -1,0 +1,8 @@
+<configs>
+	<append xpath="/recipes">
+		<recipe name="killscarecrow_start" count="1" craft_time="5">
+			<ingredient name="resourcePaper" count="3"/>
+			<ingredient name="resourceTornPage" count="3"/>
+		</recipe>
+	</append>
+</configs>

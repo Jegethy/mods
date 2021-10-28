@@ -3128,8 +3128,23 @@
 	
 	<append xpath="/items">
 		<item name="foodFreshApple">
-			<property name="Extends" value="foodCanMiso"/>
 			<property name="CustomIcon" value="foodFreshApple"/>
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="Stacknumber" value="10"/><!-- STK food -->
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+	
 			<effect_group tiered="false" name="Food Tier 0">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>

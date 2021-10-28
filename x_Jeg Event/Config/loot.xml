@@ -118,5 +118,14 @@
 	<append xpath="/lootcontainers/lootgroup[@name='decorativeBlocks']">
 		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='70']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.4"/>
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='71']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.6"/>
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='73']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.8"/>
+	</append>
 	
 </config>

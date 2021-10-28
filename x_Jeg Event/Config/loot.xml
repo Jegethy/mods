@@ -112,6 +112,11 @@
 	<append xpath="/lootcontainers/lootgroup[@name='groupAmmoPileLoot']">
 		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
-
+	<append xpath="/lootcontainers/lootgroup[@name='automotive']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='decorativeBlocks']">
+		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
+	</append>
 	
 </config>

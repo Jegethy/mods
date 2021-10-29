@@ -146,5 +146,23 @@
 			</effect_group>
 		</item_modifier>
 	</append>
+	
+	<!-- Lucky Looter -->
+	<append xpath="/item_modifiers">
+		<item_modifier name="modAccessoriseLuck" installable_tags="accessorise" type="attachment">
+			<property name="DisplayType" value="modAccessoriseLuck"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="modAccessorise"/>
+			<property name="name_key" value="modAccessoriseLuck"/>
+			<property name="description_key" value="modAccessoriseLuckDesc"/>
+			<property name="CustomIcon" value="modAccessoriseLuck"/>
+			<property name="EconomicValue" value="3850"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="LootGamestage" operation="perc_add" value=".15"/>
+				<display_value name="dLootGamestagePerc" value=".15"/>
+			</effect_group>
+		</item_modifier>
+	</append>
 
 </configs>

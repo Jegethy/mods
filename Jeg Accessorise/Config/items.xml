@@ -652,5 +652,37 @@
 	<append xpath="/items/item[@name='gunBowT1IronCrossbow']/property[@name='Tags']/@value">,rangedAccessorise</append>
 	<append xpath="/items/item[@name='gunBowT3CompoundCrossbow']/property[@name='Tags']/@value">,rangedAccessorise</append>
 	<append xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Tags']/@value">,rangedAccessorise</append>
+	
+	<append xpath="/items">
+		<item name="item4LeafClover">
+			<property name="Extends" value="resourceSilverNugget"/>
+			<property name="Weight" value="1"/>
+			<property name="Tags" value="gems"/>
+			<property name="CustomIcon" value="item4LeafClover"/>
+			<property name="name_key" value="item4LeafClover"/>
+			<property name="DescriptionKey" value="item4LeafCloverDesc"/>
+			<property name="Material" value="MRing"/>
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="CraftingIngredientTime" value="15"/>
+		</item>
+	</append>
+	
+	<append xpath="/items">
+		<item name="itemRabbitFoot">
+			<property name="Extends" value="resourceSilverNugget"/>
+			<property name="Weight" value="1"/>
+			<property name="Tags" value="gems"/>
+			<property name="CustomIcon" value="itemRabbitFoot"/>
+			<property name="name_key" value="itemRabbitFoot"/>
+			<property name="DescriptionKey" value="itemRabbitFootDesc"/>
+			<property name="Material" value="MRing"/>
+			<property name="Stacknumber" value="250"/><!-- STK resource -->
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="CraftingIngredientTime" value="15"/>
+		</item>
+	</append>
 
 </configs>

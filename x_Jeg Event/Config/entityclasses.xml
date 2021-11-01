@@ -59,6 +59,8 @@
 		</entity_class>
 	</append>
 	
+	<!--
 	<set xpath="/entity_classes/entity_class[contains(@name,'EntityLootContainer')]/property[@name='Mesh']/@value">Plants/pumpkinJackoLanternPrefab</set>
+	-->
 	
 </configs>

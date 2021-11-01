@@ -1,4 +1,5 @@
 <config>
+<!--
 	<append xpath="/lootcontainers/lootgroup[@name='junk']">
 		<item name="killscarecrow_start" count="1" prob="0.02"/>
 	</append>
@@ -43,7 +44,6 @@
 		</lootcontainer>
 	</append>
 	
-	<!-- Adds halloween loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='junk']">
 		<item name="foodHalloweenCandy1" count="2,4" prob="0.1"/>
 		<item name="foodHalloweenCandy2" count="2,4" prob="0.1"/>
@@ -59,8 +59,7 @@
 	<append xpath="/lootcontainers/lootcontainer[@id='14']">
 		<item name="killscarecrow_start" count="1" prob="0.02"/>
 	</append>
-	
-	<!-- Adds Halloween loot boxes to loot -->
+
 	<append xpath="/lootcontainers/lootgroup[@name='junk']">
 		<item name="blockHalloweenEventOuter" count="1" prob="0.05"/>
 	</append>
@@ -127,5 +126,5 @@
 	<append xpath="/lootcontainers/lootcontainer[@id='73']">
 		<item name="blockHalloweenEventOuter" count="1" prob="0.8"/>
 	</append>
-	
+-->
 </config>

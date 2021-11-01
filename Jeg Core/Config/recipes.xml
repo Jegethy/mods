@@ -7,6 +7,10 @@
 	<set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">2</set>
 	<set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">2</set>
 	<set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']/@count">2</set>
+	
+	<!-- Updated ammo recipe to craft 5 per -->
+	<set xpath="/recipes/recipe[contains(@name, 'ammo') and not (contains(@name, 'Bundle'))]/@count">5</set>
+	<set xpath="/recipes/recipe[@name='ammoGasCan']/@count">10</set>
 
 	<!-- Blessed Metal recipe -->
 	<append xpath="/recipes">
@@ -2238,9 +2242,5 @@
 			<ingredient name="foodEgg" count="2"/>
 		</recipe>
 	</append>
-	
-	<!-- Updated ammo recipe to craft 5 per -->
-	<set xpath="/recipes/recipe[contains(@name, 'ammo') and not (contains(@name, 'Bundle'))]/@count">5</set>
-	<set xpath="/recipes/recipe[@name='ammoGasCan']/@count">10</set>
 	
 </configs>

@@ -201,8 +201,8 @@
 	<set xpath="/items/item[starts-with(@name, 'book')]/property[@name='Stacknumber']/@value">250</set>
 	<set xpath="/items/item[@name='questMaster']/property[@name='Stacknumber']/@value">250</set>
 	<!-- Ammo & thrown -->
-	<set xpath="/items/item[contains(@name, 'ammo') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">2000</set>
-	<set xpath="/items/item[contains(@name, 'thrown') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">2000</set>
+	<set xpath="/items/item[contains(@name, 'ammo') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">5000</set>
+	<set xpath="/items/item[contains(@name, 'thrown') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">5000</set>
 	<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">10000</set>
 	<!-- Misc -->
 	<set xpath="/items/item[contains(@name, 'resource')]/property[@name='Stacknumber' and not(@value='1')]/@value">10000</set>
@@ -3138,7 +3138,7 @@
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="5"/>
 			<property name="EconomicValue" value="60"/>
-			<property name="Stacknumber" value="10"/><!-- STK food -->
+			<property name="Stacknumber" value="250"/><!-- STK food -->
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>

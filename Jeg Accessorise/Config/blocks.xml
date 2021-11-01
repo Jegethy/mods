@@ -1,0 +1,7 @@
+<config>
+
+	<insertAfter xpath="/blocks/block[@name='treeGrassMaster']/property[@name='HarvestOverdamage']">
+		<drop event="Harvest" name="item4LeafClover" prob=".004" count="1" tag="allHarvest"/>
+	</insertAfter>
+
+</config>

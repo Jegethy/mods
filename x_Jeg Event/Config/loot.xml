@@ -7,7 +7,7 @@
 	<append xpath="/lootcontainers/lootcontainer[@id='14']">
 		<item name="killscarecrow_start" count="1" prob="0.02"/>
 	</append>
-
+-->
 	<append xpath="/lootcontainers">
 		<lootgroup name="halloweenEvent1">
 			<item name="foodPumpkinBreadSchematic" prob="0.2"/>
@@ -25,7 +25,7 @@
 			<item name="foodHalloweenCandy2" count="2,4"/>
 		</lootgroup>
 	</append>
-	
+<!--
 	<append xpath="/lootcontainers">
 		<lootcontainer id="420" count="3" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
 			<item group="halloweenEvent2" count="2,4" prob="4"/>

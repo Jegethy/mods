@@ -92,9 +92,9 @@
 				<property name="use_closest" value="true" />
 			</objective>
 
-			<reward type="Exp" value="2500"/>
-			<reward type="Item" id="casinoCoin" value="1000"/>
-			<reward type="SkillPoints" value="3"/>
+			<reward type="Exp" value="50000"/>
+			<reward type="Item" id="casinoCoin" value="5000"/>
+			<reward type="SkillPoints" value="2"/>
 			<reward type="LootItem" id="halloweenEvent1" ischosen="true" value="7"/>
 			<reward type="LootItem" id="halloweenEvent2" ischosen="true" value="7"/>			
 		</quest>

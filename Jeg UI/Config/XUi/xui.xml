@@ -20,28 +20,7 @@
 	<!-- New Looting window -->
 	<set xpath="/xui/ruleset[@name='default']/window_group[@name='looting']/window[@name='windowLooting']/@name">JegLootingWindow</set>
 
-	<!-- Compass updates -->
-	<remove xpath="/xui/ruleset[@name='default']/window_group[@name='compass']/window[@name='windowCompass']"/>
-	<append xpath="/xui/ruleset[@name='default']/window_group[@name='compass']">
-		<window name="JegCompass" /> 
-	</append>
-
-	<append xpath="/xui/ruleset[@name='default']/window_group[@name='players']" >
-		<window name="JegCompassModule1" />
-		<window name="JegCompassModule2" />
-	</append>
-
-	<append xpath="/xui/ruleset[@name='default']/window_group[@controller]" >
-		<window name="JegCompassModule1" />
-		<window name="JegCompassModule2" />
-	</append>
-
-	<append xpath="/xui/ruleset[@name='default']/window_group[@name='map']" >
-		<window name="JegCompassModule1" />
-		<window name="JegCompassModule2" />
-	</append>
-
-	<append xpath="/xui/ruleset[@name='default']" >
+	<!-- <append xpath="/xui/ruleset[@name='default']" >
 		<window_group name="workstation_forgeAdv" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingListAdv"/>
 			<window name="craftingInfoPanel"/>
@@ -52,6 +31,6 @@
 			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
-	</append>
+	</append> -->
 
 </configs>

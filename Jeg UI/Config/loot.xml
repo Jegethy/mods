@@ -23,9 +23,6 @@
 	<!-- backpack, place where people stash things, -->
 	<set xpath="/lootcontainers/lootcontainer[@id='9']/@size">13,11</set>
 	
-	<!-- cntHardenedChestSecure, hero, big, fancy chest -->
-	<set xpath="/lootcontainers/lootcontainer[@id='121']/@size">13,11</set>
-	
 	<!-- Increased vehicle storage size -->
 	<!-- Bicycle -->
 	<set xpath="/lootcontainers/lootcontainer[@id='76']/@size">6,5</set>
@@ -38,9 +35,4 @@
 	<!-- Gyrocopter -->
 	<set xpath="/lootcontainers/lootcontainer[@id='80']/@size">11,13</set>
 
-	<insertBefore xpath="//lootcontainer[@id='83']">
-		<!-- vehicleHelicopter storage-->
-		<lootcontainer id="81" count="0" size="11,13" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
-		</lootcontainer>
-	</insertBefore>
 </configs>

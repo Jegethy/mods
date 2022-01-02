@@ -20,17 +20,4 @@
 	<!-- New Looting window -->
 	<set xpath="/xui/ruleset[@name='default']/window_group[@name='looting']/window[@name='windowLooting']/@name">JegLootingWindow</set>
 
-	<!-- <append xpath="/xui/ruleset[@name='default']" >
-		<window_group name="workstation_forgeAdv" controller="XUiC_WorkstationWindowGroup">
-			<window name="windowCraftingListAdv"/>
-			<window name="craftingInfoPanel"/>
-			<window name="JegWindowCraftingQueue"/>
-			<window name="windowToolsForgeAdv" />
-			<window name="windowFuel" />
-			<window name="windowForgeInput" />
-			<window name="windowOutput" />
-			<window name="windowNonPagingHeader" />
-		</window_group>
-	</append> -->
-
 </configs>

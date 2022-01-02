@@ -153,19 +153,18 @@
 
 	<!-- Compass improvements-->
 	<remove xpath="/windows/window[@name='windowCompass']/sprite[@sprite=''][@color='255,255,255,255']"/>
-	<insertAfter xpath="/windows/window[@name='windowCompass']/texture[@name='compassTexture3']">
-		
-			<rect name="rect_compassMapStats" pos="0,7" width="400" height="32" controller="MapStats" anchor="CenterTop">
-				<sprite depth="2" name="Icon" sprite="ui_game_symbol_alarmclock" size="22,22" pos="52,-54" color="[white]"/>
-				<label depth="2" name="TextContent" pos="169,-66" font_size="24" color="[white]" justify="center" pivot="center" text="{daytitle}: [{daycolor|always}]{day|always}[-] {timetitle}: {time|always}[-]" height="30" effect="outline" upper_case="true"/>
+	<remove xpath="/windows/window[@name='windowCompass']/sprite[@sprite='ui_game_header_fill'][@color='150,150,150,150']"/>
+	<remove xpath="/windows/window[@name='windowCompass']/sprite[@sprite='ui_game_header_fill'][@color='50,50,50,220']"/>
+	<insertAfter xpath="/windows/window[@name='windowCompass']/texture[@name='compassTexture3']">		
+		<rect name="rect_compassMapStats" pos="0,5" width="400" height="32" controller="MapStats" anchor="Center">
+			<label depth="2" name="TextContent" pos="153,-66" font_size="28" color="[white]" justify="center" pivot="center" text="{daytitle}: [{daycolor|always}]{day|always}[-] {timetitle}: {time|always}" height="30" effect="outline" upper_case="true"/>
 
-				<sprite depth="2" name="Icon" sprite="ui_game_symbol_temperature" size="22,22" pos="260,-54" color="[white]"/>
-				<label depth="2" name="TextContent" pos="308,-66" font_size="24" color="[white]" justify="center" pivot="center" text="{maptemperature}[-]" height="30" controller="MapStats" effect="outline"/>
+			<sprite depth="2" name="Icon" sprite="ui_game_symbol_temperature" size="22,22" pos="251,-55" color="[white]"/>
+			<label depth="2" name="TextContent" pos="299,-66" font_size="28" color="[white]" justify="center" pivot="center" text="{maptemperature}[-]" height="30" controller="MapStats" effect="outline"/>
 
-				<sprite depth="2" name="Icon" sprite="ui_game_symbol_climb" size="22,22" pos="340,-54" color="[white]"/>
-				<label depth="2" name="TextContent" pos="396,-66" font_size="24" color="[white]" globalopacitymod="1.8" justify="center" pivot="center" text="{mapelevation}[-] M" height="30" controller="MapStats" effect="outline"/>
-
-			</rect>
+			<sprite depth="2" name="Icon" sprite="ui_game_symbol_climb" size="22,22" pos="331,-55" color="[white]"/>
+			<label depth="2" name="TextContent" pos="387,-66" font_size="28" color="[white]" globalopacitymod="1.8" justify="center" pivot="center" text="{mapelevation}[-] M" height="30" controller="MapStats" effect="outline"/>
+		</rect>
 	</insertAfter>
 
 	<!-- Toolbelt Changes -->
@@ -198,7 +197,7 @@
 		</rect>
 	</append>
 	
-	<set xpath="/windows/window[@name='windowToolbelt']/@pos">-575, 88</set>
+	<set xpath="/windows/window[@name='windowToolbelt']/@pos">-575, 82</set>
 
 	<!-- Looting window -->
 	<append xpath="/windows">

@@ -63,7 +63,7 @@
 		</material>
 	</append>
 
-	<append xpath="/materials">	
+	<append xpath="/materials">
 		<material id="Mmetal_harder">
 			<property name="damage_category" value="metal"/>
 			<property name="surface_category" value="metal"/>
@@ -78,7 +78,7 @@
 		</material>
 	</append>
 
-	<append xpath="/materials">	
+	<append xpath="/materials">
 		<material id="Mmetal_hardest">
 			<property name="damage_category" value="metal"/>
 			<property name="surface_category" value="metal"/>
@@ -161,6 +161,22 @@
 			<property name="MaxDamage" value="15000"/>
 			<property name="Experience" value="2"/>
 			<property name="explosionresistance" value="9"/>
+		</material>
+	</append>
+	
+	<!-- Stainless Steel material -->
+	<append xpath="/materials">
+		<material id="MstainlessSteel_shapes">
+			<property name="damage_category" value="metal"/>
+			<property name="surface_category" value="metal"/>
+			<property name="forge_category" value="iron"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="320"/>
+			<property name="Mass" type="int" value="20"/>
+			<property name="explosionresistance" value="2.05"/>
+			<property name="MaxDamage" value="25000"/>
+			<property name="Experience" value="6"/>
 		</material>
 	</append>
 

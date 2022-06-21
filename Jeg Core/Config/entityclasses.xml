@@ -1,9 +1,9 @@
 <configs>
 
 	<!-- Changes starting items -->
-	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">starterFoodChest</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">starterFoodChest</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">starterFoodChest</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">starterFoodChest,itemLockedWeaponCrate</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">starterFoodChest,itemLockedWeaponCrate</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">starterFoodChest,itemLockedWeaponCrate</set>
 
 	<append xpath="/entity_classes/entity_class[@name='npcTraderTemplate']">
 		<effect_group name="Trader Protection Aura">

@@ -1542,5 +1542,45 @@
 			<ingredient name="foodRottingFlesh" count="1"/>
 		</recipe>
 	</append>
+	
+	<!-- Crude Key to unlock weapon crate -->
+	<append xpath="/recipes">
+		<recipe name="itemCrudeKey" always_unlocked="false" count="1" craft_time="2" tags="learnable,itemCrudeKey">
+			<ingredient name="resourceWood" count="15"/>
+			<ingredient name="resourceRockSmall" count="15"/>
+			<ingredient name="resourceYuccaFibers" count="10"/>
+			<ingredient name="resourceFeather" count="5"/>
+		</recipe>
+	</append>
+
+	<!-- Weapon Crate Intro Quest Reward -->
+	<append xpath="/recipes">
+		<recipe name="itemOpenWeaponCrate" craft_time="4" always_unlocked="true" count="1">
+			<ingredient name="itemLockedWeaponCrate" count="1"/>
+			<ingredient name="itemCrudeKey" count="1"/>
+		</recipe>
+	</append>
+	
+	<!-- Fewer crops are needed to craft seeds -->
+	<set xpath="/recipes/recipe[@name='plantedAloe1']/ingredient[@name='resourceCropAloeLeaf']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedBlueberry1']/ingredient[@name='foodCropBlueberries']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedChrysanthemum1']/ingredient[@name='resourceCropChrysanthemumPlant']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedCoffee1']/ingredient[@name='resourceCropCoffeeBeans']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedCorn1']/ingredient[@name='foodCropCorn']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedCotton1']/ingredient[@name='resourceCropCottonPlant']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedGoldenrod1']/ingredient[@name='resourceCropGoldenrodPlant']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedGraceCorn1']/ingredient[@name='foodCropGraceCorn']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedHop1']/ingredient[@name='resourceCropHopsFlower']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedMushroom1']/ingredient[@name='foodCropMushrooms']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedPotato1']/ingredient[@name='foodCropPotato']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedYucca1']/ingredient[@name='foodCropYuccaFruit']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='plantedPumpkin1']/ingredient[@name='foodCropPumpkin']/@count">2</set>
+	
+	<!-- Stainless steel upgrades -->
+	<append xpath="/recipes">
+		<recipe name="stainlessSteelShapes:VariantHelper" count="1">
+			<ingredient name="resourceForgedSteel" count="20"/>
+		</recipe>
+	</append>
 
 </configs>

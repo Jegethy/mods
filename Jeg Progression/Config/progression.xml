@@ -57,9 +57,13 @@
 	<!-- Adds new food items -->
 	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='2,5']/@tags">,foodGrilledChickenLeg</append>
 	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='3,5']/@tags">,foodCookedRibs</append>
+	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5,5']/@tags">,foodBearStew,drinkJarGrandpasForgettingElixir</append>
 
 	<!-- Adds parts to advanced engineering tier 5 -->
 	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,meleeWpnClubT3SteelClubParts,gunShotgunT1DoubleBarrelParts,meleeToolAxeT3ChainsawParts,armorMilitarySetParts,gunHandgunT1PistolParts,gunBowT1WoodenBowParts,meleeToolAllSteelParts,armorSteelSetParts,gunRifleT1HuntingRifleParts,gunMGT1AK47Parts,gunExplosivesT3RocketLauncherParts,gunBotRoboticsParts,meleeWpnBatonT2StunBatonParts,meleeWpnKnucklesT3SteelKnucklesParts,meleeWpnBladeT3MacheteParts,meleeWpnSpearT3SteelSpearParts,meleeWpnSledgeT3SteelSledgehammerParts</append>
+
+	<!-- Adds Advanced Forge -->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='5']/@tags">,forgeAdv</append>
 
 	<!-- Adds custom sledgehammer book category -->
 	<append xpath="/progression/skills">
@@ -87,7 +91,7 @@
 		<perk name="perkHammerTimeDefense" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDefenseDesc" long_desc_key="perkHammerTimeDefenseLongDesc">
 			<effect_group>
 				<!-- effect is on sledgehammers, item.xml -->
-			</effect_group>
+</effect_group>
 		</perk>
 
 		<perk name="perkHammerTimeDoorKey" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDoorKeyDesc" long_desc_key="perkHammerTimeDoorKeyLongDesc">
@@ -140,15 +144,15 @@
 	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']"/>
 	
 	<append xpath="/progression/perks">
-		<perk name="perkGreaseMonkey" parent="skillIntellectCraftsmanship" name_key="perkGreaseMonkeyName" desc_key="perkGreaseMonkeyDesc" icon="ui_game_symbol_service">
+		<perk name="perkGreaseMonkey" max_level="3" parent="skillIntellectCraftsmanship" name_key="perkGreaseMonkeyName" desc_key="perkGreaseMonkeyDesc" icon="ui_game_symbol_service">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
 
 			<effect_group>
-				<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkGreaseMonkey"/><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
+				<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkGreaseMonkey"/><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
 
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="vehicleWheels,resourceAcid,carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars"/>
 				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="resourceOil,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,vehicle4x4TruckChassis,vehicle4x4TruckAccessories"/>
 				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="ammoGasCanBundle,vehicleGyroCopterChassis,vehicleGyroCopterAccessories"/>
 
@@ -158,5 +162,8 @@
 			</effect_group>
 		</perk>
 	</append>
+	
+	<!-- Adds beaker crafting to Physician -->
+	<append xpath="/progression/perks/perk[@name='perkPhysician']/effect_group/passive_effect[@level='1,4']/@tags">,toolBeaker</append>
 
 </config>

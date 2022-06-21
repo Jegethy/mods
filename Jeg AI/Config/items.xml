@@ -1,23 +1,73 @@
 <configs>
 
-	<insertAfter xpath="/items/item[@name='meleeHandZombieDemolition']">
-		<item name="meleeHandZombieDemolitionWeak">
-			<property name="Extends" value="meleeHandMaster"/>
-			<property name="CreativeMode" value="None"/>
-			<property class="Action0">
-				<property name="DamageEntity" value="3"/>
-				<property name="DamageBlock" value="500"/>
-				<property name="Range" value="1.85"/>
-				<property name="Delay" value=".6"/>
-			</property>
-			<effect_group name="meleeHandZombieStrong" tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-				buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-				weights=".11,.07,.07,.05,.29,.36,.11"/>
-			</effect_group>
-		</item>
+	<!-- Modifies the damage and range of zombie attacks -->
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Delay']/@value">1</set>
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Range']/@value">1.10</set>
+	<set xpath="/items/item[@name='meleeHandAnimalBear']/property[@class='Action0']/property[@name='Range']/@value">1.7</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieBear']/property[@class='Action0']/property[@name='Range']/@value">1.7</set>
+	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='Range']/@value">1.35</set>
+	<set xpath="/items/item[@name='meleeHandAnimalCoyote']/property[@class='Action0']/property[@name='Range']/@value">1.2</set>
+	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='Range']/@value">1.4</set>
+	<set xpath="/items/item[@name='meleeHandAnimalDireWolf']/property[@class='Action0']/property[@name='Range']/@value">1.4</set>
+	<set xpath="/items/item[@name='meleeHandBossGrace']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+
+	<insertAfter xpath="/items/item[@name='meleeHandZombie02']/property[@class='Action0']/property[@name='Delay']">
+		<property name="Range" value="1.00"/>
 	</insertAfter>
+	
+	<!-- Updates the player "hand" item to restore its modded A17 range -->
+	<insertAfter xpath="/items/item[@name='meleeHandPlayer']/property[@class='Action0']/property[@name='Damage_type']">
+		<property name="Range" value="1.80"/>
+		<property name="Delay" value=".8"/>
+	</insertAfter>
+
+	<!-- Damage of all zombies increased. This is to balance the fact that their range has been drastically reduced. Dodge or die (or have armour). -->
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageEntity']/@value">22</set>
+	<set xpath="/items/item[@name='meleeHandZombie01']/effect_group[@name='meleeHandZombie01']/passive_effect[2]/@value">22</set>
+	<set xpath="/items/item[@name='meleeHandZombie02Feral']/property[@class='Action0']/property[@name='DamageEntity']/@value">38</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='DamageEntity']/@value">34</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']/property[@name='DamageEntity']/@value">58</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">48</set>
+	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='DamageEntity']/@value">38</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">62</set>
+	<set xpath="/items/item[@name='meleeHandZombieFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">36</set>
+	<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">36</set>
+	<set xpath="/items/item[@name='meleeHandZombiePartyGirl']/property[@class='Action0']/property[@name='DamageEntity']/@value">20</set>
+	<set xpath="/items/item[@name='meleeHandZombiePartyGirlFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">36</set>
+	<set xpath="/items/item[@name='meleeHandZombieStrong']/property[@class='Action0']/property[@name='DamageEntity']/@value">38</set>
+	<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">56</set>
+	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">34</set>
+	<set xpath="/items/item[@name='meleeHandZombieDemolition']/property[@class='Action0']/property[@name='DamageEntity']/@value">54</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieDog']/property[@class='Action0']/property[@name='DamageEntity']/@value">34</set>
+	<set xpath="/items/item[@name='meleeHandAnimalBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">130</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">175</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieBearFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">300</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
+	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='DamageEntity']/@value">40</set>
+	<set xpath="/items/item[@name='meleeHandAnimalDireWolf']/property[@class='Action0']/property[@name='DamageEntity']/@value">48</set>
+	<set xpath="/items/item[@name='meleeHandAnimalCoyote']/property[@class='Action0']/property[@name='DamageEntity']/@value">36</set>
+	<set xpath="/items/item[@name='meleeHandBossGrace']/property[@class='Action0']/property[@name='DamageEntity']/@value">110</set>
+	
+	<!-- Re-adding the default player damage 'hand' item -->
+	<append xpath="/items/item[@name='meleeHandPlayer']/property[@class='Action0']">
+		<property name="DamageEntity" value="10"/>
+	</append>
+	
+	<!-- Greatly reduces the amount of block damage zombies deal to hardened materials -->
+	<append xpath="/items/item[@name='meleeHandMaster']/effect_group[@name='meleeHandMaster']">
+		<passive_effect name="DamageModifier" operation="perc_add" value="-40" tags="concrete,metal,stone"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'meleeHandZombie')]/effect_group[starts-with(@name, 'meleeHandZombie')]">
+		<passive_effect name="DamageModifier" operation="perc_add" value="-40" tags="concrete,metal,stone"/>
+	</append>
+	
+	<!-- Moderately reduces the amount of block damage zombies deal to other materials -->
+	<append xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']">
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="DamageBonus.earth" value="0.8"/>
+		<property name="DamageBonus.wood" value="0.3"/>
+		<property name="DamageBonus.metal" value="0.45"/>
+		<property name="DamageBonus.stone" value="0.35"/>
+	</append>
 
 </configs>

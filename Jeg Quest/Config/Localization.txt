@@ -1,0 +1,2 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+JegQuestTimer,UI,Tooltip,,,[60CCFF]"Return to the quest area or the quest will FAIL!"

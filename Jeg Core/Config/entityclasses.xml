@@ -1,26 +1,4 @@
 <configs>
-	<insertAfter xpath="//entity_class[@name='vehicleGyrocopter']">
-		<entity_class name="vehicleHelicopter">
-			<property name="Tags" value="vehicle"/>
-			<property name="Class" value="EntityVHelicopter"/>
-			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/manux_HelicopterOH58.unity3d?HelicopterOH58Prefab_A17.prefab"/>
-			<property name="ModelType" value="Standard"/>
-			<property name="SurfaceCategory" value="metal"/>
-			<property name="IgnoreTrigger" value="true"/>
-			<property name="LootListAlive" value="81"/>
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
-			<property name="Explosion.RadiusBlocks" value="7"/>
-			<property name="Explosion.RadiusEntities" value="8"/>
-			<property name="Explosion.BlockDamage" value="200"/>
-			<property name="Explosion.EntityDamage" value="200"/>
-			<property name="RotateToGround" value="true"/>
-			<property name="Faction" value="none"/>
-			<property name="MapIcon" value="ui_game_symbol_helicopter"/>
-			<property name="NavObject" value="vehicleHelicopter" />
-		</entity_class>
-	</insertAfter>
 
 	<!-- Changes starting items -->
 	<set xpath="/entity_classes/entity_class[@name='playerMale' or @name='playerFemale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">starterFoodChest,itemLockedWeaponCrate</set>

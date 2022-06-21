@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Jeg Quest" />
+		<Description value="Jeg Quest includes various changes to quests" />
+		<Author value="Jegethy" />
+		<Version value="1.1.0" />
+	</ModInfo>
+</xml>

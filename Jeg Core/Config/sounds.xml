@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
 
-	<!-- Helicopter sounds -->
-	<insertAfter xpath="//SoundDataNode[@name='gyrocopter_empty']">
-		<SoundDataNode name="helicopter_max_speed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
-			<AudioClip ClipName="#@modfolder:Resources/manux_HelicopterOH58.unity3d?HelicopterRotor" Loop="true"/>
-			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
-		</SoundDataNode>
-	</insertAfter>
-
-	<append xpath="/Sounds">
-		<SoundDataNode name="MDtruck_horn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
-			<Noise ID="4" noise="60" time="3" heat_map_strength="0.2" heat_map_time="90"/>
-			<AudioClip ClipName="#@modfolder:Resources/MDhorns1.unity3d?MDtruck_horn"/>
-			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxEntities name="6"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
-	</append>
-
 	<!-- Removes power attack grunting -->
 	<remove xpath="/Sounds//SoundDataNode[@name='player1powerattack']" />
 	<remove xpath="/Sounds//SoundDataNode[@name='player2powerattack']" />
@@ -42,14 +27,6 @@
 	<remove xpath="/Sounds//SoundDataNode[@name='turret_overheat_lp']" />
 	<remove xpath="/Sounds//SoundDataNode[@name='turret_retarget_lp']" />
 
-	<!-- Removes the default surpressed sounds -->
-	<remove xpath="/Sounds//SoundDataNode[@name='pistol_s_fire']" />
-	<remove xpath="/Sounds//SoundDataNode[@name='mp5_s_fire']" />
-	<remove xpath="/Sounds//SoundDataNode[@name='pump_shotgun_s_fire']" />
-	<remove xpath="/Sounds//SoundDataNode[@name='hunting_rifle_s_fire']" />
-	<remove xpath="/Sounds//SoundDataNode[@name='sniperrifle_s_fire']" />
-	<remove xpath="/Sounds//SoundDataNode[@name='ak47_s_fire']" />
-
 	<!-- New Vehicle Horn -->
 	<append xpath="/Sounds">
 		<SoundDataNode name="motorbike_horn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
@@ -66,78 +43,5 @@
 			<AudioClip ClipName="#@modfolder:Resources/HornSounds.unity3d?4x4truck_horn3"/>
 			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxEntities name="6"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 	</append>
-
-	<append xpath="/Sounds">
-		<!-- Adding the updated sounds -->
-		<!-- Pistol -->	
-		<SoundDataNode name="pistol_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="5" time="2" muffled_when_crouched="0.4" heat_map_strength="0.2" heat_map_time="90"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/Pistol/pistol_s_fire1"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/Pistol/pistol_s_fire2"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/Pistol/pistol_s_fire3"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/Pistol/pistol_s_fire4"/>
-			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
-		<!-- MP5 -->	
-		<SoundDataNode name="mp5_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="6" time="2" muffled_when_crouched="0.4" heat_map_strength="0.2" heat_map_time="90"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/mp5/mp5_s_fire1"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/mp5/mp5_s_fire2"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/mp5/mp5_s_fire3"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/mp5/mp5_s_fire4"/>
-			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
-		<!-- Shotgun -->	
-		<SoundDataNode name="pump_shotgun_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="7" time="2" muffled_when_crouched="0.4" heat_map_strength="0.4" heat_map_time="90"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire1"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire2"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire3"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire4"/>
-			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
-		<!-- Hunting Rifle -->	
-		<SoundDataNode name="hunting_rifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="8" time="2" muffled_when_crouched="0.4" heat_map_strength="0.3" heat_map_time="90"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire1"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire2"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire3"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire4"/>
-			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
-		<!-- Sniper -->	
-		<SoundDataNode name="sniperrifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="8" time="2" muffled_when_crouched="0.4" heat_map_strength="0.3" heat_map_time="90"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire1"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire2"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire3"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire4"/>
-			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
-		<!-- AK47 -->	
-		<SoundDataNode name="ak47_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="7" time="2" muffled_when_crouched="0.4" heat_map_strength="0.3" heat_map_time="90"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire1"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire2"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire3"/>
-			<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire4"/>
-			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
-	</append>
-
-	<!-- Increases heatmap of ammo -->
-	<set xpath="/Sounds/SoundDataNode[@name='Pistol_Fire']/Noise/@heat_map_strength">0.9</set>             <!-- original 0.65 -->
-	<set xpath="/Sounds/SoundDataNode[@name='pistol_s_fire']/Noise/@heat_map_strength">0.6</set>           <!-- original 0.4  -->
-	<set xpath="/Sounds/SoundDataNode[@name='mp5_fire']/Noise/@heat_map_strength">0.9</set>                <!-- original 0.65 -->
-	<set xpath="/Sounds/SoundDataNode[@name='mp5_s_fire']/Noise/@heat_map_strength">0.65</set>             <!-- original 0.4  -->
-	<set xpath="/Sounds/SoundDataNode[@name='44magnum_fire']/Noise/@heat_map_strength">1</set>             <!-- original 0.75 -->
-	<set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/Noise/@heat_map_strength">1.3</set>       <!-- original 1.0  -->
-	<set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_s_fire']/Noise/@heat_map_strength">1</set>       <!-- original 0.8  -->
-	<set xpath="/Sounds/SoundDataNode[@name='sawed_off_shotgun_fire']/Noise/@heat_map_strength">0.55</set> <!-- original 0.3  -->
-	<set xpath="/Sounds/SoundDataNode[@name='shotgundb_fire']/Noise/@heat_map_strength">1.3</set>          <!-- original 1.0  -->
-	<set xpath="/Sounds/SoundDataNode[@name='blunderbuss_fire']/Noise/@heat_map_strength">1.15</set>       <!-- original 1.0  -->
-	<set xpath="/Sounds/SoundDataNode[@name='hunting_rifle_fire']/Noise/@heat_map_strength">1.2</set>      <!-- original 0.9  -->
-	<set xpath="/Sounds/SoundDataNode[@name='hunting_rifle_s_fire']/Noise/@heat_map_strength">0.85</set>   <!-- original 0.6  -->
-	<set xpath="/Sounds/SoundDataNode[@name='sniperrifle_fire']/Noise/@heat_map_strength">1.2</set>        <!-- original 0.9  -->
-	<set xpath="/Sounds/SoundDataNode[@name='sniperrifle_s_fire']/Noise/@heat_map_strength">0.9</set>      <!-- original 0.65 -->
-	<set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/Noise/@heat_map_strength">1.2</set>               <!-- original 0.9  -->
-	<set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/Noise/@heat_map_strength">0.9</set>             <!-- original 0.65 -->
-	<set xpath="/Sounds/SoundDataNode[@name='m60_fire']/Noise/@heat_map_strength">0.9</set>                <!-- original 0.65 -->
-	<set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/Noise/@heat_map_strength">1</set>                <!-- original 0.7  -->
-	<set xpath="/Sounds/SoundDataNode[@name='m136_fire']/Noise/@heat_map_strength">0.45</set>              <!-- original 0.2  -->
 
 </config>

@@ -31,6 +31,165 @@
 			<property name="UpgradeHitCount" value="4"/>
 		</property>
 	</append>
+	
+	<!-- Wood, iron and steel bars -->
+	<append xpath="/blocks">
+		<!-- Wood variants -->
+		<block name="jegBlockWoodBarsEdge">
+			<property name="Extends" value="ironBarsCentered" param1="RepairItems"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Collide" value="melee,movement,rocket"/>
+			<property name="Material" value="Mwood"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="DescriptionKey" value="jegBlockWoodBarsDesc"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="20"/>
+			</property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="jegBlockIronBarsEdge"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="15"/>
+				<property name="UpgradeHitCount" value="8"/>
+			</property>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?WoodBarsEdgePrefab"/>
+			<property name="CustomIcon" value="jegWoodEdge"/>
+		</block>
+		<block name="jegBlockWoodBarsCorner">
+			<property name="Extends" value="jegBlockWoodBarsEdge"/>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?WoodBarsCornerPrefab"/>
+			<property name="CustomIcon" value="jegWoodCorner"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="jegBlockIronBarsCorner"/>
+			</property>
+		</block>
+		<block name="jegBlockWoodBarsCenterEdge">
+			<property name="Extends" value="jegBlockWoodBarsEdge"/>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?WoodBarsCenterEdgePrefab"/>
+			<property name="CustomIcon" value="jegWoodCenterEdge"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="jegBlockIronBarsCenterEdge"/>
+			</property>
+		</block>
+		<block name="jegBlockWoodBarsCenterCorner">
+			<property name="Extends" value="jegBlockWoodBarsEdge"/>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?WoodBarsCenterCornerPrefab"/>
+			<property name="CustomIcon" value="jegWoodCenterCorner"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="jegBlockIronBarsCenterCorner"/>
+			</property>
+		</block>
+		<block name="jegBlockWoodBarsVariantHelper">
+			<property name="Extends" value="jegBlockWoodBarsEdge"/>
+			<property name="CustomIcon" value="jegWoodEdge"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="jegBlockWoodBarsEdge,jegBlockWoodBarsCorner,jegBlockWoodBarsCenterEdge,jegBlockWoodBarsCenterCorner"/>
+			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+		</block>
+
+		<!-- Iron variants -->
+		<block name="jegBlockIronBarsEdge">
+			<property name="Extends" value="ironBarsCentered" param1="RepairItems"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Collide" value="melee,movement,rocket"/>
+			<property name="Material" value="Miron"/>
+			<property name="MaxDamage" value="4000"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="DescriptionKey" value="jegBlockIronBarsDesc"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="12"/>
+			</property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="jegBlockSteelBarsEdge"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="15"/>
+				<property name="UpgradeHitCount" value="12"/>
+			</property>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?IronBarsEdgePrefab"/>
+			<drop event="Harvest" name="resourceForgedIron" count="0,3" prob="0.2" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="16,32" prob="0.8" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="16,32"/>
+			<property name="CustomIcon" value="jegIronEdge"/>
+		</block>
+		<block name="jegBlockIronBarsCorner">
+			<property name="Extends" value="jegBlockIronBarsEdge"/>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?IronBarsCornerPrefab"/>
+			<property name="CustomIcon" value="jegIronCorner"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="jegBlockSteelBarsCorner"/>
+			</property>
+		</block>
+		<block name="jegBlockIronBarsCenterEdge">
+			<property name="Extends" value="jegBlockIronBarsEdge"/>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?IronBarsCenterEdgePrefab"/>
+			<property name="CustomIcon" value="jegIronCenterEdge"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="jegBlockSteelBarsCenterEdge"/>
+			</property>
+		</block>
+		<block name="jegBlockIronBarsCenterCorner">
+			<property name="Extends" value="jegBlockIronBarsEdge"/>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?IronBarsCenterCornerPrefab"/>
+			<property name="CustomIcon" value="jegIronCenterCorner"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="jegBlockSteelBarsCenterCorner"/>
+			</property>
+		</block>
+		<block name="jegBlockIronBarsVariantHelper">
+			<property name="Extends" value="jegBlockIronBarsEdge"/>
+			<property name="CustomIcon" value="jegIronEdge"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="jegBlockIronBarsEdge,jegBlockIronBarsCorner,jegBlockIronBarsCenterEdge,jegBlockIronBarsCenterCorner"/>
+			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+		</block>
+
+		<!-- Steel variants -->
+		<block name="jegBlockSteelBarsEdge">
+			<property name="Extends" value="ironBarsCentered" param1="RepairItems"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Collide" value="melee,movement,rocket"/>
+			<property name="Material" value="Mmetal_hard2"/>
+			<property name="MaxDamage" value="12000"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="DescriptionKey" value="jegBlockSteelBarsDesc"/>
+			<property class="RepairItems">
+				<property name="resourceForgedSteel" value="12"/>
+			</property>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?SteelBarsEdgePrefab"/>
+			<drop event="Harvest" name="resourceForgedSteel" count="0,3" prob="0.2" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="24,48" prob="0.8" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="24,48"/>
+			<property name="CustomIcon" value="jegSteelEdge"/>
+		</block>
+		<block name="jegBlockSteelBarsCorner">
+			<property name="Extends" value="jegBlockSteelBarsEdge"/>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?SteelBarsCornerPrefab"/>
+			<property name="CustomIcon" value="jegSteelCorner"/>
+		</block>
+		<block name="jegBlockSteelBarsCenterEdge">
+			<property name="Extends" value="jegBlockSteelBarsEdge"/>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?SteelBarsCenterEdgePrefab"/>
+			<property name="CustomIcon" value="jegSteelCenterEdge"/>
+		</block>
+		<block name="jegBlockSteelBarsCenterCorner">
+			<property name="Extends" value="jegBlockSteelBarsEdge"/>
+			<property name="Model" value="#@modfolder:Resources/jegSteelBars.unity3d?SteelBarsCenterCornerPrefab"/>
+			<property name="CustomIcon" value="jegSteelCenterCorner"/>
+		</block>
+		<block name="jegBlockSteelBarsVariantHelper">
+			<property name="Extends" value="jegBlockSteelBarsEdge"/>
+			<property name="CustomIcon" value="jegSteelEdge"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="jegBlockSteelBarsEdge,jegBlockSteelBarsCorner,jegBlockSteelBarsCenterEdge,jegBlockSteelBarsCenterCorner"/>
+			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+		</block>
+	</append>
 
 	<!-- Wheat from tall grass -->
 	<insertAfter xpath="/blocks/block[@name='treeGrassMaster']/property[@name='HarvestOverdamage']">

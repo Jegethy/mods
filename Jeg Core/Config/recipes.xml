@@ -12,6 +12,36 @@
 	<set xpath="/recipes/recipe[contains(@name, 'ammo') and not (contains(@name, 'Bundle'))]/@count">5</set>
 	<set xpath="/recipes/recipe[@name='ammoGasCan']/@count">10</set>
 
+	<!-- Improved iron bars, returned wood bars and new steel bars -->
+	<remove xpath="/recipes/recipe[@name='ironBars']"/>
+	<remove xpath="/recipes/recipe[@name='ironBarsCNR']"/>
+	<remove xpath="/recipes/recipe[@name='ironBarsCentered']"/>
+	<append xpath="/recipes">
+		<recipe name="jegBlockWoodBarsVariantHelper" count="1"
+		        craft_area="workbench" material_based="false"
+		        craft_time="20">
+			<ingredient name="resourceWood" count="20"/>
+		</recipe>
+
+		<recipe name="jegBlockIronBarsVariantHelper" count="1"
+		        craft_area="forge" material_based="true"
+		        craft_time="60">
+			<ingredient name="unit_iron" count="125"/>
+			<ingredient name="unit_clay" count="25"/>
+			<ingredient name="unit_lead" count="10"/>
+		</recipe>
+
+		<recipe name="jegBlockSteelBarsVariantHelper" count="1"
+		        craft_area="forge" material_based="true"
+		        craft_tool="toolForgeCrucible"
+		        craft_time="100">
+			<ingredient name="unit_iron" count="300"/>
+			<ingredient name="unit_stone" count="200"/>
+			<ingredient name="unit_clay" count="30"/>
+			<ingredient name="unit_lead" count="20"/>
+		</recipe>
+	</append>
+
 	<!-- Adds Beaker recipe to the forge -->
 	<append xpath="/recipes">
 		<recipe name="toolBeaker" count="1" craft_area="forge" tags="perkPhysician,learnable" material_based="true">
@@ -271,8 +301,10 @@
 	<append xpath="/recipes">
 		<recipe name="reinforcedBladeTrap" count="1" craft_area="workbench" craft_time="28">
 			<ingredient name="bladeTrap" count="1"/>
-			<ingredient name="resourceForgedSteel" count="125"/>
-			<ingredient name="resourceForgedIron" count="125"/>
+			<ingredient name="resourceForgedSteel" count="250"/>
+			<ingredient name="resourceForgedIron" count="500"/>
+			<ingredient name="resourceOil" count="20"/>
+			<ingredient name="resourceDuctTape" count="10"/>
 		</recipe>
 	</append>
 	
@@ -1580,6 +1612,26 @@
 	<append xpath="/recipes">
 		<recipe name="stainlessSteelShapes:VariantHelper" count="1">
 			<ingredient name="resourceForgedSteel" count="20"/>
+		</recipe>
+	</append>
+	
+	<!-- Fertile Soil -->
+	<append xpath="/recipes">
+		<recipe name="itemFertileSoil" craft_time="4" always_unlocked="true" count="1">
+			<ingredient name="resourceClayLump" count="50"/>
+			<ingredient name="resourceYuccaFibers" count="25"/>
+			<ingredient name="foodRottingFlesh" count="15"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+		</recipe>
+	</append>
+	
+	<!-- Updated farm plot recipe -->
+	<remove xpath="/recipes/recipe[@name='farmPlotBlockVariantHelper']"/>
+	<append xpath="/recipes">
+		<recipe name="farmPlotBlockVariantHelper" count="1" always_unlocked="true" craft_time="20">
+			<ingredient name="resourceClayLump" count="100"/>
+			<ingredient name="resourceWood" count="15"/>
+			<ingredient name="itemFertileSoil" count="1"/>
 		</recipe>
 	</append>
 

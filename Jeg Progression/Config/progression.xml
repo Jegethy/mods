@@ -152,9 +152,9 @@
 			<effect_group>
 				<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkGreaseMonkey"/><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
 
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="vehicleWheels,resourceAcid,carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars"/>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="resourceOil,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,vehicle4x4TruckChassis,vehicle4x4TruckAccessories"/>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="ammoGasCanBundle,vehicleGyroCopterChassis,vehicleGyroCopterAccessories"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="vehicleWheels,resourceAcid,carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars,vehicleMinibikePlaceable"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="resourceOil,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,vehicle4x4TruckChassis,vehicle4x4TruckAccessories,vehicleMotorcyclePlaceable,vehicle4x4TruckPlaceable"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="ammoGasCanBundle,vehicleGyroCopterChassis,vehicleGyroCopterAccessories,vehicleGyrocopterPlaceable"/>
 
 				<effect_description level="1" desc_key="perkGreaseMonkeyRank1Desc" long_desc_key="perkGreaseMonkeyRank1LongDesc"/>
 				<effect_description level="2" desc_key="perkGreaseMonkeyRank2Desc" long_desc_key="perkGreaseMonkeyRank2LongDesc"/>

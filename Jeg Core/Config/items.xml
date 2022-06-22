@@ -730,75 +730,6 @@
 		</item>
 	</append>
 
-	<!-- Food: Chicken, tier 2 -->
-	<append xpath="/items">
-		<item name="foodGrilledChickenLeg">
-			<property name="Tags" value="food"/>
-			<property name="HoldType" value="31"/>
-			<property name="DisplayType" value="food"/>
-			<property name="CustomIcon" value="foodGrilledChickenLeg"/>
-			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="Morganic"/>
-			<property name="Stacknumber" value="250"/><!-- STK food -->
-			<property name="EconomicValue" value="72"/>
-			<property name="UnlockedBy" value="perkMasterChef"/>
-			<property class="Action0">
-				<property name="Class" value="Eat"/>
-				<property name="Delay" value="2.1"/>
-				<property name="Use_time" value="..."/>
-				<property name="Sound_start" value="player_eating"/>
-			</property>
-			<property name="Smell" value="largeSmell"/>
-			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-
-			<effect_group tiered="false" name="Food Tier 2">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="55"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="22"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="15"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-			</effect_group>
-		</item>
-	</append>
-
-	<!-- Food: Chicken Leg -->
-	<append xpath="/items">
-		<item name="foodChickenLeg">
-			<property name="Tags" value="food"/>
-			<property name="HoldType" value="31"/>
-			<property name="DisplayType" value="foodRaw"/>
-			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MfoodRawMeat"/>
-			<property name="Stacknumber" value="250"/><!-- STK food -->
-			<property name="EconomicBundleSize" value="5"/>
-			<property name="EconomicValue" value="20"/>
-			<property name="CraftingIngredientTime" value="3"/>
-			<property name="CustomIcon" value="foodChickenLeg"/>
-			<property name="DescriptionKey" value="foodChickenLegDesc"/>
-			<property class="Action0">
-				<property name="Class" value="Eat"/>
-				<property name="Delay" value="1.0"/>
-				<property name="Use_time" value="..."/>
-				<property name="Sound_start" value="player_eating"/>
-			</property>
-			<property name="Smell" value="ExLargeSmell"/>
-			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-
-			<effect_group tiered="false" name="Food Tier 0">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="-500"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-500"/><display_value name="foodHealthAmount" value="-500"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="100"/><display_value name="dDysenteryRisk" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
-					<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-				</triggered_effect>
-			</effect_group>
-		</item>
-	</append>
-
 	<!-- Increases Paintbrush speed -->
 	<set xpath="items/item[@name='meleeToolPaintTool']/property[@class='Action1']/property[@name='Delay']/@value">.43</set>
 
@@ -851,10 +782,6 @@
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='AltItemTypeIcon']/@value">readbook</set>
 
 	<!-- Updates placeable vehicles to require Grease Monkey -->
-	<insertAfter xpath="/items/item[@name='vehicleBicyclePlaceable']/property[@class='Action1']">
-		<property name="UnlockedBy" value="perkGreaseMonkey"/>
-	</insertAfter>
-
 	<insertAfter xpath="/items/item[@name='vehicleMinibikePlaceable']/property[@class='Action1']">
 		<property name="UnlockedBy" value="perkGreaseMonkey"/>
 	</insertAfter>

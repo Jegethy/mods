@@ -1,13 +1,10 @@
 <config>
 
-	<!-- Removes tier 6 loot and replaces it with tier 5 -->
-	<set xpath="/lootcontainers/lootprobtemplates/lootprobtemplate/loot[@level='6,7']/@level">5</set>
-	<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate/qualitytemplate/loot[@quality='6']/@quality">5</set>
-
 	<!-- Slightly increases the amount of feathers and eggs found in nests -->
 	<remove xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='foodEgg']"/>
 	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']">
-		<item name="foodEgg" count="2,6" loot_prob_template="medLow"/>
+		<item name="foodEgg" count="1,5" loot_prob_template="med"/>
+		<item name="resourceGoldenEgg" count="1" loot_prob_template="veryLow"/>
 	</append>
 	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='resourceFeather']/@count">4,8</set>
 

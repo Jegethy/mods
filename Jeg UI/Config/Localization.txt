@@ -337,3 +337,21 @@ foodGoldenrodOil,,item,Food,newKey,"[60CCFF]Goldenrod Oil"
 foodGoldenrodOilDesc,,item,Food,newKey,"[60CCFF]Fresh oil squeezed from 100% organic goldenrod plants...\n\nWe didn't even wash off the bear piss!"
 resourceBindingTape,,item,Food,newKey,"[60CCFF]Binding Tape"
 resourceBindingTapeDesc,,item,Food,newKey,"[60CCFF]Used by bookbinders to repair broken books, or create new books from pages torn from old books."
+jegBlockWoodBarsVariantHelper,blocks,Block,,,[60CCFF]Wood Bars
+jegBlockIronBarsVariantHelper,blocks,Block,,,[60CCFF]Iron Bars
+jegBlockSteelBarsVariantHelper,blocks,Block,,,[60CCFF]Steel Bars
+jegBlockWoodBarsEdge,blocks,Block,,,[60CCFF]Wood Bars Outer Edge
+jegBlockWoodBarsCorner,blocks,Block,,,[60CCFF]Wood Bars Outer Corner
+jegBlockWoodBarsCenterEdge,blocks,Block,,,[60CCFF]Wood Bars Center Edge
+jegBlockWoodBarsCenterCorner,blocks,Block,,,[60CCFF]Wood Bars Center Corner
+jegBlockIronBarsEdge,blocks,Block,,,[60CCFF]Iron Bars Outer Edge
+jegBlockIronBarsCorner,blocks,Block,,,[60CCFF]Iron Bars Outer Corner
+jegBlockIronBarsCenterEdge,blocks,Block,,,[60CCFF]Iron Bars Center Edge
+jegBlockIronBarsCenterCorner,blocks,Block,,,[60CCFF]Iron Bars Center Corner
+jegBlockSteelBarsEdge,blocks,Block,,,[60CCFF]Steel Bars Outer Edge
+jegBlockSteelBarsCorner,blocks,Block,,,[60CCFF]Steel Bars Outer Corner
+jegBlockSteelBarsCenterEdge,blocks,Block,,,[60CCFF]Steel Bars Center Edge
+jegBlockSteelBarsCenterCorner,blocks,Block,,,[60CCFF]Steel Bars Center Corner
+jegBlockWoodBarsDesc,blocks,Block,,,"[60CCFF]You can see, shoot and loot through Wood Bars and they offer some protection."
+jegBlockIronBarsDesc,blocks,Block,,,"[60CCFF]You can see, shoot and loot through Iron Bars and they offer decent protection."
+jegBlockSteelBarsDesc,blocks,Block,,,"[60CCFF]You can see, shoot and loot through Steel Bars and they offer great protection."

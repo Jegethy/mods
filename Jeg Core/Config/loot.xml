@@ -25,6 +25,9 @@
 	<append xpath="/lootcontainers/lootgroup[@name='groupJunk03']">
 		<item group="foodCandy" count="1" loot_prob_template="veryLow"/>
 	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupMailbox']">
+		<item group="foodCandy" count="1" loot_prob_template="veryLow"/>
+	</append>
 
 	<!-- Adds a small chance for bottles of acid and medicinal honey to be looted from cupboards -->
 	<append xpath="/lootcontainers/lootgroup[@name='groupFoodTrash']">
@@ -42,22 +45,39 @@
 		<item name="bookHammerTimeUnstoppable"/>
 		<item name="bookHammerTimeDrunk"/>
 	</insertAfter>
+	
+	<!-- Adds trader advert to loot with low drop rate -->
+	<insertAfter xpath="/lootcontainers/lootgroup[@name='groupBookcase']">
+		<!-- Trader advert loot group -->
+		<lootgroup name="groupTraderAdvert">
+			<item name="resourcePaper" count="1,5" loot_prob_template="high"/>
+			<item name="itemTraderbook" loot_prob_template="veryLow"/>
+		</lootgroup>
+	</insertAfter>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupMailbox']">
+		<item group="groupTraderAdvert"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='perkBooksT0Day1']">
+		<item name="resourcePaper" count="1,5" loot_prob_template="high"/>
+	</append>
 
 	<!-- Reduces the drop rate of lockpicks -->
 	<set xpath="/lootcontainers/lootgroup[@name='groupLootChestBonusItems']/item[@name='resourceLockPick']/@count">1,3</set>
 
 	<!-- Adds paint back to loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='groupLootChestBonusItems']">
-		<item name="resourcePaint" count="5,25" loot_prob_template="medHigh"/>
+		<item name="resourcePaint" count="5,25" loot_prob_template="med"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupPassNGas01']">
-		<item name="resourcePaint" count="5,25" loot_prob_template="medHigh"/>
+		<item name="resourcePaint" count="5,25" loot_prob_template="med"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmyTruck01']">
-		<item name="resourcePaint" count="5,25" loot_prob_template="medHigh"/>
+		<item name="resourcePaint" count="5,25" loot_prob_template="med"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupUtilityCart']">
-		<item name="resourcePaint" count="5,25" loot_prob_template="medHigh"/>
+		<item name="resourcePaint" count="5,25" loot_prob_template="med"/>
 	</append>
 	
 	<!-- Adds Medicinal Honey to the beverage dispenser -->
@@ -101,8 +121,8 @@
 	</append>
 	
 	<!-- Returns grain alcohol -->
-    <append xpath="/lootcontainers/lootgroup[@name='groupMedicalUncommon']">
-        <item name="drinkJarGrainAlcohol" loot_prob_template="low"/>
-    </append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupMedicalUncommon']">
+		<item name="drinkJarGrainAlcohol" loot_prob_template="low"/>
+	</append>
 
 </config>

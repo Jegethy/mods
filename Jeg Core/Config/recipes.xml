@@ -1,5 +1,7 @@
 <configs>
 
+	<remove xpath="/recipes/recipe[@name='bed02']"/>
+
 	<!-- Reduces the amount of meat required in several recipes -->
 	<set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']/@count">2</set>
 	<set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']/@count">2</set>
@@ -1632,6 +1634,35 @@
 			<ingredient name="resourceClayLump" count="100"/>
 			<ingredient name="resourceWood" count="15"/>
 			<ingredient name="itemFertileSoil" count="1"/>
+		</recipe>
+	</append>
+	
+	<!-- Designer Sunglasses -->
+	<append xpath="/recipes">
+		<recipe name="apparelShadesCustom" count="1" always_unlocked="true" craft_area="workbench" tags="workbenchCrafting" craft_time="20">
+			<ingredient name="apparelShades" count="1"/>
+			<ingredient name="apparelToughGuySunglasses" count="1"/>
+			<ingredient name="apparelAviatorGoggles" count="1"/>
+			<ingredient name="apparelSkiGoggles" count="1"/>
+			<ingredient name="apparelNerdGlasses" count="1"/>
+		</recipe>
+	</append>
+	
+	<!-- Water Well and Stand Pipe -->
+	<append xpath="/recipes">
+		<recipe name="WaterStandPipe" count="1" craft_area="workbench" craft_time="180" tags="workbenchCrafting">
+			<ingredient name="resourceClayLump" count="100"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceWood" count="20"/>
+			<ingredient name="resourceMetalPipe" count="4"/>
+		</recipe>
+
+		<recipe name="StoneWell" count="1" craft_area="workbench" craft_time="180" tags="workbenchCrafting">
+			<ingredient name="resourceClayLump" count="200"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceWood" count="60"/>
+			<ingredient name="resourceMetalPipe" count="4"/>
+			<ingredient name="resourceNail" count="10"/>
 		</recipe>
 	</append>
 

@@ -2321,5 +2321,18 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']/item_property_overrides[@name='*']/property[@name='Zoom_overlay']/@value">#@modfolder:Resources/Optics.unity3d?2x.png</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']/item_property_overrides[@name='*']/property[@name='Zoom_overlay']/@value">#@modfolder:Resources/Optics.unity3d?4x.png</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modGunScopeLarge']/item_property_overrides[@name='*']/property[@name='Zoom_overlay']/@value">#@modfolder:Resources/Optics.unity3d?8x.png</set>
+	
+	<!-- Updating storage pockets to be useful compared to inventory size -->
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorStoragePocket']/effect_group/passive_effect[@name='CarryCapacity']/@value">2</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorStoragePocket']/effect_group/display_value[@name='dCarryCapacity']/@value">2</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorDoubleStoragePocket']/effect_group/passive_effect[@name='CarryCapacity']/@value">4</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorDoubleStoragePocket']/effect_group/display_value[@name='dCarryCapacity']/@value">4</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorTripleStoragePocket']/effect_group/passive_effect[@name='CarryCapacity']/@value">6</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorTripleStoragePocket']/effect_group/display_value[@name='dCarryCapacity']/@value">6</set>
+
+	<set xpath="/item_modifiers/item_modifier[@name='modClothingStoragePocket']/effect_group/passive_effect[@name='CarryCapacity']/@value">2</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modClothingStoragePocket']/effect_group/display_value[@name='dCarryCapacity']/@value">2</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modClothingCargoStoragePocket']/effect_group/passive_effect[@name='CarryCapacity']/@value">4</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modClothingCargoStoragePocket']/effect_group/display_value[@name='dCarryCapacity']/@value">4</set>
 
 </configs>

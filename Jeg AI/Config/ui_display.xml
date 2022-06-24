@@ -1,0 +1,18 @@
+<configs>
+	
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="foodHoneyItems" display_group="groupAttire">
+			<display_entry name="PhysicalDamageResist" title_key="statPhysicalDamageResist" display_type="Decimal1"/>
+			<display_entry name="ElementalDamageResist" title_key="statToxicResist" tags="toxic"/>
+			<display_entry name="dStaminaChangeOT" title_key="statStaminaChangeOT"/>
+			<display_entry name="Mobility" title_key="statMobility" display_type="Percent" show_inverted="true"  negative_preferred="false"/>
+			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax"/>
+		</item_display_info>
+	</append>
+
+</configs>
+
+
+

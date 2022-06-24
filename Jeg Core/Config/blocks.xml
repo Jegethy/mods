@@ -1,5 +1,71 @@
 <config>
 
+	<!-- New player beds -->
+	<append xpath="/blocks">
+		<block name="bed02Player">
+			<property name="DescriptionKey" value="bedGroupDesc"/>
+			<property name="Class" value="SleepingBag"/>
+			<property name="Material" value="Mfurniture"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Furniture/kingSizedBedPrefab"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,1,2"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="FallDamage" value=".6"/>
+			<property name="CanPickup" value="true" param1="bedrollBlockVariantHelper"/>
+			<property class="RepairItems">
+				<property name="resourceCloth" value="40"/>
+				<property name="resourceSpring" value="20"/>
+				<property name="resourceWood" value="20"/>
+				<property name="resourceMetalPipe" value="10"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceCloth" count="16" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="8" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceSpring" count="6" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="2,3" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="10,15"/>
+			<property name="Group" value="Decor/Miscellaneous"/>
+			<property name="EconomicValue" value="2600"/>
+			<property name="FilterTags" value="MC_building,SC_decor"/>
+			<property name="CustomIcon" value="bed02"/>
+		</block>
+	</append>
+	
+	<append xpath="/blocks">
+		<block name="bunkBedMadePlayer">
+			<property name="DescriptionKey" value="bedGroupDesc"/>
+			<property name="Class" value="SleepingBag"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Furniture/bedMadePrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Texture" value="282"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="FallDamage" value=".6"/>
+			<property name="CanPickup" value="true" param1="bedrollBlockVariantHelper"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="FuelValue" value="6"/>
+			<property name="DowngradeBlock" value="bunkBedFrame"/>
+			<property class="RepairItems">
+				<property name="resourceCloth" value="10"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceCloth" count="5" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceCloth" count="5"/>
+			<property name="Group" value="Decor/Miscellaneous"/>
+			<property name="EconomicValue" value="1330"/>
+			<property name="FilterTags" value="MC_building,SC_decor"/>
+			<property name="CustomIcon" value="bunkBedMade"/>
+		</block>
+	</append>
+	
+	<insertAfter xpath="/blocks/block[@name='bed02']/property[@name='FallDamage']">
+		<property name="CanPickup" value="false"/>
+	</insertAfter>
+
 	<!-- Adds Stainless Steel back in -->
 	<append xpath="/blocks">
 		<block name="stainlessSteelShapes" shapes="All">
@@ -230,11 +296,6 @@
 
 	<set xpath="/blocks/block[@name='autoTurret']/property[@name='Material']/@value">Mmetal_harder</set>
 
-	<!-- Makes "bed" items pickup-able -->
-	<append xpath="/blocks/block[contains(@name, 'bed')]">
-		<property name="CanPickup" value="true"/>
-	</append>
-
 	<!-- Iron drops ore again -->
 	<set xpath="/blocks/block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceScrapIron']/@count">21</set>
 	<set xpath="/blocks/block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceScrapIron']/@name">resourceIronFragment</set>
@@ -282,7 +343,7 @@
 			<drop event="Harvest" name="resourceScrapIron" count="20,100" tag="allHarvest"/>
 			<drop event="Destroy" count="0"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-			<property name="Stacknumber" value="10"/>
+			<property name="Stacknumber" value="500"/>
 			<property name="EconomicValue" value="444"/>
 			<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
 			<property name="SortOrder1" value="70a0"/>
@@ -316,6 +377,8 @@
 			<property name="SortOrder1" value="70e0"/>
 		</block>
 	</append>
+	
+	<set xpath="/blocks/block[@name='bedrollBlockVariantHelper']/property[@name='PlaceAltBlockValue']/@value">bedroll,bedrollRed,bedrollOrange,bedrollYellow,bedrollGreen,bedrollBlue,bedrollPurple,bedrollPink,bedrollGrey,bedrollWhite,bedrollArmyGreen,bed02Player,bunkBedMadePlayer</set>
 
 	<set xpath="/blocks/block[@name='rockResource']/drop[@event='Harvest']/@count">12</set>
 	<set xpath="/blocks/block[@name='terrDesertGround']/drop[@name='resourceCrushedSand']/@count">12</set>
@@ -381,5 +444,67 @@
 	<insertAfter xpath="/blocks/block[@name='terrGravel']/property[@name='Map.Color']">
 		<drop event="Harvest" name="resourcedOldSilverCoin" count="1" prob="0.020" tag="allHarvest"/>
 	</insertAfter>
+	
+	<!-- Water Well and Stand Pipe -->
+	<append xpath="/blocks">
+		<block name="StoneWell">
+			<property name="AllowAllRotations" value="true"/>
+			<property name="CustomIcon" value="stonewell"/>
+			<property name="DescriptionKey" value="StoneWellDesc"/>
+			<property name="Material" value="Mconcrete"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/WaterWells.unity3d?StoneWell"/>
+			<property name="Collide" value="movement,melee"/>
+			<property name="MultiBlockDim" value="2,2,2"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="Group" value="Building,Building2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="FilterTags" value="fdecor"/>
+			<property name="SortOrder2" value="0050"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Harvest" name="resourceCrushedSand" count="4,20" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="55" tag="oreWoodHarvest"/>
+		</block>
+
+		<block name="WaterStandPipe">
+			<property name="AllowAllRotations" value="true"/>
+			<property name="CustomIcon" value="standpipe"/>
+			<property name="DescriptionKey" value="WaterStandPipeDesc"/>
+			<property name="Material" value="Mconcrete"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/WaterWells2.unity3d?3StandPipe"/>
+			<property name="Collide" value="movement,melee"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="Group" value="Building,Building2"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="FilterTags" value="fdecor"/>
+			<property name="SortOrder2" value="0050"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Harvest" name="resourceCrushedSand" count="4,20" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="55" tag="oreWoodHarvest"/>
+		</block>
+	</append>
 
 </config>

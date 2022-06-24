@@ -26,5 +26,14 @@
 			<entity name="none" prob="50"/>
 		</entitygroup>
 	</append>
+	
+	<!-- Bee Log -->
+	<append xpath="/entitygroups">
+		<entitygroup name="BeeLog">
+			<entity name="animalBeeStump" prob="0.1"/>
+			<entity name="animalBeeStump2" prob="0.1"/>
+			<entity name="animalBeeStump3" prob="0.1"/>
+		</entitygroup>
+	</append>
 
 </config>

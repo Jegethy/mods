@@ -1,0 +1,21 @@
+<configs>
+
+	<append xpath="/lootcontainers">
+		<lootcontainer id="771" name="Honey" count="1" size="7,2" destroy_on_close="true" sound_open="UseActions/BeeHiveOpen" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+			<item name="foodHoney" count="4,12" prob="1"/>
+		</lootcontainer>
+	</append>
+	
+	<append xpath="/lootcontainers">
+		<lootcontainer id="772" name="EggsReady" count="1,3" size="6,2" destroy_on_close="true" sound_open="UseActions/Chicken6Sounds" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+		<item name="foodEgg" count="5,15" prob="1"/>
+		<item name="resourceFeather" count="5,25" prob="1"/>
+		<item name="GrownChicken" count="1,3" prob="0.5"/>
+	</lootcontainer>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']">
+		<item name="CaughtChick" count="1,2" loot_prob_template="low"/>	
+	</append>
+	
+</configs>

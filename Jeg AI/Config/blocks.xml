@@ -219,11 +219,17 @@
 		</block>
 	</append>
 	
-	<!-- Bee Hives from Oak Trees -->
+	<!-- Bee Hives from trees -->
 	<insertAfter xpath="/blocks/block[contains (@name, 'treeOak')]/property[@name='ParticleOnDeath']">
 		<drop event="Destroy" name="resourceBeeHive" count="1" prob="0.1"/>
 	</insertAfter>
 	<insertAfter xpath="/blocks/block[contains (@name, 'treePlantedOak')]/property[@name='ParticleOnDeath']">
+		<drop event="Destroy" name="resourceBeeHive" count="1" prob="0.1"/>
+	</insertAfter>
+	<insertAfter xpath="/blocks/block[contains (@name, 'treeMountainPine')]/property[@name='ParticleOnDeath']">
+		<drop event="Destroy" name="resourceBeeHive" count="1" prob="0.1"/>
+	</insertAfter>
+	<insertAfter xpath="/blocks/block[contains (@name, 'treePlantedMountainPine')]/property[@name='ParticleOnDeath']">
 		<drop event="Destroy" name="resourceBeeHive" count="1" prob="0.1"/>
 	</insertAfter>
 

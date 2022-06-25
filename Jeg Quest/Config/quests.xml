@@ -481,5 +481,10 @@
 			<reward type="Item" id="itemSkillbookPage" value="15"/>
 		</quest>
 	</append>
+	
+	<!-- Adds a skill book for completing a tier -->
+	<insertAfter xpath="/quests/quest[contains(@id, '_nexttrader')]/reward[@type='Exp']">
+		<reward type="Item" id="itemSkillbook" value="1"/>
+	</insertAfter>
 
 </configs>

@@ -2334,5 +2334,18 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modClothingStoragePocket']/effect_group/display_value[@name='dCarryCapacity']/@value">2</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modClothingCargoStoragePocket']/effect_group/passive_effect[@name='CarryCapacity']/@value">4</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modClothingCargoStoragePocket']/effect_group/display_value[@name='dCarryCapacity']/@value">4</set>
+	
+	<!-- Made fortifying grip less shit -->
+	<remove xpath="/item_modifiers/item_modifier[@name='modMeleeFortifyingGrip']"/>
+	<insertAfter xpath="/item_modifiers/item_modifier[@name='modMeleeErgonomicGrip']">
+		<item_modifier name="modMeleeFortifyingGrip" installable_tags="melee" modifier_tags="health" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="UnlockedBy" value="modMeleeFortifyingGripSchematic"/>
 
+			<effect_group tiered="false">
+				<passive_effect name="HealthChangeOT" operation="base_add" value=".2"/>
+			</effect_group>
+		</item_modifier>
+	</insertAfter>
+	
 </configs>

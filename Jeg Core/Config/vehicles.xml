@@ -27,5 +27,131 @@
 	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='hornSound']/@value">motorbike_horn</set>
 	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='hornSound']/@value">motorbike_horn</set>
 	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='hornSound']/@value">4x4truck_horn</set>
+	
+
+	<insertBefore xpath="//vehicle[@name='vehicleJokeblimp']">
+		<vehicle name="vehicleHelicopter">
+			<property name="cameraDistance" value="9, 11"/>
+			<property name="cameraTurnRate" value=".2, .35"/>
+			<property name="motorTorqueMinQ" value="8000"/>
+			<property name="motorTorqueMaxQ" value="9000"/>
+			<property name="brakeTorque" value="5000"/>
+			<property name="steerRate" value="130"/>
+			<property name="steerCenteringRate" value="90"/>
+		
+			<property name="tiltAngleMax" value="2"/>
+			<property name="tiltThreshold" value=".1"/>
+			<property name="tiltDampening" value=".01"/>
+			<property name="tiltDampenThreshold" value="1"/>
+			<property name="tiltUpForce" value="1"/>
+			<property name="upAngleMax" value="3"/>
+			<property name="upForce" value="1"/>
+		
+			<property name="hopForce" value="0"/>
+			<property name="unstickForce" value="1"/>
+			<property name="velocityMax" value="20, 22"/>
+			<property name="waterY_VelMaxScale" value="2, .2"/>
+
+			<property name="hornSound" value="vehicle/minibike/minibike_horn"/>
+			
+			<property class="engine">
+				<property name="class" value="Engine"/>
+				<property name="slot_type" value="engine"/>
+				<property name="fuelKmPerL" value="0.05"/>
+				<property name="foodDrain" value=".002,.00811"/>
+				<property name="gear1" value="
+								500,2500, -1400,800,0, 1500,9999,9999,
+								,
+								,
+								0, .5,  .45, .1,  -9, .1, .1, helicopter_max_speed_lp,
+								-.1, .1,  .65, .7,  0, 9, .1, helicopter_max_speed_lp
+								"/>
+				<property name="sound_start" value="Vehicles/Gyrocopter/gyrocopter_start"/>
+				<property name="sound_shut_off" value="Vehicles/Gyrocopter/gyrocopter_shutoff"/>
+				<property name="sound_no_fuel_shut_off" value="Vehicles/Gyrocopter/gyrocopter_sputter"/>
+				<property name="paint" value="body"/>
+			</property>
+			
+			<property class="fuelTank">
+				<property name="class" value="FuelTank"/>
+				<property name="capacity" value="90"/>
+			</property>
+
+			<property class="handlebars">
+				<property name="class" value="Steering"/>
+				<property name="display_name" value="steering"/>
+				<property name="slot_type" value="handlebars"/>
+				<property name="transform" value="Origin/handlebar_root/handlebar_joint"/>
+				<property name="steerMaxAngle" value="30"/>
+				<property name="IKHandLPosition" value="-0.061, 0.296, 0.684"/>
+				<property name="IKHandLRotation" value="68.838, 71.233, 160.188"/>
+				<property name="IKHandRPosition" value="0.069, 0.303, 0.67"/>
+				<property name="IKHandRRotation" value="50.507, -68.192, -155.695"/>
+			</property>
+
+			<property class="seat0">
+				<property name="position" value="-0.4, 0.4, 1.3"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="-3,0,0 ~ 3,0,0 ~ 0,0,-10 ~ 0,0,5 ~ 0,4,0"/>
+			</property>
+			
+			<property class="seat1">
+				<property name="position" value="0.4, 0.4, 1.3"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="3,0,-.5 ~ -3,0,-.5 ~ 0,0,-10.5 ~ 0,0,5.5 ~ 0,4,-.5"/>
+			</property>
+			
+			<property class="seat2">
+				<property name="position" value="-0.4, 0.4, 0.3"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="-3,0,-1 ~ 3,0,-1 ~ 0,0,-11 ~ 0,0,6 ~ 0,4,-1"/>
+			</property>
+			
+			<property class="seat3">
+				<property name="position" value="0.4, 0.4, 0.3"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="3,0,-1.5 ~ -3,0,-1.5 ~ 0,0,-11.5 ~ 0,0,6.5 ~ 0,4,-1.5"/>
+			</property>
+			
+			<property class="seat4">
+				<property name="position" value="-0.4, 0.4, -0.3"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="-3,0,-2 ~ 3,0,-2 ~ 0,0,-12 ~ 0,0,7 ~ 0,4,-2"/>
+			</property>
+			
+			<property class="seat5">
+				<property name="position" value="0.4, 0.4, -0.3"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="3,0,-2.5 ~ -3,0,-2.5 ~ 0,0,-12.5 ~ 0,0,7.5 ~ 0,4,-2.5"/>
+			</property>
+			
+			<property class="seat6">
+				<property name="position" value="-0.4, 0.6, -0.9"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="-3,0,-3 ~ 3,0,-3 ~ 0,0,-13 ~ 0,0,8 ~ 0,4,-3"/>
+			</property>
+			
+			<property class="seat7">
+				<property name="position" value="0.4, 0.6, -0.9"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="3,0,-3.5 ~ -3,0,-3.5 ~ 0,0,-13.5 ~ 0,0,8.5 ~ 0,4,-3.5"/>
+			</property>
+
+			<property class="headlight">
+				<property name="class" value="Headlight"/>
+				<property name="parent_part" value="chassis"/>
+				<property name="transform" value="Origin/headlight_root/headlight"/>
+				<property name="bright" value=".9"/>
+			</property>
+			
+			<property class="storage">
+				<property name="class" value="Storage"/>
+				<property name="display_name" value="basket"/>
+				<property name="slot_type" value="basket"/>
+				<property name="mesh" value="basket"/>
+				<property name="transform" value="basket"/>
+			</property>
+		</vehicle>
+	</insertBefore>
 
 </configs>

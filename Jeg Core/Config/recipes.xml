@@ -13,6 +13,41 @@
 	<!-- Updated ammo recipe to craft 5 per -->
 	<set xpath="/recipes/recipe[contains(@name, 'ammo') and not (contains(@name, 'Bundle'))]/@count">5</set>
 	<set xpath="/recipes/recipe[@name='ammoGasCan']/@count">10</set>
+	
+	<!-- Helicopter -->
+	<insertAfter xpath="//recipe[@name='vehicleGyrocopterPlaceable']">
+		<recipe name="vehicleHelicopterChassis" count="1" craft_time="300" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceForgedSteel" count="575"/>
+			<ingredient name="resourceMechanicalParts" count="85"/>
+			<ingredient name="resourceDuctTape" count="40"/>
+			<ingredient name="resourceLeather" count="165"/>
+			<ingredient name="resourceElectricParts" count="100"/>
+		</recipe>
+		
+		<recipe name="vehicleHelicopterRotor" count="1" craft_time="280" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceForgedSteel" count="160"/>
+			<ingredient name="resourceMechanicalParts" count="45"/>
+			<ingredient name="resourceElectricParts" count="25"/>
+			<ingredient name="resourceSpring" count="36"/>
+			<ingredient name="resourceGlue" count="40"/>	
+		</recipe>
+		
+		<recipe name="bigEngine" count="1" craft_time="360" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceForgedSteel" count="240"/>
+			<ingredient name="resourceMechanicalParts" count="100"/>
+			<ingredient name="resourceSpring" count="25"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+			<ingredient name="smallEngine" count="6"/>
+		</recipe>
+		
+		<recipe name="vehicleHelicopterPlaceable" count="1" craft_time="600" craft_area="workbench">
+			<ingredient name="vehicleHelicopterChassis" count="1"/>
+			<ingredient name="vehicleHelicopterRotor" count="1"/>
+			<ingredient name="vehicleGyroCopterAccessories" count="1"/>
+			<ingredient name="bigEngine" count="2"/>
+			<ingredient name="carBattery" count="6"/>
+		</recipe>
+	</insertAfter>
 
 	<!-- Improved iron bars, returned wood bars and new steel bars -->
 	<remove xpath="/recipes/recipe[@name='ironBars']"/>

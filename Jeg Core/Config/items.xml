@@ -20,6 +20,23 @@
 	<set xpath="/items/item[@name='drinkJarCoffee']/effect_group/triggered_effect[@cvar='$buffCoffeeDuration' and @operation='set']/@value">903</set>
 	<set xpath="/items/item[@name='drinkJarCoffee']/effect_group/triggered_effect[@cvar='$buffCoffeeDuration' and @operation='add']/@value">903</set>
 	<set xpath="/items/item[@name='drinkJarCoffee']/effect_group/display_value[@name='dDuration']/@value">903</set>
+	
+	<!-- Quick restart pack -->
+	<append xpath="/items">
+		<item name="quickStartPack">
+			<property name="Extends" value="noteTestersDelightAdmin"/>
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="quickStartPack"/>
+			<property name="CustomIconTint" value="FFFFFF"/>
+			<property name="DescriptionKey" value="quickStartPackDesc"/>
+			<property class="Action0">
+				<property name="Sound_start" value="open_cash_register"/>
+				<property name="Create_item" value="itemSkillbook,resourceClayLump,resourceCobblestones,resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,meleeToolPickT1IronPickaxe,meleeToolAxeT1IronFireaxe,meleeToolShovelT1IronShovel,meleeToolSalvageT1Wrench,meleeToolRepairT1ClawHammer,medicalFirstAidKit,foodBaconAndEggs,drinkJarRedTea,apparelBandana,apparelArmyPants,apparelArmyShirt"/>
+				<property name="Create_item_count" value="5,10000,10000,5,5,1,1,1,1,1,1,10,25,25,1,1,1"/>
+			</property>
+		</item>
+	</append>
 
 	<!-- Parts Template -->
 	<append xpath="/items">
@@ -105,8 +122,8 @@
 				<property name="Class" value="OpenBundle"/>
 				<property name="Delay" value="0"/>
 				<property name="Use_time" value="0"/>
-				<property name="Create_item" value="gunBowT0PrimitiveBow,meleeWpnClubT0WoodenClub,meleeWpnSledgeT0StoneSledgehammer,ammoArrowStone"/>
-				<property name="Create_item_count" value="1,1,1,25"/>
+				<property name="Create_item" value="gunBowT0PrimitiveBow,meleeWpnClubT0WoodenClub,meleeWpnSledgeT0StoneSledgehammer,ammoArrowStone,quickStartPack"/>
+				<property name="Create_item_count" value="1,1,1,25,1"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemCrudeKey" operation="set" value="0"/>
@@ -783,7 +800,7 @@
 			</property>
 		</item>
 	</append>
-
+	
 	<!-- Changes the icon shown on perk books -->
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='ItemTypeIcon']/@value">unreadbook</set>
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='AltItemTypeIcon']/@value">readbook</set>
@@ -1131,6 +1148,67 @@
 	<insertAfter xpath="/items/item[@name='bucketEmpty']/property[@class='Action1']/property[@name='Focused_blockname_5']">
 		<property name="Focused_blockname_6" value="StoneWell"/>
 		<property name="Focused_blockname_7" value="WaterStandPipe"/>
+	</insertAfter>
+	
+	<!-- Helicopter parts and placeable -->
+	<insertAfter xpath="//item[@name='smallEngine']">
+		<item name="bigEngine">
+			<property name="DescriptionKey" value="bigEngineDesc"/>
+			<property name="CustomIcon" value="bigEngine"/>
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Msteel"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="MmechanicalParts"/>
+			<property name="Weight" value="200"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="Group" value="Resources"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="UnlockedBy" value="perkGreaseMonkey"/>
+		</item>
+	</insertAfter>
+		
+	<insertAfter xpath="//item[@name='vehicleGyrocopterPlaceable']">
+		<item name="vehicleHelicopterChassis">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="DescriptionKey" value="vehicleHelicopterChassisDesc"/>
+			<property name="CustomIcon" value="vehicleHelicopterChassis"/>
+			<property name="EconomicValue" value="20000"/>
+			<property name="UnlockedBy" value="perkGreaseMonkey"/>
+		</item>
+	</insertAfter>
+		
+	<insertAfter xpath="//item[@name='vehicleHelicopterChassis']">
+		<item name="vehicleHelicopterRotor">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="DescriptionKey" value="vehicleHelicopterRotorDesc"/>
+			<property name="CustomIcon" value="vehicleHelicopterRotor"/>
+			<property name="EconomicValue" value="4000"/>
+			<property name="UnlockedBy" value="perkGreaseMonkey"/>
+		</item>
+	</insertAfter>
+		
+	<insertAfter xpath="//item[@name='vehicleHelicopterRotor']">
+		<item name="vehicleHelicopterPlaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle,vengine,vfuel,canHaveCosmetic"/>
+			<property name="CustomIcon" value="vehicleHelicopterPlaceable"/>
+			<property name="DescriptionKey" value="vehicleHelicopterDesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/manux_HelicopterOH58.unity3d?HelicopterOH58Prefab_A17.prefab"/>
+			<property name="UnlockedBy" value="perkGreaseMonkey"/>
+			<property name="EconomicValue" value="220000"/>
+			<property class="Action1">
+				<property name="Vehicle" value="vehicleHelicopter"/>
+				<property name="VehicleSize" value="4, 4, 13"/>
+			</property>
+			<effect_group name="vehicleHelicopterPlaceable" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="4500"/>
+			</effect_group>
+		</item>
 	</insertAfter>
 
 </configs>

@@ -33,6 +33,8 @@
 	<set xpath="/entity_classes/entity_class[@name='zombieFemaleFat']/property[@name='ExperienceGain']/@value">1000</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']/property[@name='ExperienceGain']/@value">1800</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatRadiated']/property[@name='ExperienceGain']/@value">2800</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieMoeFeral']/property[@name='ExperienceGain']/@value">1800</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieMoeRadiated']/property[@name='ExperienceGain']/@value">2800</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']/property[@name='ExperienceGain']/@value">1000</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']/property[@name='ExperienceGain']/@value">1800</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieFatHawaiianRadiated']/property[@name='ExperienceGain']/@value">2800</set>
@@ -63,6 +65,9 @@
 	</insertAfter>
 	<insertAfter xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='MoveSpeedPanic']">
 		<property name="ExperienceGain" value="1250"/>
+	</insertAfter>
+	<insertAfter xpath="/entity_classes/entity_class[@name='zombieMoe']/property[@name='SoundAttack']">
+		<property name="ExperienceGain" value="1000"/>
 	</insertAfter>
 
 	<!-- Randomises the speed at which zombies recovery from knock downs -->

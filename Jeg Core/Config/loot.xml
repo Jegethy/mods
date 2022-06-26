@@ -10,7 +10,6 @@
 
 	<!-- Destroys bird nests and trash bags on looting -->
 	<setattribute xpath="/lootcontainers/lootcontainer[@id='10']" name="destroy_on_close">true</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='25']" name="destroy_on_close">true</setattribute>
 
 	<!-- Adds candy items to junk loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='groupJunk01']">
@@ -122,5 +121,11 @@
 	<append xpath="/lootcontainers/lootgroup[@name='groupMedicalUncommon']">
 		<item name="drinkJarGrainAlcohol" loot_prob_template="low"/>
 	</append>
+	
+	<!-- Helicopter storage -->
+	<insertBefore xpath="//lootcontainer[@id='83']">
+		<lootcontainer id="81" name="vehicleHelicopter" count="0" size="14,14" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+		</lootcontainer>
+	</insertBefore>
 
 </config>

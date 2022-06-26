@@ -69,9 +69,9 @@ perkAdvancedEngineeringRank4Desc,progression,perk,,,[60CCFF]Inventor,,
 perkAdvancedEngineeringRank5Desc,progression,perk,,,[60CCFF]Advanced Engineer,,
 perkAdvancedEngineeringRank1LongDesc,progression,perk,,,"[60CCFF]You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster, craft glue cheaper, and craft in workbenches and cement mixers 20% faster.",,
 perkAdvancedEngineeringRank2LongDesc,progression,perk,,,"[60CCFF]Your tinkering is proving useful in the apocalypse. Craft workbenches and cement mixers and craft items with them 30% faster.",,
-perkAdvancedEngineeringRank3LongDesc,progression,perk,,,"[60CCFF]You are now an electrician. Learn to craft generators, and build advanced base defense systems such as electric fences & blade traps. Craft military fiber. Gain 30% XP from electrical trap kills.\nEfficient craftsman. All forge recipes cost 10% less, crafting Forged Steel and electrical devices costs 15% less. Workbench and cement mixer crafting is 40% faster.",,
+perkAdvancedEngineeringRank3LongDesc,progression,perk,,,"[60CCFF]Learn to craft generators, and build advanced base defense systems such as electric fences & blade traps. Create a crucible to forge steel, and craft military fiber. Gain 30% XP from electrical trap kills.\nEfficient craftsman. All forge recipes cost 10% less, crafting Forged Steel and electrical devices costs 15% less. Workbench and cement mixer crafting is 40% faster.",,
 perkAdvancedEngineeringRank4LongDesc,progression,perk,,,"[60CCFF]Learn to craft shotgun turrets for short range concentrated base defense, battery banks and nail guns. Gain 60% XP from electrical trap kills.\nAll forge recipes cost 15% less, crafting Forged Steel and electrical devices costs 25% less. Workbench and cement mixer crafting is 50% faster.",,
-perkAdvancedEngineeringRank5LongDesc,progression,perk,,,"[60CCFF]Learn to craft SMG auto turrets for the best ranged base defense, and crucibles to forge steel in forges. Gain 100% XP from Electrical Trap Kills.\nAll forge recipes cost 20% less, crafting Forged Steel and electrical devices costs 35% less. Workbench and cement mixer crafting is 60% faster.",,
+perkAdvancedEngineeringRank5LongDesc,progression,perk,,,"[60CCFF]Learn to craft SMG auto turrets for the best ranged base defense, and craft parts to make weapons and armour. Gain 100% XP from Electrical Trap Kills.\nAll forge recipes cost 20% less, crafting Forged Steel and electrical devices costs 35% less. Workbench and cement mixer crafting is 60% faster.",,
 perkRuleOneCardioNameRank1LongDesc,progression,perk For,,,"[60CCFF]Just put one foot in front of the other. You are now a hiker. Increase stamina regen by 10% at all times."
 perkRuleOneCardioNameRank2LongDesc,progression,perk For,,,"[60CCFF]All the scrubs are in your rear view mirror now as you are a running man with excellent cardio. Increase stamina regen by 20% at all times."
 perkRuleOneCardioNameRank3LongDesc,progression,perk For,,,"[60CCFF]Increase stamina regen by 30% at all times."
@@ -182,8 +182,10 @@ perkGreaseMonkeyRank1Desc,progression,perk Int,,,"[60CCFF]Minibike Master"
 perkGreaseMonkeyRank1LongDesc,progression,perk Int,,,"[60CCFF]You can craft batteries, wheels, minibikes, gas cans and bottles of acid."
 perkGreaseMonkeyRank2Desc,progression,perk Int,,,"[60CCFF]Motor Vehicle Maniac"
 perkGreaseMonkeyRank2LongDesc,progression,perk Int,,,"[60CCFF]You can craft motorcycles, 4x4 trucks and oil."
-perkGreaseMonkeyRank3Desc,progression,perk Int,,,"[60CCFF]Trained Pilot"
+perkGreaseMonkeyRank3Desc,progression,perk Int,,,"[60CCFF]Budget Airline Pilot"
 perkGreaseMonkeyRank3LongDesc,progression,perk Int,,,"[60CCFF]You can craft GyroCopter and bundles of Gas."
+perkGreaseMonkeyRank4Desc,progression,perk Int,,,"[60CCFF]Navy Seal Pilot"
+perkGreaseMonkeyRank4LongDesc,progression,perk Int,,,"[60CCFF]You can craft Helicopters which can be used to quickly traverse the map."
 perkPhysicianRank1LongDesc,progression,perk Per,,,"Medical healing items heal 25% more health over time. Gain 40% more XP using bandages, first aid bandages, first aid kits and splints. Can craft chemistry stations, first aid bandages, plaster casts, [60CCFF]beakers and Biofuel."
 perkArcheryRank1LongDesc,progression,perk Agi,,,"Many start on the path of the ranger but few can reach it. Deal 10% more damage, 10% faster aim, draw and reload with bows. Unlocks wooden bow and iron crossbow crafting."
 perkArcheryRank2LongDesc,progression,perk Agi,,,"You still have much to learn, grasshopper. Deal 20% more damage, 20% faster aim, draw and reload with bows."
@@ -365,3 +367,6 @@ StoneWellDesc,blocks,Block,,,"[60CCFF]This well allows players to refill their w
 WaterStandPipe,blocks,Block,,,"[60CCFF]Stone Standpipe"
 WaterStandPipeDesc,blocks,Block,,,"[60CCFF]This standpipe allows players to refill their water jars and buckets."
 buffElementWetTooltip,buffs,Buff,,,"You are a bit moist ;)"
+modMeleeFortifyingGripDesc,item_modifiers,mod,,,Gain 1 hit point every 5 seconds.
+quickStartPack,,item,Food,newKey,"[60CCFF]Quick Start Cache"
+quickStartPackDesc,,item,Food,newKey,"[60CCFF]A supply cache packed with materials to set even the most unprepared survivor off on the right foot... Or left foot. It really doesn't matter which foot to be honest.\n\nThe 'survivor' could crawl for all I care, just take the fucking mats. Jesus Christ. Ungrateful much?\n\nWith love, Trader Rekt."

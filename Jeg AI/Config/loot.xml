@@ -15,7 +15,7 @@
 	</append>
 	
 	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']">
-		<item name="CaughtChick" count="1,2" loot_prob_template="low"/>	
+		<item name="CaughtChick" count="1,2" loot_prob_template="veryLow"/>	
 	</append>
 	
 </configs>

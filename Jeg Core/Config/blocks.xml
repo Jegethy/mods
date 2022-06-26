@@ -1,8 +1,5 @@
 <config>
 
-	<set xpath="/blocks/block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceScrapIron']/@count">125</set>
-	<set xpath="/blocks/block[@name='oreIronBoulder']/drop[@event='Harvest' and @name='resourceScrapIron']/@count">125</set>
-
 	<!-- New player beds -->
 	<append xpath="/blocks">
 		<block name="bed02Player">
@@ -300,11 +297,11 @@
 	<set xpath="/blocks/block[@name='autoTurret']/property[@name='Material']/@value">Mmetal_harder</set>
 
 	<!-- Iron drops ore again -->
-	<set xpath="/blocks/block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceScrapIron']/@count">21</set>
+	<set xpath="/blocks/block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceScrapIron']/@count">25</set>
 	<set xpath="/blocks/block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceScrapIron']/@name">resourceIronFragment</set>
 	<set xpath="/blocks/block[@name='terrOreIron']/drop[@event='Fall' and @name='resourceScrapIron']/@name">resourceIronFragment</set>
 
-	<set xpath="/blocks/block[@name='oreIronBoulder']/drop[@event='Harvest' and @name='resourceScrapIron']/@count">21</set>
+	<set xpath="/blocks/block[@name='oreIronBoulder']/drop[@event='Harvest' and @name='resourceScrapIron']/@count">25</set>
 	<set xpath="/blocks/block[@name='oreIronBoulder']/drop[@event='Harvest' and @name='resourceScrapIron']/@name">resourceIronFragment</set>
 
 	<append xpath="/blocks">

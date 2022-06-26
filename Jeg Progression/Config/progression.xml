@@ -91,7 +91,7 @@
 		<perk name="perkHammerTimeDefense" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDefenseDesc" long_desc_key="perkHammerTimeDefenseLongDesc">
 			<effect_group>
 				<!-- effect is on sledgehammers, item.xml -->
-</effect_group>
+			</effect_group>
 		</perk>
 
 		<perk name="perkHammerTimeDoorKey" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDoorKeyDesc" long_desc_key="perkHammerTimeDoorKeyLongDesc">
@@ -165,5 +165,12 @@
 	
 	<!-- Adds beaker crafting to Physician -->
 	<append xpath="/progression/perks/perk[@name='perkPhysician']/effect_group/passive_effect[@level='1,4']/@tags">,toolBeaker</append>
+	
+	<insertAfter xpath="/progression/perks/perk[@name='perkSexualTrex']/effect_group/requirement[@name='ItemHasTags']">
+		<passive_effect name="HarvestCount" operation="base_set" level="1,4" value="1" tags="ironleadharvest"/>
+		<passive_effect name="HarvestCount" operation="base_set" level="2,4" value="1" tags="coaloilharvest"/>
+		<passive_effect name="HarvestCount" operation="base_set" level="3,4" value="1" tags="brassnitrateharvest"/>
+		<passive_effect name="HarvestCount" operation="base_set" level="4,4" value="1" tags="gemharvest"/>
+	</insertAfter>
 
 </config>

@@ -52,6 +52,57 @@
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='49']/spawn[@group='FwanderingHordeStageGS64' 	and @num='08']/@num">38</set>
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='50']/spawn[@group='ZombieBearsGroup' 			and @num='02']/@num">07</set>
 	
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='01']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='02']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='03']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='04']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='05']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='06']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='07']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='08']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='09']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='10']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='11']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='12']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='13']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='14']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='15']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='16']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='17']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='18']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='19']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='20']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='21']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='22']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='23']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='24']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='25']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='26']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='27']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='28']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='29']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='30']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='31']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='32']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='33']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='34']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='35']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='36']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='37']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='38']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='39']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='40']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='41']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='42']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='43']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='44']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='45']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='46']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='47']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='48']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='49']/spawn/@maxAlive">100</set>
+	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='50']/spawn/@maxAlive">100</set>
+	
 	<!-- Attempts to fix the blood moon ending prematurely -->
 	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage/spawn/@num">250</set>
 	

@@ -370,3 +370,39 @@ buffElementWetTooltip,buffs,Buff,,,"You are a bit moist ;)"
 modMeleeFortifyingGripDesc,item_modifiers,mod,,,Gain 1 hit point every 5 seconds.
 quickStartPack,,item,Food,newKey,"[60CCFF]Quick Start Cache"
 quickStartPackDesc,,item,Food,newKey,"[60CCFF]A supply cache packed with materials to set even the most unprepared survivor off on the right foot... Or left foot. It really doesn't matter which foot to be honest.\n\nThe 'survivor' could crawl for all I care, just take the fucking mats. Jesus Christ. Ungrateful much?\n\nWith love, Trader Rekt."
+PoweredPoweredPoweredrollUpDoor3x3Black,blocks,block,,,Powered Powered Black Roll Up Door 3x3
+PoweredPoweredrollUpDoor3x3Blue,blocks,block,,,Powered Powered Blue Roll Up Door 3x3
+PoweredPoweredrollUpDoor3x3Brown,blocks,block,,,Powered Brown Roll Up Door 3x3
+PoweredrollUpDoor3x3Green,blocks,block,,,Powered Green Roll Up Door 3x3
+PoweredrollUpDoor3x3Grey,blocks,block,,,Powered Grey Roll Up Door 3x3
+PoweredrollUpDoor3x3Orange,blocks,block,,,Powered Orange Roll Up Door 3x3
+PoweredrollUpDoor3x3Pink,blocks,block,,,Powered Pink Roll Up Door 3x3
+PoweredrollUpDoor3x3Purple,blocks,block,,,Powered Purple Roll Up Door 3x3
+PoweredrollUpDoor3x3Red,blocks,block,,,Powered Red Roll Up Door 3x3
+PoweredrollUpDoor3x3VariantHelper,blocks,block,,,Powered Roll Up Door 3x3
+PoweredrollUpDoor3x3White,blocks,block,,,Powered White Roll Up Door 3x3
+PoweredrollUpDoor3x3Yellow,blocks,block,,,Powered Yellow Roll Up Door 3x3
+PoweredrollUpDoor5x4Black,blocks,block,,,Powered Black Roll Up Door 5x4
+PoweredrollUpDoor5x4Blue,blocks,block,,,Powered Blue Roll Up Door 5x4
+PoweredrollUpDoor5x4Brown,blocks,block,,,Powered Brown Roll Up Door 5x4
+PoweredrollUpDoor5x4Green,blocks,block,,,Powered Green Roll Up Door 5x4
+PoweredrollUpDoor5x4Grey,blocks,block,,,Powered Grey Roll Up Door 5x4
+PoweredrollUpDoor5x4Orange,blocks,block,,,Powered Orange Roll Up Door 5x4
+PoweredrollUpDoor5x4Pink,blocks,block,,,Powered Pink Roll Up Door 5x4
+PoweredrollUpDoor5x4Purple,blocks,block,,,Powered Purple Roll Up Door 5x4
+PoweredrollUpDoor5x4Red,blocks,block,,,Powered Red Roll Up Door 5x4
+PoweredrollUpDoor5x4VariantHelper,blocks,block,,,Powered Roll Up Door 5x4
+PoweredrollUpDoor5x4White,blocks,block,,,Powered White Roll Up Door 5x4
+PoweredrollUpDoor5x4Yellow,blocks,block,,,Powered Yellow Roll Up Door 5x4
+PoweredrollUpDoor7x4Black,blocks,block,,,Powered Black Roll Up Door 7x4
+PoweredrollUpDoor7x4Blue,blocks,block,,,Powered Blue Roll Up Door 7x4
+PoweredrollUpDoor7x4Brown,blocks,block,,,Powered Brown Roll Up Door 7x4
+PoweredrollUpDoor7x4Green,blocks,block,,,Powered Green Roll Up Door 7x4
+PoweredrollUpDoor7x4Grey,blocks,block,,,Powered Grey Roll Up Door 7x4
+PoweredrollUpDoor7x4Orange,blocks,block,,,Powered Orange Roll Up Door 7x4
+PoweredrollUpDoor7x4Pink,blocks,block,,,Powered Pink Roll Up Door 7x4
+PoweredrollUpDoor7x4Purple,blocks,block,,,Powered Purple Roll Up Door 7x4
+PoweredrollUpDoor7x4Red,blocks,block,,,Powered Red Roll Up Door 7x4
+PoweredrollUpDoor7x4VariantHelper,blocks,block,,,Powered Roll Up Door 7x4
+PoweredrollUpDoor7x4White,blocks,block,,,Powered White Roll Up Door 7x4
+PoweredrollUpDoor7x4Yellow,blocks,block,,,Powered Yellow Roll Up Door 7x4

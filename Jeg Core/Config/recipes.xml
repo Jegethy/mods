@@ -1710,4 +1710,27 @@
 	<set xpath="/recipes/recipe[@name='resourceCrushedSand']/@count">5</set>
 	<set xpath="/recipes/recipe[@name='resourceConcreteMix']/@count">2</set>
 
+	<append xpath="/recipes">
+		<recipe name="PoweredrollUpDoor3x3VariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting,perkAdvancedEngineering,learnable">
+			<ingredient name="resourceForgedIron" count="100"/>
+			<ingredient name="resourceSpring" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+		</recipe>
+
+		<recipe name="PoweredrollUpDoor5x4VariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting,perkAdvancedEngineering,learnable">
+			<ingredient name="resourceForgedIron" count="150"/>
+			<ingredient name="resourceSpring" count="15"/>
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceElectricParts" count="15"/>
+		</recipe>
+
+		<recipe name="PoweredrollUpDoor7x4VariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting,perkAdvancedEngineering,learnable">
+			<ingredient name="resourceForgedIron" count="200"/>
+			<ingredient name="resourceSpring" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="25"/>
+			<ingredient name="resourceElectricParts" count="20"/>
+		</recipe>
+	</append>
+	
 </configs>

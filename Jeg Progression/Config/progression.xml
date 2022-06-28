@@ -190,5 +190,7 @@
 		<passive_effect name="HarvestCount" operation="base_set" level="3,4" value="1" tags="brassnitrateharvest"/>
 		<passive_effect name="HarvestCount" operation="base_set" level="4,4" value="1" tags="gemharvest"/>
 	</insertAfter>
+	
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @value='1' and @level='3,5']/@tags">,PoweredrollUpDoor3x3VariantHelper,PoweredrollUpDoor5x4VariantHelper,PoweredrollUpDoor7x4VariantHelper</append>
 
 </config>

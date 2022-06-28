@@ -29,7 +29,7 @@
 			<ingredient name="resourceMechanicalParts" count="45"/>
 			<ingredient name="resourceElectricParts" count="25"/>
 			<ingredient name="resourceSpring" count="36"/>
-			<ingredient name="resourceGlue" count="40"/>	
+			<ingredient name="resourceGlue" count="40"/>
 		</recipe>
 		
 		<recipe name="bigEngine" count="1" craft_time="360" craft_area="workbench" tags="learnable">
@@ -1701,7 +1701,13 @@
 		</recipe>
 	</append>
 
-  <set xpath="/recipes/recipe[@name='resourceForgedIron']/@count">5</set>
-  <set xpath="/recipes/recipe[@name='resourceForgedSteel']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='resourceForgedIron']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='resourceForgedSteel']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='resourceBulletCasing']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='resourceBulletTip']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='resourceBuckshot']/@count">10</set>
+	<set xpath="/recipes/recipe[@name='resourceCement']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='resourceCrushedSand']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='resourceConcreteMix']/@count">2</set>
 
 </configs>

@@ -9,7 +9,7 @@
 	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='resourceFeather']/@count">4,8</set>
 
 	<!-- Destroys bird nests and trash bags on looting -->
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='10']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='25']" name="destroy_on_close">true</setattribute>
 
 	<!-- Adds candy items to junk loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='groupJunk01']">
